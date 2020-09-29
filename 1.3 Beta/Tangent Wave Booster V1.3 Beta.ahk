@@ -4,8 +4,11 @@
 ;Contact: contato@mediaenvironment.com.br
 ;Version: 1.3 Beta
 ;Updates of this version:
-;Fixed some minor bugs
-;Changed the name of the software to official Tangent Wave Booster
+;Added auto-release feature (release shortcut still exist at F1 but is not assigned anymore)
+;Added auto-toggle pages 1/2 for the basic controllers (you don't need anymore toggle between pages on the panel, use any basic control will change for the correct page automatically - The toggle shortcust still existing but is not assigned anymore)
+;Revised all the shortcuts and some positions of the controllers on Tangent Wave Mapper
+;TODO: Make all the tools change panels automatically (this will free up some shortcuts)
+;TODO: If we have some spare shortcuts, its possible to use them to transfer Curves VS from buttons to knobs (output on know left/right and input on alternative know left/right)
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -862,73 +865,73 @@ return
     }
 return
 
-^!+a:: ;Ctrl+Alt+Shift+a - Primaries Wheels Panel
-    if !(_activePage == "color"){
-        return
-    }
-    
-    if !(_activeMasterPanel == "wheels"){
-        MouseClick Left, PRIMARIES_PANEL_POS["posX"], PRIMARIES_PANEL_POS["posY"], 1, 0
-        
-        _activeMasterPanel := "wheels"
-    }
-    
-    _exitAnyControlFunction()
-    
-    _activePrimariesLogPanel := "primaries"
-    MouseClick Left, PRIMARIES_WHEELS_TAB["posX"], PRIMARIES_WHEELS_TAB["posY"], 1, 0
-    
-    Sleep 10
-    
-    _activePageBasicControls := 1
-    MouseClick left, BASIC_COLOR_PAGE1["posX"], BASIC_COLOR_PAGE1["posY"], 1, 0
-return
+;^!+a:: ;Ctrl+Shift+Alt+a - Primaries Wheels Panel
+    ;if !(_activePage == "color"){
+        ;return
+    ;}
+    ;
+    ;if !(_activeMasterPanel == "wheels"){
+        ;MouseClick Left, PRIMARIES_PANEL_POS["posX"], PRIMARIES_PANEL_POS["posY"], 1, 0
+        ;
+        ;_activeMasterPanel := "wheels"
+    ;}
+    ;
+    ;_exitAnyControlFunction()
+    ;
+    ;_activePrimariesLogPanel := "primaries"
+    ;MouseClick Left, PRIMARIES_WHEELS_TAB["posX"], PRIMARIES_WHEELS_TAB["posY"], 1, 0
+    ;
+    ;Sleep 10
+    ;
+    ;_activePageBasicControls := 1
+    ;MouseClick left, BASIC_COLOR_PAGE1["posX"], BASIC_COLOR_PAGE1["posY"], 1, 0
+;return
 
-^!+b:: ;Ctrl+Alt+Shift+b - Primaries Bars Panel
-    if !(_activePage == "color"){
-        return
-    }
-    
-    if !(_activeMasterPanel == "wheels"){
-        MouseClick Left, PRIMARIES_PANEL_POS["posX"], PRIMARIES_PANEL_POS["posY"], 1, 0
-        
-        _activeMasterPanel := "wheels"
-    }
-    
-    _exitAnyControlFunction()
-    
-    _activePrimariesLogPanel := "bars"
-    MouseClick Left, PRIMARIES_BARS_TAB["posX"], PRIMARIES_BARS_TAB["posY"], 1, 0
-    
-    Sleep 10
-    
-    _activePageBasicControls := 1
-    MouseClick left, BASIC_COLOR_PAGE1["posX"], BASIC_COLOR_PAGE1["posY"], 1, 0
-return
+;^!+b:: ;Ctrl+Shift+Alt+b - Primaries Bars Panel
+    ;if !(_activePage == "color"){
+        ;return
+    ;}
+    ;
+    ;if !(_activeMasterPanel == "wheels"){
+        ;MouseClick Left, PRIMARIES_PANEL_POS["posX"], PRIMARIES_PANEL_POS["posY"], 1, 0
+        ;
+        ;_activeMasterPanel := "wheels"
+    ;}
+    ;
+    ;_exitAnyControlFunction()
+    ;
+    ;_activePrimariesLogPanel := "bars"
+    ;MouseClick Left, PRIMARIES_BARS_TAB["posX"], PRIMARIES_BARS_TAB["posY"], 1, 0
+    ;
+    ;Sleep 10
+    ;
+    ;_activePageBasicControls := 1
+    ;MouseClick left, BASIC_COLOR_PAGE1["posX"], BASIC_COLOR_PAGE1["posY"], 1, 0
+;return
 
-^!+c:: ;Ctrl+Alt+Shift+c - Log Wheels Panel
-    if !(_activePage == "color"){
-        return
-    }
-    
-    if !(_activeMasterPanel == "wheels"){
-        MouseClick Left, PRIMARIES_PANEL_POS["posX"], PRIMARIES_PANEL_POS["posY"], 1, 0
-        
-        _activeMasterPanel := "wheels"
-    }
-    
-    _exitAnyControlFunction()
-    
-    _activePrimariesLogPanel := "log"
-    MouseClick Left, LOG_WHEELS_TAB["posX"], LOG_WHEELS_TAB["posY"], 1, 0
-    
-    Sleep 10
-    
-    _activePageBasicControls := 1
-    MouseClick left, BASIC_COLOR_PAGE1["posX"], BASIC_COLOR_PAGE1["posY"], 1, 0
-return
+;^!+c:: ;Ctrl+Shift+Alt+c - Log Wheels Panel
+    ;if !(_activePage == "color"){
+        ;return
+    ;}
+    ;
+    ;if !(_activeMasterPanel == "wheels"){
+        ;MouseClick Left, PRIMARIES_PANEL_POS["posX"], PRIMARIES_PANEL_POS["posY"], 1, 0
+        ;
+        ;_activeMasterPanel := "wheels"
+    ;}
+    ;
+    ;_exitAnyControlFunction()
+    ;
+    ;_activePrimariesLogPanel := "log"
+    ;MouseClick Left, LOG_WHEELS_TAB["posX"], LOG_WHEELS_TAB["posY"], 1, 0
+    ;
+    ;Sleep 10
+    ;
+    ;_activePageBasicControls := 1
+    ;MouseClick left, BASIC_COLOR_PAGE1["posX"], BASIC_COLOR_PAGE1["posY"], 1, 0
+;return
 
-!+0:: ;Alt+Shift+0 - Grab Still
+!+0:: ;Shift+Alt+0 - Grab Still
     if !(_activePage == "color"){
         return
     }
@@ -940,7 +943,7 @@ return
 
 ; == Contrast Controls ==
 
-^!+q:: ;Ctrl+Alt+Shift+q - Increase Contrast Big Steps
+^!+q:: ;Ctrl+Shift+Alt+q - Increase Contrast Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -962,7 +965,7 @@ return
 	}
 return
 
-^!+w:: ;Ctrl+Alt+Shift+w - Reduce Contrast Big Steps
+^!+w:: ;Ctrl+Shift+Alt+w - Reduce Contrast Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1053,7 +1056,7 @@ return
 return
 
 ; == Pivot Controls ==
-^!+e:: ;Ctrl+Alt+Shift+e - Increase Pivot Big Steps
+^!+e:: ;Ctrl+Shift+Alt+e - Increase Pivot Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1075,7 +1078,7 @@ return
 	}
 return
 
-^!+l:: ;Ctrl+Alt+Shift+l - Reduce Pivot Big Steps
+^!+l:: ;Ctrl+Shift+Alt+l - Reduce Pivot Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1166,7 +1169,7 @@ return
 return
 
 ; == Saturation Controls ==
-^!+t:: ;Ctrl+Alt+Shift+t - Increase Saturation Big Steps
+^!+t:: ;Ctrl+Shift+Alt+t - Increase Saturation Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1188,7 +1191,7 @@ return
 	}
 return
 
-^!+y:: ;Ctrl+Alt+Shift+y - Reduce Saturation Big Steps
+^!+y:: ;Ctrl+Shift+Alt+y - Reduce Saturation Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1392,7 +1395,7 @@ return
 return
 
 ; == Lum Mix Controls ==
-^!+o:: ;Ctrl+Alt+Shift+o - Increase Lum Mix Big Steps
+^!+o:: ;Ctrl+Shift+Alt+o - Increase Lum Mix Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1410,7 +1413,7 @@ return
 	}
 return
 
-^!+p:: ;Ctrl+Alt+Shift+p - Reduce Lum Mix Big Steps
+^!+p:: ;Ctrl+Shift+Alt+p - Reduce Lum Mix Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1483,7 +1486,7 @@ return
 return
 
 ; == Temperature controls ==
-#^+q:: ;Win+Ctrl+Shift+q - Increase Temperature Big Steps
+#^+q:: ;Ctrl+Shift+Win+q - Increase Temperature Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1501,7 +1504,7 @@ return
 	}
 return
 
-#^+w:: ;Win+Ctrl+Shift+q - Reduce Temperature Big Steps
+#^+w:: ;Ctrl+Shift+Win+w - Reduce Temperature Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1519,7 +1522,7 @@ return
 	}
 return
 
-#^+e:: ;Win+Ctrl+Shift+e - Increase Temperature Small Steps
+#^+e:: ;Ctrl+Shift+Win+e - Increase Temperature Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1537,7 +1540,7 @@ return
 	}
 return
 
-#^+r:: ;Win+Ctrl+Shift+r - Reduce Temperature Small Steps
+#^+r:: ;Ctrl+Shift+Win+r - Reduce Temperature Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1555,7 +1558,7 @@ return
 	}
 return
 
-#^+t:: ;Win+Ctrl+Shift+t - Reset Temperature
+#^+t:: ;Ctrl+Shift+Win+t - Reset Temperature
     if !(_activePage == "color"){
         return
     }
@@ -1574,7 +1577,7 @@ return
 return
 
 ; == Tint controls ==
-#^+y:: ;Win+Ctrl+Shift+y - Increase Tint Big Steps
+#^+y:: ;Ctrl+Shift+Win+y - Increase Tint Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1592,7 +1595,7 @@ return
 	}
 return
 
-#^+u:: ;Win+Ctrl+Shift+u - Reduce tint Big Steps
+#^+u:: ;Ctrl+Shift+Win+u - Reduce tint Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1610,7 +1613,7 @@ return
 	}
 return
 
-#^+i:: ;Win+Ctrl+Shift+i - Increase tint Small Steps
+#^+i:: ;Ctrl+Shift+Win+i - Increase tint Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1628,7 +1631,7 @@ return
 	}
 return
 
-#^+o:: ;Win+Ctrl+Shift+o - Reduce tint Small Steps
+#^+o:: ;Ctrl+Shift+Win+o - Reduce tint Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1646,7 +1649,7 @@ return
 	}
 return
 
-#^+p:: ;Win+Ctrl+Shift+p - Reset tint
+#^+p:: ;Ctrl+Shift+Win+p - Reset tint
     if !(_activePage == "color"){
         return
     }
@@ -1666,7 +1669,7 @@ return
 
 ; == MD controls ==
 
-#^+a:: ;Win+Ctrl+Shift+a - Increase MD Big Steps
+#^+a:: ;Ctrl+Shift+Win+a - Increase MD Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1684,7 +1687,7 @@ return
 	}
 return
 
-#^+s:: ;Win+Ctrl+Shift+s - Reduce MD Big Steps
+#^+s:: ;Ctrl+Shift+Win+s - Reduce MD Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1702,7 +1705,7 @@ return
 	}
 return
 
-#^+d:: ;Win+Ctrl+Shift+d - Reduce MD Small Steps
+#^+d:: ;Ctrl+Shift+Win+d - Increase MD Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1720,7 +1723,7 @@ return
 	}
 return
 
-#^+f:: ;Win+Ctrl+Shift+f - Reduce MD Small Steps
+#^+f:: ;Ctrl+Shift+Win+f - Reduce MD Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1738,7 +1741,7 @@ return
 	}
 return
 
-#^+g:: ;Win+Ctrl+Shift+g - Reset MD
+#^+g:: ;Ctrl+Shift+Win+g - Reset MD
     if !(_activePage == "color"){
         return
     }
@@ -1757,7 +1760,7 @@ return
 return
 
 ; == Cool Boost controls ==
-#^+h:: ;Win+Ctrl+Shift+h - Increase Cool Boost Big Steps
+#^+h:: ;Ctrl+Shift+Win+h - Increase Cool Boost Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1775,7 +1778,7 @@ return
 	}
 return
 
-#^+j:: ;Win+Ctrl+Shift+j - Reduce Cool Boost Big Steps
+#^+j:: ;Ctrl+Shift+Win+j - Reduce Cool Boost Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1793,7 +1796,7 @@ return
 	}
 return
 
-#^+k:: ;Win+Ctrl+Shift+k - Reduce Cool Boost Small Steps
+#^+k:: ;Ctrl+Shift+Win+k - Increase Cool Boost Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1811,7 +1814,7 @@ return
 	}
 return
 
-#^+l:: ;Win+Ctrl+Shift+l - Reduce Cool Boost Small Steps
+#^+l:: ;Ctrl+Shift+Win+l - Reduce Cool Boost Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1848,7 +1851,7 @@ return
 return
 
 ; == Shad controls ==
-#^+z:: ;Win+Ctrl+Shift+z - Increase Shad Big Steps
+#^+z:: ;Ctrl+Shift+Win+z - Increase Shad Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1866,7 +1869,7 @@ return
 	}
 return
 
-#^+x:: ;Win+Ctrl+Shift+x - Reduce Shad Big Steps
+#^+x:: ;Ctrl+Shift+Win+x - Reduce Shad Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1884,7 +1887,7 @@ return
 	}
 return
 
-#^+c:: ;Win+Ctrl+Shift+c - Reduce Shad Small Steps
+#^+c:: ;Ctrl+Shift+Win+c - Increase Shad Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1902,7 +1905,7 @@ return
 	}
 return
 
-#^+v:: ;Win+Ctrl+Shift+v - Reduce Shad Small Steps
+#^+v:: ;Ctrl+Shift+Win+v - Reduce Shad Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1920,7 +1923,7 @@ return
 	}
 return
 
-#^+b:: ;Win+Ctrl+Shift+b - Reset Shad
+#^+b:: ;Ctrl+Shift+Win+b - Reset Shad
     if !(_activePage == "color"){
         return
     }
@@ -1939,7 +1942,7 @@ return
 return
 
 ; == HL controls ==
-#^+n:: ;Win+Ctrl+Shift+n - Increase HL Big Steps
+#^+n:: ;Ctrl+Shift+Win+n - Increase HL Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1957,7 +1960,7 @@ return
 	}
 return
 
-#^+m:: ;Win+Ctrl+Shift+m - Reduce HL Big Steps
+#^+m:: ;Ctrl+Shift+Win+m - Reduce HL Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -1975,7 +1978,7 @@ return
 	}
 return
 
-#^+,:: ;Win+Ctrl+Shift+, - Reduce HL Small Steps
+#^+,:: ;Ctrl+Shift+Win+, - Increase HL Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -1993,7 +1996,7 @@ return
 	}
 return
 
-#^+.:: ;Win+Ctrl+Shift+. - Reduce HL Small Steps
+#^+.:: ;Ctrl+Shift+Win+. - Reduce HL Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -2030,7 +2033,7 @@ return
 return
 
 ; == LR controls ==
-!+e:: ;Alt+Shift+e - Increase LR Big Steps
+!+e:: ;Shift+Alt+e - Increase LR Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -2052,7 +2055,7 @@ return
 	}
 return
 
-!+t:: ;Alt+Shift+t - Reduce LR Big Steps
+!+t:: ;Shift+Alt+t - Reduce LR Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -2072,7 +2075,7 @@ return
 	}
 return
 
-!+y:: ;Alt+Shift+y - Reduce LR Small Steps
+!+y:: ;Shift+Alt+y - Reduce LR Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -2094,7 +2097,7 @@ return
 	}
 return
 
-!+u:: ;Alt+Shift+u - Reduce LR Small Steps
+!+u:: ;Shift+Alt+u - Reduce LR Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -2116,7 +2119,7 @@ return
 	}
 return
 
-!+a:: ;Alt+Shift+a; - Reset LR
+!+a:: ;Shift+Alt+a; - Reset LR
     if !(_activePage == "color"){
         return
     }
@@ -2142,7 +2145,7 @@ return
 
 
 ; == HR controls ==
-!+s:: ;Alt+Shift+s - Increase HR Big Steps
+!+s:: ;Shift+Alt+s - Increase HR Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -2164,7 +2167,7 @@ return
 	}
 return
 
-!+d:: ;Alt+Shift+d - Reduce HR Big Steps
+!+d:: ;Shift+Alt+d - Reduce HR Big Steps
     if !(_activePage == "color"){
         return
     }
@@ -2186,7 +2189,7 @@ return
 	}
 return
 
-!+f:: ;Alt+Shift+f - Reduce HR Small Steps
+!+f:: ;Shift+Alt+f - Reduce HR Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -2208,7 +2211,7 @@ return
 	}
 return
 
-!+g:: ;Alt+Shift+g - Reduce HR Small Steps
+!+g:: ;Shift+Alt+g - Reduce HR Small Steps
     if !(_activePage == "color"){
         return
     }
@@ -2230,7 +2233,7 @@ return
 	}
 return
 
-!+b:: ;Alt+Shift+b; - Reset HR
+!+b:: ;Shift+Alt+b; - Reset HR
     if !(_activePage == "color"){
         return
     }
@@ -2483,7 +2486,7 @@ return
 	MouseClick WheelDown, GAMMA_BLUE_BAR_POS["posX"], GAMMA_BLUE_BAR_POS["posY"], 1, 0
 return
 
-^!+f:: ;Ctrl+Alt+Shift+f - Gain Red Up
+^!+f:: ;Ctrl+Shift+Alt+f - Gain Red Up
     if !(_activePage == "color"){
         return
     }
@@ -2499,7 +2502,7 @@ return
 	MouseClick WheelUp, GAIN_RED_BAR_POS["posX"], GAIN_RED_BAR_POS["posY"], 1, 0
 return
 
-^!+g:: ;Ctrl+Alt+Shift+g - Gain Red Down
+^!+g:: ;Ctrl+Shift+Alt+g - Gain Red Down
     if !(_activePage == "color"){
         return
     }
@@ -2515,7 +2518,7 @@ return
 	MouseClick WheelDown, GAIN_RED_BAR_POS["posX"], GAIN_RED_BAR_POS["posY"], 1, 0
 return
 
-^!+h:: ;Ctrl+Alt+Shift+h - Gain Green Up
+^!+h:: ;Ctrl+Shift+Alt+h - Gain Green Up
     if !(_activePage == "color"){
         return
     }
@@ -2531,7 +2534,7 @@ return
 	MouseClick WheelUp, GAIN_GREEN_BAR_POS["posX"], GAIN_GREEN_BAR_POS["posY"], 1, 0
 return
 
-^!+i:: ;Ctrl+Alt+Shift+i - Gain Green Down
+^!+i:: ;Ctrl+Shift+Alt+i - Gain Green Down
     if !(_activePage == "color"){
         return
     }
@@ -2547,7 +2550,7 @@ return
 	MouseClick WheelDown, GAIN_GREEN_BAR_POS["posX"], GAIN_GREEN_BAR_POS["posY"], 1, 0
 return
 
-^!+j:: ;Ctrl+Alt+Shift+j - Gain Blue Up
+^!+j:: ;Ctrl+Shift+Alt+j - Gain Blue Up
     if !(_activePage == "color"){
         return
     }
@@ -2563,7 +2566,7 @@ return
 	MouseClick WheelUp, GAIN_BLUE_BAR_POS["posX"], GAIN_BLUE_BAR_POS["posY"], 1, 0
 return
 
-^!+k:: ;Ctrl+Alt+Shift+k - Gain Blue Down
+^!+k:: ;Ctrl+Shift+Alt+k - Gain Blue Down
     if !(_activePage == "color"){
         return
     }
@@ -2677,7 +2680,7 @@ return
 return
 
 ; == Luma Controls ==
-^!+F5:: ;Ctrl+Alt+Shift+F5 - Luma Lift Down
+^!+F5:: ;Ctrl+Shift+Alt+F5 - Luma Lift Down
     if !(_activePage == "color"){
         return
     }
@@ -2693,7 +2696,7 @@ return
 	MouseClick WheelDown, LUMA_LIFT_BAR_POS["posX"], LUMA_LIFT_BAR_POS["posY"], 1, 0
 return
 
-^!+F6:: ;Ctrl+Alt+Shift+F6 - Luma Lift Up
+^!+F6:: ;Ctrl+Shift+Alt+F6 - Luma Lift Up
     if !(_activePage == "color"){
         return
     }
@@ -2709,7 +2712,7 @@ return
 	MouseClick WheelUp, LUMA_LIFT_BAR_POS["posX"], LUMA_LIFT_BAR_POS["posY"], 1, 0
 return
 
-^!+F7:: ;Ctrl+Alt+Shift+F7 - Luma Gamma Down
+^!+F7:: ;Ctrl+Shift+Alt+F7 - Luma Gamma Down
     if !(_activePage == "color"){
         return
     }
@@ -2725,7 +2728,7 @@ return
 	MouseClick WheelDown, LUMA_GAMMA_BAR_POS["posX"], LUMA_GAMMA_BAR_POS["posY"], 1, 0
 return
 
-^!+F8:: ;Ctrl+Alt+Shift+F8 - Luma Gamma Up
+^!+F8:: ;Ctrl+Shift+Alt+F8 - Luma Gamma Up
     if !(_activePage == "color"){
         return
     }
@@ -2741,7 +2744,7 @@ return
 	MouseClick WheelUp, LUMA_GAMMA_BAR_POS["posX"], LUMA_GAMMA_BAR_POS["posY"], 1, 0
 return
 
-^!+F9:: ;Ctrl+Alt+Shift+F9 - Luma Gain Down
+^!+F9:: ;Ctrl+Shift+Alt+F9 - Luma Gain Down
     if !(_activePage == "color"){
         return
     }
@@ -2757,7 +2760,7 @@ return
 	MouseClick WheelDown, LUMA_GAIN_BAR_POS["posX"], LUMA_GAIN_BAR_POS["posY"], 1, 0
 return
 
-^!+F10:: ;Ctrl+Alt+Shift+F10 - Luma Gain Up
+^!+F10:: ;Ctrl+Shift+Alt+F10 - Luma Gain Up
     if !(_activePage == "color"){
         return
     }
@@ -2774,7 +2777,7 @@ return
 return
 
 ; == Primary/Log Wheels Controls ==
-^!+F1:: ;Ctrl+Alt+Shift+F1 - Lift/Shadows TrackBall
+^!+F1:: ;Ctrl+Shift+Alt+F1 - Lift/Shadows TrackBall
     if !(_activePage == "color"){
         return
     }
@@ -2799,7 +2802,7 @@ return
 	}
 return
 
-^!+F2:: ;Ctrl+Alt+Shift+F2 - Gamma/Midtones TrackBall
+^!+F2:: ;Ctrl+Shift+Alt+F2 - Gamma/Midtones TrackBall
     if !(_activePage == "color"){
         return
     }
@@ -2824,7 +2827,7 @@ return
 	}
 return
 
-^!+F3:: ;Ctrl+Alt+Shift+F3 - Gain/Highlights TrackBall
+^!+F3:: ;Ctrl+Shift+Alt+F3 - Gain/Highlights TrackBall
     if !(_activePage == "color"){
         return
     }
@@ -2849,7 +2852,7 @@ return
 	}
 return
 
-^!+F4:: ;Ctrl+Alt+Shift+F4 - Offset TrackBall
+^!+F4:: ;Ctrl+Shift+Alt+F4 - Offset TrackBall
     if !(_activePage == "color"){
         return
     }
@@ -2875,7 +2878,7 @@ return
 return
 
 ; == Control Jogs ==
-^!+1:: ;Ctrl+Alt+Shift+1 - Lift Horizontal Wheel Up
+^!+1:: ;Ctrl+Shift+Alt+1 - Lift Horizontal Wheel Up
     if !(_activePage == "color"){
         return
     }
@@ -2898,7 +2901,7 @@ return
 	Sleep 10
 return
 
-^!+2:: ;Ctrl+Alt+Shift+2 - Lift Horizontal Wheel Down
+^!+2:: ;Ctrl+Shift+Alt+2 - Lift Horizontal Wheel Down
     if !(_activePage == "color"){
         return
     }
@@ -2921,7 +2924,7 @@ return
 	Sleep 10
 return
 
-^!+3:: ;Ctrl+Alt+Shift+3 - Gamma Horizontal Wheel Up
+^!+3:: ;Ctrl+Shift+Alt+3 - Gamma Horizontal Wheel Up
     if !(_activePage == "color"){
         return
     }
@@ -2944,7 +2947,7 @@ return
 	Sleep 10
 return
 
-^!+4:: ;Ctrl+Alt+Shift+4 - Gamma Horizontal Wheel Down
+^!+4:: ;Ctrl+Shift+Alt+4 - Gamma Horizontal Wheel Down
     if !(_activePage == "color"){
         return
     }
@@ -2967,7 +2970,7 @@ return
 	Sleep 10
 return
 
-^!+5:: ;Ctrl+Alt+Shift+5 - Gain Horizontal Wheel Up
+^!+5:: ;Ctrl+Shift+Alt+5 - Gain Horizontal Wheel Up
     if !(_activePage == "color"){
         return
     }
@@ -2990,7 +2993,7 @@ return
 	Sleep 10
 return
 
-^!+6:: ;Ctrl+Alt+Shift+6 - Gain Horizontal Wheel Down
+^!+6:: ;Ctrl+Shift+Alt+6 - Gain Horizontal Wheel Down
     if !(_activePage == "color"){
         return
     }
@@ -3013,7 +3016,7 @@ return
 	Sleep 10
 return
 
-^!+7:: ;Ctrl+Alt+Shift+7 - Offset Horizontal Wheel Up
+^!+7:: ;Ctrl+Shift+Alt+7 - Offset Horizontal Wheel Up
     if !(_activePage == "color"){
         return
     }
@@ -3036,7 +3039,7 @@ return
 	Sleep 10
 return
 
-^!+8:: ;Ctrl+Alt+Shift+8 - Offset Horizontal Wheel Down
+^!+8:: ;Ctrl+Shift+Alt+8 - Offset Horizontal Wheel Down
     if !(_activePage == "color"){
         return
     }
@@ -3060,7 +3063,7 @@ return
 return
 
 ; == Reset Primaries and Logs ==
-^!+Insert:: ;Ctrl+Alt+Shift+Insert - Reset Lift/Shadows
+^!+Insert:: ;Ctrl+Shift+Alt+Insert - Reset Lift/Shadows
     if !(_activePage == "color"){
         return
     }
@@ -3072,7 +3075,7 @@ return
 	MouseClick Left, LIFT_SHADOWS_RESET_POS["posX"], LIFT_SHADOWS_RESET_POS["posY"], 2, 0
 return
 
-^!+Delete:: ;Ctrl+Alt+Shift+Delete - Reset Gamma/Midtones
+^!+Delete:: ;Ctrl+Shift+Alt+Delete - Reset Gamma/Midtones
     if !(_activePage == "color"){
         return
     }
@@ -3084,7 +3087,7 @@ return
 	MouseClick Left, GAMMA_MID_RESET_POS["posX"], GAMMA_MID_RESET_POS["posY"], 2, 0
 return
 
-^!+Home:: ;Ctrl+Alt+Shift+Home - Reset Gain/Highlights
+^!+Home:: ;Ctrl+Shift+Alt+Home - Reset Gain/Highlights
     if !(_activePage == "color"){
         return
     }
@@ -3096,7 +3099,7 @@ return
 	MouseClick Left, GAIN_HIGH_RESET_POS["posX"], GAIN_HIGH_RESET_POS["posY"], 2, 0
 return
 
-^!+End:: ;Ctrl+Alt+Shift+End - Reset Offset
+^!+End:: ;Ctrl+Shift+Alt+End - Reset Offset
     if !(_activePage == "color"){
         return
     }
@@ -3108,7 +3111,7 @@ return
 	MouseClick Left, OFFSET_RESET_POS["posX"], OFFSET_RESET_POS["posY"], 2, 0
 return
 
-^!+PgUp:: ;Ctrl+Alt+Shift+PgUp - Reset All Primary
+^!+PgUp:: ;Ctrl+Shift+Alt+PgUp - Reset All Primary
     if !(_activePage == "color"){
         return
     }
@@ -3125,7 +3128,7 @@ return
     MouseClick Left, RESET_ALL_PRIMARIES_LOG_POS["posX"], RESET_ALL_PRIMARIES_LOG_POS["posY"], 1, 0
 return
 
-^!+PgDn:: ;Ctrl+Alt+Shift+PgDn - Reset All Log
+^!+PgDn:: ;Ctrl+Shift+Alt+PgDn - Reset All Log
     if !(_activePage == "color"){
         return
     }
@@ -3197,7 +3200,7 @@ Numpad1:: ;Numpad1 - Next Curves Panel
     }
 return
 
-!+Insert:: ;Alt+Shift+Insert - Reset Curves VS
+!+Insert:: ;Shift+Alt+Insert - Reset Curves VS
     if !(_activePage == "color"){
         return
     }
@@ -4121,7 +4124,7 @@ return
     MouseClick Left, RESET_SOFT_CLIP_POS["posX"], RESET_SOFT_CLIP_POS["posY"], 1, 0
 return
 
-!+Delete:: ;Alt+Shift+Delete - Reset Y Channel Intensity Bar
+!+Delete:: ;Shift+Alt+Delete - Reset Y Channel Intensity Bar
     if !(_activePage == "color"){
         return
     }
@@ -4140,7 +4143,7 @@ return
 return
 
 
-!+PgUp:: ;Alt+Shift+PgUp - Reset R Channel Intensity Bar
+!+PgUp:: ;Shift+Alt+PgUp - Reset R Channel Intensity Bar
     if !(_activePage == "color"){
         return
     }
@@ -4158,7 +4161,7 @@ return
     MouseClick Left, RESET_R_CHANNEL_INTENSITY_POS["posX"], RESET_R_CHANNEL_INTENSITY_POS["posY"], 1, 0
 return
 
-!+PgDn:: ;Alt+Shift+PgDn - Reset G Channel Intensity Bar
+!+PgDn:: ;Shift+Alt+PgDn - Reset G Channel Intensity Bar
     if !(_activePage == "color"){
         return
     }
@@ -4176,7 +4179,7 @@ return
     MouseClick Left, RESET_G_CHANNEL_INTENSITY_POS["posX"], RESET_G_CHANNEL_INTENSITY_POS["posY"], 1, 0
 return
 
-!+F11:: ;Alt+Shift+F11 - Reset B Channel Intensity Bar
+!+F11:: ;Shift+Alt+F11 - Reset B Channel Intensity Bar
     if !(_activePage == "color"){
         return
     }
@@ -4487,7 +4490,7 @@ return
 ;return
 
 ; == Select Panels on Color Tab ==
-!+c:: ;Alt+Shift+c - Open Curves Panel
+!+c:: ;Shift+Alt+c - Open Curves Panel
     if !(_activePage == "color"){
         return
     }
@@ -4500,7 +4503,7 @@ return
     }
 return
 
-!+j:: ;Alt+Shift+j - Open Qualifier Panel
+!+j:: ;Shift+Alt+j - Open Qualifier Panel
     if !(_activePage == "color"){
         return
     }
@@ -4513,20 +4516,20 @@ return
     }
 return
 
-!+k:: ;Alt+Shift+k - Open Power Windows Panel
-    if !(_activePage == "color"){
-        return
-    }
+;!+k:: ;Shift+Alt+k - Open Power Windows Panel
+    ;if !(_activePage == "color"){
+        ;return
+    ;}
 
-    if (_activePanel == "windows"){
-        return
-    }Else{
-        _activePanel := "windows"
-        MouseClick, Left, WINDOWS_PANEL_POS["posX"], WINDOWS_PANEL_POS["posY"], 1, 0
-    }
-return
+    ;if (_activePanel == "windows"){
+        ;return
+    ;}Else{
+        ;_activePanel := "windows"
+        ;MouseClick, Left, WINDOWS_PANEL_POS["posX"], WINDOWS_PANEL_POS["posY"], 1, 0
+    ;}
+;return
 
-!+l:: ;Alt+Shift+c - Open Tracking Panel
+!+l:: ;Shift+Alt+c - Open Tracking Panel
     if !(_activePage == "color"){
         return
     }
@@ -4539,25 +4542,25 @@ return
     }
 return
 
-!+m:: ;Alt+Shift+m - Open RGB Mixer + Blur Panel
-    if !(_activePage == "color"){
-        return
-    }
+;!+m:: ;Shift+Alt+m - Open RGB Mixer + Blur Panel
+    ;if !(_activePage == "color"){
+        ;return
+    ;}
 
-    if (_activePanel == "blur" and _activeMasterPanel == "rgbmixer"){
-        return
-    }Else{
-        _activePanel := "blur"
-        
-        _activeMasterPanel := "rgbmixer"
-        
-        MouseClick, Left, RGB_MIXER_PANEL_POS["posX"], RGB_MIXER_PANEL_POS["posY"], 1, 0
-        Sleep 10
-        MouseClick, Left, BLUR_PANEL_POS["posX"], BLUR_PANEL_POS["posY"], 1, 0
-    }
-return
+    ;if (_activePanel == "blur" and _activeMasterPanel == "rgbmixer"){
+        ;return
+    ;}Else{
+        ;_activePanel := "blur"
+        ;
+        ;_activeMasterPanel := "rgbmixer"
+        ;
+        ;MouseClick, Left, RGB_MIXER_PANEL_POS["posX"], RGB_MIXER_PANEL_POS["posY"], 1, 0
+        ;Sleep 10
+        ;MouseClick, Left, BLUR_PANEL_POS["posX"], BLUR_PANEL_POS["posY"], 1, 0
+    ;}
+;return
 
-!+n:: ;Alt+Shift+c - Open Key Panel
+!+n:: ;Shift+Alt+c - Open Key Panel
     if !(_activePage == "color"){
         return
     }
@@ -4570,7 +4573,7 @@ return
     }
 return
 
-!+-:: ;Alt+Shift+- - Open Sizing Panel
+!+-:: ;Shift+Alt+- - Open Sizing Panel
     if !(_activePage == "color"){
         return
     }
@@ -6171,7 +6174,7 @@ return
 	}
 return
 
-^!+F11:: ;Ctrl+Alt+Shift+F11 - Inspector Flip Horizontal
+^!+F11:: ;Ctrl+Shift+Alt+F11 - Inspector Flip Horizontal
     if !(_activePage == "edit"){
         return
     }
@@ -6179,7 +6182,7 @@ return
     MouseClick Left, INSPECTOR_FLIP_HORIZONTAL_POS["posX"], INSPECTOR_FLIP_HORIZONTAL_POS["posY"], 1, 0
 return
 
-^!+F12:: ;Ctrl+Alt+Shift+F12 - Inspector Flip Vertical
+^!+F12:: ;Ctrl+Shift+Alt+F12 - Inspector Flip Vertical
     if !(_activePage == "edit"){
         return
     }
@@ -6187,7 +6190,7 @@ return
     MouseClick Left, INSPECTOR_FLIP_VERTICAL_POS["posX"], INSPECTOR_FLIP_VERTICAL_POS["posY"], 1, 0
 return
 
-^!+Backspace:: ;Ctrl+Alt+Shift+Backspace - Inspector Link/Unlink Zoom
+^!+Backspace:: ;Ctrl+Shift+Alt+Backspace - Inspector Link/Unlink Zoom
     if !(_activePage == "edit"){
         return
     }
@@ -6261,7 +6264,7 @@ return
     MouseClick Left, RESET_ALL_BASIC_TRANSFORM_POS["posX"], RESET_ALL_BASIC_TRANSFORM_POS["posY"], 1, 0
 return
 
-^!+d:: ;Ctrl+Alt+Shift+d - Reset Inspector Zoom 
+^!+d:: ;Ctrl+Shift+Alt+d - Reset Inspector Zoom 
     if !(_activePage == "edit"){
         return
     }
@@ -6269,7 +6272,7 @@ return
     MouseClick Left, RESET_INSPECTOR_ZOOM_POS["posX"], RESET_INSPECTOR_ZOOM_POS["posY"], 1, 0
 return
 
-^!+m:: ;Ctrl+Alt+Shift+m - Reset Inspector Position 
+^!+m:: ;Ctrl+Shift+Alt+m - Reset Inspector Position 
     if !(_activePage == "edit"){
         return
     }
@@ -6277,7 +6280,7 @@ return
     MouseClick Left, RESET_INSPECTOR_POSITION_POS["posX"], RESET_INSPECTOR_POSITION_POS["posY"], 1, 0
 return
 
-^!+n:: ;Ctrl+Alt+Shift+n - Reset Inspector Rotation Angle
+^!+n:: ;Ctrl+Shift+Alt+n - Reset Inspector Rotation Angle
     if !(_activePage == "edit"){
         return
     }
@@ -6285,7 +6288,7 @@ return
     MouseClick Left, RESET_INSPECTOR_ROTATION_POS["posX"], RESET_INSPECTOR_ROTATION_POS["posY"], 1, 0
 return
 
-^!+s:: ;Ctrl+Alt+Shift+s - Reset Inspector Anchor Point
+^!+s:: ;Ctrl+Shift+Alt+s - Reset Inspector Anchor Point
     if !(_activePage == "edit"){
         return
     }
@@ -6293,7 +6296,7 @@ return
     MouseClick Left, RESET_INSPECTOR_ANCHOR_POS["posX"], RESET_INSPECTOR_ANCHOR_POS["posY"], 1, 0
 return
 
-^!+u:: ;Ctrl+Alt+Shift+u - Reset Inspector Pitch
+^!+u:: ;Ctrl+Shift+Alt+u - Reset Inspector Pitch
     if !(_activePage == "edit"){
         return
     }
@@ -6301,7 +6304,7 @@ return
     MouseClick Left, RESET_INSPECTOR_PITCH_POS["posX"], RESET_INSPECTOR_PITCH_POS["posY"], 1, 0
 return
 
-^!+v:: ;Ctrl+Alt+Shift+v - Reset Inspector Yaw
+^!+v:: ;Ctrl+Shift+Alt+v - Reset Inspector Yaw
     if !(_activePage == "edit"){
         return
     }
@@ -6309,7 +6312,7 @@ return
     MouseClick Left, RESET_INSPECTOR_YAW_POS["posX"], RESET_INSPECTOR_YAW_POS["posY"], 1, 0
 return
 
-^!+x:: ;Ctrl+Alt+Shift+x - Reset Inspector Flip
+^!+x:: ;Ctrl+Shift+Alt+x - Reset Inspector Flip
     if !(_activePage == "edit"){
         return
     }
@@ -6317,7 +6320,7 @@ return
     MouseClick Left, RESET_INSPECTOR_FLIP_POS["posX"], RESET_INSPECTOR_FLIP_POS["posY"], 1, 0
 return
 
-^!+z:: ;Ctrl+Alt+Shift+z - Reset Inspector Opacity
+^!+z:: ;Ctrl+Shift+Alt+z - Reset Inspector Opacity
     if !(_activePage == "edit"){
         return
     }

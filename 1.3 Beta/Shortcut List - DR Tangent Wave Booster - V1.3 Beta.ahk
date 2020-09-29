@@ -1,6 +1,7 @@
-﻿;Shortcuts list used for Tangent Wave Booster - Davinci Resolve
+﻿;Shortcuts list used for Tangent Wave Booster - Davinci Resolve - ANY NON LISTED SHORTCUT IS ALREADY IN USE FOR THE SOFTWARE OR WINDOWS
 ;Version 1.3 beta
-;ANY NON LISTED SHORTCUT IS ALREADY IN USE FOR THE SOFTWARE OR WINDOWS
+;Updates of this version:
+;Added some shortcuts that was not listed previously
 ;TODO - Finish the list with all the shortcuts with description of each
 
 ;Keys
@@ -182,8 +183,8 @@ NumpadEnter:: ;DONT WORK
 ^+F8:: ;Ctrl+Shift+F8 - Select R Curves 2
 ^+F9:: ;Ctrl+Shift+F9 - Select G Curves 2
 ^+F10:: ;Ctrl+Shift+F10 - Select B Curves 2
-^+F11:: ;DAVINCI SHORTCUT EDITED - Delete Start to Playhead
-^+F12:: ;DAVINCI SHORTCUT EDITED - Delete End to Playhead
+^+F11:: ;Ctrl+Shift+F11 - DAVINCI SHORTCUT EDITED - Delete Start to Playhead
+^+F12:: ;Ctrl+Shift+F12 - DAVINCI SHORTCUT EDITED - Delete End to Playhead
 ^+1:: ;DAVINCI RESERVED
 ^+2:: ;DAVINCI RESERVED
 ^+3:: ;DAVINCI RESERVED
@@ -272,39 +273,39 @@ NumpadEnter:: ;DONT WORK
 ^#-:: ;Ctrl+Win+- - Reset Soft Clip on Curves
 ^#=::
 
-;Alt+Shift
-!+a:: ;Alt+Shift+a - Reset LR
-!+b:: ;Alt+Shift+b - Reset HR
-!+c:: ;Alt+Shift+c - Open Curves Panel
-!+d:: ;Alt+Shift+d - Reduce HR Big Steps
-!+e:: ;Alt+Shift+e - Increase LR Big Steps
-!+f:: ;Alt+Shift+f - Reduce HR Small Steps
-!+g:: ;Alt+Shift+g - Reduce HR Small Steps
+;Shift+Alt
+!+a:: ;Shift+Alt+a - Reset LR
+!+b:: ;Shift+Alt+b - Reset HR
+!+c:: ;Shift+Alt+c - Open Curves Panel
+!+d:: ;Shift+Alt+d - Reduce HR Big Steps
+!+e:: ;Shift+Alt+e - Increase LR Big Steps
+!+f:: ;Shift+Alt+f - Reduce HR Small Steps
+!+g:: ;Shift+Alt+g - Reduce HR Small Steps
 !+h:: ;DAVINCI RESERVED
 !+i:: ;DAVINCI RESERVED
-!+j:: ;Alt+Shift+j - Open Qualifier Panel
-!+k:: ;Alt+Shift+k - Open Power Windows Panel
-!+l:: ;Alt+Shift+l - Open Tracking Panel
-!+m:: ;Alt+Shift+m - Open RGB Mixer + Blur Panel
-!+n:: ;Alt+Shift+n - Open Key Panel
+!+j:: ;Shift+Alt+j - Open Qualifier Panel
+!+k:: ;Shift+Alt+k
+!+l:: ;Shift+Alt+l - Open Tracking Panel
+!+m:: ;Shift+Alt+m
+!+n:: ;Shift+Alt+n - Open Key Panel
 !+o:: ;DAVINCI RESERVED
 !+p:: ;DAVINCI RESERVED
 !+q:: ;DAVINCI RESERVED
 !+r:: ;DAVINCI RESERVED
-!+s:: ;Alt+Shift+s - Increase HR Big Steps
-!+t:: ;Alt+Shift+t - Reduce LR Big Steps
-!+u:: ;Alt+Shift+u - Reduce LR Small Steps
+!+s:: ;Shift+Alt+s - Increase HR Big Steps
+!+t:: ;Shift+Alt+t - Reduce LR Big Steps
+!+u:: ;Shift+Alt+u - Reduce LR Small Steps
 !+v:: ;DAVINCI RESERVED
 !+w:: ;DAVINCI RESERVED
 !+x:: ;DAVINCI RESERVED
-!+y:: ;Alt+Shift+y - Reduce LR Small Steps
+!+y:: ;Shift+Alt+y - Reduce LR Small Steps
 !+z:: ;DAVINCI RESERVED
-!+Insert:: ;Alt+Shift+Insert - Reset Curves VS
-!+Delete:: ;Alt+Shift+Delete - Reset Y Channel Intensity Bar
+!+Insert:: ;Shift+Alt+Insert - Reset Curves VS
+!+Delete:: ;Shift+Alt+Delete - Reset Y Channel Intensity Bar
 !+Home:: ;DAVINCI SHORTCUT EDITED - Next Node
 !+End:: ;DAVINCI SHORTCUT EDITED - Previous Node
-!+PgUp:: ;Alt+Shift+PgUp - Reset R Channel Intensity Bar
-!+PgDn:: ;Alt+Shift+PgDn - Reset G Channel Intensity Bar
+!+PgUp:: ;Shift+Alt+PgUp - Reset R Channel Intensity Bar
+!+PgDn:: ;Shift+Alt+PgDn - Reset G Channel Intensity Bar
 !+F1:: ;DAVINCI RESERVED
 !+F2:: ;DAVINCI RESERVED
 !+F3:: ;DAVINCI RESERVED
@@ -315,7 +316,7 @@ NumpadEnter:: ;DONT WORK
 !+F8:: ;DAVINCI RESERVED
 !+F9:: ;DAVINCI RESERVED
 !+F10:: ;NVIDIA RESERVED
-!+F11:: ;Alt+Shift+F11 - Reset B Channel Intensity Bar
+!+F11:: ;Shift+Alt+F11 - Reset B Channel Intensity Bar
 !+F12::
 !+1:: ;DAVINCI RESERVED
 !+2:: ;DAVINCI RESERVED
@@ -326,43 +327,43 @@ NumpadEnter:: ;DONT WORK
 !+7:: ;DAVINCI RESERVED
 !+8:: ;DAVINCI RESERVED
 !+9:: ;DAVINCI RESERVED
-!+0:: ;Alt+Shift+0 - Grab Still
-!+-:: ;Alt+Shift+- - Open Sizing Panel
+!+0:: ;Shift+Alt+0 - Grab Still
+!+-:: ;Shift+Alt+- - Open Sizing Panel
 !+=::
 
-;Win+alt
+;Alt+Win
 #!a:: ;Win+Alt+a - Select Red Point Input on Hue Curves
-#!b:: ;Win+Alt+b - Select Yellow Point Input on Hue Curves
-#!c:: ;Win+Alt+c - Select Green Point Input on Hue Curves
+#!b:: ;Alt+Win+b - Select Yellow Point Input on Hue Curves
+#!c:: ;Alt+Win+c - Select Green Point Input on Hue Curves
 #!d:: ;WINDOWS RESERVED
-#!e:: ;Win+Alt+e - Select Cyan Point Input on Hue Curves
-#!f:: ;Win+Alt+f - Select Blue Point Input on Hue Curves
-#!g:: ;Win+Alt+g - Select Purple Point Input on Hue Curves
-#!h:: ;Win+Alt+h - Select Black Point Input on Hue Curves
-#!i:: ;Win+Alt+i - Select White Point Input on Hue Curves
-#!j:: ;Win+Alt+j - Select Red Point Output on Hue Curves
-#!k:: ;Win+Alt+k - Select Yellow Point Output on Hue Curves
-#!l:: ;Win+Alt+l - Select Green Point Output on Hue Curves
-#!m:: ;Win+Alt+m - Select Cyan Point Output on Hue Curves
-#!n:: ;Win+Alt+n - Select Blue Point Output on Hue Curves
-#!o:: ;Win+Alt+o - Select Purple Point Output on Hue Curves
-#!p:: ;Win+Alt+p - Select Black Point Output on Hue Curves
-#!q:: ;Win+Alt+q - Select White Point Output on Hue Curves
-#!r:: ;Win+Alt+r - Select Spine Point on Hue Curves
-#!s:: ;Win+Alt+s - Increase Black Point On Sat vs Sat Curve
-#!t:: ;Win+Alt+t - Reduce Black Point On Sat vs Sat Curve
-#!u:: ;Win+Alt+u - Increase White Point On Sat vs Sat Curve
-#!v:: ;Win+Alt+v - Reduce White Point On Sat vs Sat Curve
-#!w:: ;Win+Alt+w - Inspector Opacity Increase
-#!x:: ;Win+Alt+x - Inspector Opacity Reduce
-#!y:: ;Win+Alt+y - Inspector Zoom X Increase
-#!z:: ;Win+Alt+z - Inspector Zoom X Reduce
-#!Insert:: ;Win+Alt+Insert - Inspector Zoom Y Increase
-#!Delete:: ;Win+Alt+Delete - Inspector Zoom Y Reduce
-#!Home:: ;Win+Alt+Home - Inspector Position X Increase
-#!End:: ;Win+Alt+End - Inspector Position X Reduce
-#!PgUp:: ;Win+Alt+PgUp - Inspector Position Y Increase
-#!PgDn:: ;Win+Alt+PgDn - Inspector Position Y Reduce
+#!e:: ;Alt+Win+e - Select Cyan Point Input on Hue Curves
+#!f:: ;Alt+Win+f - Select Blue Point Input on Hue Curves
+#!g:: ;Alt+Win+g - Select Purple Point Input on Hue Curves
+#!h:: ;Alt+Win+h - Select Black Point Input on Hue Curves
+#!i:: ;Alt+Win+i - Select White Point Input on Hue Curves
+#!j:: ;Alt+Win+j - Select Red Point Output on Hue Curves
+#!k:: ;Alt+Win+k - Select Yellow Point Output on Hue Curves
+#!l:: ;Alt+Win+l - Select Green Point Output on Hue Curves
+#!m:: ;Alt+Win+m - Select Cyan Point Output on Hue Curves
+#!n:: ;Alt+Win+n - Select Blue Point Output on Hue Curves
+#!o:: ;Alt+Win+o - Select Purple Point Output on Hue Curves
+#!p:: ;Alt+Win+p - Select Black Point Output on Hue Curves
+#!q:: ;Alt+Win+q - Select White Point Output on Hue Curves
+#!r:: ;Alt+Win+r - Select Spine Point on Hue Curves
+#!s:: ;Alt+Win+s - Increase Black Point On Sat vs Sat Curve
+#!t:: ;Alt+Win+t - Reduce Black Point On Sat vs Sat Curve
+#!u:: ;Alt+Win+u - Increase White Point On Sat vs Sat Curve
+#!v:: ;Alt+Win+v - Reduce White Point On Sat vs Sat Curve
+#!w:: ;Alt+Win+w - Inspector Opacity Increase
+#!x:: ;Alt+Win+x - Inspector Opacity Reduce
+#!y:: ;Alt+Win+y - Inspector Zoom X Increase
+#!z:: ;Alt+Win+z - Inspector Zoom X Reduce
+#!Insert:: ;Alt+Win+Insert - Inspector Zoom Y Increase
+#!Delete:: ;Alt+Win+Delete - Inspector Zoom Y Reduce
+#!Home:: ;Alt+Win+Home - Inspector Position X Increase
+#!End:: ;Alt+Win+End - Inspector Position X Reduce
+#!PgUp:: ;Alt+Win+PgUp - Inspector Position Y Increase
+#!PgDn:: ;Alt+Win+PgDn - Inspector Position Y Reduce
 #!1:: ;WINDOWS RESERVED
 #!2:: ;WINDOWS RESERVED
 #!3:: ;WINDOWS RESERVED
@@ -373,77 +374,107 @@ NumpadEnter:: ;DONT WORK
 #!8:: ;WINDOWS RESERVED
 #!9:: ;WINDOWS RESERVED
 #!0:: ;WINDOWS RESERVED
-#!F1:: ;Win+Alt+F1 - Inspector Rotation Angle Increase
-#!F2:: ;Win+Alt+F2 - Inspector Rotation Angle Reduce 
-#!F3:: ;Win+Alt+F3 - Inspector Anchor Point X Increase
+#!F1:: ;Alt+Win+F1 - Inspector Rotation Angle Increase
+#!F2:: ;Alt+Win+F2 - Inspector Rotation Angle Reduce 
+#!F3:: ;Alt+Win+F3 - Inspector Anchor Point X Increase
 #!F4:: ;WINDOWS RESERVED
-#!F5:: ;Win+Alt+F5 - Inspector Anchor Point X Reduce
-#!F6:: ;Win+Alt+F6 - Inspector Anchor Point Y Increase
-#!F7:: ;Win+Alt+F7 - Inspector Anchor Point Y Reduce
-#!F8:: ;Win+Alt+F8 - Inspector Pitch Increase
-#!F9:: ;Win+Alt+F9 - Inspector Pitch Reduce
-#!F10:: ;Win+Alt+F10 - Inspector Yaw Increase
-#!F11:: ;Win+Alt+F11 - Inspector Yaw Reduce
-#!F12:: ;Win+Alt+F12 - Reset All Basic Transform
+#!F5:: ;Alt+Win+F5 - Inspector Anchor Point X Reduce
+#!F6:: ;Alt+Win+F6 - Inspector Anchor Point Y Increase
+#!F7:: ;Alt+Win+F7 - Inspector Anchor Point Y Reduce
+#!F8:: ;Alt+Win+F8 - Inspector Pitch Increase
+#!F9:: ;Alt+Win+F9 - Inspector Pitch Reduce
+#!F10:: ;Alt+Win+F10 - Inspector Yaw Increase
+#!F11:: ;Alt+Win+F11 - Inspector Yaw Reduce
+#!F12:: ;Alt+Win+F12 - Reset All Basic Transform
 
-;Ctrl+Alt+Shift
-^!+a:: ;Ctrl+Alt+Shift+a - Primaries Wheels Panel
-^!+b:: ;Ctrl+Alt+Shift+b - Primaries Bars Panel
-^!+c:: ;Ctrl+Alt+Shift+c - Log Wheels Panel
-^!+d:: ;Ctrl+Alt+Shift+d - Reset Inspector Zoom 
-^!+e:: ;Ctrl+Alt+Shift+e - Increase Pivot Big Steps
-^!+f:: ;Ctrl+Alt+Shift+f - Gain Red Up
-^!+g:: ;Ctrl+Alt+Shift+g - Gain Red Down
-^!+h:: ;Ctrl+Alt+Shift+h - Gain Green Up
-^!+i:: ;Ctrl+Alt+Shift+i - Gain Green Down
-^!+j:: ;Ctrl+Alt+Shift+j - Gain Blue Up
-^!+k:: ;Ctrl+Alt+Shift+k - Gain Blue Down
-^!+l:: ;Ctrl+Alt+Shift+l - Reduce Pivot Big Steps
-^!+m:: ;Ctrl+Alt+Shift+m - Reset Inspector Position 
-^!+n:: ;Ctrl+Alt+Shift+n - Reset Inspector Rotation Angle
-^!+o:: ;Ctrl+Alt+Shift+o - Increase Lum Mix Big Steps
-^!+p:: ;Ctrl+Alt+Shift+p - Reduce Lum Mix Big Steps
-^!+q:: ;Ctrl+Alt+Shift+q - Increase Contrast Big Steps
+;Ctrl+Shift+Alt
+^!+a:: ;Ctrl+Shift+Alt+a
+^!+b:: ;Ctrl+Shift+Alt+b
+^!+c:: ;Ctrl+Shift+Alt+c
+^!+d:: ;Ctrl+Shift+Alt+d - Reset Inspector Zoom 
+^!+e:: ;Ctrl+Shift+Alt+e - Increase Pivot Big Steps
+^!+f:: ;Ctrl+Shift+Alt+f - Gain Red Up
+^!+g:: ;Ctrl+Shift+Alt+g - Gain Red Down
+^!+h:: ;Ctrl+Shift+Alt+h - Gain Green Up
+^!+i:: ;Ctrl+Shift+Alt+i - Gain Green Down
+^!+j:: ;Ctrl+Shift+Alt+j - Gain Blue Up
+^!+k:: ;Ctrl+Shift+Alt+k - Gain Blue Down
+^!+l:: ;Ctrl+Shift+Alt+l - Reduce Pivot Big Steps
+^!+m:: ;Ctrl+Shift+Alt+m - Reset Inspector Position 
+^!+n:: ;Ctrl+Shift+Alt+n - Reset Inspector Rotation Angle
+^!+o:: ;Ctrl+Shift+Alt+o - Increase Lum Mix Big Steps
+^!+p:: ;Ctrl+Shift+Alt+p - Reduce Lum Mix Big Steps
+^!+q:: ;Ctrl+Shift+Alt+q - Increase Contrast Big Steps
 ^!+r:: ;DAVINCI SHORTCUT EDITED - Open/Close Retime Curves
-^!+s:: ;Ctrl+Alt+Shift+s - Reset Inspector Anchor Point
-^!+t:: ;Ctrl+Alt+Shift+t - Increase Saturation Big Steps
-^!+u:: ;Ctrl+Alt+Shift+u - Reset Inspector Pitch
-^!+v:: ;Ctrl+Alt+Shift+v - Reset Inspector Yaw
-^!+w:: ;Ctrl+Alt+Shift+w - Reduce Contrast Big Steps
-^!+x:: ;Ctrl+Alt+Shift+x - Reset Inspector Flip
-^!+y:: ;Ctrl+Alt+Shift+y - Reduce Saturation Big Steps
-^!+z:: ;Ctrl+Alt+Shift+z - Reset Inspector Opacity
-^!+Insert:: ;Ctrl+Alt+Shift+Insert - Reset Lift/Shadows
-^!+Delete:: ;Ctrl+Alt+Shift+Delete - Reset Gamma/Midtones
-^!+Home:: ;Ctrl+Alt+Shift+Home - Reset Gain/Highlights
-^!+End:: ;Ctrl+Alt+Shift+End - Reset Offset
-^!+PgUp:: ;DAVINCI SHORTCUT EDITED - Delete Start to Playhead
-^!+PgDn:: ;DAVINCI SHORTCUT EDITED - Delete End to Playhead
-^!+Backspace:: ;Ctrl+Alt+Shift+Backspace - Inspector Link/Unlink Zoom
-^!+F1:: ;Ctrl+Alt+Shift+F1 - Lift/Shadows TrackBall
-^!+F2:: ;Ctrl+Alt+Shift+F2 - Gamma/Midtones TrackBall
-^!+F3:: ;Ctrl+Alt+Shift+F3 - Gain/Highlights TrackBall
-^!+F4:: ;Ctrl+Alt+Shift+F4 - Offset TrackBall
-^!+F5:: ;Ctrl+Alt+Shift+F5 - Luma Lift Down
-^!+F6:: ;Ctrl+Alt+Shift+F6 - Luma Lift Up
-^!+F7:: ;Ctrl+Alt+Shift+F7 - Luma Gamma Down
-^!+F8:: ;Ctrl+Alt+Shift+F8 - Luma Gamma Up
-^!+F9:: ;Ctrl+Alt+Shift+F9 - Luma Gain Down
-^!+F10:: ;Ctrl+Alt+Shift+F10 - Luma Gain Up
-^!+F11:: ;Ctrl+Alt+Shift+F11 - Inspector Flip Horizontal
-^!+F12:: ;Ctrl+Alt+Shift+F12 - Inspector Flip Vertical
-^!+1:: ;Ctrl+Alt+Shift+1 - Lift Wheel Up
-^!+2:: ;Ctrl+Alt+Shift+2 - Lift Wheel Down
-^!+3:: ;Ctrl+Alt+Shift+3 - Gamma Wheel Up
-^!+4:: ;Ctrl+Alt+Shift+4 - Gamma Wheel Down
-^!+5:: ;Ctrl+Alt+Shift+5 - Gain Wheel Up
-^!+6:: ;Ctrl+Alt+Shift+6 - Gain Wheel Down
-^!+7:: ;Ctrl+Alt+Shift+7 - Offset Wheel Up
-^!+8:: ;Ctrl+Alt+Shift+8 - Offset Wheel Down
-^!+9::
-^!+0::
+^!+s:: ;Ctrl+Shift+Alt+s - Reset Inspector Anchor Point
+^!+t:: ;Ctrl+Shift+Alt+t - Increase Saturation Big Steps
+^!+u:: ;Ctrl+Shift+Alt+u - Reset Inspector Pitch
+^!+v:: ;Ctrl+Shift+Alt+v - Reset Inspector Yaw
+^!+w:: ;Ctrl+Shift+Alt+w - Reduce Contrast Big Steps
+^!+x:: ;Ctrl+Shift+Alt+x - Reset Inspector Flip
+^!+y:: ;Ctrl+Shift+Alt+y - Reduce Saturation Big Steps
+^!+z:: ;Ctrl+Shift+Alt+z - Reset Inspector Opacity
+^!+Insert:: ;Ctrl+Shift+Alt+Insert - Reset Lift/Shadows
+^!+Delete:: ;Ctrl+Shift+Alt+Delete - Reset Gamma/Midtones
+^!+Home:: ;Ctrl+Shift+Alt+Home - Reset Gain/Highlights
+^!+End:: ;Ctrl+Shift+Alt+End - Reset Offset
+^!+PgUp:: ;Ctrl+Shift+Alt+PgUp - Reset All Primary
+^!+PgDn:: ;Ctrl+Shift+Alt+PgDn - Reset All Log
+^!+Backspace:: ;Ctrl+Shift+Alt+Backspace - Inspector Link/Unlink Zoom
+^!+F1:: ;Ctrl+Shift+Alt+F1 - Lift/Shadows TrackBall
+^!+F2:: ;Ctrl+Shift+Alt+F2 - Gamma/Midtones TrackBall
+^!+F3:: ;Ctrl+Shift+Alt+F3 - Gain/Highlights TrackBall
+^!+F4:: ;Ctrl+Shift+Alt+F4 - Offset TrackBall
+^!+F5:: ;Ctrl+Shift+Alt+F5 - Luma Lift Down
+^!+F6:: ;Ctrl+Shift+Alt+F6 - Luma Lift Up
+^!+F7:: ;Ctrl+Shift+Alt+F7 - Luma Gamma Down
+^!+F8:: ;Ctrl+Shift+Alt+F8 - Luma Gamma Up
+^!+F9:: ;Ctrl+Shift+Alt+F9 - Luma Gain Down
+^!+F10:: ;Ctrl+Shift+Alt+F10 - Luma Gain Up
+^!+F11:: ;Ctrl+Shift+Alt+F11 - Inspector Flip Horizontal
+^!+F12:: ;Ctrl+Shift+Alt+F12 - Inspector Flip Vertical
+^!+1:: ;Ctrl+Shift+Alt+1 - Lift Wheel Up
+^!+2:: ;Ctrl+Shift+Alt+2 - Lift Wheel Down
+^!+3:: ;Ctrl+Shift+Alt+3 - Gamma Wheel Up
+^!+4:: ;Ctrl+Shift+Alt+4 - Gamma Wheel Down
+^!+5:: ;Ctrl+Shift+Alt+5 - Gain Wheel Up
+^!+6:: ;Ctrl+Shift+Alt+6 - Gain Wheel Down
+^!+7:: ;Ctrl+Shift+Alt+7 - Offset Wheel Up
+^!+8:: ;Ctrl+Shift+Alt+8 - Offset Wheel Down
+^!+9:: 
+^!+0:: 
 ^!+-:: ;DAVINCI RESERVED
 ^!+=:: ;DAVINCI RESERVED
+
+;Ctrl+Shift+Win
+#^+a:: ;Ctrl+Shift+Win+a - Increase MD Big Steps
+#^+b:: ;Ctrl+Shift+Win+b - Reset Shad
+#^+c:: ;Ctrl+Shift+Win+c - Increase Shad Small Steps
+#^+d:: ;Ctrl+Shift+Win+d - Increase MD Small Steps
+#^+e:: ;Ctrl+Shift+Win+e - Increase Temperature Small Steps
+#^+f:: ;Ctrl+Shift+Win+f - Reduce MD Small Steps
+#^+g:: ;Ctrl+Shift+Win+g - Reset MD
+#^+h:: ;Ctrl+Shift+Win+h - Increase Cool Boost Big Steps
+#^+i:: ;Ctrl+Shift+Win+i - Increase tint Small Steps
+#^+j:: ;Ctrl+Shift+Win+j - Reduce Cool Boost Big Steps
+#^+k:: ;Ctrl+Shift+Win+k - Increase Cool Boost Small Steps
+#^+l:: ;Ctrl+Shift+Win+l - Reduce Cool Boost Small Steps
+#^+m:: ;Ctrl+Shift+Win+m - Reduce HL Big Steps
+#^+n:: ;Ctrl+Shift+Win+n - Increase HL Big Steps
+#^+o:: ;Ctrl+Shift+Win+o - Reduce tint Small Steps
+#^+p:: ;Ctrl+Shift+Win+p - Reset tint
+#^+q:: ;Ctrl+Shift+Win+q - Increase Temperature Big Steps
+#^+r:: ;Ctrl+Shift+Win+r - Reduce Temperature Small Steps
+#^+s:: ;Ctrl+Shift+Win+s - Reduce MD Big Steps
+#^+t:: ;Ctrl+Shift+Win+t - Reset Temperature
+#^+u:: ;Ctrl+Shift+Win+u - Reduce tint Big Steps
+#^+v:: ;Ctrl+Shift+Win+v - Reduce Shad Small Steps
+#^+w:: ;Ctrl+Shift+Win+w - Reduce Temperature Big Steps
+#^+x:: ;Ctrl+Shift+Win+x - Reduce Shad Big Steps
+#^+y:: ;Ctrl+Shift+Win+y - Increase Tint Big Steps
+#^+z:: ;Ctrl+Shift+Win+z - Increase Shad Big Steps
+#^+,:: ;Ctrl+Shift+Win+, - Increase HL Small Steps
+#^+.:: ;Ctrl+Shift+Win+. - Reduce HL Small Steps
 
 ;Ctrl+Alt+Win
 ^!#a:: ;Ctrl+Alt+Win+a - PW Size Increase
@@ -561,59 +592,59 @@ NumpadEnter:: ;DONT WORK
 !#+-::  ;Shift+Alt+Win+- - Reset All Blur Panel
 !#+=::
 
-;FORGET USE THESE SHORTCUTS - THE COMBINATION "Win+Ctrl+Alt+Shift" IS USED BY WINDOWS TO CALL OFFICE AND MAKES EVERYTHING IMPOSSIBLE
-;Win+Ctrl+Alt+Shift
+;FORGET USE THESE SHORTCUTS - THE COMBINATION "Win+Ctrl+Shift+Alt" IS USED BY WINDOWS TO CALL OFFICE AND MAKES EVERYTHING IMPOSSIBLE
+;Ctrl+Shift+Alt+Win
 #^!+:
-#^!+a:: ;Win+Ctrl+Alt+Shift+a
-#^!+b:: ;Win+Ctrl+Alt+Shift+b
-#^!+c:: ;Win+Ctrl+Alt+Shift+c
-#^!+d:: ;Win+Ctrl+Alt+Shift+d
-#^!+e:: ;Win+Ctrl+Alt+Shift+e
-#^!+f:: ;Win+Ctrl+Alt+Shift+f
-#^!+g:: ;Win+Ctrl+Alt+Shift+g
-#^!+h:: ;Win+Ctrl+Alt+Shift+J
-#^!+i:: ;Win+Ctrl+Alt+Shift+i
-#^!+j:: ;Win+Ctrl+Alt+Shift+j
-#^!+k:: ;Win+Ctrl+Alt+Shift+k
+#^!+a:: ;Ctrl+Shift+Alt+Win+a
+#^!+b:: ;Ctrl+Shift+Alt+Win+b
+#^!+c:: ;Ctrl+Shift+Alt+Win+c
+#^!+d:: ;Ctrl+Shift+Alt+Win+d
+#^!+e:: ;Ctrl+Shift+Alt+Win+e
+#^!+f:: ;Ctrl+Shift+Alt+Win+f
+#^!+g:: ;Ctrl+Shift+Alt+Win+g
+#^!+h:: ;Ctrl+Shift+Alt+Win+J
+#^!+i:: ;Ctrl+Shift+Alt+Win+i
+#^!+j:: ;Ctrl+Shift+Alt+Win+j
+#^!+k:: ;Ctrl+Shift+Alt+Win+k
 #^!+l:: 
-#^!+m:: ;Win+Ctrl+Alt+Shift+m
-#^!+n:: ;Win+Ctrl+Alt+Shift+n
-#^!+o:: ;Win+Ctrl+Alt+Shift+o
-#^!+p:: ;Win+Ctrl+Alt+Shift+p
-#^!+q:: ;Win+Ctrl+Alt+Shift+q
-#^!+r:: ;Win+Ctrl+Alt+Shift+r
-#^!+s:: ;Win+Ctrl+Alt+Shift+s
-#^!+t:: ;Win+Ctrl+Alt+Shift+t
-#^!+u:: ;Win+Ctrl+Alt+Shift+u
+#^!+m:: ;Ctrl+Shift+Alt+Win+m
+#^!+n:: ;Ctrl+Shift+Alt+Win+n
+#^!+o:: ;Ctrl+Shift+Alt+Win+o
+#^!+p:: ;Ctrl+Shift+Alt+Win+p
+#^!+q:: ;Ctrl+Shift+Alt+Win+q
+#^!+r:: ;Ctrl+Shift+Alt+Win+r
+#^!+s:: ;Ctrl+Shift+Alt+Win+s
+#^!+t:: ;Ctrl+Shift+Alt+Win+t
+#^!+u:: ;Ctrl+Shift+Alt+Win+u
 #^!+v:: 
-#^!+w:: ;Win+Ctrl+Alt+Shift+w
+#^!+w:: ;Ctrl+Shift+Alt+Win+w
 #^!+x::
 #^!+y:: ;WINDOWS RESERVED
-#^!+z:: ;Win+Ctrl+Alt+Shift+z
-#^!+Insert:: ;Win+Ctrl+Alt+Shift+Insert
-#^!+Home:: ;Win+Ctrl+Alt+Shift+Home
-#^!+PgUp:: ;Win+Ctrl+Alt+Shift+PgUp
-#^!+Delete:: ;Win+Ctrl+Alt+Shift+Delete
-#^!+End:: ;Win+Ctrl+Alt+Shift+End
-#^!+PgDn:: ;Win+Ctrl+Alt+Shift+PgDn
-#^!+F1:: ;Win+Ctrl+Alt+Shift+F1
-#^!+F2:: ;Win+Ctrl+Alt+Shift+F2
-#^!+F3:: ;Win+Ctrl+Alt+Shift+F3
-#^!+F4:: ;Win+Ctrl+Alt+Shift+F4
-#^!+F5:: ;Win+Ctrl+Alt+Shift+F5
-#^!+F6:: ;Win+Ctrl+Alt+Shift+F6
-#^!+F7:: ;Win+Ctrl+Alt+Shift+F7
-#^!+F8:: ;Win+Ctrl+Alt+Shift+F8
-#^!+F9:: ;Win+Ctrl+Alt+Shift+F9
-#^!+F10:: ;Win+Ctrl+Alt+Shift+F10
-#^!+F11:: ;Win+Ctrl+Alt+Shift+F11
-#^!+F12:: ;Win+Ctrl+Alt+Shift+F12
-#^!+1:: ;Win+Ctrl+Alt+Shift+1
-#^!+2:: ;Win+Ctrl+Alt+Shift+2
-#^!+3:: ;Win+Ctrl+Alt+Shift+3
-#^!+4:: ;Win+Ctrl+Alt+Shift+4
-#^!+5:: ;Win+Ctrl+Alt+Shift+5
-#^!+6:: ;Win+Ctrl+Alt+Shift+6
+#^!+z:: ;Ctrl+Shift+Alt+Win+z
+#^!+Insert:: ;Ctrl+Shift+Alt+Win+Insert
+#^!+Home:: ;Ctrl+Shift+Alt+Win+Home
+#^!+PgUp:: ;Ctrl+Shift+Alt+Win+PgUp
+#^!+Delete:: ;Ctrl+Shift+Alt+Win+Delete
+#^!+End:: ;Ctrl+Shift+Alt+Win+End
+#^!+PgDn:: ;Ctrl+Shift+Alt+Win+PgDn
+#^!+F1:: ;Ctrl+Shift+Alt+Win+F1
+#^!+F2:: ;Ctrl+Shift+Alt+Win+F2
+#^!+F3:: ;Ctrl+Shift+Alt+Win+F3
+#^!+F4:: ;Ctrl+Shift+Alt+Win+F4
+#^!+F5:: ;Ctrl+Shift+Alt+Win+F5
+#^!+F6:: ;Ctrl+Shift+Alt+Win+F6
+#^!+F7:: ;Ctrl+Shift+Alt+Win+F7
+#^!+F8:: ;Ctrl+Shift+Alt+Win+F8
+#^!+F9:: ;Ctrl+Shift+Alt+Win+F9
+#^!+F10:: ;Ctrl+Shift+Alt+Win+F10
+#^!+F11:: ;Ctrl+Shift+Alt+Win+F11
+#^!+F12:: ;Ctrl+Shift+Alt+Win+F12
+#^!+1:: ;Ctrl+Shift+Alt+Win+1
+#^!+2:: ;Ctrl+Shift+Alt+Win+2
+#^!+3:: ;Ctrl+Shift+Alt+Win+3
+#^!+4:: ;Ctrl+Shift+Alt+Win+4
+#^!+5:: ;Ctrl+Shift+Alt+Win+5
+#^!+6:: ;Ctrl+Shift+Alt+Win+6
 #^!+7::
 #^!+8::
 #^!+9::

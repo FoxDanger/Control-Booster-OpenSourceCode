@@ -13,7 +13,9 @@ Version: 2.1.8
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
 Please donate if you liked the project! - Por favor faça uma doação se você gostou deste projeto!
+
 For Dollar Donation: https://www.paypal.com/donate?token=W-GPZQGsQgvQnAsrB-7hstJD9_dl5SY36Dp2o94jVcxDhPKr37jv4BRCDAWXfxxZ4ChxTkmpRbvTnYN9
+
 Para doações em Real: https://www.paypal.com/donate?token=sWmyMjVydvUof2GcR24qNrzSQQMveaM-QTJsTj3H4UF1Y5MmYvnVs9VFVFHqMlMhIlz1x9ISrQnWq0Fl
 
 Updates of 2.1.8 version:
@@ -127,66 +129,70 @@ Updates of 2.0 version:
 - Added support to be used with 2 or more screens setup.
 
 Tips about Tangent Wave Booster:
-1 - When setting a knob intensity on Tangent Mapper, use for the OSC Value format the option Interger and the knob sensitivity at Coarse. For the Min and Max values, use 0 to 5 if you want not too fast repeating. 0 to 6 for a little more. 0 to 10 and 0 to 50 will give you a fast response with a more sensible knob so only use this for things that doesn't matter repeat the same command more than one time. Example: For select all clips, you can repeat the command because doesn't matter, will select all and that's it. So you can use 0 to 50 because will give you a sensible and fast response. Although for delete you don't wanna the delete being pressed a lot of times in a row, so use 0 to 5.
+- 1 - When setting a knob intensity on Tangent Mapper, use for the OSC Value format the option Interger and the knob sensitivity at Coarse. For the Min and Max values, use 0 to 5 if you want not too fast repeating. 0 to 6 for a little more. 0 to 10 and 0 to 50 will give you a fast response with a more sensible knob so only use this for things that doesn't matter repeat the same command more than one time. Example: For select all clips, you can repeat the command because doesn't matter, will select all and that's it. So you can use 0 to 50 because will give you a sensible and fast response. Although for delete you don't wanna the delete being pressed a lot of times in a row, so use 0 to 5.
 
-2 - When creating a new resolution/dpi scale setup, you have to create the hashs for the dots on curves panels. For this use the FindText class, run it using AHK than:
-2.1 - Open the custom_curves_hash.ini and create a new field with the same name of your resolution/dpi Scale scheme (just copy/paste one that is already in the document and change the name of the resolution inside the []) - Before you continue, check if it's working for your resolution tha same hashs that already exist in the file, you can try copy different resolutions and see if one of them already work for your resolution. If not, than proceed to create your own hashes;
-2.2 - For each type of dot, you have one hash. One for the Dot in ALL/Y modes, one for any dot selected, one for the dot in each color mode RGB. Total of 5 hashs for each resolution. You have to create one of each for your new resolution/dpi scale scheme;
-2.3 - To create each hash, start running the class FindText.ahk;
-2.4 - Click on capture;
-2.5 - Select the dot on the screen (inside the red/blue rectagle);
-2.6 - On the captured image, cut the edges to keep just the dot;
-2.7 - Use COLOR mode to select the gray part of the dot;
-2.8 - Click on the center of the dot image to select the color;
-2.9 - Click on COLOR2TWO Button;
-2.10 - Click on Ok Button;
-2.11 - Copy the on TEXT propertie to the custom_curves_hashs.ini respective hash place;
-2.12 - Repeat the process from 2.4 to 2.11 for each type of dot.
+- 2 - When creating a new resolution/dpi scale setup, you have to create the hashs for the dots on curves panels. For this use the FindText class, run it using AHK than:
+- 2.1 - Open the custom_curves_hash.ini and create a new field with the same name of your resolution/dpi Scale scheme (just copy/paste one that is already in the document and change the name of the resolution inside the []) - Before you continue, check if it's working for your resolution tha same hashs that already exist in the file, you can try copy different resolutions and see if one of them already work for your resolution. If not, than proceed to create your own hashes;
+- 2.2 - For each type of dot, you have one hash. One for the Dot in ALL/Y modes, one for any dot selected, one for the dot in each color mode RGB. Total of 5 hashs for each resolution. You have to create one of each for your new resolution/dpi scale scheme;
+- 2.3 - To create each hash, start running the class FindText.ahk;
+- 2.4 - Click on capture;
+- 2.5 - Select the dot on the screen (inside the red/blue rectagle);
+- 2.6 - On the captured image, cut the edges to keep just the dot;
+- 2.7 - Use COLOR mode to select the gray part of the dot;
+- 2.8 - Click on the center of the dot image to select the color;
+- 2.9 - Click on COLOR2TWO Button;
+- 2.10 - Click on Ok Button;
+- 2.11 - Copy the on TEXT propertie to the custom_curves_hashs.ini respective hash place;
+- 2.12 - Repeat the process from 2.4 to 2.11 for each type of dot.
 
 3 - When creating a new position variable, remember to add it on res_dpi_scale_variables.ini file too.
 
 Non-default Davinci Resolve shortcuts used (you need assign these shortcuts on your Davinci - You can use the Davinci Resolve Shortcut Map that comes with TWB):
-Shift+F1 - Active Playhead A
-Shift+F2 - Active Playhead B
-Shift+F3 - Active Playhead C
-Shift+F4 - Active Playhead D
-Shift+F5 - Reset Playheads
-Shift+F7 - Ripple Node Changes to Selected Clips
-Ctrl + F1 - Reset UI Layout
-Ctrl + F2 - Full Screen Window
-Shift + Y - Next Node
-Shift + U - Previous Node
-Ctrl + Alt + Q - Turn on/off Printer Lights (replace the original shortcut Ctrl + Alt + `)
-Ctrl + Alt + Numpad 4 - Half Printer Light Red -
-Ctrl + Alt + Numpad 7 - Half Printer Light Red +
-Ctrl + Alt + Numpad 5 - Half Printer Light Green -
-Ctrl + Alt + Numpad 8 - Half Printer Light Green +
-Ctrl + Alt + Numpad 6 - Half Printer Light Blue -
-Ctrl + Alt + Numpad 9 - Half Printer Light Blue +
-Ctrl + Alt + Numpad Sub - Half Printer Light Magenta -
-Ctrl + Alt + Numpad 1 - Half Printer Light Magenta +
-Ctrl + Alt + Numpad Mult - Half Printer Light Yellow -
-Ctrl + Alt + Numpad 3 - Half Printer Light Yellow +
-Ctrl + Alt + Numpad Enter - Half Printer Light Master -
-Ctrl + Alt + Numpad Add - Half Printer Light Master +
-Ctrl + H - Apply Grade
+
+- Shift+F1 - Active Playhead A
+- Shift+F2 - Active Playhead B
+- Shift+F3 - Active Playhead C
+- Shift+F4 - Active Playhead D
+- Shift+F5 - Reset Playheads
+- Shift+F7 - Ripple Node Changes to Selected Clips
+- Ctrl + F1 - Reset UI Layout
+- Ctrl + F2 - Full Screen Window
+- Shift + Y - Next Node
+- Shift + U - Previous Node
+- Ctrl + Alt + Q - Turn on/off Printer Lights (replace the original shortcut Ctrl + Alt + `)
+- Ctrl + Alt + Numpad 4 - Half Printer Light Red -
+- Ctrl + Alt + Numpad 7 - Half Printer Light Red +
+- Ctrl + Alt + Numpad 5 - Half Printer Light Green -
+- Ctrl + Alt + Numpad 8 - Half Printer Light Green +
+- Ctrl + Alt + Numpad 6 - Half Printer Light Blue -
+- Ctrl + Alt + Numpad 9 - Half Printer Light Blue +
+- Ctrl + Alt + Numpad Sub - Half Printer Light Magenta -
+- Ctrl + Alt + Numpad 1 - Half Printer Light Magenta +
+- Ctrl + Alt + Numpad Mult - Half Printer Light Yellow -
+- Ctrl + Alt + Numpad 3 - Half Printer Light Yellow +
+- Ctrl + Alt + Numpad Enter - Half Printer Light Master -
+- Ctrl + Alt + Numpad Add - Half Printer Light Master +
+- Ctrl + H - Apply Grade
 
 Special Thanks:
-To Tangent for create this amazing panel!
-To Andy Knox because he knows <3
-To all the guys that developed AHK and made my software possible.
-To Ludwig Frühschütz for the incredible OSC2AHK that allows the OSC communication between my software and Tangent Mapper (and other softwares with OSC Support).
-To FeiYue for the amazing class FindText that allows my software to find images on the screen and made possible the use of the tools on Custom Curves panel.
-To my wife and family (cliché but is obvious that I can't do nothing without them)
-To some people from AHK Forum and Facebook group that helped me with some questions that I had when I was learning the language and with some help for the software:
-boiler (AHK Forum)
-mikeyww (AHK Forum)
-Ben Sacherich (AHK Facebook)
-Daniel Oxner (AHK Facebook)
-Jon Rees (AHK Facebook)
-To all donators!
-Gq Lewis
-Ultra Mobile LLC
-Trevor Wright
-Ernest Savage
-Maira Rocha Tavares
+
+- To Tangent for create this amazing panel!
+- To Andy Knox because he knows <3
+- To all the guys that developed AHK and made my software possible.
+- To Ludwig Frühschütz for the incredible OSC2AHK that allows the OSC communication between my software and Tangent Mapper (and other softwares with OSC Support).
+- To FeiYue for the amazing class FindText that allows my software to find images on the screen and made possible the use of the tools on Custom Curves panel.
+- To my wife and family (cliché but is obvious that I can't do nothing without them)
+- To some people from AHK Forum and Facebook group that helped me with some questions that I had when I was learning the language and with some help for the software:
+
+- boiler (AHK Forum)
+- mikeyww (AHK Forum)
+- Ben Sacherich (AHK Facebook)
+- Daniel Oxner (AHK Facebook)
+- Jon Rees (AHK Facebook)
+- To all donators!
+- Gq Lewis
+- Ultra Mobile LLC
+- Trevor Wright
+- Ernest Savage
+- Maira Rocha Tavares
+- Javier Perez

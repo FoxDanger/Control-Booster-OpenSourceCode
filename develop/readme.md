@@ -13,6 +13,7 @@ Version: 2.1.8
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
 Please donate if you liked the project! - Por favor faça uma doação se você gostou deste projeto!
+
 For Dollar Donation: https://www.paypal.com/donate?token=W-GPZQGsQgvQnAsrB-7hstJD9_dl5SY36Dp2o94jVcxDhPKr37jv4BRCDAWXfxxZ4ChxTkmpRbvTnYN9
 
 Para doações em Real: https://www.paypal.com/donate?token=sWmyMjVydvUof2GcR24qNrzSQQMveaM-QTJsTj3H4UF1Y5MmYvnVs9VFVFHqMlMhIlz1x9ISrQnWq0Fl

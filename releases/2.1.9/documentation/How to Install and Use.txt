@@ -1,5 +1,7 @@
 This is a step-by-step about how to install and make Tangent Wave Booster work.
 
+You can find a video tutorial about this step-by-step on our website: https://souandrerodrigues.com.br/twb
+
 1 - First of all! Turn off the connection between Davinci Resolve and Tangent Panel!
 Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Panel->Select this panel for grading - Select "NONE".
 
@@ -37,7 +39,11 @@ Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Pa
 
 18 - Click on "Save" button.
 
-19 - You're ready to go! Every time you want to work with your panel, just run TWB 2, click at the "OK" Button when you receive the message: "TWB 2 is ready to be used", run the Tangent Wave Mapper (or your other mapper software) and that's it! Open Davinci Resolve and be happy!
+19 - On TWB 2, select the resolution/dpi scale that you're using on your computer.
+
+20 - You're ready to go! Every time you want to work with your panel, just run TWB 2, click at the "OK" Button when you receive the message: "TWB 2 is ready to be used", run the Tangent Wave Mapper (or your other mapper software) and that's it! Open Davinci Resolve and be happy!
+
+TIP: You can press Alt + F9 on the Tangent Panel (or whatever button you setup with the function /startStop) to pause or restart TWB 2. So you can go to other windows outside Davinci without the misstype some key or control on your panel.
 
 IMPORTANT 1: TWB 2 has some native resolutions and scaling configurations, so if you're using a different resolution or scaling, or if you want to customize your Davinci layout, you have to setup the positions of the elements on the screen. There's a very detailed video about how to do this on our website.
 

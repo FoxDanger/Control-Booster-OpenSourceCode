@@ -1486,70 +1486,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -1602,8 +1602,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -1613,8 +1613,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -1624,8 +1624,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -2371,70 +2371,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -2487,8 +2487,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -2498,8 +2498,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -2509,8 +2509,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -2690,11 +2690,11 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/homeEnd</CustomControl>
-                                <CustomName>Home/End</CustomName>
+                                <CustomControl>/trimMode</CustomControl>
+                                <CustomName>Trim/Dynamic</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for sensitivity processing only) -->
-                                <Value2>50.000000</Value2> <!-- Maximum -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -2711,7 +2711,7 @@
                             <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/selectFwBwActiveTrack</CustomControl>
-                                <CustomName>S. Fw/Bw Track</CustomName>
+                                <CustomName>S.Fw/Bw T.</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for sensitivity processing only) -->
                                 <Value2>50.000000</Value2> <!-- Maximum -->
@@ -2726,15 +2726,6 @@
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for sensitivity processing only) -->
                                 <Value2>50.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/trimMode</CustomControl>
-                                <CustomName>Trim/Dynamic</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for sensitivity processing only) -->
-                                <Value2>10.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -2806,6 +2797,17 @@
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for sensitivity processing only) -->
                                 <Value2>6.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7"> <!-- Wave Knob 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/homeEnd</CustomControl>
+                                <CustomName>Home/End</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for sensitivity processing only) -->
+                                <Value2>50.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -3064,70 +3066,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3180,8 +3182,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3191,8 +3193,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3202,8 +3204,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3609,70 +3611,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3725,8 +3727,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3736,8 +3738,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -3747,8 +3749,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -4256,70 +4258,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -4372,8 +4374,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -4383,8 +4385,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -4394,8 +4396,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5103,70 +5105,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5219,8 +5221,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5230,8 +5232,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5241,8 +5243,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5854,70 +5856,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5970,8 +5972,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5981,8 +5983,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -5992,8 +5994,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6447,70 +6449,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6563,8 +6565,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6574,8 +6576,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6585,8 +6587,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6804,70 +6806,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6920,8 +6922,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6931,8 +6933,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6942,8 +6944,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -7427,70 +7429,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -7543,8 +7545,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -7554,8 +7556,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -7565,8 +7567,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8007,70 +8009,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8123,8 +8125,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8134,8 +8136,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8145,8 +8147,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8507,70 +8509,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8623,8 +8625,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8634,8 +8636,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8645,8 +8647,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -9446,70 +9448,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -9562,8 +9564,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -9573,8 +9575,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -9584,8 +9586,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10073,70 +10075,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10189,8 +10191,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10200,8 +10202,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10211,8 +10213,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10686,70 +10688,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10802,8 +10804,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10813,8 +10815,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10824,8 +10826,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11205,70 +11207,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11321,8 +11323,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11332,8 +11334,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11343,8 +11345,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11804,70 +11806,70 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/copy</CustomControl>
-                                <CustomName>Copy</CustomName>
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
+                                <CustomControl>/copy</CustomControl>
+                                <CustomName>Copy</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/paste</CustomControl>
-                                <CustomName>Paste</CustomName>
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
+                                <CustomControl>/paste</CustomControl>
+                                <CustomName>Paste</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/cut</CustomControl>
-                                <CustomName>Cut</CustomName>
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
+                                <CustomControl>/cut</CustomControl>
+                                <CustomName>Cut</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <CustomName>Bypass Color Grading</CustomName>
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <CustomName>Bypass Color Grading</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11920,8 +11922,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/startStop</CustomControl>
-                                <CustomName>Start/Stop TWB</CustomName>
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11931,8 +11933,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -11942,8 +11944,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleFullscreen</CustomControl>
-                                <CustomName>Full Screen</CustomName>
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>

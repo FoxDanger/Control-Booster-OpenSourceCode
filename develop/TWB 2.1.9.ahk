@@ -3,11 +3,19 @@
 ;Developer: André Rodrigues - Media Environment
 ;Website: https://souandrerodrigues.com.br/twb
 ;Contact: contato@souandrerodrigues.com.br
-;Version: 2.1.8
+;Version: 2.1.9
 ;You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 ;Please donate if you liked the project! - Por favor faça uma doação se você gostou deste projeto!
 ;For Dollar Donation: https://www.paypal.com/donate?token=W-GPZQGsQgvQnAsrB-7hstJD9_dl5SY36Dp2o94jVcxDhPKr37jv4BRCDAWXfxxZ4ChxTkmpRbvTnYN9
 ;Para doações em Real: https://www.paypal.com/donate?token=sWmyMjVydvUof2GcR24qNrzSQQMveaM-QTJsTj3H4UF1Y5MmYvnVs9VFVFHqMlMhIlz1x9ISrQnWq0Fl
+
+;Updates of 2.1.9 version:
+;- A bug that causes strange behavior on inspector window and wrong save state on windows_status.ini was noted and fixed.
+;- A bug where use some Matte Finesse didn't change correctly the panel to Qualifier and back for other panels was noted and fixed.
+;- Fixed an mistake where some positions was wrong in some resolutions.
+;- Fixed the problem where clicking on the first clip on media pool when open the media pool prevents you from navigate through clips. Now it clicks on a empty space on media pool and you can navigate through clips. The position variable for this was changed from pos_first_media_pool_clip to pos_media_pool_empty_space.
+;- Minor UX change on EDIT Mode mapping.
+;- Functions documentation created.
 
 ;Updates of 2.1.8 version:
 ;- Nodes menu transfered from dots to the actual menu.
@@ -265,7 +273,7 @@ Global _editPageWindowsStatus := []
 Global _actualPage := "EDIT"
 
 ;Set the actual mode. Can be: "CAMERA RAW", "COLOR CHECKER", "COLOR WHEELS", "HDR WHEELS", "RGB MIXER", "MOTION BLUR", "CURVES", "WARPER", "QUALIFIER", "POWER WINDOWS", "TRACKING", "MAGIC MASK", "BSM", "KEY", "SIZING", "3D"
-Global _actualMode := "COLOR WHEELS"
+Global _actualMode := "NONE"
 
 ;Set the actual panel. Can be: "NONE" (when u are in edit page), "HDR", "PRIMARIES", "BARS", "LOG", "CURVES", "HUEXHUE", "HUEXSAT", "HUEXLUM"
 Global _actualColorPanel := "NONE"
@@ -739,23 +747,23 @@ Gui Add, Button, g_set_variable_button vpos_qualifier_feather_substract x1440 y6
 Gui Add, Button, g_set_variable_button vpos_qualifier_feather_add x1440 y716 w150 h50, Qualifier Feather Add
 Gui Add, Button, g_set_variable_button vpos_qualifier_invert x1440 y780 w150 h50, Qualifier Invert
 Gui Add, Button, g_set_variable_button vpos_qualifier_hue_on_off x320 y464 w150 h50, Hue On/Off
-Gui Add, Button, g_set_variable_button vpos_qualifier_hue_center x480 y848 w150 h50, Hue Center
-Gui Add, Button, g_set_variable_button vpos_qualifier_hue_width x640 y848 w150 h50, Hue Width
-Gui Add, Button, g_set_variable_button vpos_qualifier_hue_soft x800 y848 w150 h50, Hue Soft
-Gui Add, Button, g_set_variable_button vpos_qualifier_hue_sym x960 y848 w150 h50, Hue Sym
-Gui Add, Button, g_set_variable_button vpos_qualifier_hue_reset x1120 y848 w150 h50, Hue Reset
-Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_on_off x320 y592 w150 h50, Saturation On/Off
-Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_low x480 y912 w150 h50, Saturation Low
-Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_high x640 y912 w150 h50, Saturation High
-Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_low_soft x800 y912 w150 h50, Saturation Low Soft
-Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_high_soft x960 y912 w150 h50, Saturation High Soft
-Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_reset x1120 y912 w150 h50, Saturation Reset
-Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_on_off x320 y712 w150 h50, Luminance On/Off
-Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_low x480 y976 w150 h50, Luminance Low
-Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_high x640 y976 w150 h50, Luminance High
-Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_low_soft x800 y976 w150 h50, Luminance Low Soft
-Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_high_soft x960 y976 w150 h50, Luminance High Soft
-Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_reset x1120 y976 w150 h50, Luminance Reset
+Gui Add, Button, g_set_variable_button vpos_qualifier_hue_center x480 y848 w150 h50, Hue Center/Red Low
+Gui Add, Button, g_set_variable_button vpos_qualifier_hue_width x640 y848 w150 h50, Hue Width/Red High
+Gui Add, Button, g_set_variable_button vpos_qualifier_hue_soft x800 y848 w150 h50, Hue Soft/Red Low Soft
+Gui Add, Button, g_set_variable_button vpos_qualifier_hue_sym x960 y848 w150 h50, Hue Sym/Red High Soft
+Gui Add, Button, g_set_variable_button vpos_qualifier_hue_reset x1120 y848 w150 h50, Hue/Red Reset
+Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_on_off x320 y592 w150 h50, Saturation/Green On/Off
+Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_low x480 y912 w150 h50, Saturation/Green Low
+Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_high x640 y912 w150 h50, Saturation/Green High
+Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_low_soft x800 y912 w150 h50, Saturation/Green Low Soft
+Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_high_soft x960 y912 w150 h50, Saturation/Green High Soft
+Gui Add, Button, g_set_variable_button vpos_qualifier_saturation_reset x1120 y912 w150 h50, Saturation/Green Reset
+Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_on_off x320 y712 w150 h50, Luminance/Blue On/Off
+Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_low x480 y976 w150 h50, Luminance/Blue Low
+Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_high x640 y976 w150 h50, Luminance/Blue High
+Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_low_soft x800 y976 w150 h50, Luminance/Blue Low Soft
+Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_high_soft x960 y976 w150 h50, Luminance/Blue High Soft
+Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_reset x1120 y976 w150 h50, Luminance/Blue Reset
 
 Gui Tab, 17
 Gui Add, Picture, x672 y320 w570 h400, %A_ScriptDir%\images\Qualifier Matte Finesse Panel.png
@@ -920,15 +928,15 @@ Gui Add, Button, g_set_variable_button vpos_scopes_low_pass_filter x1416 y736 w1
 
 Gui Tab, 23
 Gui Add, Picture, x40 y312 w950 h51, %A_ScriptDir%\images\Timeline Time Bar.png
-Gui Add, Picture, x40 y472 w529 h185, %A_ScriptDir%\images\First Clip Media Pool.png
+Gui Add, Picture, x40 y472 w529 h185, %A_ScriptDir%\images\Empty Space on Media Pool.png
 Gui Add, Picture, x1352 y312 w529 h185, %A_ScriptDir%\images\Color Page Thumbnails.png
 Gui Add, Button, g_set_variable_button vpos_timeline_time_bar x40 y250 w150 h50, Timeline Time Bar
-Gui Add, Button, g_set_variable_button vpos_first_media_pool_clip x40 y408 w150 h50, First Media Pool Clip
+Gui Add, Button, g_set_variable_button vpos_media_pool_empty_space x40 y408 w150 h50, Media Pool Empty Space
 Gui Add, Button, g_set_variable_button vpos_color_page_thumbnails x1352 y248 w150 h50, Color Page Thumbnails
 
 Gui Tab
 
-Gui Show, w1920 h1080, TWB 2.1.8
+Gui Show, w1920 h1080, TWB 2.1.9
 
 ; \/ APP START \/
 
@@ -4467,6 +4475,9 @@ LoadWindowsStatus(){
     
     ;Set a counter for the Array Position
     arrayPos := 1
+    
+    ;Reset Windows Status
+    _editPageWindowsStatus := []
     
     ;Loop through resolution/dps scale ini file to populate the arrays (_positionsArray1 and _positionsArray2)
     Loop, read, %A_ScriptDir%\windows_status.ini
@@ -10697,7 +10708,7 @@ _inspectorZoomY(oscType, data, msgID, hwnd){
 
 ;Knob - Increment, decrement or reset Inspector Zoom X - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
 _inspectorZoomX(oscType, data, msgID, hwnd){
-    if (_actualPage != "EDIT" OR GetWindow("pos_edit_top_bts_inspector").status == 0 OR GetWindow("pos_inspector_video").status != 1)
+    if (CheckIfEditInspector() == false)
     Return
     
     if (data == 0){
@@ -11224,9 +11235,11 @@ _cutAllTimelines(oscType, data, msgID, hwnd){
     Send ^{b}
 }
 
-;***** End of Edit Mode Functions *****
+;***** End of Edit Functions *****
 
-;***** Other DLL Call Functions *****
+;----- End of Edit Mode Functions -----
+
+;----- General Functions -----
 
 ;Button - Set mode to EDIT, go to Edit Page and open the Inspector
 _enterEditMode(oscType, data, msgID, hwnd){
@@ -11237,7 +11250,7 @@ _enterEditMode(oscType, data, msgID, hwnd){
 }
 
 GoToEditMode(force := False){
-    ChangePage("EDIT", "INSPECTOR", True)
+    ChangePage("EDIT", force)
 }
 
 ;Button - Set mode to EDIT and go to Edit Page and open the Inspector
@@ -11250,7 +11263,7 @@ _goToInspectorWindow(oscType, data, msgID, hwnd){
 
 OpenInspectorWindow(){
     if (_actualPage != "EDIT"){
-        ChangePage("EDIT", "INSPECTOR")
+        ChangePage("EDIT")
     }Else{
         ;Check if inspector is closed, if is closed it send command to open
         if (GetWindow("pos_edit_top_bts_inspector").status == 0){
@@ -11270,10 +11283,6 @@ _enterColorMode(oscType, data, msgID, hwnd){
 GoToColorMode(){
     ChangePage("COLOR")
 }
-
-;***** End of Other DLL Call Functions *****
-
-;***** All Modes Functions *****
 
 ;Turn on and off all the app
 _startStop(oscType, data, msgID, hwnd){
@@ -11376,7 +11385,6 @@ _cut(oscType, data, msgID, hwnd){
     Send ^{x}
 }
 
-
 ;Jog - Alternate Key + First Jog Wheel can be used to move the thumbnails to left and right in Color Page - Default Jog Sensitivity - Min. 0 - Max: 100 - Step: 1 - Coarse
 _colorPageScrollThumbnails(oscType, data, msgID, hwnd){
     ChangePage("COLOR")
@@ -11468,6 +11476,8 @@ _resetDefaultState(oscType, data, msgID, hwnd){
     Return
     
     FileCopy %A_ScriptDir%\default_ini_files\windows_status.ini, %A_ScriptDir%, 1
+
+    LoadWindowsStatus()
     
     Send ^{F1}
     Sleep 1000
@@ -11586,9 +11596,7 @@ _backspaceKey(oscType, data, msgID, hwnd){
     Send {Backspace}
 }
 
-;***** End of All Modes Functions *****
-
-;----- End of Edit Mode Functions -----
+;----- End of General Functions -----
 
 ;===== End of DLLCall functions =====
 
@@ -11647,7 +11655,7 @@ AutoReleaseControls(isWheels := false){
 }
 
 ;Change the page and you can pass a from parameter so it can call specific functions after change the page
-ChangePage(page, from := "NONE", force := False){
+ChangePage(page, force := False){
     Switch (page){
         Case "EDIT":
             if (_actualPage == "EDIT" and force == False)
@@ -11696,6 +11704,8 @@ ChangeMode(mode){
     if (_actualPage != "COLOR"){
         ChangePage("COLOR")
     }
+    
+    _actualMatteFinessePage := "NONE"
     
     if (_actualMode == mode)
     Return
@@ -11990,7 +12000,7 @@ OpenCloseWindow(buttonName, ifInspectorVideoOrAudio := 1){
         
         ;For media pool specficaly we move the mouse and click on the first clip of the library so you can start naviagation on it
         if (object.var == "pos_edit_top_bts_media_pool"){
-            MoveMouseAndClick("pos_first_media_pool_clip") 
+            MoveMouseAndClick("pos_media_pool_empty_space") 
         }
         
         ;For inspector it check if is using a Video (1) or Audio(0) tool
@@ -12058,11 +12068,9 @@ ChangeQualifierPanel(panel){
 ChangeMatteFinessePage(page){
     if (_actualMatteFinessePage == page)
     Return
-    
-    if (_actualMode != "QUALIFIER"){
-        ChangeMode("QUALIFIER")
-    }
 
+    CheckIfColorPanel("QUALIFIERHSL")
+    
     object := GetWindow("actual_matte_finess")
     
     _actualMatteFinessePage := page
@@ -12203,7 +12211,7 @@ CheckIfEditOrData0(data){
 ;Check if _actualPage is EDIT, if it is return false if safety is active (so it changes the page to edit but doesn't execute the command - for some cases you don't wanna execute command imediately to prevent change things on the project, like a cut in some place that you don't wanna cut for example) or return true instead (so change the page and execute the command), than open the inspector window if closed and open video or audio panel (based on videoOrAudio parameter)
 CheckIfEditInspector(videoOrAudio := 1){
     if (_actualPage != "EDIT"){
-        ChangePage("EDIT", "INSPECTOR")
+        ChangePage("EDIT")
         
         Return False
     }

@@ -8,7 +8,7 @@ Website: https://souandrerodrigues.com.br/twb
 
 Contact: contato@souandrerodrigues.com.br
 
-Version: 2.1.8
+Version: 2.1.9
 
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
@@ -17,6 +17,13 @@ Please donate if you liked the project! - Por favor faça uma doação se você 
 For Dollar Donation: https://www.paypal.com/donate?token=W-GPZQGsQgvQnAsrB-7hstJD9_dl5SY36Dp2o94jVcxDhPKr37jv4BRCDAWXfxxZ4ChxTkmpRbvTnYN9
 
 Para doações em Real: https://www.paypal.com/donate?token=sWmyMjVydvUof2GcR24qNrzSQQMveaM-QTJsTj3H4UF1Y5MmYvnVs9VFVFHqMlMhIlz1x9ISrQnWq0Fl
+
+Updates of 2.1.9 version:
+- A bug that causes strange behavior on inspector window and wrong save state on windows_status.ini was noted and fixed.
+- A bug where use some Matte Finesse didn't change correctly the panel to Qualifier and back for other panels was noted and fixed.
+- Fixed an mistake where some positions was wrong in some resolutions.
+- Fixed the problem where clicking on the first clip on media pool when open the media pool prevents you from navigate through clips. Now it clicks on a empty space on media pool and you can navigate through clips. The position variable for this was changed from pos_first_media_pool_clip to pos_media_pool_empty_space.
+- Minor UX change on EDIT Mode mapping.
 
 Updates of 2.1.8 version:
 - Nodes menu transfered from dots to the actual menu.

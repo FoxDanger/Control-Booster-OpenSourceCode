@@ -1,11 +1,4 @@
-﻿;Tangent Wave Booster
-;All Positions Variables
-
-; == Array for the position variables - Set the position of each element on the Davinci Resolve workarea (if your resolution and/or scale doesn't work with any of the presets, you need setup each position manualy using TWB tool) ==
-global _positionsArray1 := []
-global _positionsArray2 := []
-
-;== Position Variables - Set the position of each element on the Davinci Resolve workarea (if your resolution and/or scale doesn't work with any of the presets, you need setup each position manualy using TWB tool) ==
+﻿;== Position Variables - Set the position of each element on the Davinci Resolve workarea (if your resolution and/or scale doesn't work with any of the presets, you need setup each position manualy using TWB tool) ==
 global pos_edit_top_bts_left_expand						:= {"var": "pos_edit_top_bts_left_expand", "x": 1000, "y": 1000}
 global pos_edit_top_bts_media_pool						:= {"var": "pos_edit_top_bts_media_pool", "x": 1000, "y": 1000}
 global pos_edit_top_bts_effects_library					:= {"var": "pos_edit_top_bts_effects_library", "x": 1000, "y": 1000}

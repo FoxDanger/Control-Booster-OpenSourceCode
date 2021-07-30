@@ -1696,6 +1696,9 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 - Button on MODE SELECTION - Reset Davinci UI Layout, reset all variables to default states and put Davinci on Full Screen Mode (IMPORTANT: You have to manually put Custom Curves Edit on LINKED mode after use this function) - Davinci Resolve NON-Default Shortcut: Ctrl + F1 (Reset UI Layout) and Ctrl + F2 (Full Screen Window)
 /resetDefaultState
 
+- Button Alt + F6 - Enable/Disable All Nodes - Davinci Resolve Default Shortcut: Alt + D
+/enableDisableAllNodes
+
 - Button Alt + Up - Enable/Disable Selected Nodes - Davinci Resolve Default Shortcut: Ctrl + D
 /enableDisableSelectedNodes
 
@@ -1728,5 +1731,23 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 
 - Button - Delete selection using Backspace key - Davinci Resolve Default Shortcut: Backspace
 /backspaceKey
+
+- Jog Wheel Button - Paste attributes from other clip - Davinci Resolve default shortcut: Alt + V (it's the same function of a button but to be setted on a jog wheel button)
+/pasteAttributesJogWheel
+
+- Jog Wheel Button - Copy - Davinci Resolve default shortcut: Ctrl + C (it's the same function of a button but to be setted on a jog wheel button)
+/copyJogWheel
+
+- Jog Wheel Button - Paste - Davinci Resolve default shortcut: Ctrl + V (it's the same function of a button but to be setted on a jog wheel button)
+/pasteJogWheel
+
+- Jog Wheel Button - Paste - Davinci Resolve default shortcut: Ctrl + X (it's the same function of a button but to be setted on a jog wheel button)
+/cutJogWheel
+
+- Button - Toogle between 2 Timeline modes on Color Page - Record A Mode or Source A Mode
+/toggleTimlineThumbMode
+
+- Button - Open Key Frame Animation window on Color Page
+/openKeyFrameWindowColorPage
 
 ***** End of General Functions *****

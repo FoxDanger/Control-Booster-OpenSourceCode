@@ -23,3 +23,6 @@ Ctrl + Alt + Numpad 3 - Half Printer Light Yellow +
 Ctrl + Alt + Numpad Enter - Half Printer Light Master -
 Ctrl + Alt + Numpad Add - Half Printer Light Master +
 Ctrl + H - Apply Grade
+Ctrl + Alt + A - Timeline Thumbnail Record A Mode
+Ctrl + Alt + C - Timeline Thumbnail Source C Mode
+F8 - Insert Clip on Timeline (changed from F9 which doesn't work sometimes for some bug on Davinci Resolve)

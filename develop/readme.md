@@ -8,15 +8,29 @@ Website: https://souandrerodrigues.com.br/twb
 
 Contact: contato@souandrerodrigues.com.br
 
-Version: 2.1.9
+Version: 2.2
 
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
 Please donate if you liked the project! - Por favor faça uma doação se você gostou deste projeto!
 
-For Dollar Donation: https://www.paypal.com/donate?token=W-GPZQGsQgvQnAsrB-7hstJD9_dl5SY36Dp2o94jVcxDhPKr37jv4BRCDAWXfxxZ4ChxTkmpRbvTnYN9
+For Dollar Donation: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=USD
 
-Para doações em Real: https://www.paypal.com/donate?token=sWmyMjVydvUof2GcR24qNrzSQQMveaM-QTJsTj3H4UF1Y5MmYvnVs9VFVFHqMlMhIlz1x9ISrQnWq0Fl
+Para doações em Real: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=BRL
+
+Updates of 2.2 version:
+- Added the function - _enableDisableAllNodes.
+- Correction on Tangent Mapping, added the jog wheels for the Primaries Bars mode.
+- Donation links updated.
+- Added the reset for jog wheels on the left button over the jog wheels. (thx Javier for the Protokol!)
+- Tangent Map updated. Resets for Min/Max Range and Falloff on HDR Mode was removed because now you can reset pressing the left button on top of the jog wheel.
+- Added copy, paste, cut and paste attributes for all modes on the first jog buttons (Left = Copy / Alt + left = Cut / Right = Paste / Alt + Right = Paste Attributes) - It not works when you on mouse emulation mode.
+- Updated the Tangent Map with these functions above.
+- All Jog Wheels and Trackball functions updated with the new Data == 0 option so you can assign behaviors for the left/right buttons over the Jog Wheels.
+- Updates on UX changing some functions on Inspector Mode of Tangent Map.
+- Updates on UX changing some functions on arrows and F-Keys.
+- Added a function that toggle between Timeline Thumbnail modes Rec Mode A our Source Mode C.
+- Updated the Tangent Map on the HDR Wheels bringing the Turn on/off and Show/Hide buttons for the zones to the third bank buttons, so we can keep the color interface buttons always on second page doesn' matter what color mode you are.
 
 Updates of 2.1.9 version:
 - A bug that causes strange behavior on inspector window and wrong save state on windows_status.ini was noted and fixed.

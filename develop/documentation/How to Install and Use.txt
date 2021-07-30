@@ -9,7 +9,7 @@ Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Pa
 
 3 - Download and install Tangent Mapper.
 
-4 - Open the Tangent Wave Booster.
+4 - Open the Tangent Wave Booster 2 (run the TWB 2.exe file on the root folder).
 
 5 - Open the Tangent Mapper.
 

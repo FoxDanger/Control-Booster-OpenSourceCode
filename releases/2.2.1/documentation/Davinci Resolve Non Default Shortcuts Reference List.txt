@@ -1,0 +1,28 @@
+Non-default Davinci Resolve shortcuts used (you need assign these shortcuts on your Davinci - You can use the Davinci Resolve Shortcut Map that comes with TWB):
+Shift+F1 - Active Playhead A
+Shift+F2 - Active Playhead B
+Shift+F3 - Active Playhead C
+Shift+F4 - Active Playhead D
+Shift+F5 - Reset Playheads
+Shift+F7 - Ripple Node Changes to Selected Clips
+Ctrl + F1 - Reset UI Layout
+Ctrl + F2 - Full Screen Window
+Shift + Y - Next Node
+Shift + U - Previous Node
+Ctrl + Alt + Q - Turn on/off Printer Lights (replace the original shortcut Ctrl + Alt + `)
+Ctrl + Alt + Numpad 4 - Half Printer Light Red -
+Ctrl + Alt + Numpad 7 - Half Printer Light Red +
+Ctrl + Alt + Numpad 5 - Half Printer Light Green -
+Ctrl + Alt + Numpad 8 - Half Printer Light Green +
+Ctrl + Alt + Numpad 6 - Half Printer Light Blue -
+Ctrl + Alt + Numpad 9 - Half Printer Light Blue +
+Ctrl + Alt + Numpad Sub - Half Printer Light Magenta -
+Ctrl + Alt + Numpad 1 - Half Printer Light Magenta +
+Ctrl + Alt + Numpad Mult - Half Printer Light Yellow -
+Ctrl + Alt + Numpad 3 - Half Printer Light Yellow +
+Ctrl + Alt + Numpad Enter - Half Printer Light Master -
+Ctrl + Alt + Numpad Add - Half Printer Light Master +
+Ctrl + H - Apply Grade
+Ctrl + Alt + A - Timeline Thumbnail Record A Mode
+Ctrl + Alt + C - Timeline Thumbnail Source C Mode
+F8 - Insert Clip on Timeline (changed from F9 which doesn't work sometimes for some bug on Davinci Resolve)

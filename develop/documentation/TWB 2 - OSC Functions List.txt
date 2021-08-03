@@ -1,4 +1,6 @@
-﻿===== How to use these functions =====
+﻿Version 2.2.1
+
+===== How to use these functions =====
 
 1 - You have to setup these functions in some mapping software with OSC Support.
 
@@ -1716,7 +1718,7 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 
 - Button Alt + F4 - Active Playhead D - Davinci Resolve NON-Default Shortcut: Shift + F4
 /playheadD
-
+ ;Latest Low
 - Button Alt + F5 - Reset Playheads - Davinci Resolve NON-Default Shortcut: Shift + F5
 /resetPlayheads
 
@@ -1751,3 +1753,25 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 /openKeyFrameWindowColorPage
 
 ***** End of General Functions *****
+
+***** Update 2.2.1 Functions *****
+
+;Button from Jog or Wheel - Delete selection using Delete key - Davinci Resolve Default Shortcut: Delete
+_deleteKeyJogWheel
+
+;Button from Jog or Wheel - Delete selection using Backspace key - Davinci Resolve Default Shortcut: Backspace
+/backspaceKeyJogWheel
+
+- Button to Shortcut - Open Retime on the selected clip on Edit Mode - Davinci Resolve default shortcut: Ctrl + R
+/retime
+
+- Button to Shortcut - Open Retime on the selected clip on Edit Mode - Davinci Resolve default shortcut: R
+/changeClipSpeed
+
+- Knob to Shortcut - Open or Close the Right and Left Expanders on Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/leftRightExpander
+
+- Button to Shortcut - Toggle Dynamic Trim tool - Davinci Resolve default shortcut: W
+/dynamicTrimTool
+
+***** End of Update 2.2.1 Functions *****

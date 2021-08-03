@@ -8,7 +8,7 @@ Website: https://souandrerodrigues.com.br/twb
 
 Contact: contato@souandrerodrigues.com.br
 
-Version: 2.2
+Version: 2.2.1
 
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
@@ -17,6 +17,18 @@ Please donate if you liked the project! - Por favor faça uma doação se você 
 For Dollar Donation: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=USD
 
 Para doações em Real: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=BRL
+
+Updates of 2.2.1 version:
+- Change on Tangent Map on Edit Mode. Some knobs and buttons changed places.
+- Right and left expander changed for Knobs.
+- Trim mode and Dynamic Trim mode changed for buttons.
+- Changed the Delete and Backspace buttons for the buttons on top of the Middle Jog - In all modes you have Backspace on the Left Button of the Middle Jog and Delete on the Right Button of the Middle Jog, except on HDR Mode that the Left Button is to reset Min/Max Range (but you still having Delete option on the Right Button).
+- Changed the Retime functions for two buttons (old Delet and Backspace).
+- All the Edit Interface buttons now are on First Bank pressing the alt key instead the second bank which now has the Insert Clip on Timeline functions buttons.
+- Change on Tangent Map HDR Mode where some reset buttons changed places.
+- Added some functions on Tangent Map for Elements VS extra panel using a tablet.
+- Created a function to check only if it is on edit page without open the inspector.
+- F-Keys now are different on Edit Mode and Color Mode. For Color Mode they keep as before, but on Edit Mode we have new functions from F1 to F7 (F8 and F9 still all modes the same). Now you select tools using the F1 to F4 keys and F5, F6 and F7 are free to be used in the future for more useful tools.
 
 Updates of 2.2 version:
 - Added the function - _enableDisableAllNodes.

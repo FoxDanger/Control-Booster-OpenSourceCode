@@ -26,3 +26,12 @@ Ctrl + H - Apply Grade
 Ctrl + Alt + A - Timeline Thumbnail Record A Mode
 Ctrl + Alt + C - Timeline Thumbnail Source C Mode
 F8 - Insert Clip on Timeline (changed from F9 which doesn't work sometimes for some bug on Davinci Resolve)
+Ctrl + Shift + Q - Create a Six Vector Blue Qualifier;
+Ctrl + Shift + E - Create a Six Vector Cyan Qualifier;
+Ctrl + Shift + Y - Create a Six Vector Green Qualifier;
+Ctrl + Shift + U - Create a Six Vector Magenta Qualifier;
+Ctrl + Shift + G - Create a Six Vector Red Qualifier;
+Ctrl + Shift + J - Create a Six Vector Yellow Qualifier;
+Ctrl + Shift + K - Create a Chroma Dark Qualifier;
+Ctrl + Shift + B - Create a Chroma Light Qualifier;
+Ctrl + Shift + M - Create a Chroma Dark and Light Qualifier.

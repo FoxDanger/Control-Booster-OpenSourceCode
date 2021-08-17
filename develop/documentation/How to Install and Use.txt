@@ -29,7 +29,12 @@ Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Pa
 
 12 - On top part of the menu check if the Tangent Wave Booster.exe is selected and on the bottom part click on "Import" button.
 
-13 - Navigate to TWB folder. Inside the "MAPPINGS" folder you will select the "twb_tangent_map.xml" and click on "open" button.
+13 - Navigate to TWB folder. Inside the "MAPPINGS" folder you will select the respective map XML for your panel. Choose what you gonna use and click on "open" button.
+
+- For Tangent Wave or Tangent Wave 2 - "twb_tangent_wave_map.xml".
+- For Tangent Elements or Tangent Elements VS (Tablet app) - "twb_tangent_elements_map.xml". This map is mapped to be used with one BT, one KB, one TK and one MF panels.
+
+* If you're using other panel from Tangent or other brand, you have to create your own map using the functions on the "TWB 2 - OSC Functions List.txt" file at the "DOCUMENTATION" folder. When possible I'll add more default mappings for other panels/MIDI Controllers/Apps.
 
 14 - Click on "Select" and "Close" buttons.
 

@@ -1747,7 +1747,7 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 /cutJogWheel
 
 - Button - Toogle between 2 Timeline modes on Color Page - Record A Mode or Source A Mode
-/toggleTimlineThumbMode
+/toggleTimelineThumbMode
 
 - Button - Open Key Frame Animation window on Color Page
 /openKeyFrameWindowColorPage
@@ -1775,3 +1775,73 @@ _deleteKeyJogWheel
 /dynamicTrimTool
 
 ***** End of Update 2.2.1 Functions *****
+
+***** Update 2.2.2 Functions *****
+
+- Button - Create a Chroma Dark and Light Qualifier
+/qualifierChromaDarkLight
+
+- Button - Create a Chroma Light Qualifier
+/qualifierChromaLight
+
+- Button - Create a Chroma Dark Qualifier
+/qualifierChromaDark
+
+- Button - Create a Six Vector Qualifier Yellow
+/qualifierSixVectorYellow
+
+- Button - Create a Six Vector Qualifier Red
+/qualifierSixVectorRed
+
+- Button - Create a Six Vector Qualifier Magenta
+/qualifierSixVectorMagenta
+
+- Button - Create a Six Vector Qualifier Green
+/qualifierSixVectorGreen
+
+- Button - Create a Six Vector Qualifier Cyan
+/qualifierSixVectorCyan
+
+- Button - Create a Six Vector Qualifier Blue
+/qualifierSixVectorBlue
+
+- Knob - Reset all Qualifier when pressing the Kbob - Default Knob Sensitivity: Min: 0 - Max: 1 - Step: 1 - Coarse
+/qualifierResetKnob
+
+- Knob - Reset Luminance on HSL when turning Left or Blue on RGB when turning right on Qualifier Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/qualifierResetLuminanceKnob
+
+- Knob - Reset Saturation on HSL when turning Left or Green on RGB when turning right on Qualifier Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/qualifierResetSaturationKnob
+
+- Knob - Reset Hue on HSL when turning Left or Red on RGB when turning right on Qualifier Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/qualifierResetHueKnob
+
+- Button - Copy actual curve to All curves
+/customCurvesCopyToAll
+
+- Button - Copy actual curve to Blue curve
+/customCurvesCopyToBlue
+
+- Button - Copy actual curve to Green curve
+/customCurvesCopyToGreen
+
+- Button - Copy actual curve to Red curve
+/customCurvesCopyToRed
+
+- Button - Copy actual curve to Lum curve
+/customCurvesCopyToLum
+
+- Knob - Reset all Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/customCurvesResetKnob
+
+- Knob - Reset Soft Clip only - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/customCurvesResetSoftClipKnob
+
+- Knob - Reset all Custom Curves only, not intensity and soft parameters - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/customCurvesResetEditKnob
+
+- Jog/Knob - Move HDR Wheels to the left or righ on HDR Panel - Default Jog/Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/hdrNavigateWheels
+
+***** End Of Update 2.2.2 Functions *****

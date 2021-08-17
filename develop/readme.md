@@ -8,7 +8,7 @@ Website: https://souandrerodrigues.com.br/twb
 
 Contact: contato@souandrerodrigues.com.br
 
-Version: 2.2.1
+Version: 2.2.2
 
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
@@ -17,6 +17,25 @@ Please donate if you liked the project! - Por favor faça uma doação se você 
 For Dollar Donation: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=USD
 
 Para doações em Real: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=BRL
+
+Updates of 2.2.2 version:
+- Added the mapping for the Tangent Element Panel and Element VS App.
+- _toggleTimelineThumbMode function name fixed the missing "e" on "Timeline".
+- Added a new function that can be used to navigate left or right the HDR Wheels using a Knob or Jog Wheel instead pressing buttons.
+- Added 3 new functions to reset custom curves on knobs instead buttons (the buttons functions still existing in case that someone want use it). Did this so I could free 3 slots on buttons and put the new functions for Copy Curves.
+- Added 5 new functions to copy curves.
+- Added 4 new functions to reset each HSL and RGB Qualifier on knobs instead buttons (the buttons functions still existing in case that someone want use it). Did this so I could free 4 slots on buttons and put all the new functions for Qualifier Color Presets.
+- Added 9 new non-default shortcuts on Davinci keyboard shortcuts for Qualifier Color Presets:
+- Ctrl + Shift + Q - Create a Six Vector Blue Qualifier;
+- Ctrl + Shift + E - Create a Six Vector Cyan Qualifier;
+- Ctrl + Shift + Y - Create a Six Vector Green Qualifier;
+- Ctrl + Shift + U - Create a Six Vector Magenta Qualifier;
+- Ctrl + Shift + G - Create a Six Vector Red Qualifier;
+- Ctrl + Shift + J - Create a Six Vector Yellow Qualifier;
+- Ctrl + Shift + K - Create a Chroma Dark Qualifier;
+- Ctrl + Shift + B - Create a Chroma Light Qualifier;
+- Ctrl + Shift + M - Create a Chroma Dark and Light Qualifier.
+- Added 9 new functions for Qualifier Color Presets.
 
 Updates of 2.2.1 version:
 - Change on Tangent Map on Edit Mode. Some knobs and buttons changed places.
@@ -211,11 +230,17 @@ Non-default Davinci Resolve shortcuts used (you need assign these shortcuts on y
 Special Thanks:
 
 - To Tangent for create this amazing panel!
+
 - To Andy Knox because he knows <3
+
 - To all the guys that developed AHK and made my software possible.
+
 - To Ludwig Frühschütz for the incredible OSC2AHK that allows the OSC communication between my software and Tangent Mapper (and other softwares with OSC Support).
+
 - To FeiYue for the amazing class FindText that allows my software to find images on the screen and made possible the use of the tools on Custom Curves panel.
+
 - To my wife and family (cliché but is obvious that I can't do nothing without them)
+
 - To some people from AHK Forum and Facebook group that helped me with some questions that I had when I was learning the language and with some help for the software:
 
 - boiler (AHK Forum)
@@ -223,10 +248,13 @@ Special Thanks:
 - Ben Sacherich (AHK Facebook)
 - Daniel Oxner (AHK Facebook)
 - Jon Rees (AHK Facebook)
+
 - To all donators!
+
 - Gq Lewis
 - Ultra Mobile LLC
 - Trevor Wright
 - Ernest Savage
 - Maira Rocha Tavares
 - Javier Perez
+- Flederico Martins

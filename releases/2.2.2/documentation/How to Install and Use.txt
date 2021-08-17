@@ -1,0 +1,59 @@
+How to install TWB 2 - Version 2.2.1
+
+This is a step-by-step about how to install and make Tangent Wave Booster work.
+
+You can find a video tutorial about this step-by-step on our website: https://souandrerodrigues.com.br/twb
+
+1 - First of all! Turn off the connection between Davinci Resolve and Tangent Panel!
+Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Panel->Select this panel for grading - Select "NONE".
+
+2 - Download TWB, unzip and put it in somewhere on your PC.
+
+3 - Download and install Tangent Mapper.
+
+4 - Open the Tangent Wave Booster 2 (run the TWB 2.exe file on the root folder).
+
+5 - Open the Tangent Mapper.
+
+6 - Go to File -> New Control Map.
+
+7 - Select "Add a New Application" and click on "Next" button.
+
+8 - Click on "Select From Desktop Button".
+
+9 - You have 10 seconds to click on the Tangent Wave Booster Screen, just click on the window of the software and wait for the 10 seconds end.
+
+10 - After the 10 seconds, Tangent Mapper shows the name of the Tangent Wave Booster.exe so you just have to click on "Finish" button.
+
+11 - Now go to File -> Manage Control Maps.
+
+12 - On top part of the menu check if the Tangent Wave Booster.exe is selected and on the bottom part click on "Import" button.
+
+13 - Navigate to TWB folder. Inside the "MAPPINGS" folder you will select the respective map XML for your panel. Choose what you gonna use and click on "open" button.
+
+- For Tangent Wave or Tangent Wave 2 - "twb_tangent_wave_map.xml".
+- For Tangent Elements or Tangent Elements VS (Tablet app) - "twb_tangent_elements_map.xml". This map is mapped to be used with one BT, one KB, one TK and one MF panels.
+
+* If you're using other panel from Tangent or other brand, you have to create your own map using the functions on the "TWB 2 - OSC Functions List.txt" file at the "DOCUMENTATION" folder. When possible I'll add more default mappings for other panels/MIDI Controllers/Apps.
+
+14 - Click on "Select" and "Close" buttons.
+
+15 - Now go to Davinci Resolve, open the keyboard customization screen (Ctrl+Alt+K or Davinci Resolve->Keyboard Customization).
+
+16 - Click on the 3 dots (...) on the upper right corner and choose "Import Preset...".
+
+17 - Inside the same folder "MAPPINGS" you gonna find the "twb_davinci_map.txt", select it.
+
+18 - Click on "Save" button.
+
+19 - On TWB 2, select the resolution/dpi scale that you're using on your computer.
+
+20 - You're ready to go! Every time you want to work with your panel, just run TWB 2, click at the "OK" Button when you receive the message: "TWB 2 is ready to be used", run the Tangent Wave Mapper (or your other mapper software) and that's it! Open Davinci Resolve and be happy!
+
+TIP: You can press Alt + F9 on the Tangent Panel (or whatever button you setup with the function /startStop) to pause or restart TWB 2. So you can go to other windows outside Davinci without the misstype some key or control on your panel.
+
+IMPORTANT 1: TWB 2 has some native resolutions and scaling configurations, so if you're using a different resolution or scaling, or if you want to customize your Davinci layout, you have to setup the positions of the elements on the screen. There's a very detailed video about how to do this on our website.
+
+IMPORTANT 2: TWB 2 uses a DLL called OSC2AHK.DLL to make the comunication between the mappers softwares with OSC and TWB 2. For this it uses the door 7002 on the 127.0.0.1 local IP. If you don't see the message saying "TWB 2 is ready to be used" when you start the software (instead you get a message about error on a port) you need to open this door on your firewall. There's an explanation about how to do this on a video at our website.
+
+IMPORTANT 3: Some anti-virus can identify TWB 2 and/or the OSC2AHK.DLL as a virus, this is a FALSE POSITIVE. There's NOTHING on TWB 2 that can be harmful to you or your PC. Just add an exception to the software and you're be fine.

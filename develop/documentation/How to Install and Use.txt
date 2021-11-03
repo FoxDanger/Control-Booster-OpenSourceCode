@@ -1,4 +1,4 @@
-How to install TWB 2 - Version 2.2.1
+How to install TWB 2 - Version 2.3
 
 This is a step-by-step about how to install and make Tangent Wave Booster work.
 

@@ -1,0 +1,25 @@
+Tangent Wave Booster 2
+
+A software that will give to your Tangent Panels (not just wave panels) incredible powers to control Davinci Resolve! It can be used too with any MIDI Controller that has a Mapping Software with OSC support. Last but not least, it can be used with other softwares than Davinci Resolve, but you need to change the code as your needs.
+
+Developer: André Rodrigues - Media Environment
+
+Website: https://souandrerodrigues.com.br/twb
+
+Contact: contato@souandrerodrigues.com.br
+
+Version: 2.3
+
+You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+This document represents my authority about this software and all the use of it.
+
+This is not a free software. You can't sell it, redistribute, change the code or use it in any other way than for personal use. You can only use the software as it is, you can't modify the code in any way.
+
+To use this software you have to pay me the $199,00 (international buyers) or R$600,00 (brazilian buyers) price.
+
+São Paulo, SP - Brasil - 24/08/2021
+
+André Luiz Rodrigues Costa

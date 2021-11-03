@@ -149,23 +149,26 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 
 ***** Qualifier mode functions *****
 
-- Knob - Increment, decrement or reset White Clip at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
-/matteFinesseWhiteClip
+- Knob - Increment, decrement or reset Post Filter at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinessePostFilter
 
-- Knob - Increment, decrement or reset Black Clip at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
-/matteFinesseBlackClip
+- Knob - Increment, decrement or reset Highlight at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinesseHighlight
 
-- Knob - Increment, decrement or reset Iterations at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
-/matteFinesseIterations
+- Knob - Increment, decrement or reset Midtone at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinesseMidtone
 
-- Knob - Increment, decrement or reset Radius at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
-/matteFinesseRadius
+- Knob - Increment, decrement or reset Shadow at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinesseShadow
 
-- Knob - Change the options or reset Shape at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
-/matteFinesseShape
+- Knob - Increment, decrement or reset Denoise at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed the matteFinesseIterations to matteFinesseDenoise)
+/matteFinesseDenoise
 
-- Knob - Change the options or reset Mode at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
-/matteFinesseMode
+- Knob - Increment, decrement or reset Morph Radius at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed the matteFinesseRadius to matteFinesseMorphRadius)
+/matteFinesseMorphRadius
+
+- Knob - Change the options or reset Morph Menu at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse (Update 2.3 changed the matteFinesseMode to matteFinesseMorphMenu)
+/matteFinesseMorphMenu
 
 - Knob - Increment, decrement or reset In/Out Ratio at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
 /matteFinesseInOutRatio
@@ -173,14 +176,20 @@ Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I p
 - Knob - Increment, decrement or reset Blur Radius at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
 /matteFinesseBlurRadius
 
+- Knob - Increment, decrement or reset White Clip at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed from page 2 to page 1)
+/matteFinesseWhiteClip
+
+- Knob - Increment, decrement or reset Black Clip at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed from page 2 to page 1)
+/matteFinesseBlackClip
+
 - Knob - Increment, decrement or reset Clean White at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
 /matteFinesseCleanWhite
 
 - Knob - Increment, decrement or reset Clean Black at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
 /matteFinesseCleanBlack
 
-- Knob - Increment, decrement or reset Denoise at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
-/matteFinesseDenoise
+- Knob - Increment, decrement or reset Pre-Filter at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinessePreFilter
 
 - Knob - Increment, decrement or reset Blue High Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
 /qualifierBlueHighSoft
@@ -1845,3 +1854,25 @@ _deleteKeyJogWheel
 /hdrNavigateWheels
 
 ***** End Of Update 2.2.2 Functions *****
+
+***** Update 2.3 Functions *****
+
+- Knob - Increment or decrement Monitoring Volume or press to toggle On/Off the monitoring volume on Edit Page - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/monitoringVolume
+
+- Button - Show/Hide Timeline Stacked Tabs on Edit Mode
+/timelineViewOptionsStackedTimelines
+
+- Button - Show/Hide Subtitle Tracks on Edit Mode
+/timelineViewOptionsSubtitleTracks
+
+- Button - Show/Hide Audio Waveforms on Edit Mode
+/timelineViewOptionsAudioWaveforms
+
+- Trackball - Move left/right the trackball to navigate between the next and previous clip on timeline and press the button over Jog Wheel to Delete anything - Default Trackball Sensitivity: Min: 0 - Max: 30 - Step: 1 - Coarse
+/navigateClipsLeftRightAndDelete
+
+- Trackball - Move up/down the trackball to navigate between the clips up and down on timeline - Default Trackball Sensitivity: Min: 0 - Max: 30 - Step: 1 - Coarse
+/navigateClipsUpDown
+
+***** End Of Update 2.3 Functions *****

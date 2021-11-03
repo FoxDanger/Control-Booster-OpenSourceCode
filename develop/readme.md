@@ -6,17 +6,20 @@ Developer: André Rodrigues - Media Environment
 
 Website: https://souandrerodrigues.com.br/twb
 
-Contact: contato@souandrerodrigues.com.br
+Contact: twb@souandrerodrigues.com.br
 
-Version: 2.2.2
+Version: 2.3
 
 You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
-Please donate if you liked the project! - Por favor faça uma doação se você gostou deste projeto!
-
-For Dollar Donation: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=USD
-
-Para doações em Real: https://www.paypal.com/donate?business=NUXQJRJAZF6DG&no_recurring=0&item_name=Help+Tangent+Wave+Booster+2+Project&currency_code=BRL
+Updates of 2.3 version:
+- TWB UI updated.
+- New default positions of some UI elements updated after the Davinci Resolve 17.4 update.
+- Matte Finesse panel, variables and other stuffs changed to the new UI of Davinci Resolve 17.4.
+- 3 new shortcuts on F5, F6 and F7 buttons to toggle on/off the Timeline View Options: Stacked Timeline, Subtitle tracks and Audio Waveforms.
+- New knob on Edit Mode to control Monitoring Volume.
+- New Middle Trackball now navigate between clips on Edit Mode.
+- Wave and Elements Tangent Map updated with the new functions.
 
 Updates of 2.2.2 version:
 - Added the mapping for the Tangent Element Panel and Element VS App.

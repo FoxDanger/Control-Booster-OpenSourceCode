@@ -1,0 +1,10 @@
+GuiClose:>101
+F9>107
+start()>118
+if()>171
+_getAccPositions()>240
+_start_stop_bt()>258
+_save_positions_bt()>283
+_accClick()>291
+DisplayPositionsArray()>302
+MoveMouseAndClick()>311

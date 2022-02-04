@@ -3240,7 +3240,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -4783,7 +4783,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -6120,7 +6120,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -6976,7 +6976,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -7802,7 +7802,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -8448,7 +8448,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -8816,7 +8816,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -9492,7 +9492,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -10125,7 +10125,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -10671,7 +10671,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -11613,7 +11613,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -12293,7 +12293,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -12959,7 +12959,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -13531,7 +13531,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
@@ -14163,7 +14163,7 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimlineThumbMode</CustomControl>
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
                                 <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>

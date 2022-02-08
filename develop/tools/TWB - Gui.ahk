@@ -4,9 +4,14 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
+Menu, Tray, Icon, %A_ScriptDir%\images\TWB Ready.ico
+
+
+Gui Add, GroupBox, x0 y0 w1024 h768, GroupBox
+
 Gui Font, s9, Segoe UI
 Gui Add, Picture, x8 y8 w150 h150, %A_ScriptDir%\images\Logo.png
-Gui Add, Text, x1200 y8 w700 h23 +0x200  , How to setup your own resolution (took aprox. 40 minutes):
+Gui Add, Text, x1200 y8 w700 h23 +0x200, How to setup manually your own resolution:
 Gui Add, Text, x1200 y31 w700 h23, 1 - Click on "Add New Resolution Config" Button and set a name for it
 Gui Add, Text, x1200 y54 w700 h23, 2 - Click on the button of the tool that you will change the position
 Gui Add, Text, x1200 y77 w700 h23, 3 - Go to your software screen and position the mouse on top of the tool
@@ -18,30 +23,50 @@ Gui Add, Button, g_save_positions_bt x192 y64 w150 h50, Save Positions
 Gui Add, Button, g_enable_last_button x192 y120 w150 h50, Enable Last Button
 Gui Add, Button, g_add_combobox_items_input_box x768 y8 w150 h50, Add New Resolution Config
 Gui Add, Text, x360 y8 w250 h23, Set Resolution / DPI Scale (in percentage):
-Gui Add, ComboBox, vcomboboxResolutionScale g_change_resolution_and_scale x360 y32 w400, %_comboboxItems%
+Gui Add, ComboBox, g_change_resolution_and_scale vcomboboxResolutionScale x360 y32 w400, %_comboboxResolutionItems%
+Gui Add, Text, x360 y64 w250 h23, Set what is your Davinci Resolve Layout:
+Gui Add, ComboBox, g_change_davinci_layout_ui vcomboboxDavinciLayoutUI x360 y90 w400, NORMAL|CONDENSED|WIDE
+Gui Add, CheckBox, g_set_scopes_state vscopesState x360 y135 w403 h23, Check this box if your scopes window are floating
 
-Gui Add, Picture, x480 y232 w956 h406 +0x400000 , %A_ScriptDir%\images\Primaries Wheels Panel.png
-Gui Add, Button, g_set_variable_button vpos_primaries_auto_balance x320 y352 w150 h50, Auto Balance
-Gui Add, Button, g_set_variable_button vpos_primaries_awb_picker x320 y416 w150 h50, AWB Picker
-Gui Add, Button, g_set_variable_button vpos_primaries_black_point_picker x488 y288 w150 h50, Black Point Picker
-Gui Add, Button, g_set_variable_button vpos_primaries_white_point_picker x920 y288 w150 h50, White Point Picker
-Gui Add, Button, g_set_variable_button vpos_primaries_lift_y x528 y768 w150 h50, Lift Y
-Gui Add, Button, g_set_variable_button vpos_primaries_lift_r x528 y832 w150 h50 Lift R
-Gui Add, Button, g_set_variable_button vpos_primaries_lift_g x528 y776 w150 h50, Lift G
-Gui Add, Button, g_set_variable_button vpos_primaries_lift_b x528 y896 w150 h50, Lift B
-Gui Add, Button, g_set_variable_button vpos_primaries_gamma_y x776 y648 w150 h50, Gamma Y
-Gui Add, Button, g_set_variable_button vpos_primaries_gamma_r x776 y712 w150 h50, Gamma R
-Gui Add, Button, g_set_variable_button vpos_primaries_gamma_g x776 y776 w150 h50, Gamma G
-Gui Add, Button, g_set_variable_button vpos_primaries_gamma_b x776 y840 w150 h50, Gamma B
-Gui Add, Button, g_set_variable_button vpos_primaries_gain_y x1008 y648 w150 h50, Gain Y
-Gui Add, Button, g_set_variable_button vpos_primaries_gain_r x1008 y712 w150 h50, Gain R
-Gui Add, Button, g_set_variable_button vpos_primaries_gain_g x1008 y776 w150 h50, Gain G
-Gui Add, Button, g_set_variable_button vpos_primaries_gain_b x1008 y840 w150 h50, Gain B
-Gui Add, Button, g_set_variable_button vpos_primaries_offset_r x1240 y648 w150 h50, Offset R
-Gui Add, Button, g_set_variable_button vpos_primaries_offset_g x1240 y712 w150 h50, Offset G
-Gui Add, Button, g_set_variable_button vpos_primaries_offset_b x1240 y776 w150 h50, Offset B
 
-Gui Show, w1920 h1080, TWB 2.3
+
+Gui Add, Picture, x40 y432 w950 h400, %A_ScriptDir%\images\Curves Panel 2.png
+Gui Add, Button, g_set_variable_button vpos_custom_edit_link_on_off x40 y368 w150 h50, Edit Link On/Off
+Gui Add, Button, g_set_variable_button vpos_custom_edit_y_on_off x200 y368 w150 h50, Edit Y On/Off
+Gui Add, Button, g_set_variable_button vpos_custom_edit_r_on_off x360 y368 w150 h50, Edit R On/Off
+Gui Add, Button, g_set_variable_button vpos_custom_edit_g_on_off x520 y368 w150 h50, Edit G On/Off
+Gui Add, Button, g_set_variable_button vpos_custom_edit_b_on_off x680 y368 w150 h50, Edit B On/Off
+Gui Add, Button, g_set_variable_button vpos_custom_edit_reset x840 y368 w150 h50, Edit Reset
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_lum x1000 y464 w150 h50, Intensity Lum
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_red x1000 y528 w150 h50, Intensity Red
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_green x1000 y592 w150 h50, Intensity Green
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_blue x1000 y656 w150 h50, Intensity Blue
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_link x200 y848 w150 h50, Soft Clip Link
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_r x360 y848 w150 h50, Soft Clip R
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_g x520 y848 w150 h50, Soft Clip G
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_b x680 y848 w150 h50, Soft Clip B
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_reset x840 y848 w150 h50, Soft Clip Reset
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_low x680 y912 w150 h50, Soft Clip Low
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_low_smooth x680 y976 w150 h50, Soft Clip Low Smooth
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_high x840 y912 w150 h50, Soft Clip High
+Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_high_smooth x840 y976 w150 h50, Soft Clip High Smooth
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_lum_reset x1160 y464 w150 h50, Intensity Lum Reset
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_red_reset x1160 y528 w150 h50, Intensity Red Reset
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_green_reset x1160 y592 w150 h50, Intensity Green Reset
+Gui Add, Button, g_set_variable_button vpos_custom_intensity_blue_reset x1160 y656 w150 h50, Intensity Blue Reset
+Gui Add, Picture, x1520 y432 w360 h420, %A_ScriptDir%\images\Curves Panel Dots Menu.png
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu x1520 y368 w150 h50, Dots Menu
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_lum x1360 y440 w150 h50, Copy to Lum
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_red x1360 y504 w150 h50, Copy to Red
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_green x1360 y568 w150 h50, Copy to Green
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_blue x1360 y632 w150 h50, Copy to Blue
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_all x1360 y696 w150 h50, Copy to All
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_editable_splines x1360 y760 w150 h50, Editable Splines
+Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_add_default_anchors x1360 y824 w150 h50, Add Default Anchors
+
+Gui Tab
+
+Gui Show, w1024 h768, TWB 2.4
 Return
 
 _start_stop_bt:

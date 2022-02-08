@@ -7,13 +7,24 @@
 ;You can find video tutorials about how to setup and use all the functions at: https://souandrerodrigues.com.br/twb
 
 ;Updates of 2.4 version:
-;- Implemented a new tool to auto-setup the positions of the elements on the screen. Now you only need setup manually just a few things and there's a auto-guided method for this. You don't need goes and back to TWB and press the buttons to setup each position.
+;- TWB screen now resize with different DPI/Resolution Scales.
+;- Added native support for more resolutions.
+;- Implemented a new tool (BETA) to auto-setup the positions of the elements on the screen. Now you only need setup manually just a few things and there's a auto-guided method for this. You don't need goes and back to TWB and press the buttons to setup each position.
 ;- Bug fixed: When you move knobs too slow the field sometimes was selected and the tool stop to working. Now the code keeps the Enter Key pressed when you are moving the knobs and this prevents that behavior/bug.
 ;- Bug Fixed: When your scopes window are on a second screen or floating instead fixed on the Davinci UI, when you was using the control panel to change the scopes, it wasn't working because it closes the scopes window every time you choose some option. Now it will works fine, you just need check the checkbox on TWB to let TWB knows that your window is floating.
 ;- Added a new non-default shortcuts on Davinci keyboard shortcuts:
 ;- Ctrl + O - Label node name of the selected node.
 ;- Added a function for label node name the selected node - /labelNode.
 ;- Some improvements on the loadPositions() function and res_dpi_scale.ini file.
+;- Created a combobox so user can choose how his Davinci Resolve UI layout looks like:
+;- "NORMAL" is when the Davinci Resolve layout has 3 groups of panels on color page (camera raw, color checker, primaries and etc + Curves, Warper, Qualifier and etc + Keyframes, waveform and info)
+;- "CONDENSED" is when the Davinci Resolve layout has 2 groups of panels on color page (camera raw, color checker, primaries and etc + Keyframes, waveform and info)
+;- "WIDE"is when the Davinci Resolve is the same of NORMAL but is way wider (when you use big resolutions with smaller windows scale like 100% or 125% normally). In this layout the Qualifier tools doesn't has Matte Finess pages 1 and 2, it has all the Matte Finess tools in the same place.
+;- Some changes on the code for the different layouts of Davinci Resolve.
+;- Created a combobox so user can choose between 3 types of hashs for different resolutions/scales. If you choose 1 and the custom curves is not working, just choose one of the other hashs (2 or 3) until it work.
+;- A new file for Custom Curves Hash (custom_curves_hashs.ini). Now it only has 3 types of hashs and the use don't need add more hashs when creating different types of resolutions/scale. Just need choose on TWB between the 3 modes.
+;- Some changes on the resolution.ini file.
+;- Added the address.ini files with the address of each button on Davinci UI.
 
 ;Updates of 2.3 version:
 ;- TWB UI updated.
@@ -247,6 +258,7 @@
 ;Special Thanks:
 ;To Tangent for create this amazing panel!
 ;To Andy Knox because he knows <3
+;To Chris Hocking from CommandPost to help me with TWB 2 for MAC.
 ;To all the guys that developed AHK and made my software possible.
 ;To Ludwig Frühschütz for the incredible OSC2AHK that allows the OSC communication between my software and Tangent Mapper (and other softwares with OSC Support).
 ;To FeiYue for the amazing class FindText that allows my software to find images on the screen and made possible the use of the tools on Custom Curves panel.
@@ -265,8 +277,6 @@
 ;Ernest Savage
 ;Maira Rocha Tavares
 
-;TODO: There's one variable position on array of positions that can be used for a new thing if necessary: pos_preview_window (array 2 - 187).
-
 ;------------------------------------------------------------------------------------------ Software Code Start -------------------------------------------------------------------------------------------------------
 
 ; \/ AHK Setup \/
@@ -278,7 +288,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Gui +LastFound
 hWnd := WinExist()
 CoordMode, Mouse, Screen
-#Maxmem 256
+#Maxmem 256 ;Set the max use of memory by the software
 
 ;Includes FindText class. This is a Third Party class that is used to find the dots on custom curves
 #Include <FindText>
@@ -306,7 +316,7 @@ StartOSC2AHK()
 ;Create a variable for the resolution and scale combo box and set the actual PC Resolution and DPIScale - String - Can be: "FHD100/125", "UHD100/125", UHD150/175/200" or any custom resoltuion/dpi scale created by the user.
 Global comboboxResolutionScale
 Global newResolutionItem
-Global _comboboxItems
+Global _comboboxResolutionItems
 Global _resolutionAndScale := "UHD150/175/200"
 
 ;Define if app is runnig or in stand by
@@ -408,8 +418,10 @@ Global _movingDot := False
 ;A variable to suspend some controls when needed. When true the controller will not work until the variable became false again
 Global _delay := False
 
-;Save all the hashs text for FindText function that will look for the dots on Custom Curves
-Global _dotsHashsArray := []
+;Save all the hashs text for FindText function that will look for the dots on Custom Curves when using the Normal and Condensed Davinci UI Layout
+Global _dotsHashsArray1 := []
+Global _dotsHashsArray2 := []
+Global _dotsHashsArray3 := []
 
 ;A flag variable to know if something is being drag
 Global _isDrag := False
@@ -423,6 +435,18 @@ Global _colorPageZoomPreview := True
 ;Set if scopes panel is fixed or floating
 Global _scopesFixed := True
 
+;Set what Davinci Resolve UI Layout are in use. Can be: "NORMAL", "CONDENSED", "WIDE"
+Global _davinciLayoutUI := "NORMAL"
+
+;Set what curves hashs will be in use. Can be: 1, 2 or 3
+Global _actualCurvesHashs := 1
+
+;Save globaly the variable of the GUI element
+Global comboboxDavinciLayoutUI
+
+;Save globaly the variable of the GUI element
+Global comboboxCurvesHashs
+
 ; /\ END OF GLOBAL VARIABLES /\
 
 ; \/ READ AND LOAD EXTERNAL VARIABLES \/
@@ -432,14 +456,16 @@ Loop, read, %A_ScriptDir%\resolution.ini
 {
     Loop, parse, A_LoopReadLine, %A_Tab%
     {
+        startingPos := InStr(A_Loopfield, "=")
+        
         if (InStr(A_Loopfield, "lastResScale") != 0){
-            startingPos := InStr(A_Loopfield, "=")
-
             _resolutionAndScale := SubStr(A_Loopfield, startingPos + 1)
+        }Else if (InStr(A_Loopfield, "davinciLayoutUI") != 0){
+            _davinciLayoutUI := SubStr(A_Loopfield, startingPos + 1)
+        }Else if (InStr(A_Loopfield, "actualCurvesHashs") != 0){
+            _actualCurvesHashs := SubStr(A_Loopfield, startingPos + 1)
         }Else if (InStr(A_Loopfield, "comboboxItems") != 0){
-            startingPos := InStr(A_Loopfield, "=")
-            
-            _comboboxItems := SubStr(A_Loopfield, startingPos + 1)
+            _comboboxResolutionItems := SubStr(A_Loopfield, startingPos + 1)
         }
     }
 }
@@ -454,7 +480,25 @@ LoadFindTextHashs()
 
 Menu, Tray, Icon, %A_ScriptDir%\images\TWB Ready.ico
 
-Gui Font, s9, Segoe UI
+Gui, -dpiscale
+
+Global screenDPI := % A_ScreenDPI + 0
+Global screenWidth := % A_ScreenWidth + 0
+
+if (screenWidth >= 1280 AND screenWidth <= 1920){
+    if (screenDPI >= 144){
+        Gui Font, s6, Segoe UI
+    }Else{
+        Gui Font, s7, Segoe UI
+    }
+}Else if(screenWidth > 1920){
+    if (screenDPI >= 144){
+        Gui Font, s6, Segoe UI
+    }Else{
+        Gui Font, s10, Segoe UI
+    }
+}
+
 Gui Add, Picture, x8 y8 w150 h150, %A_ScriptDir%\images\Logo.png
 Gui Add, Text, x1200 y8 w700 h23 +0x200, How to setup manually your own resolution:
 Gui Add, Text, x1200 y31 w700 h23, 1 - Click on "Add New Resolution Config" Button and set a name for it
@@ -466,10 +510,14 @@ Gui Add, Text, x1200 y146 w700 h23, * Please wait 5 to 10 seconds to do anything
 Gui Add, Button, g_start_stop_bt x192 y8 w150 h50, Stop TWB
 Gui Add, Button, g_save_positions_bt x192 y64 w150 h50, Save Positions
 Gui Add, Button, g_enable_last_button x192 y120 w150 h50, Enable Last Button
-Gui Add, Button, g_add_combobox_items_input_box x768 y8 w150 h50, Add New Resolution Config
+Gui Add, Button, g_add_combobox_items_input_box x790 y8 w150 h50, Add New Resolution Config
 Gui Add, Text, x360 y8 w250 h23, Set Resolution / DPI Scale (in percentage):
-Gui Add, ComboBox, g_change_resolution_and_scale vcomboboxResolutionScale x360 y32 w400, %_comboboxItems%
-Gui Add, CheckBox, g_set_scopes_state vscopesState x360 y96 w403 h23, Check this box if your scopes window are floating
+Gui Add, ComboBox, g_change_resolution_and_scale vcomboboxResolutionScale x360 y32 w400, %_comboboxResolutionItems%
+Gui Add, Text, x360 y64 w250 h23, Set what is your Davinci Resolve Layout:
+Gui Add, ComboBox, g_change_davinci_layout_ui vcomboboxDavinciLayoutUI x360 y90 w400, NORMAL|CONDENSED|WIDE
+Gui Add, Text, x360 y120 w250 h23, Set a type of curves Hashs:
+Gui Add, ComboBox, g_change_curves_hash vcomboboxCurvesHashs x360 y148 w100, 1|2|3
+Gui Add, CheckBox, g_set_scopes_state vscopesState x790 y90 w403 h23, Check this box if your scopes window are floating
 
 Gui Add, Tab3, x8 y176 w1905 h900 Choose1, Edit Page Interface|Inspector Transform|Color Page Interface|Primaries Wheels/Jogs|Bars Jogs|Log Wheels/Jogs|HDR Wheels|Primaries Tools|Primaries YRBG|Bars YRBG|Log RGB|Log Tools|HDR Tools|HDR Controllers|HDR Zone|RGB Mixer|Curves UI|Custom Curves|Hue Curves|Qualifier|Qualifier Matte Finess|Power Windows|BSM|Key|Motion Effects|Scopes|Other
 
@@ -1061,7 +1109,7 @@ Gui Add, Button, g_set_variable_button vpos_timeline_view_options_audio_waveform
 
 Gui Tab
 
-Gui Show, w1920 h1080, TWB 2.4
+Gui Show, % "w" . A_ScreenWidth-100 . " h" . A_ScreenHeight-100, TWB 2.4
 
 if !(_scopesFixed){
     GuiControl,, scopesState, 1
@@ -1083,7 +1131,7 @@ GuiClose:
 
 ;TEST KEY - Use this for test anything in the code
 F9::
-    ;MsgBox Test key pressed
+    ;MsgBox %_davinciLayoutUI%
 Return
 
 #If (_appRunning) ;Turn on and off all the other functions of the app, making it stop if you need. Shortcut to turn on/off is F8
@@ -1265,8 +1313,8 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         DllCall("OSC2AHK.dll\addListener", AStr, "/startStop", UInt, 0x2050, UInt, oscTypeInt)
         OnMessage(0x2050, "_startStop")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGrade", UInt, 0x2051, UInt, oscTypeInt)
-        OnMessage(0x2051, "_resetAllNodesGrade")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGrade", UInt, 0x2051, UInt, oscTypeInt)
+        ;OnMessage(0x2051, "_resetAllNodesGrade")
         
         DllCall("OSC2AHK.dll\addListener", AStr, "/enableDisableAllNodes", UInt, 0x2052, UInt, oscTypeInt)
         OnMessage(0x2052, "_enableDisableAllNodes")
@@ -3066,8 +3114,8 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         ;DllCall("OSC2AHK.dll\removeListener", AStr, "/startStop", UInt, 0x2050, UInt, oscTypeInt)
         ;OnMessage(0x2050, "_startStop") ;This listener cannot be removed otherwise will be impossible restart the app using the shortcut key. Keep this commented
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x2051, UInt, oscTypeInt)
-        OnMessage(0x2051, "_resetAllNodesGrade")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x2051, UInt, oscTypeInt)
+        ;OnMessage(0x2051, "_resetAllNodesGrade")
         
         ;Update 2.2.1 Listeners
         DllCall("OSC2AHK.dll\removeListener", AStr, "/deleteKeyJogWheel", UInt, 0x2053, UInt, oscTypeInt)
@@ -3527,8 +3575,8 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesParade", UInt, 0x1392, UInt, oscTypeInt)
         OnMessage(0x1392, "_scopesParade")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x1391, UInt, oscTypeInt)
-        OnMessage(0x1391, "_resetAllNodesGrade")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x1391, UInt, oscTypeInt)
+        ;OnMessage(0x1391, "_resetAllNodesGrade")
         
         DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesExtract", UInt, 0x1390, UInt, oscTypeInt)
         OnMessage(0x1390, "_nodesExtract")
@@ -4718,6 +4766,12 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
 LoadPositions(){
     ;Set the Combo Box Resolution/Scale for the latest Resolution/Scale used
     GuiControl, Text, comboboxResolutionScale, %_resolutionAndScale%
+
+    ;Set the Combo Box Davinci Layout UI for the latest choosed
+    GuiControl, Text, comboboxDavinciLayoutUI, %_davinciLayoutUI%
+
+    ;Set the Combo Box Actual Curves Hashs for the latest choosed
+    GuiControl, Text, comboboxCurvesHashs, %_actualCurvesHashs%
     
     ;Reset _positionsArray
     _positionsArray := []
@@ -4838,7 +4892,6 @@ LoadWindowsStatus(){
     }
 }
 
-;Load the Edit Windows status of the last session from windows_status.ini
 LoadFindTextHashs(){
     ;Set a counter from 1 to 2 so loop knows if it is Var (1), text(2)
     counter := 1
@@ -4846,31 +4899,91 @@ LoadFindTextHashs(){
     ;Set a counter for the Array Position
     arrayPos := 1
     
-    ;Loop through custom_curves_hashs.ini file to populate the _dotsHashsArray with all the hashs for dots on custom curves panel
+    ;Loop through custom_curves_hashs.ini file to populate the _dotsHashsArray1, 2 and 3 with all the hashs for dots on custom curves panel
     Loop, read, %A_ScriptDir%\custom_curves_hashs.ini
     {
         Loop, parse, A_LoopReadLine, %A_Tab%
         {
-            if (InStr(A_Loopfield, _resolutionAndScale) == 0){
+            if (InStr(A_Loopfield, "TYPE 1") != 0){
                 continue
             }
             
-            if (InStr(A_Loopfield, "dotsHashArray") != 0){
+            if (InStr(A_Loopfield, "dotsHashArray1") != 0){
                 switch (counter){
                     Case 1:
                         object := []
-                        _dotsHashsArray.Push(object)
+                        _dotsHashsArray1.Push(object)
                         
                         startingPos := InStr(A_Loopfield, "=")
                         
-                        _dotsHashsArray[arrayPos].var := SubStr(A_Loopfield, startingPos + 1)
+                        _dotsHashsArray1[arrayPos].var := SubStr(A_Loopfield, startingPos + 1)
 
                         counter++
                     continue
                     Case 2:
                         startingPos := InStr(A_Loopfield, "=")
                         
-                        _dotsHashsArray[arrayPos].text := SubStr(A_Loopfield, startingPos + 1)
+                        _dotsHashsArray1[arrayPos].text := SubStr(A_Loopfield, startingPos + 1)
+
+                        counter := 1
+                        arrayPos++
+                    continue
+                }
+            }
+            
+            if (InStr(A_Loopfield, "TYPE 2") != 0){
+                counter := 1
+                arrayPos := 1
+                
+                continue
+            }
+            
+            if (InStr(A_Loopfield, "dotsHashArray2") != 0){
+                switch (counter){
+                    Case 1:
+                        object := []
+                        _dotsHashsArray2.Push(object)
+                        
+                        startingPos := InStr(A_Loopfield, "=")
+                        
+                        _dotsHashsArray2[arrayPos].var := SubStr(A_Loopfield, startingPos + 1)
+
+                        counter++
+                    continue
+                    Case 2:
+                        startingPos := InStr(A_Loopfield, "=")
+                        
+                        _dotsHashsArray2[arrayPos].text := SubStr(A_Loopfield, startingPos + 1)
+
+                        counter := 1
+                        arrayPos++
+                    continue
+                }
+            }
+            
+            if (InStr(A_Loopfield, "TYPE 3") != 0){
+                counter := 1
+                arrayPos := 1
+                
+                continue
+            }
+            
+            if (InStr(A_Loopfield, "dotsHashArray3") != 0){
+                switch (counter){
+                    Case 1:
+                        object := []
+                        _dotsHashsArray3.Push(object)
+                        
+                        startingPos := InStr(A_Loopfield, "=")
+                        
+                        _dotsHashsArray3[arrayPos].var := SubStr(A_Loopfield, startingPos + 1)
+
+                        counter++
+                    continue
+                    Case 2:
+                        startingPos := InStr(A_Loopfield, "=")
+                        
+                        _dotsHashsArray3[arrayPos].text := SubStr(A_Loopfield, startingPos + 1)
 
                         counter := 1
                         arrayPos++
@@ -4908,10 +5021,10 @@ AddcomboboxItems(item) {
     GuiControl,, comboboxResolutionScale, %item%
     
     ;Add the new item to the variable that stores all the combobox items
-    _comboboxItems := _comboboxItems . "|" . item
+    _comboboxResolutionItems := _comboboxResolutionItems . "|" . item
     
     ;Write the new item on the ini file for future load
-    IniWrite, %_comboboxItems%, %A_ScriptDir%\resolution.ini, RESOLUTION, comboboxItems
+    IniWrite, %_comboboxResolutionItems%, %A_ScriptDir%\resolution.ini, RESOLUTION, comboboxItems
     
     ;Change the resolution and scale variable to the new item
     _resolutionAndScale := item
@@ -11207,7 +11320,7 @@ _toggleTimelineThumbMode(oscType, data, msgID, hwnd){
         ChangePage("COLOR")
         Return
     }
-    
+
     if (_actualTimelineThumbnailMode){
         Send ^!{c}
     }Else{
@@ -12509,11 +12622,24 @@ GetObjectOnPositionsArray(objectName){
     }
 }
 
-;Run the _dotsHashsArray to find a expecific object and return it
+;Run the _dotsHashsArray or the _dotsHashsArray2 to find a expecific object and return it
 GetHashsText(hash){
-    For index, object in _dotsHashsArray
-    if (object.var == hash) {
-        Return object
+    Switch (_actualCurvesHashs){
+        Case "1":
+            For index, object in _dotsHashsArray1
+            if (object.var == hash) {
+                Return object
+            }
+        Case "2":
+            For index, object in _dotsHashsArray2
+            if (object.var == hash) {
+                Return object
+            }
+        Case "3":
+            For index, object in _dotsHashsArray3
+            if (object.var == hash) {
+                Return object
+            }
     }
 }
 
@@ -12667,6 +12793,14 @@ ChangeMode(mode){
 ChangeColorPanel(panel){
     if (_actualColorPanel == panel)
     Return
+    
+    if (_actualMode == "HDR"){
+        object := GetWindow("pos_hdr_open_zone")
+
+        if (object.status == 1){
+            OpenCloseHDRZone()
+        }
+    }
     
     Switch (panel){
         Case "PRIMARIES":
@@ -12918,6 +13052,19 @@ OpenCloseWindow(buttonName, ifInspectorVideoOrAudio := 1){
     }
 }
 
+;Close HDR Zone Window
+CloseHDRZone(){
+    if (_davinciLayoutUI == "CONDENSED"){
+        MoveMouseAndClick("pos_hdr_wheels")
+    }Else {
+        MoveMouseAndClick("pos_zone_close_zone")
+    }
+    
+    SetWindowStatus(object.var, 0)
+    
+    SaveWindowsStatus()
+}
+
 ;Open or Close HDR Zone Window
 OpenCloseHDRZone(){
     ChangeColorPanel("HDR")
@@ -12926,13 +13073,21 @@ OpenCloseHDRZone(){
     
     if (object.status == 0)
     {   
-        MoveMouseAndClick("pos_hdr_open_zone")
+        if (_davinciLayoutUI == "CONDENSED"){
+            MoveMouseAndClick("pos_hdr_zone_toggle")
+        }Else {
+            MoveMouseAndClick("pos_hdr_open_zone")
+        }
         
         SetWindowStatus(object.var, 1)
         
         SaveWindowsStatus()
     }Else{
-        MoveMouseAndClick("pos_zone_close_zone")
+        if (_davinciLayoutUI == "CONDENSED"){
+            MoveMouseAndClick("pos_hdr_wheels")
+        }Else {
+            MoveMouseAndClick("pos_zone_close_zone")
+        }
         
         SetWindowStatus(object.var, 0)
         
@@ -12969,21 +13124,24 @@ ChangeMatteFinessePage(page){
 
     CheckIfColorPanel("QUALIFIERHSL")
     
-    object := GetWindow("actual_matte_finess")
-    
-    _actualMatteFinessePage := page
-    
-    if (page == 1){
-        MoveMouseAndClick("pos_matte_finesse_1")
+    ;Check if the layout isn't "WIDE". When is "WHIDE" there's no pages for Matte Finess so all this block is ignored
+    if (_davinciLayoutUI != "WIDE"){
+        object := GetWindow("actual_matte_finess")
         
-        SetWindowStatus(object.var, 0)
-    }Else{
-        MoveMouseAndClick("pos_matte_finesse_2")
+        _actualMatteFinessePage := page
         
-        SetWindowStatus(object.var, 1)
+        if (page == 1){
+            MoveMouseAndClick("pos_matte_finesse_1")
+            
+            SetWindowStatus(object.var, 0)
+        }Else{
+            MoveMouseAndClick("pos_matte_finesse_2")
+            
+            SetWindowStatus(object.var, 1)
+        }
+        
+        SaveWindowsStatus()
     }
-    
-    SaveWindowsStatus()
     
     Return
 }
@@ -13050,7 +13208,7 @@ CheckIfColorPanelData0(data, panel, openHDRZone := False){
 ;Check if HDR Zone panel is opened (1) or closed (0) and if closed, open it
 CheckIfHDRZone(){
     if (GetWindow("pos_hdr_open_zone").status == 0){
-        OpenCloseWindow("pos_hdr_open_zone", 1)
+        OpenCloseHDRZone()
     }
     
     Return True
@@ -13332,8 +13490,6 @@ _enable_last_button(){
 
 ;Change the combobox for the latest resolution/scale saved in the _resolutionAndScale variable and write it on the INI file. After that, load all the positions inside the _positionsArray
 _change_resolution_and_scale(CtrlHwnd, GuiEvent, EventInfo, ErrLevel := "") {
-    CoordMode, Mouse, Screen
-
     GuiControlGet, comboboxResolutionScale
     _resolutionAndScale := comboboxResolutionScale
     
@@ -13342,6 +13498,20 @@ _change_resolution_and_scale(CtrlHwnd, GuiEvent, EventInfo, ErrLevel := "") {
     LoadPositions()
     
     LoadFindTextHashs()
+}
+
+_change_davinci_layout_ui(CtrlHwnd, GuiEvent, EventInfo, ErrLevel := ""){
+    GuiControlGet, comboboxDavinciLayoutUI
+    _davinciLayoutUI := comboboxDavinciLayoutUI
+    
+    IniWrite, %_davinciLayoutUI%, %A_ScriptDir%\resolution.ini, RESOLUTION, davinciLayoutUI
+}
+
+_change_curves_hash(CtrlHwnd, GuiEvent, EventInfo, ErrLevel := ""){
+    GuiControlGet, comboboxCurvesHashs
+    _actualCurvesHashs := comboboxCurvesHashs
+    
+    IniWrite, %_actualCurvesHashs%, %A_ScriptDir%\resolution.ini, RESOLUTION, actualCurvesHashs
 }
 
 ;Call the input Box where user will type the new resolution/scale bank name

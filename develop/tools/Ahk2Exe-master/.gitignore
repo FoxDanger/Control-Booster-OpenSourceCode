@@ -1,0 +1,10 @@
+*.exe
+*.bin
+*.bak
+*.db
+*.zip
+*.cmd
+*.chm
+*.reg
+*.session
+/__debug.ahk

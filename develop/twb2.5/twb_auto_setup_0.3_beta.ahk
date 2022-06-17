@@ -177,7 +177,7 @@ StartAutoPositions(){
     
     Switch (_davinciLayoutUI){
         Case "NORMAL":
-            filePath := "addresses_normal.ini"
+            filePath := "addresses_normalB.ini"
         Case "CONDENSED":
             filePath := "addresses_condensed.ini"
         Case "WIDE":
@@ -307,7 +307,10 @@ startUserPositions(){
     Gui Font, s9, Segoe UI
     Gui Add, Text, x0 y0 w1024 h768
     Gui Add, Text, x0 y100 w1280 h3 +0x10
-
+    
+    ;Remove the comment to skip the user position configuration
+    _actualTool := 100
+    
     Switch (_actualTool){
         Case 1:
             _actualObject := "pos_media_pool_empty_space"
@@ -643,10 +646,10 @@ StartSetup(){
 ResetDefaultState(){
     FileCopy %A_ScriptDir%\default_ini_files\windows_status.ini, %A_ScriptDir%, 1
 
-    Send ^{F1}
-    Sleep 1000
-    Send ^{F2}
-    Sleep 1000
+    ;Send ^{F1}
+   ; Sleep 1000
+    ;Send ^{F2}
+    ;Sleep 1000
 }
 
 ChangePositionVariable(){

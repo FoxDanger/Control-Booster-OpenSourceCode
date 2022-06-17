@@ -11,7 +11,9 @@
 ;- Now the Mode Selection mode on the Tangent Panel works differently: When you choose a new mode, it not only change the mode in the Tangent Panel, but automatically changes the Page (EDIT or COLOR) and goes to the chosed Panel on the Davinci UI.
 ;- Added a knob on Qualifier Mode to change between HSL and RGB panels. It still changing automatically between panels when you use a tool from HSL or RGB. I added this so you can turn off and on each HSL or RGB channels without have to use a tool to go to that panel.
 ;- TODO:
+;- Color Warper Mode
 ;- Add Pan, Semitones and cents control to audio inspector controllers on inspector mode
+;- ADD ALL THE NEW THINGS TO THE ELEMENTS PANEL TOO
 
 ;Updates of 2.4 version:
 ;- TWB screen now resize with different DPI/Resolution Scales.
@@ -312,7 +314,7 @@ CoordMode, Mouse, Screen
 Global OSC_RECEIVE_IP := "127.0.0.1"
 Global OSC_RECEIVE_PORT := 7002
 Global OSC_SEND_IP := "127.0.0.1"
-Global OSC_SEND_PORT := 51170
+Global OSC_SEND_PORT := 60368
 
 ; OSC datatypes. Just for better readability, you also just could use the numbers
 Global oscTypeNone := 1
@@ -1398,9 +1400,12 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         ;---------------------------------------------------------------------- High / Low Listeners ID's ----------------------------------------------------------------------
         
         ;Update 2.5 Listeners
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperHueSat", UInt, 0x1538, UInt, oscTypeInt)
+        OnMessage(0x1538, "_colorWarperHueSat")
+        
         DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHSLxRGB", UInt, 0x1537, UInt, oscTypeInt)
         OnMessage(0x1537, "_qualifierHSLxRGB")
-
+        
         ;Update 2.4 Listeners
         DllCall("OSC2AHK.dll\addListener", AStr, "/barsFirstJog", UInt, 0x1536, UInt, oscTypeInt)
         OnMessage(0x1536, "_barsFirstJog")
@@ -3251,6 +3256,9 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         ;---------------------------------------------------------------------- High / Low Listeners ID's ----------------------------------------------------------------------
         
         ;Update 2.5 Listeners
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperHueSat", UInt, 0x1538, UInt, oscTypeInt)
+        OnMessage(0x1538, "_colorWarperHueSat")
+        
         DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHSLxRGB", UInt, 0x1537, UInt, oscTypeInt)
         OnMessage(0x1537, "_qualifierHSLxRGB")
         
@@ -5681,6 +5689,21 @@ _motionEffects(oscType, data, msgID, hwnd){
     _currentPanel := "MOTION EFFECTS"
     
     DllCall("OSC2AHK.dll\sendOscMessageString", AStr, OSC_SEND_IP, UInt, OSC_SEND_PORT, AStr, "/HubCommand", AStr, "ModeValue[16]")
+}
+
+_colorWarperHueSat(oscType, data, msgID, hwnd){
+    if (data == 0)
+    Return
+    
+    ChangePage("COLOR")
+    
+    MoveMouseAndClick("pos_color_page_bts_color_warper")
+    MoveMouseAndClick("pos_color_warper_huexsat_dot")
+    
+    _lastPanel := _currentPanel
+    _currentPanel := "COLOR WARPER HUEXSAT"
+    
+    DllCall("OSC2AHK.dll\sendOscMessageString", AStr, OSC_SEND_IP, UInt, OSC_SEND_PORT, AStr, "/HubCommand", AStr, "ModeValue[17]")
 }
 
 ;***** End of Change mode functions *****

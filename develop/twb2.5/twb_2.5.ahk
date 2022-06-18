@@ -14,6 +14,8 @@
 ;- New Color Warper Chroma x Lum Mode.
 ;- Implemented all the listeners and functions for Color Warper Hue X Sat and Chroma x Lum panels.
 ;- TODO:
+;- Add Tracking Mode
+;- Add Sizing Mode
 ;- Add Pan, Semitones and cents control to audio inspector controllers on inspector mode
 ;- ADD ALL THE NEW THINGS TO THE ELEMENTS PANEL TOO
 
@@ -326,7 +328,7 @@ CoordMode, Mouse, Screen
 Global OSC_RECEIVE_IP := "127.0.0.1"
 Global OSC_RECEIVE_PORT := 7002
 Global OSC_SEND_IP := "127.0.0.1"
-Global OSC_SEND_PORT := 64769
+Global OSC_SEND_PORT := 52344
 
 ; OSC datatypes. Just for better readability, you also just could use the numbers
 Global oscTypeNone := 1
@@ -562,7 +564,7 @@ Gui Add, ComboBox, g_change_curves_hash vcomboboxCurvesHashs x360 y148 w100, 1|2
 Gui Add, CheckBox, g_set_scopes_state vscopesState x790 y90 w403 h23, Check this box if your scopes window is floating
 Gui Add, CheckBox, g_set_color_warper_state vcolorWarperState x790 y120 w403 h23, Check this box if your color warper window is floating
 
-Gui Add, Tab3, x8 y176 w1905 h900 Choose1, Edit Page Interface|Inspector Transform|Color Page Interface|Primaries Wheels/Jogs|Bars Jogs|Log Wheels/Jogs|HDR Wheels|Primaries Tools|Primaries YRBG|Bars YRBG|Log RGB|Log Tools|HDR Tools|HDR Controllers|HDR Zone|RGB Mixer|Curves UI|Custom Curves|Hue Curves|Qualifier|Qualifier Matte Finess|Power Windows|BSM|Key|Motion Effects|Scopes|Other
+Gui Add, Tab3, x8 y176 w1905 h900 Choose1, Edit Page Interface|Inspector Transform|Color Page Interface|Primaries Wheels/Jogs|Bars Jogs|Log Wheels/Jogs|HDR Wheels|Primaries Tools|Primaries YRBG|Bars YRBG|Log RGB|Log Tools|HDR Tools|HDR Controllers|HDR Zone|RGB Mixer|Curves UI|Custom Curves|Hue Curves|Color Warper Hue X Sat|Color Warper Chr X Lum|Qualifier|Qualifier Matte Finess|Power Windows|BSM|Key|Motion Effects|Scopes|Other
 
 Gui Tab, 1
 Gui Add, Picture, x480 y608 w950 h40, %A_ScriptDir%\images\Edit Page Top Buttons.png
@@ -955,6 +957,96 @@ Gui Add, Button, g_set_variable_button vpos_hue_curves_output x1255 y848 h50, Ou
 Gui Add, Button, g_set_variable_button vpos_hue_curves_bottom_right x1440 y784 w150 h50, Hue Curves Graphic Bottom Right Corner
 
 Gui Tab, 20
+Gui Add, Picture, x184 y312 w950 h400, %A_ScriptDir%\images\Color Warper Hue x Sat Panel.png
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_dot x752 y248 w120 h50, Color Warper Hue x Sat
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_dot x880 y248 w120 h50, Color Warper Chr x Lum
+Gui Add, Button, g_set_variable_button vpos_color_warper_reset_all x1008 y248 w120 h50, Color Warper Reset All
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_select x1144 y320 w120 h50, Select / Deselect
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_draw x1272 y320 w120 h50, Draw
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_pin x1400 y320 w120 h50, Pin / De-pin
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_pull x1528 y320 w120 h50, Pull Points
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_push x1656 y320 w120 h50, Push Points
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_increase_falloff x1144 y384 w120 h50, Increase Fall Off
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_decrease_falloff x1272 y384 w120 h50, Decrease Fall Off
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_invert_selection x1400 y384 w120 h50, Invert Selection
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_convert_to_pin x1528 y384 w120 h50, Convert To Pin
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_pin_column x1144 y448 w120 h50, Pin Column
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_pin_ring x1272 y448 w120 h50, Pin Ring
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_select_all x1400 y448 w120 h50, Select / Deselect All
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_reset_selection x1528 y448 w120 h50, Reset Selection
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_auto_lock x1144 y512 w120 h50, Auto Lock
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_bar x1144 y576 w120 h50, Hue Bar
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_bar x1272 y576 w120 h50, Saturation Bar
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_lum_bar x1400 y576 w120 h50, Luma Bar
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_feather x1144 y640 w120 h50, Smooth Hue
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_reset x1272 y640 w120 h50, Reset Hue
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_feather x1400 y640 w120 h50, Smooth Saturation
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_reset x1528 y640 w120 h50, Reset Saturation
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_lum_reset x1656 y640 w120 h50, Reset Luma
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_resolution x184 y720 w120 h50, Hue Resolution
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_resolution_1 x184 y784 w120 h40, Option 6
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_resolution_2 x184 y832 w120 h40, Option 8
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_resolution_3 x184 y880 w120 h40, Option 12
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_resolution_4 x184 y928 w120 h40, Option 16
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_hue_resolution_5 x184 y976 w120 h40, Option 24
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_resolution x320 y720 w120 h50, Saturation Resolution
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_resolution_1 x320 y784 w120 h40, Option 6
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_resolution_2 x320 y832 w120 h40, Option 8
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_resolution_3 x320 y880 w120 h40, Option 12
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_sat_resolution_4 x320 y928 w120 h40, Option 16
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_color_space x664 y720 w120 h50, Color Space
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_color_space_hsv x664 y784 w120 h40, HSV
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_color_space_hsl x664 y832 w120 h40, HSL
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_color_space_hsy x664 y880 w120 h40, HSY
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_color_space_hsp x664 y928 w120 h40, HSP
+Gui Add, Button, g_set_variable_button vpos_color_warper_huexsat_color_space_hsp_log x664 y976 w120 h40, HSP LOG
+
+Gui Tab, 21
+Gui Add, Picture, x184 y312 w950 h400, %A_ScriptDir%\images\Color Warper Chroma x Lum Panel.png
+Gui Add, Picture, x184 y312 w950 h400, %A_ScriptDir%\images\Color Warper Chroma x Lum Panel.png
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_select x1144 y320 w120 h50, Select / Deselect
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_draw x1272 y320 w120 h50, Draw
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_pin x1400 y320 w120 h50, Pin / De-pin
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_pull x1528 y320 w120 h50, Pull Points
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_push x1656 y320 w120 h50, Push Points
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_increase_falloff x1144 y384 w120 h50, Increase Fall Off
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_decrease_falloff x1272 y384 w120 h50, Decrease Fall Off
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_invert_selection x1400 y384 w120 h50, Invert Selection
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_convert_to_pin x1528 y384 w120 h50, Convert To Pin
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_pin_column x1144 y448 w120 h50, Pin Column
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_pin_ring x1272 y448 w120 h50, Pin Ring
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_select_all x1400 y448 w120 h50, Select / Deselect All
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_reset_selection x1528 y448 w120 h50, Reset Selection
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_auto_lock x1144 y512 w120 h50, Auto Lock
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_bar x1144 y576 w120 h50, Chroma Bar
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_bar x1272 y576 w120 h50, Luma Bar
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_feather x1144 y640 w120 h50, Smoothe Chroma
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_reset x1272 y640 w120 h50, Reset Chroma
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_feather x1400 y640 w120 h50, Smooth Luma
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_reset x1528 y640 w120 h50, Reset Luma
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution x184 y720 w120 h50, Chroma Resolution
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution_pos_color_warper_chrxlum_chroma_resolution_2 x184 y832 w120 h40, Option 6
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution_pos_color_warper_chrxlum_chroma_resolution_3 x184 y880 w120 h40, Option 8
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution_pos_color_warper_chrxlum_chroma_resolution_4 x184 y928 w120 h40, Option 12
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution_pos_color_warper_chrxlum_chroma_resolution_5 x184 y976 w120 h40, Option 16
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution_pos_color_warper_chrxlum_chroma_resolution_6 x184 y1024 w120 h40, Option 24
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution x320 y720 w120 h50, Luma Resolution
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution_2 x320 y832 w120 h40, Option 6
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution_3 x320 y880 w120 h40, Option 8
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution_4 x320 y928 w120 h40, Option 12
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution_5 x320 y976 w120 h40, Option 16
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_color_space x664 y720 w120 h50, Color Space
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_color_space_hsv x664 y784 w120 h40, HSV
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_color_space_hsl x664 y832 w120 h40, HSL
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_color_space_hsy x664 y880 w120 h40, HSY
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_color_space_hsp x664 y928 w120 h40, HSP
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_color_space_hsp_log x664 y976 w120 h40, HSP LOG
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_chroma_resolution_pos_color_warper_chrxlum_chroma_resolution_1 x184 y784 w120 h40, Option 4
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution_1 x320 y784 w120 h40, Option 4
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_lum_resolution_6 x320 y1024 w120 h40, Option 24
+Gui Add, Button, g_set_variable_button vpos_color_warper_chrxlum_axis_angle x512 y720 w120 h50, Axis Angle Bar
+
+Gui Tab, 22
 Gui Add, Picture, x480 y432 w950 h400, %A_ScriptDir%\images\Qualifier Panel.png
 Gui Add, Button, g_set_variable_button vpos_qualifier_hsl_dot x1120 y304 w150 h50, Qualifier HSL Button
 Gui Add, Button, g_set_variable_button vpos_qualifier_rgb_dot x1280 y304 w150 h50, Qualifier RGB Button
@@ -984,7 +1076,7 @@ Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_low_soft x800 y9
 Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_high_soft x960 y976 w150 h50, Luminance/Blue High Soft
 Gui Add, Button, g_set_variable_button vpos_qualifier_luminance_reset x1120 y976 w150 h50, Luminance/Blue Reset
 
-Gui Tab, 21
+Gui Tab, 23
 Gui Add, Picture, x672 y320 w570 h400, %A_ScriptDir%\images\Qualifier Matte Finesse Panel.png
 Gui Add, Button, g_set_variable_button vpos_matte_finesse_1 x672 y256 w150 h50, Matte Finesse 1
 Gui Add, Button, g_set_variable_button vpos_matte_finesse_2 x1088 y256 w150 h50, Matte Finesse 2
@@ -1007,7 +1099,7 @@ Gui Add, Button, g_set_variable_button vpos_matte_finesse_2_midtone x1416 y584 w
 Gui Add, Button, g_set_variable_button vpos_matte_finesse_2_highlight x1416 y648 w150 h50, Highlight
 Gui Add, Button, g_set_variable_button vpos_matte_finesse_2_post_filter x1416 y712 w150 h50, Post-Filter
 
-Gui Tab, 22
+Gui Tab, 24
 Gui Add, Picture, x480 y320 w950 h400, %A_ScriptDir%\images\Power Windows Panel.png
 Gui Add, Button, g_set_variable_button vpos_power_window_add_linear x480 y256 w150 h50, Add Linear
 Gui Add, Button, g_set_variable_button vpos_power_window_add_circle x640 y256 w150 h50, Add Circle
@@ -1029,7 +1121,7 @@ Gui Add, Button, g_set_variable_button vpos_power_window_soft_4 x1280 y800 w150 
 Gui Add, Button, g_set_variable_button vpos_power_window_inside x1120 y864 w150 h50, Inside
 Gui Add, Button, g_set_variable_button vpos_power_window_outside x1280 y864 w150 h50, Outside
 
-Gui Tab, 23
+Gui Tab, 25
 Gui Add, Picture, x480 y432 w950 h400, %A_ScriptDir%\images\BSM Panel.png
 Gui Add, Button, g_set_variable_button vpos_bsm_blur_dot x960 y304 w150 h50, Blur Button
 Gui Add, Button, g_set_variable_button vpos_bsm_sharpen_dot x1120 y304 w150 h50, Sharpen Button
@@ -1054,7 +1146,7 @@ Gui Add, Button, g_set_variable_button vpos_bsm_ratio_link x800 y368 w150 h50, R
 Gui Add, Button, g_set_variable_button vpos_bsm_radius_g x568 y912 w150 h50, Radius G
 Gui Add, Button, g_set_variable_button vpos_bsm_ratio_r x880 y848 w150 h50, Ratio R
 
-Gui Tab, 24
+Gui Tab, 26
 Gui Add, Picture, x480 y320 w950 h400, %A_ScriptDir%\images\Key Panel.png
 Gui Add, Button, g_set_variable_button vpos_key_reset x1280 y256 w150 h50, Reset Key
 Gui Add, Button, g_set_variable_button vpos_key_input_invert_matte_mask x1440 y320 w150 h50, Input Invert Matte/Mask
@@ -1071,7 +1163,7 @@ Gui Add, Button, g_set_variable_button vpos_key_output_offset x1256 y864 w150 h5
 Gui Add, Button, g_set_variable_button vpos_key_qualifier_gain x1040 y928 w150 h50, Qualifier Gain
 Gui Add, Button, g_set_variable_button vpos_key_qualifier_offset x1256 y928 w150 h50, Qualifier Offset
 
-Gui Tab, 25
+Gui Tab, 27
 Gui Add, Picture, x480 y432 w950 h400, %A_ScriptDir%\images\Motion Effects Panel.png
 Gui Add, Button, g_set_variable_button vpos_motion_effects_reset x1312 y368 w120 h50, Reset Motion Effects
 Gui Add, Button, g_set_variable_button vpos_motion_effects_frames x96 y432 w120 h50, Frames
@@ -1121,7 +1213,7 @@ Gui Add, Button, g_set_variable_button vpos_motion_effects_blur_motion_range_sma
 Gui Add, Button, g_set_variable_button vpos_motion_effects_motion_blur x1696 y528 w120 h50, Motion Blur
 Gui Add, Button, g_set_variable_button vpos_motion_effects_reset_motion_blur x1696 y464 w120 h50, Reset Motion Blur
 
-Gui Tab, 26
+Gui Tab, 28
 Gui Add, Picture, x600 y464 w420 h360, %A_ScriptDir%\images\Scopes.png
 Gui Add, Picture, x1032 y576 w370 h240, %A_ScriptDir%\images\Scopes Dots Menu.png
 Gui Add, Button, g_set_variable_button vpos_scopes_menu x440 y456 w150 h50, Scopes Menu
@@ -1134,7 +1226,7 @@ Gui Add, Button, g_set_variable_button vpos_scopes_dots_menu x1032 y512 w150 h50
 Gui Add, Button, g_set_variable_button vpos_scopes_display_focus x1416 y672 w150 h50, Display Qualifier Focus
 Gui Add, Button, g_set_variable_button vpos_scopes_low_pass_filter x1416 y736 w150 h50, Low Pass Filter
 
-Gui Tab, 27
+Gui Tab, 29
 Gui Add, Picture, x40 y312 w950 h51, %A_ScriptDir%\images\Timeline Time Bar.png
 Gui Add, Picture, x40 y472 w529 h185, %A_ScriptDir%\images\Empty Space on Media Pool.png
 Gui Add, Picture, x1352 y312 w529 h185, %A_ScriptDir%\images\Color Page Thumbnails.png

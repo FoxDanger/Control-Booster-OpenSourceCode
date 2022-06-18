@@ -110,10 +110,10 @@ GuiClose:
 
 ;Setup things for TWB Positions Generator work correctly
 FirstSetup(){
-    MsgBox "Before start we need to do 3 steps:"
-    MsgBox "1 - Open a new project on Davinci Resolve"
-    MsgBox "2 - Create a timeline and put a clip with audio on it"
-    MsgBox "3 - Go to color page, select the clip and add this clip to a group."
+    ;MsgBox "Before start we need to do 3 steps:"
+    ;MsgBox "1 - Open a new project on Davinci Resolve"
+    ;MsgBox "2 - Create a timeline and put a clip with audio on it"
+    ;MsgBox "3 - Go to color page, select the clip and add this clip to a group."
     
     CallNormalLayout()
 }
@@ -650,7 +650,7 @@ ResetDefaultState(){
     FileCopy %A_ScriptDir%\default_ini_files\windows_status.ini, %A_ScriptDir%, 1
 
     ;Send ^{F1}
-   ; Sleep 1000
+    ;Sleep 1000
     ;Send ^{F2}
     ;Sleep 1000
 }

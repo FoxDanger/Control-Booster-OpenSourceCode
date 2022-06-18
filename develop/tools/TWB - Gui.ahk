@@ -4,14 +4,9 @@
 SetWorkingDir %A_ScriptDir%
 SetBatchLines -1
 
-Menu, Tray, Icon, %A_ScriptDir%\images\TWB Ready.ico
-
-
-Gui Add, GroupBox, x0 y0 w1024 h768, GroupBox
-
 Gui Font, s9, Segoe UI
 Gui Add, Picture, x8 y8 w150 h150, %A_ScriptDir%\images\Logo.png
-Gui Add, Text, x1200 y8 w700 h23 +0x200, How to setup manually your own resolution:
+Gui Add, Text, x1200 y8 w700 h23 +0x200 , How to setup manually your own resolution:
 Gui Add, Text, x1200 y31 w700 h23, 1 - Click on "Add New Resolution Config" Button and set a name for it
 Gui Add, Text, x1200 y54 w700 h23, 2 - Click on the button of the tool that you will change the position
 Gui Add, Text, x1200 y77 w700 h23, 3 - Go to your software screen and position the mouse on top of the tool
@@ -21,52 +16,60 @@ Gui Add, Text, x1200 y146 w700 h23, * Please wait 5 to 10 seconds to do anything
 Gui Add, Button, g_start_stop_bt x192 y8 w150 h50, Stop TWB
 Gui Add, Button, g_save_positions_bt x192 y64 w150 h50, Save Positions
 Gui Add, Button, g_enable_last_button x192 y120 w150 h50, Enable Last Button
-Gui Add, Button, g_add_combobox_items_input_box x768 y8 w150 h50, Add New Resolution Config
+Gui Add, Button, g_add_combobox_items_input_box x790 y8 w150 h50, Add New Resolution Config
 Gui Add, Text, x360 y8 w250 h23, Set Resolution / DPI Scale (in percentage):
-Gui Add, ComboBox, g_change_resolution_and_scale vcomboboxResolutionScale x360 y32 w400, %_comboboxResolutionItems%
+Gui Add, ComboBox, vcomboboxResolutionScale g_change_resolution_and_scale x360 y32 w400, %_comboboxResolutionItems%
 Gui Add, Text, x360 y64 w250 h23, Set what is your Davinci Resolve Layout:
-Gui Add, ComboBox, g_change_davinci_layout_ui vcomboboxDavinciLayoutUI x360 y90 w400, NORMAL|CONDENSED|WIDE
-Gui Add, CheckBox, g_set_scopes_state vscopesState x360 y135 w403 h23, Check this box if your scopes window are floating
+Gui Add, ComboBox, vcomboboxDavinciLayoutUI g_change_davinci_layout_ui x360 y90 w400, NORMAL|CONDENSED|WIDE
+Gui Add, Text, x360 y120 w250 h23, Set a type of curves Hashs:
+Gui Add, ComboBox, vcomboboxCurvesHashs g_change_curves_hash x360 y148 w100, 1|2|3
+Gui Add, CheckBox, vscopesState g_set_scopes_state x790 y90 w403 h23, Check this box if your scopes window is floating
+Gui Add, CheckBox, vcolorWarperState g_set_color_warper_state x790 y120 w403 h23, Check this box if your color warper window is floating
+Gui Add, Picture, x184 y312 w950 h400, F:\André Rodrigues\Media Environment\Produtos\TWB 2 - Develop\GIT\develop\twb2.5\images\Color Warper Hue x Sat Panel.png
+Gui Add, Button, vpos_color_warper_huexsat_dot g_set_variable_button x752 y248 w120 h50, Color Warper Hue x Sat
+Gui Add, Button, vpos_color_warper_chrxlum_dot x880 y248 w120 h50, Color Warper Chr x Lum
+Gui Add, Button, vpos_color_warper_reset_all x1008 y248 w120 h50, Color Warper Reset All
+Gui Add, Button, vpos_color_warper_huexsat_select x1144 y320 w120 h50, Select / Deselect
+Gui Add, Button, vpos_color_warper_huexsat_draw x1272 y320 w120 h50, Draw
+Gui Add, Button, vpos_color_warper_huexsat_pin x1400 y320 w120 h50, Pin / De-pin
+Gui Add, Button, vpos_color_warper_huexsat_pull x1528 y320 w120 h50, Pull Points
+Gui Add, Button, vpos_color_warper_huexsat_push x1656 y320 w120 h50, Push Points
+Gui Add, Button, vpos_color_warper_huexsat_increase_falloff x1144 y384 w120 h50, Increase Fall Off
+Gui Add, Button, vpos_color_warper_huexsat_decrease_falloff x1272 y384 w120 h50, Decrease Fall Off
+Gui Add, Button, vpos_color_warper_huexsat_invert_selection x1400 y384 w120 h50, Invert Selection
+Gui Add, Button, vpos_color_warper_huexsat_convert_to_pin x1528 y384 w120 h50, Convert To Pin
+Gui Add, Button, vpos_color_warper_huexsat_pin_column x1144 y448 w120 h50, Pin Column
+Gui Add, Button, vpos_color_warper_huexsat_pin_ring x1272 y448 w120 h50, Pin Ring
+Gui Add, Button, vpos_color_warper_huexsat_select_all x1400 y448 w120 h50, Select / Deselect All
+Gui Add, Button, vpos_color_warper_huexsat_reset_selection x1528 y448 w120 h50, Reset Selection
+Gui Add, Button, vpos_color_warper_huexsat_auto_lock x1144 y512 w120 h50, Auto Lock
+Gui Add, Button, vpos_color_warper_huexsat_hue_bar x1144 y576 w120 h50, Hue Bar
+Gui Add, Button, vpos_color_warper_huexsat_sat_bar x1272 y576 w120 h50, Saturation Bar
+Gui Add, Button, vpos_color_warper_huexsat_lum_bar x1400 y576 w120 h50, Luma Bar
+Gui Add, Button, vpos_color_warper_huexsat_hue_feather x1144 y640 w120 h50, Smooth Hue
+Gui Add, Button, vpos_color_warper_huexsat_hue_reset x1272 y640 w120 h50, Reset Hue
+Gui Add, Button, vpos_color_warper_huexsat_sat_feather x1400 y640 w120 h50, Smooth Saturation
+Gui Add, Button, vpos_color_warper_huexsat_sat_reset x1528 y640 w120 h50, Reset Saturation
+Gui Add, Button, vpos_color_warper_huexsat_lum_reset x1656 y640 w120 h50, Reset Luma
+Gui Add, Button, vpos_color_warper_huexsat_hue_resolution x184 y720 w120 h50, Hue Resolution
+Gui Add, Button, vpos_color_warper_huexsat_hue_resolution_1 x184 y784 w120 h40, Option 6
+Gui Add, Button, vpos_color_warper_huexsat_hue_resolution_2 x184 y832 w120 h40, Option 8
+Gui Add, Button, vpos_color_warper_huexsat_hue_resolution_3 x184 y880 w120 h40, Option 12
+Gui Add, Button, vpos_color_warper_huexsat_hue_resolution_4 x184 y928 w120 h40, Option 16
+Gui Add, Button, vpos_color_warper_huexsat_hue_resolution_5 x184 y976 w120 h40, Option 24
+Gui Add, Button, vpos_color_warper_huexsat_sat_resolution x320 y720 w120 h50, Saturation Resolution
+Gui Add, Button, vpos_color_warper_huexsat_sat_resolution_1 x320 y784 w120 h40, Option 6
+Gui Add, Button, vpos_color_warper_huexsat_sat_resolution_2 x320 y832 w120 h40, Option 8
+Gui Add, Button, vpos_color_warper_huexsat_sat_resolution_3 x320 y880 w120 h40, Option 12
+Gui Add, Button, vpos_color_warper_huexsat_sat_resolution_4 x320 y928 w120 h40, Option 16
+Gui Add, Button, vpos_color_warper_huexsat_color_space x664 y720 w120 h50, Color Space
+Gui Add, Button, vpos_color_warper_huexsat_color_space_hsv x664 y784 w120 h40, HSV
+Gui Add, Button, vpos_color_warper_huexsat_color_space_hsl x664 y832 w120 h40, HSL
+Gui Add, Button, vpos_color_warper_huexsat_color_space_hsy x664 y880 w120 h40, HSY
+Gui Add, Button, vpos_color_warper_huexsat_color_space_hsp x664 y928 w120 h40, HSP
+Gui Add, Button, vpos_color_warper_huexsat_color_space_hsp_log x664 y976 w120 h40, HSP LOG
 
-
-
-Gui Add, Picture, x40 y432 w950 h400, %A_ScriptDir%\images\Curves Panel 2.png
-Gui Add, Button, g_set_variable_button vpos_custom_edit_link_on_off x40 y368 w150 h50, Edit Link On/Off
-Gui Add, Button, g_set_variable_button vpos_custom_edit_y_on_off x200 y368 w150 h50, Edit Y On/Off
-Gui Add, Button, g_set_variable_button vpos_custom_edit_r_on_off x360 y368 w150 h50, Edit R On/Off
-Gui Add, Button, g_set_variable_button vpos_custom_edit_g_on_off x520 y368 w150 h50, Edit G On/Off
-Gui Add, Button, g_set_variable_button vpos_custom_edit_b_on_off x680 y368 w150 h50, Edit B On/Off
-Gui Add, Button, g_set_variable_button vpos_custom_edit_reset x840 y368 w150 h50, Edit Reset
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_lum x1000 y464 w150 h50, Intensity Lum
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_red x1000 y528 w150 h50, Intensity Red
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_green x1000 y592 w150 h50, Intensity Green
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_blue x1000 y656 w150 h50, Intensity Blue
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_link x200 y848 w150 h50, Soft Clip Link
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_r x360 y848 w150 h50, Soft Clip R
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_g x520 y848 w150 h50, Soft Clip G
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_b x680 y848 w150 h50, Soft Clip B
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_reset x840 y848 w150 h50, Soft Clip Reset
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_low x680 y912 w150 h50, Soft Clip Low
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_low_smooth x680 y976 w150 h50, Soft Clip Low Smooth
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_high x840 y912 w150 h50, Soft Clip High
-Gui Add, Button, g_set_variable_button vpos_custom_soft_clip_high_smooth x840 y976 w150 h50, Soft Clip High Smooth
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_lum_reset x1160 y464 w150 h50, Intensity Lum Reset
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_red_reset x1160 y528 w150 h50, Intensity Red Reset
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_green_reset x1160 y592 w150 h50, Intensity Green Reset
-Gui Add, Button, g_set_variable_button vpos_custom_intensity_blue_reset x1160 y656 w150 h50, Intensity Blue Reset
-Gui Add, Picture, x1520 y432 w360 h420, %A_ScriptDir%\images\Curves Panel Dots Menu.png
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu x1520 y368 w150 h50, Dots Menu
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_lum x1360 y440 w150 h50, Copy to Lum
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_red x1360 y504 w150 h50, Copy to Red
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_green x1360 y568 w150 h50, Copy to Green
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_blue x1360 y632 w150 h50, Copy to Blue
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_copy_to_all x1360 y696 w150 h50, Copy to All
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_editable_splines x1360 y760 w150 h50, Editable Splines
-Gui Add, Button, g_set_variable_button vpos_custom_dots_menu_add_default_anchors x1360 y824 w150 h50, Add Default Anchors
-
-Gui Tab
-
-Gui Show, w1024 h768, TWB 2.4
+Gui Show, w1920 h1080, TWB 2.5
 Return
 
 _start_stop_bt:
@@ -82,6 +85,18 @@ _add_combobox_items_input_box:
 Return
 
 _change_resolution_and_scale:
+Return
+
+_change_davinci_layout_ui:
+Return
+
+_change_curves_hash:
+Return
+
+_set_scopes_state:
+Return
+
+_set_color_warper_state:
 Return
 
 _set_variable_button:

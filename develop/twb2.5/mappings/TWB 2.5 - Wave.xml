@@ -46,6 +46,12 @@
         <Mode id="0x83000006">
             <Name>Motion Effects</Name>
         </Mode>
+        <Mode id="0x83000011">
+            <Name>C. Warper - Hue x Sat</Name>
+        </Mode>
+        <Mode id="0x83000012">
+            <Name>C.Warper - Chr x Lum</Name>
+        </Mode>
         <Mode id="0x83000009">
             <Name>Modes Selection</Name>
         </Mode>
@@ -1790,6 +1796,210 @@
                     </Bank>
                 </ControlBank>
             </Mode>
+            <Mode id="0x83000011"> <!-- C. Warper - Hue x Sat -->
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0"> <!-- Element-Mf Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/saveProject</CustomControl>
+                                <CustomName>Save Project</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1"> <!-- Element-Mf Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/scopesWaveform</CustomControl>
+                                <CustomName>Waveform</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2"> <!-- Element-Mf Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/scopesVectorscope</CustomControl>
+                                <CustomName>Vectorscope</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3"> <!-- Element-Mf Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddSerial</CustomControl>
+                                <CustomName>+ Serial</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4"> <!-- Element-Mf Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddSerialBefore</CustomControl>
+                                <CustomName>+ S. Before</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5"> <!-- Element-Mf Button 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAppend</CustomControl>
+                                <CustomName>Append a Node</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6"> <!-- Element-Mf Button 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddParallel</CustomControl>
+                                <CustomName>+ Parallel</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7"> <!-- Element-Mf Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddLayer</CustomControl>
+                                <CustomName>+ Layer</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8"> <!-- Element-Mf Button 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesSplitterCombiner</CustomControl>
+                                <CustomName>+ Splitter Combiner</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9"> <!-- Element-Mf Button 10 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddOutside</CustomControl>
+                                <CustomName>+ Outside</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10"> <!-- Element-Mf Button 11 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesExtract</CustomControl>
+                                <CustomName>Extract Node</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Element-Mf Button 12 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetAllNodesGrade</CustomControl>
+                                <CustomName>Reset All Nodes Grade</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x83000012"> <!-- C.Warper - Chr x Lum -->
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0"> <!-- Element-Mf Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/saveProject</CustomControl>
+                                <CustomName>Save Project</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1"> <!-- Element-Mf Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/scopesWaveform</CustomControl>
+                                <CustomName>Waveform</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2"> <!-- Element-Mf Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/scopesVectorscope</CustomControl>
+                                <CustomName>Vectorscope</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3"> <!-- Element-Mf Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddSerial</CustomControl>
+                                <CustomName>+ Serial</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4"> <!-- Element-Mf Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddSerialBefore</CustomControl>
+                                <CustomName>+ S. Before</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="5"> <!-- Element-Mf Button 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAppend</CustomControl>
+                                <CustomName>Append a Node</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="6"> <!-- Element-Mf Button 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddParallel</CustomControl>
+                                <CustomName>+ Parallel</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="7"> <!-- Element-Mf Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddLayer</CustomControl>
+                                <CustomName>+ Layer</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="8"> <!-- Element-Mf Button 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesSplitterCombiner</CustomControl>
+                                <CustomName>+ Splitter Combiner</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9"> <!-- Element-Mf Button 10 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAddOutside</CustomControl>
+                                <CustomName>+ Outside</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10"> <!-- Element-Mf Button 11 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesExtract</CustomControl>
+                                <CustomName>Extract Node</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Element-Mf Button 12 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetAllNodesGrade</CustomControl>
+                                <CustomName>Reset All Nodes Grade</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
         </Panel>
         <Panel type="Element-Kb" number="1">
         </Panel>
@@ -3130,6 +3340,172 @@
                 </ControlBank>
             </Mode>
             <Mode id="0x83000010"> <!-- Qualifier HSL/RGB -->
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12"> <!-- Element-Bt Button A -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <Argument>0x00004406</Argument> <!-- Ctrl+F -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13"> <!-- Element-Bt Button B -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <Argument>0x00004106</Argument> <!-- Shift+F -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0"> <!-- Element-Bt Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Copy</CustomName>
+                                <Argument>0x00004403</Argument> <!-- Ctrl+C -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1"> <!-- Element-Bt Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Paste</CustomName>
+                                <Argument>0x00004416</Argument> <!-- Ctrl+V -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2"> <!-- Element-Bt Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Paste Atrib.</CustomName>
+                                <Argument>0x00004216</Argument> <!-- Alt+V -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3"> <!-- Element-Bt Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Full Screen</CustomName>
+                                <Argument>0x00004406</Argument> <!-- Ctrl+F -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4"> <!-- Element-Bt Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Save Projects</CustomName>
+                                <Argument>0x00004413</Argument> <!-- Ctrl+S -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9"> <!-- Element-Bt Button 10 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Zoom Fit</CustomName>
+                                <Argument>0x0000411A</Argument> <!-- Shift+Z -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10"> <!-- Element-Bt Button 11 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Undo</CustomName>
+                                <Argument>0x0000441A</Argument> <!-- Ctrl+Z -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Element-Bt Button 12 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Redo</CustomName>
+                                <Argument>0x0000451A</Argument> <!-- Ctrl+Shift+Z -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Res Grade</CustomName>
+                                <Argument>0x0000444C</Argument> <!-- Ctrl+Home -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x83000011"> <!-- C. Warper - Hue x Sat -->
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="12"> <!-- Element-Bt Button A -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <Argument>0x00004406</Argument> <!-- Ctrl+F -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="13"> <!-- Element-Bt Button B -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <Argument>0x00004106</Argument> <!-- Shift+F -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="0"> <!-- Element-Bt Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Copy</CustomName>
+                                <Argument>0x00004403</Argument> <!-- Ctrl+C -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="1"> <!-- Element-Bt Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Paste</CustomName>
+                                <Argument>0x00004416</Argument> <!-- Ctrl+V -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="2"> <!-- Element-Bt Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Paste Atrib.</CustomName>
+                                <Argument>0x00004216</Argument> <!-- Alt+V -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="3"> <!-- Element-Bt Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Full Screen</CustomName>
+                                <Argument>0x00004406</Argument> <!-- Ctrl+F -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="4"> <!-- Element-Bt Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Save Projects</CustomName>
+                                <Argument>0x00004413</Argument> <!-- Ctrl+S -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9"> <!-- Element-Bt Button 10 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Zoom Fit</CustomName>
+                                <Argument>0x0000411A</Argument> <!-- Shift+Z -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="10"> <!-- Element-Bt Button 11 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Undo</CustomName>
+                                <Argument>0x0000441A</Argument> <!-- Ctrl+Z -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Element-Bt Button 12 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Redo</CustomName>
+                                <Argument>0x0000451A</Argument> <!-- Ctrl+Shift+Z -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x8000000E</Key> <!-- Keyboard Shortcut -->
+                                <CustomName>Res Grade</CustomName>
+                                <Argument>0x0000444C</Argument> <!-- Ctrl+Home -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x83000012"> <!-- C.Warper - Chr x Lum -->
                 <ControlBank id="Standard">
                     <Bank>
                         <Control type="Button" number="12"> <!-- Element-Bt Button A -->
@@ -4670,12 +5046,6 @@
                                 <CustomName>Retime</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/openCloseInspector</CustomControl>
-                                <CustomName>Inspector</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
                         </Control>
                         <Control type="Button" number="21"> <!-- Wave Button 8 -->
                             <Mapping mode="Std">
@@ -4684,17 +5054,25 @@
                                 <CustomName>Change Clip Speed</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/openCloseInspector</CustomControl>
+                                <CustomName>Inspector Window</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
                         </Control>
                         <Control type="Button" number="22"> <!-- Wave Button 9 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/inspectorMode</CustomControl>
                                 <CustomName>Go To Inspector</CustomName>
-                                <Argument>0x8300000B</Argument> <!-- Inspector -->
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/inspectorMode</CustomControl>
                                 <CustomName>Go To Inspector</CustomName>
-                                <Argument>0x8300000B</Argument> <!-- Inspector -->
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                     </Bank>
@@ -8428,97 +8806,16 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="34"> <!-- Wave Function 2 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
-                                <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="35"> <!-- Wave Function 3 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="30"> <!-- Wave Function 4 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/openKeyFrameWindowColorPage</CustomControl>
-                                <CustomName>Key Frame Window - Color Page</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="31"> <!-- Wave Function 5 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/bypassColorGrading</CustomControl>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="32"> <!-- Wave Function 6 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/enableDisableSelectedNodes</CustomControl>
-                                <CustomName>Enable/Disable Selected Nodes</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/enableDisableAllNodes</CustomControl>
-                                <CustomName>Enable/Disable All Nodes</CustomName>
+                                <CustomControl>/editMode</CustomControl>
+                                <CustomName>Edit</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="27"> <!-- Wave Function 7 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/applyGrade</CustomControl>
-                                <CustomName>Apply Grade</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/grabStill</CustomControl>
-                                <CustomName>Grab Still</CustomName>
+                                <CustomControl>/resetDefaultState</CustomControl>
+                                <CustomName>RESET DEFAULT</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8573,28 +8870,16 @@
                         <Control type="Button" number="36"> <!-- Wave Inch Reverse -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/previousClip</CustomControl>
-                                <CustomName>Previous Clip</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetAllNodesGradeAndKeepNodes</CustomControl>
-                                <CustomName>Reset All Nodes Grade and Keep Nodes</CustomName>
+                                <CustomControl>/projectSettings</CustomControl>
+                                <CustomName>Project Settings</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="37"> <!-- Wave Inch Forward -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/nextClip</CustomControl>
-                                <CustomName>Next Clip</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetNodeGrade</CustomControl>
-                                <CustomName>Reset Node Grade</CustomName>
+                                <CustomControl>/davinciSettings</CustomControl>
+                                <CustomName>Davinci Settings</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -8645,86 +8930,15 @@
                                 <Key>0x80000001</Key> <!-- Select ALTernative Function -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="12"> <!-- Wave Transport Dial -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/stepFrame</CustomControl>
-                                <CustomName>Step Frame</CustomName>
-                                <Display>Number</Display>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>50.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/navigateNodes</CustomControl>
-                                <CustomName>Next/Previous Node</CustomName>
-                                <Display>Number</Display>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>10.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
                     </Bank>
                 </ControlBank>
                 <ControlBank id="Encoder">
                     <Bank>
-                        <Control type="Encoder" number="3"> <!-- Wave Knob 4 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/knobTestOSC</CustomControl>
-                                <CustomName>Knob Test</CustomName>
-                                <Display>Number</Display>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                                <ArgumentEx>0x00000001</ArgumentEx> <!-- Absolute values -->
-                            </Mapping>
-                        </Control>
                     </Bank>
                 </ControlBank>
                 <ControlBank id="Button">
                     <Bank>
                         <Control type="Button" number="10"> <!-- Wave Button 1 -->
-                            <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Edit</CustomName>
-                                <Argument>0x83000001</Argument> <!-- Edit -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Qualifier HSL/RGB</CustomName>
-                                <Argument>0x83000010</Argument> <!-- Qualifier HSL/RGB -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="11"> <!-- Wave Button 2 -->
-                            <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Nodes and Scopes</CustomName>
-                                <Argument>0x8300000E</Argument> <!-- Nodes and Scopes -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Power Windows</CustomName>
-                                <Argument>0x83000008</Argument> <!-- Power Windows -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="12"> <!-- Wave Button 3 -->
-                            <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Printer Lights</CustomName>
-                                <Argument>0x8300000F</Argument> <!-- Printer Lights -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>BSM</CustomName>
-                                <Argument>0x8300000D</Argument> <!-- BSM -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="15"> <!-- Wave Button 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
                                 <CustomControl>/primariesWheels</CustomControl>
@@ -8732,72 +8946,119 @@
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>RGB Mixer</CustomName>
-                                <Argument>0x8300000A</Argument> <!-- RGB Mixer -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorWarperHueSat</CustomControl>
+                                <CustomName>C. Warper Hue-Sat</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Wave Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/primariesBars</CustomControl>
+                                <CustomName>Primaries Bars</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorWarperChrLum</CustomControl>
+                                <CustomName>C. Warper Chr-Lum</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="12"> <!-- Wave Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/logWheels</CustomControl>
+                                <CustomName>Log Wheels</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/qualifier</CustomControl>
+                                <CustomName>Qualifier HSL/RGB</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15"> <!-- Wave Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrWheels</CustomControl>
+                                <CustomName>HDR Wheels</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/powerWindows</CustomControl>
+                                <CustomName>Power Windows</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="16"> <!-- Wave Button 5 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomControl>/logResetAll</CustomControl>
-                                <CustomName>Primaries Bars</CustomName>
-                                <Argument>0x83000005</Argument> <!-- Bars -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/rgbMixer</CustomControl>
+                                <CustomName>RGB Mixer</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Key</CustomName>
-                                <Argument>0x83000002</Argument> <!-- Key -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomName>Tracker</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="17"> <!-- Wave Button 6 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Log Wheels</CustomName>
-                                <Argument>0x83000004</Argument> <!-- Log -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/printerLights</CustomControl>
+                                <CustomName>Printer Lights</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Motion Effects</CustomName>
-                                <Argument>0x83000006</Argument> <!-- Motion Effects -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/blurSharpenMist</CustomControl>
+                                <CustomName>BSM</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="20"> <!-- Wave Button 7 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>HDR Wheels</CustomName>
-                                <Argument>0x8300000C</Argument> <!-- HDR Wheels -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/customCurves</CustomControl>
+                                <CustomName>Custom Curves</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/projectSettings</CustomControl>
-                                <CustomName>Project Settings</CustomName>
+                                <CustomControl>/key</CustomControl>
+                                <CustomName>Key</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="21"> <!-- Wave Button 8 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Custom Curves</CustomName>
-                                <Argument>0x83000003</Argument> <!-- Custom Curves -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/hueCurves</CustomControl>
+                                <CustomName>Hue Curves</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/davinciSettings</CustomControl>
-                                <CustomName>Davinci Settings</CustomName>
+                                <CustomName>Sizing</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="22"> <!-- Wave Button 9 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
-                                <CustomName>Hue Curves</CustomName>
-                                <Argument>0x83000007</Argument> <!-- Hue Curves -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nodesAndScopes</CustomControl>
+                                <CustomName>Nodes and Scopes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetDefaultState</CustomControl>
-                                <CustomName>RESET DEFAULT</CustomName>
+                                <CustomControl>/motionEffects</CustomControl>
+                                <CustomName>Motion Effects</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -10637,6 +10898,12 @@
                             </Mapping>
                         </Control>
                         <Control type="Button" number="21"> <!-- Wave Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/openCloseInspector</CustomControl>
+                                <CustomName>Inspector Window</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
                                 <CustomControl>/inspectorAudioReset</CustomControl>
@@ -10646,14 +10913,16 @@
                         </Control>
                         <Control type="Button" number="22"> <!-- Wave Button 9 -->
                             <Mapping mode="Std">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/editMode</CustomControl>
                                 <CustomName>Go To Edit</CustomName>
-                                <Argument>0x83000001</Argument> <!-- Edit -->
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                             <Mapping mode="Alt">
-                                <Key>0x8000000B</Key> <!-- Goto Mode -->
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/editMode</CustomControl>
                                 <CustomName>Go To Edit</CustomName>
-                                <Argument>0x83000001</Argument> <!-- Edit -->
+                                <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                     </Bank>
@@ -14552,6 +14821,17 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
+                        <Control type="Encoder" number="4"> <!-- Wave Knob 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/qualifierHSLxRGB</CustomControl>
+                                <CustomName>HSL - RGB</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
                         <Control type="Encoder" number="5"> <!-- Wave Knob 6 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
@@ -14711,6 +14991,17 @@
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4"> <!-- Wave Knob 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/qualifierHSLxRGB</CustomControl>
+                                <CustomName>HSL - RGB</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -15063,6 +15354,1353 @@
                                 <Key>0x80000014</Key> <!-- OSC Command -->
                                 <CustomControl>/qualifierChromaDarkLight</CustomControl>
                                 <CustomName>Chroma Dark/Light</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                    <Bank>
+                        <Control type="Button" number="10"> <!-- Wave Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceImageWipe</CustomControl>
+                                <CustomName>Image Wipe</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceGallery</CustomControl>
+                                <CustomName>Gallery</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Wave Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceSplitScreen</CustomControl>
+                                <CustomName>Split Screen</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceLuts</CustomControl>
+                                <CustomName>LUTs</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="12"> <!-- Wave Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceHighlight</CustomControl>
+                                <CustomName>Highlight</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceMediaPool</CustomControl>
+                                <CustomName>Media Pool</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15"> <!-- Wave Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceImageWipeMode</CustomControl>
+                                <CustomName>Image Wipe Mode</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceTimeline</CustomControl>
+                                <CustomName>Timeline</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16"> <!-- Wave Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceZoomView</CustomControl>
+                                <CustomName>Toggle Zoom View</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceClips</CustomControl>
+                                <CustomName>Clips</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17"> <!-- Wave Button 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode1</CustomControl>
+                                <CustomName>Nodes Mode 1</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodes</CustomControl>
+                                <CustomName>Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="20"> <!-- Wave Button 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode2</CustomControl>
+                                <CustomName>Nodes Mode 2</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceOpenFX</CustomControl>
+                                <CustomName>Open FX</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="21"> <!-- Wave Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode3</CustomControl>
+                                <CustomName>Nodes Mode 3</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceLightbox</CustomControl>
+                                <CustomName>Lightbox</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="22"> <!-- Wave Button 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode4</CustomControl>
+                                <CustomName>Nodes Mode 4</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceCursorHand</CustomControl>
+                                <CustomName>Cursor / Hand</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x83000011"> <!-- C. Warper - Hue x Sat -->
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="33"> <!-- Wave Function 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="34"> <!-- Wave Function 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
+                                <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="35"> <!-- Wave Function 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="30"> <!-- Wave Function 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/openKeyFrameWindowColorPage</CustomControl>
+                                <CustomName>Key Frame Window - Color Page</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="31"> <!-- Wave Function 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="32"> <!-- Wave Function 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/enableDisableSelectedNodes</CustomControl>
+                                <CustomName>Enable/Disable Selected Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/enableDisableAllNodes</CustomControl>
+                                <CustomName>Enable/Disable All Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="27"> <!-- Wave Function 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/applyGrade</CustomControl>
+                                <CustomName>Apply Grade</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/grabStill</CustomControl>
+                                <CustomName>Grab Still</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="28"> <!-- Wave Function 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000D</Key> <!-- Toggle Mouse Emulation -->
+                                <Sensitivity>1</Sensitivity>
+                                <Argument>0x00000003</Argument>
+                                <ArgumentEx>0x00000001</ArgumentEx>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x8000000D</Key> <!-- Toggle Mouse Emulation -->
+                                <Sensitivity>1</Sensitivity>
+                                <Argument>0x00000001</Argument>
+                                <ArgumentEx>0x00000001</ArgumentEx>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="29"> <!-- Wave Function 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000B</Key> <!-- Goto Mode -->
+                                <Argument>0x83000009</Argument> <!-- Modes Selection -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="25"> <!-- Wave Up Arrow -->
+                            <Mapping mode="Std">
+                                <Key>0x80000002</Key> <!-- Next Knob Bank -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/projectSelection</CustomControl>
+                                <CustomName>Project Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="26"> <!-- Wave Down Arrow -->
+                            <Mapping mode="Std">
+                                <Key>0x80000004</Key> <!-- Next Button Bank -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="36"> <!-- Wave Inch Reverse -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/previousClip</CustomControl>
+                                <CustomName>Previous Clip</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetAllNodesGradeAndKeepNodes</CustomControl>
+                                <CustomName>Reset All Nodes Grade and Keep Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="37"> <!-- Wave Inch Forward -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nextClip</CustomControl>
+                                <CustomName>Next Clip</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetNodeGrade</CustomControl>
+                                <CustomName>Reset Node Grade</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="38"> <!-- Wave Play Reverse -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playBackward</CustomControl>
+                                <CustomName>Play Backwards</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/undo</CustomControl>
+                                <CustomName>Undo</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="39"> <!-- Wave Stop -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/stop</CustomControl>
+                                <CustomName>Stop</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/saveProject</CustomControl>
+                                <CustomName>Save Project</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="40"> <!-- Wave Play Forward -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playForward</CustomControl>
+                                <CustomName>Play Forward</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/redo</CustomControl>
+                                <CustomName>Redo</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9"> <!-- Wave Alt -->
+                            <Mapping mode="Std">
+                                <Key>0x80000001</Key> <!-- Select ALTernative Function -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="12"> <!-- Wave Transport Dial -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/stepFrame</CustomControl>
+                                <CustomName>Step Frame</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>50.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/navigateNodes</CustomControl>
+                                <CustomName>Next/Previous Node</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="13"> <!-- Wave Trackerball 1 X -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/pasteJogWheel</CustomControl>
+                                <CustomName>Paste</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/pasteAttributesJogWheel</CustomControl>
+                                <CustomName>Paste Attributes</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="15"> <!-- Wave Trackerball 2 X -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/deleteKeyJogWheel</CustomControl>
+                                <CustomName>Delete</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="9"> <!-- Wave Dial 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/copyJogWheel</CustomControl>
+                                <CustomName>Copy</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/colorPageScrollThumbnails</CustomControl>
+                                <CustomName>Color Page Scroll Thumbnails</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>100.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="10"> <!-- Wave Dial 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/backspaceKeyJogWheel</CustomControl>
+                                <CustomName>Backspace</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/fastNavigateClips</CustomControl>
+                                <CustomName>Fast Clips Navigation</CustomName>
+                                <Display>Number</Display>
+                                <Sensitivity>5</Sensitivity>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Encoder">
+                    <Bank>
+                        <Control type="Encoder" number="0"> <!-- Wave Knob 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatHueBar</CustomControl>
+                                <CustomName>Hue</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>2000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1"> <!-- Wave Knob 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSatBar</CustomControl>
+                                <CustomName>Saturation</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>2000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2"> <!-- Wave Knob 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatLumaBar</CustomControl>
+                                <CustomName>Luma</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>2000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3"> <!-- Wave Knob 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSmoothHue</CustomControl>
+                                <CustomName>Smooth Hue</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4"> <!-- Wave Knob 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSmoothSat</CustomControl>
+                                <CustomName>Smooth Sat</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6"> <!-- Wave Knob 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatHueResolution</CustomControl>
+                                <CustomName>Hue Res.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>20.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7"> <!-- Wave Knob 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSatResolution</CustomControl>
+                                <CustomName>Sat Res.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>20.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8"> <!-- Wave Knob 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatColorSpace</CustomControl>
+                                <CustomName>Col Space</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>20.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="10"> <!-- Wave Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSelect</CustomControl>
+                                <CustomName>Select / Deselect</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSelectPinColumn</CustomControl>
+                                <CustomName>Select / Pin Column</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Wave Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatDraw</CustomControl>
+                                <CustomName>Draw Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSelectPinRing</CustomControl>
+                                <CustomName>Select / Pin Ring</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="12"> <!-- Wave Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatPinDepin</CustomControl>
+                                <CustomName>Pin / De-pin</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatSelectDeselectAll</CustomControl>
+                                <CustomName>Sel / Des All</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15"> <!-- Wave Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatPullPoints</CustomControl>
+                                <CustomName>Pull Points</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16"> <!-- Wave Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatPushPoints</CustomControl>
+                                <CustomName>Push Points</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17"> <!-- Wave Button 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatIncreaseFalloff</CustomControl>
+                                <CustomName>Increase Fall off</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="20"> <!-- Wave Button 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatDecreaseFalloff</CustomControl>
+                                <CustomName>Decrease Fall Off</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatResetSelection</CustomControl>
+                                <CustomName>Reset Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="21"> <!-- Wave Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatInvertSelection</CustomControl>
+                                <CustomName>Invert Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatAutoLock</CustomControl>
+                                <CustomName>Auto Lock</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="22"> <!-- Wave Button 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwHueSatConvertToPin</CustomControl>
+                                <CustomName>Convert To Pin</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwResetColorWarper</CustomControl>
+                                <CustomName>Reset C. Warper</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                    <Bank>
+                        <Control type="Button" number="10"> <!-- Wave Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceImageWipe</CustomControl>
+                                <CustomName>Image Wipe</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceGallery</CustomControl>
+                                <CustomName>Gallery</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Wave Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceSplitScreen</CustomControl>
+                                <CustomName>Split Screen</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceLuts</CustomControl>
+                                <CustomName>LUTs</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="12"> <!-- Wave Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceHighlight</CustomControl>
+                                <CustomName>Highlight</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceMediaPool</CustomControl>
+                                <CustomName>Media Pool</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15"> <!-- Wave Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceImageWipeMode</CustomControl>
+                                <CustomName>Image Wipe Mode</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceTimeline</CustomControl>
+                                <CustomName>Timeline</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16"> <!-- Wave Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceZoomView</CustomControl>
+                                <CustomName>Toggle Zoom View</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceClips</CustomControl>
+                                <CustomName>Clips</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17"> <!-- Wave Button 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode1</CustomControl>
+                                <CustomName>Nodes Mode 1</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodes</CustomControl>
+                                <CustomName>Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="20"> <!-- Wave Button 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode2</CustomControl>
+                                <CustomName>Nodes Mode 2</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceOpenFX</CustomControl>
+                                <CustomName>Open FX</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="21"> <!-- Wave Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode3</CustomControl>
+                                <CustomName>Nodes Mode 3</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceLightbox</CustomControl>
+                                <CustomName>Lightbox</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="22"> <!-- Wave Button 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceNodeMode4</CustomControl>
+                                <CustomName>Nodes Mode 4</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/colorInterfaceCursorHand</CustomControl>
+                                <CustomName>Cursor / Hand</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+            </Mode>
+            <Mode id="0x83000012"> <!-- C.Warper - Chr x Lum -->
+                <ControlBank id="Standard">
+                    <Bank>
+                        <Control type="Button" number="33"> <!-- Wave Function 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadA</CustomControl>
+                                <CustomName>Active Playhead A</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
+                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="34"> <!-- Wave Function 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadB</CustomControl>
+                                <CustomName>Active Playhead B</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
+                                <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="35"> <!-- Wave Function 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadC</CustomControl>
+                                <CustomName>Active Playhead C</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/fullView</CustomControl>
+                                <CustomName>Full View</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="30"> <!-- Wave Function 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playheadD</CustomControl>
+                                <CustomName>Active Playhead D</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/openKeyFrameWindowColorPage</CustomControl>
+                                <CustomName>Key Frame Window - Color Page</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="31"> <!-- Wave Function 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetPlayheads</CustomControl>
+                                <CustomName>Reset Playheads</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/bypassColorGrading</CustomControl>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="32"> <!-- Wave Function 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/enableDisableSelectedNodes</CustomControl>
+                                <CustomName>Enable/Disable Selected Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/enableDisableAllNodes</CustomControl>
+                                <CustomName>Enable/Disable All Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="27"> <!-- Wave Function 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/applyGrade</CustomControl>
+                                <CustomName>Apply Grade</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/grabStill</CustomControl>
+                                <CustomName>Grab Still</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="28"> <!-- Wave Function 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000D</Key> <!-- Toggle Mouse Emulation -->
+                                <Sensitivity>1</Sensitivity>
+                                <Argument>0x00000003</Argument>
+                                <ArgumentEx>0x00000001</ArgumentEx>
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x8000000D</Key> <!-- Toggle Mouse Emulation -->
+                                <Sensitivity>1</Sensitivity>
+                                <Argument>0x00000001</Argument>
+                                <ArgumentEx>0x00000001</ArgumentEx>
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="29"> <!-- Wave Function 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x8000000B</Key> <!-- Goto Mode -->
+                                <Argument>0x83000009</Argument> <!-- Modes Selection -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/toggleFullscreen</CustomControl>
+                                <CustomName>Full Screen</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="25"> <!-- Wave Up Arrow -->
+                            <Mapping mode="Std">
+                                <Key>0x80000002</Key> <!-- Next Knob Bank -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/projectSelection</CustomControl>
+                                <CustomName>Project Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="26"> <!-- Wave Down Arrow -->
+                            <Mapping mode="Std">
+                                <Key>0x80000004</Key> <!-- Next Button Bank -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/startStop</CustomControl>
+                                <CustomName>Start/Stop TWB</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="36"> <!-- Wave Inch Reverse -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/previousClip</CustomControl>
+                                <CustomName>Previous Clip</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetAllNodesGradeAndKeepNodes</CustomControl>
+                                <CustomName>Reset All Nodes Grade and Keep Nodes</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="37"> <!-- Wave Inch Forward -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/nextClip</CustomControl>
+                                <CustomName>Next Clip</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/resetNodeGrade</CustomControl>
+                                <CustomName>Reset Node Grade</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="38"> <!-- Wave Play Reverse -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playBackward</CustomControl>
+                                <CustomName>Play Backwards</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/undo</CustomControl>
+                                <CustomName>Undo</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="39"> <!-- Wave Stop -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/stop</CustomControl>
+                                <CustomName>Stop</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/saveProject</CustomControl>
+                                <CustomName>Save Project</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="40"> <!-- Wave Play Forward -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/playForward</CustomControl>
+                                <CustomName>Play Forward</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/redo</CustomControl>
+                                <CustomName>Redo</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="9"> <!-- Wave Alt -->
+                            <Mapping mode="Std">
+                                <Key>0x80000001</Key> <!-- Select ALTernative Function -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="12"> <!-- Wave Transport Dial -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/stepFrame</CustomControl>
+                                <CustomName>Step Frame</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>50.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/navigateNodes</CustomControl>
+                                <CustomName>Next/Previous Node</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="13"> <!-- Wave Trackerball 1 X -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/pasteJogWheel</CustomControl>
+                                <CustomName>Paste</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/pasteAttributesJogWheel</CustomControl>
+                                <CustomName>Paste Attributes</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="15"> <!-- Wave Trackerball 2 X -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/deleteKeyJogWheel</CustomControl>
+                                <CustomName>Delete</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="9"> <!-- Wave Dial 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/copyJogWheel</CustomControl>
+                                <CustomName>Copy</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/colorPageScrollThumbnails</CustomControl>
+                                <CustomName>Color Page Scroll Thumbnails</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>100.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="10"> <!-- Wave Dial 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/backspaceKeyJogWheel</CustomControl>
+                                <CustomName>Backspace</CustomName>
+                                <Display>Number</Display>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/fastNavigateClips</CustomControl>
+                                <CustomName>Fast Clips Navigation</CustomName>
+                                <Display>Number</Display>
+                                <Sensitivity>5</Sensitivity>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Encoder">
+                    <Bank>
+                        <Control type="Encoder" number="0"> <!-- Wave Knob 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumChromaBar</CustomControl>
+                                <CustomName>Chroma</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>2000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1"> <!-- Wave Knob 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumLumBar</CustomControl>
+                                <CustomName>Luma</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>2000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2"> <!-- Wave Knob 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumAxisAngle</CustomControl>
+                                <CustomName>Axis Angle</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3"> <!-- Wave Knob 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumSmoothChroma</CustomControl>
+                                <CustomName>Smooth Chr</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4"> <!-- Wave Knob 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumSmoothLum</CustomControl>
+                                <CustomName>Smooth Lum</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5"> <!-- Wave Knob 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumToggleGrids</CustomControl>
+                                <CustomName>Grid 1/2</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6"> <!-- Wave Knob 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumChromaResolution</CustomControl>
+                                <CustomName>Chr. Res.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>20.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7"> <!-- Wave Knob 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumLumResolution</CustomControl>
+                                <CustomName>Lum Res.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>20.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8"> <!-- Wave Knob 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumColorSpace</CustomControl>
+                                <CustomName>Col Space</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>20.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                </ControlBank>
+                <ControlBank id="Button">
+                    <Bank>
+                        <Control type="Button" number="10"> <!-- Wave Button 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumSelect</CustomControl>
+                                <CustomName>Select / Deselect</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumSelectPinColumn</CustomControl>
+                                <CustomName>Select / Pin Column</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="11"> <!-- Wave Button 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumDraw</CustomControl>
+                                <CustomName>Draw Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumSelectPinRow</CustomControl>
+                                <CustomName>Select / Pin Row</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="12"> <!-- Wave Button 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumPinDepin</CustomControl>
+                                <CustomName>Pin / De-pin</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumSelectDeselectAll</CustomControl>
+                                <CustomName>Sel / Des All</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="15"> <!-- Wave Button 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumPullPoints</CustomControl>
+                                <CustomName>Pull Points</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumAutoPinColumns</CustomControl>
+                                <CustomName>Auto Pin Columns</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="16"> <!-- Wave Button 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumPushPoints</CustomControl>
+                                <CustomName>Push Points</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumAutoPinRows</CustomControl>
+                                <CustomName>Auto Pin Rows</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="17"> <!-- Wave Button 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumIncreaseFalloff</CustomControl>
+                                <CustomName>Increase Fall off</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumAutoPinSingle</CustomControl>
+                                <CustomName>Auto Pin Single</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="20"> <!-- Wave Button 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumDecreaseFalloff</CustomControl>
+                                <CustomName>Decrease Fall Off</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumResetSelection</CustomControl>
+                                <CustomName>Reset Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="21"> <!-- Wave Button 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumInvertSelection</CustomControl>
+                                <CustomName>Invert Selection</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumAutoLock</CustomControl>
+                                <CustomName>Auto Lock</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Button" number="22"> <!-- Wave Button 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwChrLumConvertToPin</CustomControl>
+                                <CustomName>Convert To Pin</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x80000014</Key> <!-- OSC Command -->
+                                <CustomControl>/cwResetColorWarper</CustomControl>
+                                <CustomName>Reset C. Warper</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>

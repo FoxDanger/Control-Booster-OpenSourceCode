@@ -10,8 +10,10 @@
 ;- New version of Tangent Wave Hub (still in beta) made possible send messages to change modes directly from TWB 2. This means that is not necessary test each panel anymore to use a tool which makes the software way faster and less buggy.
 ;- Now the Mode Selection mode on the Tangent Panel works differently: When you choose a new mode, it not only change the mode in the Tangent Panel, but automatically changes the Page (EDIT or COLOR) and goes to the chosed Panel on the Davinci UI.
 ;- Added a knob on Qualifier Mode to change between HSL and RGB panels. It still changing automatically between panels when you use a tool from HSL or RGB. I added this so you can turn off and on each HSL or RGB channels without have to use a tool to go to that panel.
+;- New Color Warper Hue x Sat Mode.
+;- New Color Warper Chroma x Lum Mode.
+;- Implemented all the listeners and functions for Color Warper Hue X Sat and Chroma x Lum panels.
 ;- TODO:
-;- Color Warper Mode
 ;- Add Pan, Semitones and cents control to audio inspector controllers on inspector mode
 ;- ADD ALL THE NEW THINGS TO THE ELEMENTS PANEL TOO
 
@@ -207,10 +209,20 @@
 ;- Revised all the shortcuts and some positions of the controllers on Tangent Wave Mapper.
 ;- Added support to be used with 2 or more screens setup since they have the same resolution/DPI Scale.
 
-;Tips about Tangent Wave Booster:
-;1 - When setting a knob intensity on Tangent Mapper, use for the OSC Value format the option Interger and the knob sensitivity at Coarse. For the Min and Max values, use 0 to 5 if you want not too fast repeating. 0 to 6 for a little more. 0 to 10 and 0 to 50 will give you a fast response with a more sensible knob so only use this for things that doesn't matter repeat the same command more than one time. Example: For select all clips, you can repeat the command because doesn't matter, will select all and that's it. So you can use 0 to 50 because will give you a sensible and fast response. Although for delete you don't wanna the delete being pressed a lot of times in a row, so use 0 to 5.
+;Instructions about Tangent Wave Booster:
 
-;2 - When creating a new resolution/dpi scale setup, you have to create the hashs for the dots on curves panels. For this use the FindText class, run it using AHK than:
+;To update the softwares with new panel functions:
+;1 - Create the new mode and each controller with all the OSC Address on Tangent Mapper
+;2 - Create a adress file with the new positions address for normal, condensed and wide UI
+;3 - Generate the res_dpi file  with the new positions for each resolution
+;4 - Remove the numbers before variable names on the new res_dpi file
+;5 - Copy all the new positions for the default res_dpi file
+;6 - Create each OSC listener (add and remove listeners) for each new controller on TWB.AHK
+;7 - Create each function for each listener on TWB.AHK
+
+;Tip 1 - When setting a knob intensity on Tangent Mapper, use for the OSC Value format the option Interger and the knob sensitivity at Coarse. For the Min and Max values, use 0 to 5 if you want not too fast repeating. 0 to 6 for a little more. 0 to 10 and 0 to 50 will give you a fast response with a more sensible knob so only use this for things that doesn't matter repeat the same command more than one time. Example: For select all clips, you can repeat the command because doesn't matter, will select all and that's it. So you can use 0 to 50 because will give you a sensible and fast response. Although for delete you don't wanna the delete being pressed a lot of times in a row, so use 0 to 5.
+
+;Tip 2 - When creating a new resolution/dpi scale setup, you have to create the hashs for the dots on curves panels. For this use the FindText class, run it using AHK than:
 ;2.1 - Open the custom_curves_hash.ini and create a new field with the same name of your resolution/dpi Scale scheme (just copy/paste one that is already in the document and change the name of the resolution inside the []) - Before you continue, check if it's working for your resolution tha same hashs that already exist in the file, you can try copy different resolutions and see if one of them already work for your resolution. If not, than proceed to create your own hashes;
 ;2.2 - For each type of dot, you have one hash. One for the Dot in ALL/Y modes, one for any dot selected, one for the dot in each color mode RGB. Total of 5 hashs for each resolution. You have to create one of each for your new resolution/dpi scale scheme;
 ;2.3 - To create each hash, start running the class FindText.ahk;
@@ -224,7 +236,7 @@
 ;2.11 - Copy the on TEXT propertie to the custom_curves_hashs.ini respective hash place;
 ;2.12 - Repeat the process from 2.4 to 2.11 for each type of dot.
 
-;3 - When creating a new position variable, remember to add it on res_dpi_scale_variables.ini file too.
+;Tip 3 - When creating a new position variable, remember to add it on res_dpi_scale_variables.ini file too.
 
 ;Non-default Davinci Resolve shortcuts used (you need assign these shortcuts on your Davinci - You can use the Davinci Resolve Shortcut Map that comes with TWB):
 ;Shift+F1 - Active Playhead A
@@ -314,7 +326,7 @@ CoordMode, Mouse, Screen
 Global OSC_RECEIVE_IP := "127.0.0.1"
 Global OSC_RECEIVE_PORT := 7002
 Global OSC_SEND_IP := "127.0.0.1"
-Global OSC_SEND_PORT := 60368
+Global OSC_SEND_PORT := 64769
 
 ; OSC datatypes. Just for better readability, you also just could use the numbers
 Global oscTypeNone := 1
@@ -409,6 +421,24 @@ Global _actualMotionBlurEstType := 1
 ;Set the actual Motion Blur Motion Range on Motion Effects Panel. Can be: "1" (Large), "2" (Medium), "3" (Small)
 Global _actualMotionBlurMotionRange := 1
 
+;Set the actual Color Space on Color Warper HuexSat Panel. Can be: "1" (HSV), "2" (HSL), "3" (HSY), "4" (HSP), "5" (HSP LOG)
+Global _actualColorWarperHueSatColorSpace := 1
+
+;Set the actual Hue Resolution on Color Warper HuexSat Panel. Can be: "1" (6), "2" (8), "3" (12), "4" (16), "5" (24)
+Global _actualColorWarperHueSatHueRes := 1
+
+;Set the actual Sat Resolution on Color Warper HuexSat Panel. Can be: "1" (6), "2" (8), "3" (12), "4" (16)
+Global _actualColorWarperHueSatSatRes := 1
+
+;Set the actual Color Space on Color Warper ChrxLum Panel. Can be: "1" (HSV), "2" (HSL), "3" (HSY), "4" (HSP), "5" (HSP LOG)
+Global _actualColorWarperChrLumColorSpace := 1
+
+;Set the actual Chroma Resolution on Color Warper ChrxLum Panel. Can be: "1" (4), "2" (6), "3" (8), "4" (12), "5" (16), "6" (24)
+Global _actualColorWarperChrLumChromaRes := 1
+
+;Set the actual Lum Resolution on Color Warper ChrxLum Panel. Can be: "1" (4), "2" (6), "3" (8), "4" (12), "5" (16), "6" (24)
+Global _actualColorWarperChrLumLumRes := 1
+
 ;Set what controller are in use with a string name of the object. If is "off" no controller are in use.
 Global _activeController := "OFF"
 
@@ -445,7 +475,10 @@ Global _actualNodeCursorMode := True
 Global _colorPageZoomPreview := True
 
 ;Set if scopes panel is fixed or floating
-Global _scopesFixed := True
+Global _scopesFixed := 1
+
+;Set if scopes panel is fixed or floating
+Global _colorWarperFixed := 1
 
 ;Set what curves hashs will be in use. Can be: 1, 2 or 3
 Global _actualCurvesHashs := 1
@@ -526,7 +559,8 @@ Gui Add, Text, x360 y64 w250 h23, Set what is your Davinci Resolve Layout:
 Gui Add, ComboBox, g_change_davinci_layout_ui vcomboboxDavinciLayoutUI x360 y90 w400, NORMAL|CONDENSED|WIDE
 Gui Add, Text, x360 y120 w250 h23, Set a type of curves Hashs:
 Gui Add, ComboBox, g_change_curves_hash vcomboboxCurvesHashs x360 y148 w100, 1|2|3
-Gui Add, CheckBox, g_set_scopes_state vscopesState x790 y90 w403 h23, Check this box if your scopes window are floating
+Gui Add, CheckBox, g_set_scopes_state vscopesState x790 y90 w403 h23, Check this box if your scopes window is floating
+Gui Add, CheckBox, g_set_color_warper_state vcolorWarperState x790 y120 w403 h23, Check this box if your color warper window is floating
 
 Gui Add, Tab3, x8 y176 w1905 h900 Choose1, Edit Page Interface|Inspector Transform|Color Page Interface|Primaries Wheels/Jogs|Bars Jogs|Log Wheels/Jogs|HDR Wheels|Primaries Tools|Primaries YRBG|Bars YRBG|Log RGB|Log Tools|HDR Tools|HDR Controllers|HDR Zone|RGB Mixer|Curves UI|Custom Curves|Hue Curves|Qualifier|Qualifier Matte Finess|Power Windows|BSM|Key|Motion Effects|Scopes|Other
 
@@ -1121,8 +1155,12 @@ Gui Tab
 ;Gui Show, % "w" . A_ScreenWidth-100 . " h" . A_ScreenHeight-100, TWB 2.5
 Gui Show, % "w" . 1920 . " h" . 1080, TWB 2.5
 
-if !(_scopesFixed){
+if (_scopesFixed == 1){
     GuiControl,, scopesState, 1
+}
+
+if (_colorWarperFixed == 1){
+    GuiControl,, colorWarperState, 1
 }
 
 ; \/ APP START \/
@@ -1400,9 +1438,159 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         ;---------------------------------------------------------------------- High / Low Listeners ID's ----------------------------------------------------------------------
         
         ;Update 2.5 Listeners
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelect", UInt, 0x1588, UInt, oscTypeInt)
+        OnMessage(0x1588, "_cwChrLumSelect")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumDraw", UInt, 0x1587, UInt, oscTypeInt)
+        OnMessage(0x1587, "_cwChrLumDraw")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPinDepin", UInt, 0x1586, UInt, oscTypeInt)
+        OnMessage(0x1586, "_cwChrLumPinDepin")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPullPoints", UInt, 0x1585, UInt, oscTypeInt)
+        OnMessage(0x1585, "_cwChrLumPullPoints")
+      
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPushPoints", UInt, 0x1584, UInt, oscTypeInt)
+        OnMessage(0x1584, "_cwChrLumPushPoints")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumIncreaseFalloff", UInt, 0x1583, UInt, oscTypeInt)
+        OnMessage(0x1583, "_cwChrLumIncreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumDecreaseFalloff", UInt, 0x1582, UInt, oscTypeInt)
+        OnMessage(0x1582, "_cwChrLumDecreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumInvertSelection", UInt, 0x1581, UInt, oscTypeInt)
+        OnMessage(0x1581, "_cwChrLumInvertSelection")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumConvertToPin", UInt, 0x1580, UInt, oscTypeInt)
+        OnMessage(0x1580, "_cwChrLumConvertToPin")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectPinColumn", UInt, 0x1579, UInt, oscTypeInt)
+        OnMessage(0x1579, "_cwChrLumSelectPinColumn")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectPinRow", UInt, 0x1578, UInt, oscTypeInt)
+        OnMessage(0x1578, "_cwChrLumSelectPinRow")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectDeselectAll", UInt, 0x1577, UInt, oscTypeInt)
+        OnMessage(0x1577, "_cwChrLumSelectDeselectAll")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinColumns", UInt, 0x1576, UInt, oscTypeInt)
+        OnMessage(0x1576, "_cwChrLumAutoPinColumns")
+      
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinRows", UInt, 0x1575, UInt, oscTypeInt)
+        OnMessage(0x1575, "_cwChrLumAutoPinRows")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinSingle", UInt, 0x1574, UInt, oscTypeInt)
+        OnMessage(0x1574, "_cwChrLumAutoPinSingle")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumResetSelection", UInt, 0x1573, UInt, oscTypeInt)
+        OnMessage(0x1573, "_cwChrLumResetSelection")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoLock", UInt, 0x1572, UInt, oscTypeInt)
+        OnMessage(0x1572, "_cwChrLumAutoLock")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumChromaBar", UInt, 0x1571, UInt, oscTypeInt)
+        OnMessage(0x1571, "_cwChrLumChromaBar")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumLumBar", UInt, 0x1570, UInt, oscTypeInt)
+        OnMessage(0x1570, "_cwChrLumLumBar")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAxisAngle", UInt, 0x1569, UInt, oscTypeInt)
+        OnMessage(0x1569, "_cwChrLumAxisAngle")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSmoothChroma", UInt, 0x1568, UInt, oscTypeInt)
+        OnMessage(0x1568, "_cwChrLumSmoothChroma")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSmoothLum", UInt, 0x1567, UInt, oscTypeInt)
+        OnMessage(0x1567, "_cwChrLumSmoothLum")
+      
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumToggleGrids", UInt, 0x1566, UInt, oscTypeInt)
+        OnMessage(0x1566, "_cwChrLumToggleGrids")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumChromaResolution", UInt, 0x1565, UInt, oscTypeInt)
+        OnMessage(0x1565, "_cwChrLumChromaResolution")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumLumResolution", UInt, 0x1564, UInt, oscTypeInt)
+        OnMessage(0x1564, "_cwChrLumLumResolution")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumColorSpace", UInt, 0x1563, UInt, oscTypeInt)
+        OnMessage(0x1563, "_cwChrLumColorSpace")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelect", UInt, 0x1562, UInt, oscTypeInt)
+        OnMessage(0x1562, "_cwHueSatSelect")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatDraw", UInt, 0x1561, UInt, oscTypeInt)
+        OnMessage(0x1561, "_cwHueSatDraw")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPinDepin", UInt, 0x1560, UInt, oscTypeInt)
+        OnMessage(0x1560, "_cwHueSatPinDepin")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPullPoints", UInt, 0x1559, UInt, oscTypeInt)
+        OnMessage(0x1559, "_cwHueSatPullPoints")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPushPoints", UInt, 0x1558, UInt, oscTypeInt)
+        OnMessage(0x1558, "_cwHueSatPushPoints")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatIncreaseFalloff", UInt, 0x1557, UInt, oscTypeInt)
+        OnMessage(0x1557, "_cwHueSatIncreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatDecreaseFalloff", UInt, 0x1556, UInt, oscTypeInt)
+        OnMessage(0x1556, "_cwHueSatDecreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatInvertSelection", UInt, 0x1555, UInt, oscTypeInt)
+        OnMessage(0x1555, "_cwHueSatInvertSelection")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatConvertToPin", UInt, 0x1554, UInt, oscTypeInt)
+        OnMessage(0x1554, "_cwHueSatConvertToPin")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectPinColumn", UInt, 0x1553, UInt, oscTypeInt)
+        OnMessage(0x1553, "_cwHueSatSelectPinColumn")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectPinRing", UInt, 0x1552, UInt, oscTypeInt)
+        OnMessage(0x1552, "_cwHueSatSelectPinRing")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectDeselectAll", UInt, 0x1551, UInt, oscTypeInt)
+        OnMessage(0x1551, "_cwHueSatSelectDeselectAll")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatResetSelection", UInt, 0x1550, UInt, oscTypeInt)
+        OnMessage(0x1550, "_cwHueSatResetSelection")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSmoothHue", UInt, 0x1549, UInt, oscTypeInt)
+        OnMessage(0x1549, "_cwHueSatSmoothHue")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSmoothSat", UInt, 0x1548, UInt, oscTypeInt)
+        OnMessage(0x1548, "_cwHueSatSmoothSat")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatAutoLock", UInt, 0x1547, UInt, oscTypeInt)
+        OnMessage(0x1547, "_cwHueSatAutoLock")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatHueBar", UInt, 0x1546, UInt, oscTypeInt)
+        OnMessage(0x1546, "_cwHueSatHueBar")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSatBar", UInt, 0x1545, UInt, oscTypeInt)
+        OnMessage(0x1545, "_cwHueSatSatBar")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatLumaBar", UInt, 0x1544, UInt, oscTypeInt)
+        OnMessage(0x1544, "_cwHueSatLumaBar")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatHueResolution", UInt, 0x1543, UInt, oscTypeInt)
+        OnMessage(0x1543, "_cwHueSatHueResolution")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSatResolution", UInt, 0x1542, UInt, oscTypeInt)
+        OnMessage(0x1542, "_cwHueSatSatResolution")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatColorSpace", UInt, 0x1541, UInt, oscTypeInt)
+        OnMessage(0x1541, "_cwHueSatColorSpace")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwResetColorWarper", UInt, 0x1540, UInt, oscTypeInt)
+        OnMessage(0x1540, "_cwResetColorWarper")
+        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperChrLum", UInt, 0x1539, UInt, oscTypeInt)
+        OnMessage(0x1539, "_colorWarperChrLum")
+        
         DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperHueSat", UInt, 0x1538, UInt, oscTypeInt)
         OnMessage(0x1538, "_colorWarperHueSat")
-        
+
         DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHSLxRGB", UInt, 0x1537, UInt, oscTypeInt)
         OnMessage(0x1537, "_qualifierHSLxRGB")
         
@@ -3256,6 +3444,156 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         ;---------------------------------------------------------------------- High / Low Listeners ID's ----------------------------------------------------------------------
         
         ;Update 2.5 Listeners
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelect", UInt, 0x1588, UInt, oscTypeInt)
+        OnMessage(0x1588, "_cwChrLumSelect")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumDraw", UInt, 0x1587, UInt, oscTypeInt)
+        OnMessage(0x1587, "_cwChrLumDraw")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPinDepin", UInt, 0x1586, UInt, oscTypeInt)
+        OnMessage(0x1586, "_cwChrLumPinDepin")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPullPoints", UInt, 0x1585, UInt, oscTypeInt)
+        OnMessage(0x1585, "_cwChrLumPullPoints")
+      
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPushPoints", UInt, 0x1584, UInt, oscTypeInt)
+        OnMessage(0x1584, "_cwChrLumPushPoints")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumIncreaseFalloff", UInt, 0x1583, UInt, oscTypeInt)
+        OnMessage(0x1583, "_cwChrLumIncreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumDecreaseFalloff", UInt, 0x1582, UInt, oscTypeInt)
+        OnMessage(0x1582, "_cwChrLumDecreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumInvertSelection", UInt, 0x1581, UInt, oscTypeInt)
+        OnMessage(0x1581, "_cwChrLumInvertSelection")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumConvertToPin", UInt, 0x1580, UInt, oscTypeInt)
+        OnMessage(0x1580, "_cwChrLumConvertToPin")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectPinColumn", UInt, 0x1579, UInt, oscTypeInt)
+        OnMessage(0x1579, "_cwChrLumSelectPinColumn")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectPinRow", UInt, 0x1578, UInt, oscTypeInt)
+        OnMessage(0x1578, "_cwChrLumSelectPinRow")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectDeselectAll", UInt, 0x1577, UInt, oscTypeInt)
+        OnMessage(0x1577, "_cwChrLumSelectDeselectAll")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinColumns", UInt, 0x1576, UInt, oscTypeInt)
+        OnMessage(0x1576, "_cwChrLumAutoPinColumns")
+      
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinRows", UInt, 0x1575, UInt, oscTypeInt)
+        OnMessage(0x1575, "_cwChrLumAutoPinRows")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinSingle", UInt, 0x1574, UInt, oscTypeInt)
+        OnMessage(0x1574, "_cwChrLumAutoPinSingle")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumResetSelection", UInt, 0x1573, UInt, oscTypeInt)
+        OnMessage(0x1573, "_cwChrLumResetSelection")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoLock", UInt, 0x1572, UInt, oscTypeInt)
+        OnMessage(0x1572, "_cwChrLumAutoLock")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumChromaBar", UInt, 0x1571, UInt, oscTypeInt)
+        OnMessage(0x1571, "_cwChrLumChromaBar")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumLumBar", UInt, 0x1570, UInt, oscTypeInt)
+        OnMessage(0x1570, "_cwChrLumLumBar")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAxisAngle", UInt, 0x1569, UInt, oscTypeInt)
+        OnMessage(0x1569, "_cwChrLumAxisAngle")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSmoothChroma", UInt, 0x1568, UInt, oscTypeInt)
+        OnMessage(0x1568, "_cwChrLumSmoothChroma")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSmoothLum", UInt, 0x1567, UInt, oscTypeInt)
+        OnMessage(0x1567, "_cwChrLumSmoothLum")
+      
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumToggleGrids", UInt, 0x1566, UInt, oscTypeInt)
+        OnMessage(0x1566, "_cwChrLumToggleGrids")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumChromaResolution", UInt, 0x1565, UInt, oscTypeInt)
+        OnMessage(0x1565, "_cwChrLumChromaResolution")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumLumResolution", UInt, 0x1564, UInt, oscTypeInt)
+        OnMessage(0x1564, "_cwChrLumLumResolution")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumColorSpace", UInt, 0x1563, UInt, oscTypeInt)
+        OnMessage(0x1563, "_cwChrLumColorSpace")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelect", UInt, 0x1562, UInt, oscTypeInt)
+        OnMessage(0x1562, "_cwHueSatSelect")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatDraw", UInt, 0x1561, UInt, oscTypeInt)
+        OnMessage(0x1561, "_cwHueSatDraw")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPinDepin", UInt, 0x1560, UInt, oscTypeInt)
+        OnMessage(0x1560, "_cwHueSatPinDepin")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPullPoints", UInt, 0x1559, UInt, oscTypeInt)
+        OnMessage(0x1559, "_cwHueSatPullPoints")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPushPoints", UInt, 0x1558, UInt, oscTypeInt)
+        OnMessage(0x1558, "_cwHueSatPushPoints")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatIncreaseFalloff", UInt, 0x1557, UInt, oscTypeInt)
+        OnMessage(0x1557, "_cwHueSatIncreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatDecreaseFalloff", UInt, 0x1556, UInt, oscTypeInt)
+        OnMessage(0x1556, "_cwHueSatDecreaseFalloff")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatInvertSelection", UInt, 0x1555, UInt, oscTypeInt)
+        OnMessage(0x1555, "_cwHueSatInvertSelection")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatConvertToPin", UInt, 0x1554, UInt, oscTypeInt)
+        OnMessage(0x1554, "_cwHueSatConvertToPin")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectPinColumn", UInt, 0x1553, UInt, oscTypeInt)
+        OnMessage(0x1553, "_cwHueSatSelectPinColumn")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectPinRing", UInt, 0x1552, UInt, oscTypeInt)
+        OnMessage(0x1552, "_cwHueSatSelectPinRing")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectDeselectAll", UInt, 0x1551, UInt, oscTypeInt)
+        OnMessage(0x1551, "_cwHueSatSelectDeselectAll")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatResetSelection", UInt, 0x1550, UInt, oscTypeInt)
+        OnMessage(0x1550, "_cwHueSatResetSelection")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSmoothHue", UInt, 0x1549, UInt, oscTypeInt)
+        OnMessage(0x1549, "_cwHueSatSmoothHue")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSmoothSat", UInt, 0x1548, UInt, oscTypeInt)
+        OnMessage(0x1548, "_cwHueSatSmoothSat")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatAutoLock", UInt, 0x1547, UInt, oscTypeInt)
+        OnMessage(0x1547, "_cwHueSatAutoLock")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatHueBar", UInt, 0x1546, UInt, oscTypeInt)
+        OnMessage(0x1546, "_cwHueSatHueBar")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSatBar", UInt, 0x1545, UInt, oscTypeInt)
+        OnMessage(0x1545, "_cwHueSatSatBar")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatLumaBar", UInt, 0x1544, UInt, oscTypeInt)
+        OnMessage(0x1544, "_cwHueSatLumaBar")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatHueResolution", UInt, 0x1543, UInt, oscTypeInt)
+        OnMessage(0x1543, "_cwHueSatHueResolution")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSatResolution", UInt, 0x1542, UInt, oscTypeInt)
+        OnMessage(0x1542, "_cwHueSatSatResolution")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatColorSpace", UInt, 0x1541, UInt, oscTypeInt)
+        OnMessage(0x1541, "_cwHueSatColorSpace")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwResetColorWarper", UInt, 0x1540, UInt, oscTypeInt)
+        OnMessage(0x1540, "_cwResetColorWarper")
+                
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperChrLum", UInt, 0x1539, UInt, oscTypeInt)
+        OnMessage(0x1539, "_colorWarperChrLum")
+        
         DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperHueSat", UInt, 0x1538, UInt, oscTypeInt)
         OnMessage(0x1538, "_colorWarperHueSat")
         
@@ -4979,6 +5317,7 @@ LoadWindowsStatus(){
     _editPageWindowsStatus := []
     
     setScopesFixed := False
+    setColorWarperFixed := False
     
     ;Loop through windows_status.ini to load and populate the latest windows status on _editPageWindowsStatus array
     Loop, read, %A_ScriptDir%\windows_status.ini
@@ -4999,6 +5338,10 @@ LoadWindowsStatus(){
                             setScopesFixed := True
                         }
                         
+                        if InStr(A_LoopField, "color_warper_fixed"){
+                            setColorWarperFixed := True
+                        }
+                        
                         _editPageWindowsStatus[arrayPos].var := SubStr(A_Loopfield, startingPos + 1)
 
                         counter++
@@ -5008,8 +5351,16 @@ LoadWindowsStatus(){
                         
                         if (setScopesFixed){
                             _scopesFixed := SubStr(A_Loopfield, startingPos + 1)
+                            
+                            setScopesFixed := False
                         }
                         
+                        if (setColorWarperFixed){
+                            _colorWarperFixed := SubStr(A_Loopfield, startingPos + 1)
+                            
+                            setColorWarperFixed := False
+                        }
+
                         _editPageWindowsStatus[arrayPos].status := SubStr(A_Loopfield, startingPos + 1)
                         
                         ;Check if the variable is the last page used and if yes, set the _currentPage as the variable
@@ -5691,13 +6042,17 @@ _motionEffects(oscType, data, msgID, hwnd){
     DllCall("OSC2AHK.dll\sendOscMessageString", AStr, OSC_SEND_IP, UInt, OSC_SEND_PORT, AStr, "/HubCommand", AStr, "ModeValue[16]")
 }
 
+;Button - Open Color Warper HueXSat panel on Davinci UI and change the mode on the Tangent Panel
 _colorWarperHueSat(oscType, data, msgID, hwnd){
     if (data == 0)
     Return
     
     ChangePage("COLOR")
     
-    MoveMouseAndClick("pos_color_page_bts_color_warper")
+    if (!_colorWarperFixed){
+        MoveMouseAndClick("pos_color_page_bts_color_warper")
+    }
+    
     MoveMouseAndClick("pos_color_warper_huexsat_dot")
     
     _lastPanel := _currentPanel
@@ -5706,9 +6061,642 @@ _colorWarperHueSat(oscType, data, msgID, hwnd){
     DllCall("OSC2AHK.dll\sendOscMessageString", AStr, OSC_SEND_IP, UInt, OSC_SEND_PORT, AStr, "/HubCommand", AStr, "ModeValue[17]")
 }
 
+;Button - Open Color Warper ChrxLum panel on Davinci UI and change the mode on the Tangent Panel
+_colorWarperChrLum(oscType, data, msgID, hwnd){
+    if (data == 0)
+    Return
+    
+    ChangePage("COLOR")
+    
+    if (!_colorWarperFixed){
+        MoveMouseAndClick("pos_color_page_bts_color_warper")
+    }
+
+    MoveMouseAndClick("pos_color_warper_chrxlum_dot")
+    
+    _lastPanel := _currentPanel
+    _currentPanel := "COLOR WARPER CHRXLUM"
+    
+    DllCall("OSC2AHK.dll\sendOscMessageString", AStr, OSC_SEND_IP, UInt, OSC_SEND_PORT, AStr, "/HubCommand", AStr, "ModeValue[18]")
+}
+
 ;***** End of Change mode functions *****
 
 ;----- Color mode functions -----
+
+;***** Color Warper ChrXLum mode functions *****
+
+;Button - Reset All Color Warper Panel
+_cwResetColorWarper(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_reset_all")
+}
+
+;Knob - Increment, decrement or reset Chroma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+_cwChrLumChromaBar(oscType, data, msgID, hwnd){
+    if (data == 0){
+        MoveMouseAndClick("pos_color_warper_chrxlum_chroma_reset")
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_color_warper_chrxlum_chroma_bar")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset Luma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+_cwChrLumLumBar(oscType, data, msgID, hwnd){
+    if (data == 0){
+        MoveMouseAndClick("pos_color_warper_chrxlum_lum_reset")
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_color_warper_chrxlum_lum_bar")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset Axis Angle on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_cwChrLumAxisAngle(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_color_warper_chrxlum_axis_angle", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_color_warper_chrxlum_axis_angle")
+        Return
+    }
+}
+
+;Knob - Run through Chroma Resolution options on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+_cwChrLumChromaResolution(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        if (_actualColorWarperChrLumChromaRes <= 1){
+            _actualColorWarperChrLumChromaRes := 6
+        }Else{
+            _actualColorWarperChrLumChromaRes--
+        }
+    }Else if(data > 0){
+        if (_actualColorWarperChrLumChromaRes >= 6){
+            _actualColorWarperChrLumChromaRes := 1
+        }Else{
+            _actualColorWarperChrLumChromaRes++
+        }
+    }
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution")
+    
+    Switch (_actualColorWarperChrLumChromaRes){
+        Case "1":
+            MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution_1")            
+        Return
+        Case "2":
+            MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution_2")            
+        Return
+        Case "3":
+            MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution_3")            
+        Return
+        Case "4":
+            MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution_4")            
+        Return
+        Case "5":
+            MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution_5")
+        Return
+        Case "6":
+            MoveMouseAndClick("pos_color_warper_chrxlum_chroma_resolution_6")
+        Return
+    }
+}
+
+;Knob - Run through Luma Resolution options on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+_cwChrLumLumResolution(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        if (_actualColorWarperChrLumLumRes <= 1){
+            _actualColorWarperChrLumLumRes := 6
+        }Else{
+            _actualColorWarperChrLumLumRes--
+        }
+    }Else if(data > 0){
+        if (_actualColorWarperChrLumLumRes >= 6){
+            _actualColorWarperChrLumLumRes := 1
+        }Else{
+            _actualColorWarperChrLumLumRes++
+        }
+    }
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution")
+    
+    Switch (_actualColorWarperChrLumLumRes){
+        Case "1":
+            MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution_1")            
+        Return
+        Case "2":
+            MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution_2")            
+        Return
+        Case "3":
+            MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution_3")            
+        Return
+        Case "4":
+            MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution_4")
+        Return
+        Case "5":
+            MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution_5")
+        Return
+        Case "6":
+            MoveMouseAndClick("pos_color_warper_chrxlum_lum_resolution_6")
+        Return
+    }
+}
+
+;Knob - Run through Color Space options on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+_cwChrLumColorSpace(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        if (_actualColorWarperChrLumColorSpace <= 1){
+            _actualColorWarperChrLumColorSpace := 5
+        }Else{
+            _actualColorWarperChrLumColorSpace--
+        }
+    }Else if(data > 0){
+        if (_actualColorWarperChrLumColorSpace >= 5){
+            _actualColorWarperChrLumColorSpace := 1
+        }Else{
+            _actualColorWarperChrLumColorSpace++
+        }
+    }
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_color_space")
+
+    Switch (_actualColorWarperChrLumColorSpace){
+        Case "1":
+            MoveMouseAndClick("pos_color_warper_chrxlum_color_space_hsv")
+        Return
+        Case "2":
+            MoveMouseAndClick("pos_color_warper_chrxlum_color_space_hsl")
+        Return
+        Case "3":
+            MoveMouseAndClick("pos_color_warper_chrxlum_color_space_hsy")
+        Return
+        Case "4":
+            MoveMouseAndClick("pos_color_warper_chrxlum_color_space_hsp")
+        Return
+        Case "5":
+            MoveMouseAndClick("pos_color_warper_chrxlum_color_space_hsp_log")
+        Return
+    }
+}
+
+;Knob - Toggle between Grids 1 (left) and 2(right) on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+_cwChrLumToggleGrids(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        MoveMouseAndClick("pos_color_warper_chrxlum_grid_1")
+    }Else if(data > 0){
+        MoveMouseAndClick("pos_color_warper_chrxlum_grid_2")        
+    }
+}
+
+;Knob - Smooth Chroma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+_cwChrLumSmoothChroma(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else {
+        MoveMouseAndClick("pos_color_warper_chrxlum_chroma_feather")
+    }
+}
+
+;Knob - Smooth Luma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+_cwChrLumSmoothLum(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else {
+        MoveMouseAndClick("pos_color_warper_chrxlum_lum_feather")
+    }
+}
+
+;Button - Select / Deselect on Color Warper ChrXLum Panel
+_cwChrLumSelect(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_select")
+}
+
+;Button - Draw on Color Warper ChrXLum Panel
+_cwChrLumDraw(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_draw")
+}
+
+;Button - Pin / De-Pin on Color Warper ChrXLum Panel
+_cwChrLumPinDepin(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_pin")
+}
+
+;Button - Pull Points on Color Warper ChrXLum Panel
+_cwChrLumPullPoints(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_pull")
+}
+
+;Button - Push Points on Color Warper ChrXLum Panel
+_cwChrLumPushPoints(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_push")
+}
+
+;Button - Increase Fall Off on Color Warper ChrXLum Panel
+_cwChrLumIncreaseFalloff(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_increase_falloff")
+}
+
+;Button - Decrease Fall Off on Color Warper ChrXLum Panel
+_cwChrLumDecreaseFalloff(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_decrease_falloff")
+}
+
+;Button - Invert Selection on Color Warper ChrXLum Panel
+_cwChrLumInvertSelection(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_invert_selection")
+}
+
+;Button - Convert to Pin on Color Warper ChrXLum Panel
+_cwChrLumConvertToPin(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_convert_to_pin")
+}
+
+;Button - Select or Pin Column on Color Warper ChrXLum Panel
+_cwChrLumSelectPinColumn(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_select_pin_column")
+}
+
+;Button - Select or Pin Ring on Color Warper ChrXLum Panel
+_cwChrLumSelectPinRow(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_select_pin_row")
+}
+
+;Button - Select or Deselect All on Color Warper ChrXLum Panel
+_cwChrLumSelectDeselectAll(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_select_all")
+}
+
+;Button - Reset All Selection on Color Warper ChrXLum Panel
+_cwChrLumResetSelection(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_reset_selection")
+}
+
+;Button - Turn On/Off Auto Lock on Color Warper ChrXLum Panel
+_cwChrLumAutoLock(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_auto_lock")
+}
+
+;Button - Auto Pin Columns on Color Warper ChrXLum Panel
+_cwChrLumAutoPinColumns(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_auto_pin_columns")
+}
+
+;Button - Auto Pin Rows on Color Warper ChrXLum Panel
+_cwChrLumAutoPinRows(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_auto_pin_rows")
+}
+
+;Button - Auto Pin Single Point on Color Warper ChrXLum Panel
+_cwChrLumAutoPinSingle(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_chrxlum_auto_pin_single")
+}
+
+;***** End of Color Warper ChrXLum mode functions *****
+
+;***** Color Warper HueXSat mode functions *****
+
+;Knob - Increment, decrement or reset Luma on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+_cwHueSatHueBar(oscType, data, msgID, hwnd){
+    if (data == 0){
+        MoveMouseAndClick("pos_color_warper_huexsat_hue_reset")
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_color_warper_huexsat_hue_bar")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset Luma on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+_cwHueSatSatBar(oscType, data, msgID, hwnd){
+    if (data == 0){
+        MoveMouseAndClick("pos_color_warper_huexsat_sat_reset")
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_color_warper_huexsat_sat_bar")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset Luma on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+_cwHueSatLumaBar(oscType, data, msgID, hwnd){
+    if (data == 0){
+        MoveMouseAndClick("pos_color_warper_huexsat_lum_reset")
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_color_warper_huexsat_lum_bar")
+        Return
+    }
+}
+
+;Knob - Run through Hue Resolution options on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+_cwHueSatHueResolution(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        if (_actualColorWarperHueSatHueRes <= 1){
+            _actualColorWarperHueSatHueRes := 5
+        }Else{
+            _actualColorWarperHueSatHueRes--
+        }
+    }Else if(data > 0){
+        if (_actualColorWarperHueSatHueRes >= 5){
+            _actualColorWarperHueSatHueRes := 1
+        }Else{
+            _actualColorWarperHueSatHueRes++
+        }
+    }
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_hue_resolution")
+    
+    Switch (_actualColorWarperHueSatHueRes){
+        Case "1":
+            MoveMouseAndClick("pos_color_warper_huexsat_hue_resolution_1")            
+        Return
+        Case "2":
+            MoveMouseAndClick("pos_color_warper_huexsat_hue_resolution_2")            
+        Return
+        Case "3":
+            MoveMouseAndClick("pos_color_warper_huexsat_hue_resolution_3")            
+        Return
+        Case "4":
+            MoveMouseAndClick("pos_color_warper_huexsat_hue_resolution_4")            
+        Return
+        Case "5":
+            MoveMouseAndClick("pos_color_warper_huexsat_hue_resolution_5")
+        Return
+    }
+}
+
+;Knob - Run through Saturation Resolution options on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+_cwHueSatSatResolution(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        if (_actualColorWarperHueSatSatRes <= 1){
+            _actualColorWarperHueSatSatRes := 4
+        }Else{
+            _actualColorWarperHueSatSatRes--
+        }
+    }Else if(data > 0){
+        if (_actualColorWarperHueSatSatRes >= 4){
+            _actualColorWarperHueSatSatRes := 1
+        }Else{
+            _actualColorWarperHueSatSatRes++
+        }
+    }
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_sat_resolution")
+    
+    Switch (_actualColorWarperHueSatSatRes){
+        Case "1":
+            MoveMouseAndClick("pos_color_warper_huexsat_sat_resolution_1")            
+        Return
+        Case "2":
+            MoveMouseAndClick("pos_color_warper_huexsat_sat_resolution_2")            
+        Return
+        Case "3":
+            MoveMouseAndClick("pos_color_warper_huexsat_sat_resolution_3")            
+        Return
+        Case "4":
+            MoveMouseAndClick("pos_color_warper_huexsat_sat_resolution_4")
+        Return
+    }
+}
+
+;Knob - Run through Color Space options on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+_cwHueSatColorSpace(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else if(data < 0){
+        if (_actualColorWarperHueSatColorSpace <= 1){
+            _actualColorWarperHueSatColorSpace := 5
+        }Else{
+            _actualColorWarperHueSatColorSpace--
+        }
+    }Else if(data > 0){
+        if (_actualColorWarperHueSatColorSpace >= 5){
+            _actualColorWarperHueSatColorSpace := 1
+        }Else{
+            _actualColorWarperHueSatColorSpace++
+        }
+    }
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_color_space")
+    
+    Switch (_actualColorWarperHueSatColorSpace){
+        Case "1":
+            MoveMouseAndClick("pos_color_warper_huexsat_color_space_hsv")
+        Return
+        Case "2":
+            MoveMouseAndClick("pos_color_warper_huexsat_color_space_hsl")
+        Return
+        Case "3":
+            MoveMouseAndClick("pos_color_warper_huexsat_color_space_hsy")
+        Return
+        Case "4":
+            MoveMouseAndClick("pos_color_warper_huexsat_color_space_hsp")
+        Return
+        Case "5":
+            MoveMouseAndClick("pos_color_warper_huexsat_color_space_hsp_log")
+        Return
+    }
+}
+
+;Knob - Smooth Hue on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+_cwHueSatSmoothHue(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else {
+        MoveMouseAndClick("pos_color_warper_huexsat_hue_feather")
+    }
+}
+
+;Knob - Smooth Saturation on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+_cwHueSatSmoothSat(oscType, data, msgID, hwnd){
+    if (data == 0){
+        Return
+    }Else {
+        MoveMouseAndClick("pos_color_warper_huexsat_sat_feather")
+    }
+}
+
+;Button - Select / Deselect on Color Warper HueXSat Panel
+_cwHueSatSelect(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_select")
+}
+
+;Button - Draw on Color Warper HueXSat Panel
+_cwHueSatDraw(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_draw")
+}
+
+;Button - Pin / De-Pin on Color Warper HueXSat Panel
+_cwHueSatPinDepin(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_pin")
+}
+
+;Button - Pull Points on Color Warper HueXSat Panel
+_cwHueSatPullPoints(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_pull")
+}
+
+;Button - Push Points on Color Warper HueXSat Panel
+_cwHueSatPushPoints(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_push")
+}
+
+;Button - Increase Fall Off on Color Warper HueXSat Panel
+_cwHueSatIncreaseFalloff(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_increase_falloff")
+}
+
+;Button - Decrease Fall Off on Color Warper HueXSat Panel
+_cwHueSatDecreaseFalloff(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_decrease_falloff")
+}
+
+;Button - Invert Selection on Color Warper HueXSat Panel
+_cwHueSatInvertSelection(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_invert_selection")
+}
+
+;Button - Convert to Pin on Color Warper HueXSat Panel
+_cwHueSatConvertToPin(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_convert_to_pin")
+}
+
+;Button - Select or Pin Column on Color Warper HueXSat Panel
+_cwHueSatSelectPinColumn(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_select_pin_column")
+}
+
+;Button - Select or Pin Ring on Color Warper HueXSat Panel
+_cwHueSatSelectPinRing(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_select_pin_ring")
+}
+
+;Button - Select or Deselect All on Color Warper HueXSat Panel
+_cwHueSatSelectDeselectAll(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_select_all")
+}
+
+;Button - Reset All Selection on Color Warper HueXSat Panel
+_cwHueSatResetSelection(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_reset_selection")
+}
+
+;Button - Turn On/Off Auto Lock on Color Warper HueXSat Panel
+_cwHueSatAutoLock(oscType, data, msgID, hwnd){
+    if(data == 0)
+    Return
+    
+    MoveMouseAndClick("pos_color_warper_huexsat_auto_lock")
+}
+
+;***** End of Color Warper HueXSat mode functions *****
 
 ;***** Motion Effects mode functions *****
 
@@ -5734,13 +6722,13 @@ _motionEffectsSpatialRadius(oscType, data, msgID, hwnd){
     
     Switch (_actualSpatialNRRadius){
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_spatial_radius_small")            
+            MoveMouseAndClick("pos_motion_effects_spatial_radius_small")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_spatial_radius_medium")            
+            MoveMouseAndClick("pos_motion_effects_spatial_radius_medium")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_spatial_radius_large")            
+            MoveMouseAndClick("pos_motion_effects_spatial_radius_large")
         Return
     }
 }
@@ -5767,13 +6755,13 @@ _motionEffectsSpatialMode(oscType, data, msgID, hwnd){
     
     Switch (_actualSpatialNRMode){
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_spatial_mode_faster")            
+            MoveMouseAndClick("pos_motion_effects_spatial_mode_faster")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_spatial_mode_better")            
+            MoveMouseAndClick("pos_motion_effects_spatial_mode_better")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_spatial_mode_enhanced")            
+            MoveMouseAndClick("pos_motion_effects_spatial_mode_enhanced")
         Return
     }
 }
@@ -5811,13 +6799,13 @@ _motionEffectsMotionBlurMotionRange(oscType, data, msgID, hwnd){
     
     Switch (_actualMotionBlurMotionRange){
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_blur_motion_range_large")            
+            MoveMouseAndClick("pos_motion_effects_blur_motion_range_large")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_blur_motion_range_medium")            
+            MoveMouseAndClick("pos_motion_effects_blur_motion_range_medium")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_blur_motion_range_small")            
+            MoveMouseAndClick("pos_motion_effects_blur_motion_range_small")
         Return
     }
 }
@@ -5844,13 +6832,13 @@ _motionEffectsMotionBlurMotionEstType(oscType, data, msgID, hwnd){
     
     Switch (_actualMotionBlurEstType){
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_blur_mo_est_type_faster")            
+            MoveMouseAndClick("pos_motion_effects_blur_mo_est_type_faster")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_blur_mo_est_type_better")            
+            MoveMouseAndClick("pos_motion_effects_blur_mo_est_type_better")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_blur_mo_est_type_none")            
+            MoveMouseAndClick("pos_motion_effects_blur_mo_est_type_none")
         Return
     }
 }
@@ -5877,13 +6865,13 @@ _motionEffectsTemporalMotionRange(oscType, data, msgID, hwnd){
     
     Switch (_actualTemporalNRMotionRange){
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_temporal_motion_range_large")            
+            MoveMouseAndClick("pos_motion_effects_temporal_motion_range_large")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_temporal_motion_range_medium")            
+            MoveMouseAndClick("pos_motion_effects_temporal_motion_range_medium")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_temporal_motion_range_small")            
+            MoveMouseAndClick("pos_motion_effects_temporal_motion_range_small")
         Return
     }
 }
@@ -5910,13 +6898,13 @@ _motionEffectsTemporalMotionEstType(oscType, data, msgID, hwnd){
     
     Switch (_actualTemporalNREstType){
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_temporal_mo_est_type_faster")            
+            MoveMouseAndClick("pos_motion_effects_temporal_mo_est_type_faster")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_temporal_mo_est_type_better")            
+            MoveMouseAndClick("pos_motion_effects_temporal_mo_est_type_better")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_temporal_mo_est_type_none")            
+            MoveMouseAndClick("pos_motion_effects_temporal_mo_est_type_none")
         Return
     }
 }
@@ -5943,22 +6931,22 @@ _motionEffectsTemporalFrames(oscType, data, msgID, hwnd){
     
     Switch (_actualTemporalNRFrames){
         Case "0":
-            MoveMouseAndClick("pos_motion_effects_frames_0")            
+            MoveMouseAndClick("pos_motion_effects_frames_0")
         Return
         Case "1":
-            MoveMouseAndClick("pos_motion_effects_frames_1")            
+            MoveMouseAndClick("pos_motion_effects_frames_1")
         Return
         Case "2":
-            MoveMouseAndClick("pos_motion_effects_frames_2")            
+            MoveMouseAndClick("pos_motion_effects_frames_2")
         Return
         Case "3":
-            MoveMouseAndClick("pos_motion_effects_frames_3")            
+            MoveMouseAndClick("pos_motion_effects_frames_3")
         Return
         Case "4":
-            MoveMouseAndClick("pos_motion_effects_frames_4")            
+            MoveMouseAndClick("pos_motion_effects_frames_4")
         Return
         Case "5":
-            MoveMouseAndClick("pos_motion_effects_frames_5")            
+            MoveMouseAndClick("pos_motion_effects_frames_5")
         Return
     }
 }
@@ -7022,6 +8010,10 @@ _scopesLowPassFilter(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
     
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
+    
     MoveMouseAndClick("pos_scopes_dots_menu")
     
     Sleep 10
@@ -7033,6 +8025,10 @@ _scopesLowPassFilter(oscType, data, msgID, hwnd){
 _scopesDisplayFocus(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
+    
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
     
     MoveMouseAndClick("pos_scopes_dots_menu")
     
@@ -7046,6 +8042,10 @@ _scopesCIE(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
     
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
+    
     MoveMouseAndClick("pos_scopes_menu")
     
     Sleep 10
@@ -7057,6 +8057,10 @@ _scopesCIE(oscType, data, msgID, hwnd){
 _scopesHistogram(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
+    
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
     
     MoveMouseAndClick("pos_scopes_menu")
     
@@ -7070,6 +8074,10 @@ _scopesVectorscope(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
     
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
+    
     MoveMouseAndClick("pos_scopes_menu")
     
     Sleep 10
@@ -7082,6 +8090,10 @@ _scopesWaveform(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
     
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
+    
     MoveMouseAndClick("pos_scopes_menu")
     
     Sleep 10
@@ -7093,6 +8105,10 @@ _scopesWaveform(oscType, data, msgID, hwnd){
 _scopesParade(oscType, data, msgID, hwnd){
     if(data == 0)
     Return
+    
+    if (!_scopesFixed){
+        MoveMouseAndClick("pos_color_page_bts_scopes")        
+    }
     
     MoveMouseAndClick("pos_scopes_menu")
     
@@ -12644,13 +13660,31 @@ _set_scopes_state(){
     GuiControlGet, state, , scopesState
     
     if (state){
-        _scopesFixed := False
-        
-        SetWindowStatus("scopes_fixed", 0)
-    }Else{
-        _scopesFixed := True
+        _scopesFixed := 1
         
         SetWindowStatus("scopes_fixed", 1)
+    }Else{
+        _scopesFixed := 0
+        
+        SetWindowStatus("scopes_fixed", 0)
+    }
+    
+    SaveWindowsStatus()
+
+    Sleep 10
+}
+
+_set_color_warper_state(){
+    GuiControlGet, state, , colorWarperState
+    
+    if (state){
+        _colorWarperFixed := 1
+        
+        SetWindowStatus("color_warper_fixed", 1)
+    }Else{
+        _colorWarperFixed := 0
+        
+        SetWindowStatus("color_warper_fixed", 0)
     }
     
     SaveWindowsStatus()

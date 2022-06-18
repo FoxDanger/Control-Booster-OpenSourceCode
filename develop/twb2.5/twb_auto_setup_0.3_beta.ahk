@@ -127,7 +127,7 @@ CallNormalLayout(){
     Gui Add, Text, x0 y0 w1024 h50 +0x200 +Center , How's your Davinci UI looks like on color page?
     Gui Add, Text, x0 y50 w1024 h50 +0x200 +Center , Pay attention to the buttons bar on the color page and the Matte Finess on Qualifier
     Gui Add, Picture, x0 y120 w1024 h518, %A_ScriptDir%\images\step-by-step\davinci_normal_interface.png
-    Gui Add, Button, g_set_variable_button x412 y620 w200 h50, Normal Layout
+    Gui Add, Button, g_set_variable_button x412 y650 w200 h50, Normal Layout
     Gui Add, Button, g_set_variable_button x800 y700 w200 h50, Show Condensed Layout
 
     Gui Show, w1024 h768, Window
@@ -174,10 +174,13 @@ StartAutoPositions(){
     
     ;Define if the next item should be clicked or just move the mouse
     nextClick := False
+
+    ;Use this to add some paths without need use all the paths
+    ;filePath := "temp_address.ini"
     
     Switch (_davinciLayoutUI){
         Case "NORMAL":
-            filePath := "addresses_normalB.ini"
+            filePath := "addresses_normal.ini"
         Case "CONDENSED":
             filePath := "addresses_condensed.ini"
         Case "WIDE":

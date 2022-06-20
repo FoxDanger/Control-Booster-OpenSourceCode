@@ -19109,8 +19109,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/sizingEditResetCrop</CustomControl>
-                                <CustomName>Reset Crop</CustomName>
+                                <CustomControl>/sizingEditResetCropBlanking</CustomControl>
+                                <CustomName>Reset Crop/Blanking</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -19773,8 +19773,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/sizingInputResetBlanking</CustomControl>
-                                <CustomName>Reset Blanking</CustomName>
+                                <CustomControl>/sizingInputResetCropBlanking</CustomControl>
+                                <CustomName>Reset Crop/Blanking</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -20437,8 +20437,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/sizingOutputResetBlanking</CustomControl>
-                                <CustomName>Reset Blanking</CustomName>
+                                <CustomControl>/sizingOutputResetCropBlanking</CustomControl>
+                                <CustomName>Reset Crop/Blanking</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -21107,8 +21107,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/sizingNodeResetBlanking</CustomControl>
-                                <CustomName>Reset Blanking</CustomName>
+                                <CustomControl>/sizingNodeResetCropBlanking</CustomControl>
+                                <CustomName>Reset Crop/Blanking</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -21771,8 +21771,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/sizingReferenceResetBlanking</CustomControl>
-                                <CustomName>Reset Blanking</CustomName>
+                                <CustomControl>/sizingReferenceResetCropBlanking</CustomControl>
+                                <CustomName>Reset Crop/Blanking</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>

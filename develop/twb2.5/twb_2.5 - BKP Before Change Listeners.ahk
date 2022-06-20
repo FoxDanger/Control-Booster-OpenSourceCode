@@ -328,7 +328,7 @@ CoordMode, Mouse, Screen
 Global OSC_RECEIVE_IP := "127.0.0.1"
 Global OSC_RECEIVE_PORT := 7002
 Global OSC_SEND_IP := "127.0.0.1"
-Global OSC_SEND_PORT := 57872
+Global OSC_SEND_PORT := 52344
 
 ; OSC datatypes. Just for better readability, you also just could use the numbers
 Global oscTypeNone := 1
@@ -1308,4674 +1308,4675 @@ Osc2ahkAddOrRemoveListeners(addOrRemove := "add"){
         ;OnMessage(0x3003, "_testSendFloatOSC")
     
         ;All Panels Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/undo", UInt, 0x1000, UInt, oscTypeInt)
-        OnMessage(0x1000, "_undo")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/undo", UInt, 0x2000, UInt, oscTypeInt)
+        OnMessage(0x2000, "_undo")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/redo", UInt, 0x1001, UInt, oscTypeInt)
-        OnMessage(0x1001, "_redo")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/redo", UInt, 0x2001, UInt, oscTypeInt)
+        OnMessage(0x2001, "_redo")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorPageScrollThumbnails", UInt, 0x1002, UInt, oscTypeInt)
-        OnMessage(0x1002, "_colorPageScrollThumbnails")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorPageScrollThumbnails", UInt, 0x2002, UInt, oscTypeInt)
+        OnMessage(0x2002, "_colorPageScrollThumbnails")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/navigateNodes", UInt, 0x1003, UInt, oscTypeInt)
-        OnMessage(0x1003, "_navigateNodes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/navigateNodes", UInt, 0x2003, UInt, oscTypeInt)
+        OnMessage(0x2003, "_navigateNodes")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/resetDefaultState", UInt, 0x1004, UInt, oscTypeInt)
-        OnMessage(0x1004, "_resetDefaultState")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/resetDefaultState", UInt, 0x2004, UInt, oscTypeInt)
+        OnMessage(0x2004, "_resetDefaultState")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/enableDisableSelectedNodes", UInt, 0x1005, UInt, oscTypeInt)
-        OnMessage(0x1005, "_enableDisableSelectedNodes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/enableDisableSelectedNodes", UInt, 0x2005, UInt, oscTypeInt)
+        OnMessage(0x2005, "_enableDisableSelectedNodes")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bypassColorGrading", UInt, 0x1006, UInt, oscTypeInt)
-        OnMessage(0x1006, "_bypassColorGrading")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bypassColorGrading", UInt, 0x2006, UInt, oscTypeInt)
+        OnMessage(0x2006, "_bypassColorGrading")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadA", UInt, 0x1007, UInt, oscTypeInt)
-        OnMessage(0x1007, "_playheadA")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadA", UInt, 0x2007, UInt, oscTypeInt)
+        OnMessage(0x2007, "_playheadA")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadB", UInt, 0x1008, UInt, oscTypeInt)
-        OnMessage(0x1008, "_playheadB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadB", UInt, 0x2008, UInt, oscTypeInt)
+        OnMessage(0x2008, "_playheadB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadC", UInt, 0x1009, UInt, oscTypeInt)
-        OnMessage(0x1009, "_playheadC")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadC", UInt, 0x2009, UInt, oscTypeInt)
+        OnMessage(0x2009, "_playheadC")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadD", UInt, 0x1010, UInt, oscTypeInt)
-        OnMessage(0x1010, "_playheadD")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/playheadD", UInt, 0x2010, UInt, oscTypeInt)
+        OnMessage(0x2010, "_playheadD")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/resetPlayheads", UInt, 0x1011, UInt, oscTypeInt)
-        OnMessage(0x1011, "_resetPlayheads")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/resetPlayheads", UInt, 0x2011, UInt, oscTypeInt)
+        OnMessage(0x2011, "_resetPlayheads")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rippleNodesToSelectedClips", UInt, 0x1012, UInt, oscTypeInt)
-        OnMessage(0x1012, "_rippleNodesToSelectedClips")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rippleNodesToSelectedClips", UInt, 0x2012, UInt, oscTypeInt)
+        OnMessage(0x2012, "_rippleNodesToSelectedClips")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/fastNavigateClips", UInt, 0x1013, UInt, oscTypeInt)
-        OnMessage(0x1013, "_fastNavigateClips")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/fastNavigateClips", UInt, 0x2013, UInt, oscTypeInt)
+        OnMessage(0x2013, "_fastNavigateClips")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/deleteKey", UInt, 0x1014, UInt, oscTypeInt)
-        OnMessage(0x1014, "_deleteKey")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/deleteKey", UInt, 0x2014, UInt, oscTypeInt)
+        OnMessage(0x2014, "_deleteKey")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/backspaceKey", UInt, 0x1015, UInt, oscTypeInt)
-        OnMessage(0x1015, "_backspaceKey")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/backspaceKey", UInt, 0x2015, UInt, oscTypeInt)
+        OnMessage(0x2015, "_backspaceKey")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceImageWipe", UInt, 0x1016, UInt, oscTypeInt)
-        OnMessage(0x1016, "_colorInterfaceImageWipe")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceImageWipe", UInt, 0x2016, UInt, oscTypeInt)
+        OnMessage(0x2016, "_colorInterfaceImageWipe")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceSplitScreen", UInt, 0x1017, UInt, oscTypeInt)
-        OnMessage(0x1017, "_colorInterfaceSplitScreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceSplitScreen", UInt, 0x2017, UInt, oscTypeInt)
+        OnMessage(0x2017, "_colorInterfaceSplitScreen")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceHighlight", UInt, 0x1018, UInt, oscTypeInt)
-        OnMessage(0x1018, "_colorInterfaceHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceHighlight", UInt, 0x2018, UInt, oscTypeInt)
+        OnMessage(0x2018, "_colorInterfaceHighlight")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceZoomView", UInt, 0x1019, UInt, oscTypeInt)
-        OnMessage(0x1019, "_colorInterfaceZoomView")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceZoomView", UInt, 0x2019, UInt, oscTypeInt)
+        OnMessage(0x2019, "_colorInterfaceZoomView")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceCursorHand", UInt, 0x1020, UInt, oscTypeInt)
-        OnMessage(0x1020, "_colorInterfaceCursorHand")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceCursorHand", UInt, 0x2020, UInt, oscTypeInt)
+        OnMessage(0x2020, "_colorInterfaceCursorHand")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode1", UInt, 0x1021, UInt, oscTypeInt)
-        OnMessage(0x1021, "_colorInterfaceNodeMode1")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode1", UInt, 0x2021, UInt, oscTypeInt)
+        OnMessage(0x2021, "_colorInterfaceNodeMode1")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode2", UInt, 0x1022, UInt, oscTypeInt)
-        OnMessage(0x1022, "_colorInterfaceNodeMode2")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode2", UInt, 0x2022, UInt, oscTypeInt)
+        OnMessage(0x2022, "_colorInterfaceNodeMode2")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode3", UInt, 0x1023, UInt, oscTypeInt)
-        OnMessage(0x1023, "_colorInterfaceNodeMode3")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode3", UInt, 0x2023, UInt, oscTypeInt)
+        OnMessage(0x2023, "_colorInterfaceNodeMode3")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode4", UInt, 0x1024, UInt, oscTypeInt)
-        OnMessage(0x1024, "_colorInterfaceNodeMode4")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodeMode4", UInt, 0x2024, UInt, oscTypeInt)
+        OnMessage(0x2024, "_colorInterfaceNodeMode4")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceGallery", UInt, 0x1025, UInt, oscTypeInt)
-        OnMessage(0x1025, "_colorInterfaceGallery")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceGallery", UInt, 0x2025, UInt, oscTypeInt)
+        OnMessage(0x2025, "_colorInterfaceGallery")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceLuts", UInt, 0x1026, UInt, oscTypeInt)
-        OnMessage(0x1026, "_colorInterfaceLuts")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceLuts", UInt, 0x2026, UInt, oscTypeInt)
+        OnMessage(0x2026, "_colorInterfaceLuts")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceMediaPool", UInt, 0x1027, UInt, oscTypeInt)
-        OnMessage(0x1027, "_colorInterfaceMediaPool")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceMediaPool", UInt, 0x2027, UInt, oscTypeInt)
+        OnMessage(0x2027, "_colorInterfaceMediaPool")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceTimeline", UInt, 0x1028, UInt, oscTypeInt)
-        OnMessage(0x1028, "_colorInterfaceTimeline")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceTimeline", UInt, 0x2028, UInt, oscTypeInt)
+        OnMessage(0x2028, "_colorInterfaceTimeline")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceClips", UInt, 0x1029, UInt, oscTypeInt)
-        OnMessage(0x1029, "_colorInterfaceClips")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceClips", UInt, 0x2029, UInt, oscTypeInt)
+        OnMessage(0x2029, "_colorInterfaceClips")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodes", UInt, 0x1030, UInt, oscTypeInt)
-        OnMessage(0x1030, "_colorInterfaceNodes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceNodes", UInt, 0x2030, UInt, oscTypeInt)
+        OnMessage(0x2030, "_colorInterfaceNodes")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceOpenFX", UInt, 0x1031, UInt, oscTypeInt)
-        OnMessage(0x1031, "_colorInterfaceOpenFX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceOpenFX", UInt, 0x2031, UInt, oscTypeInt)
+        OnMessage(0x2031, "_colorInterfaceOpenFX")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceLightbox", UInt, 0x1032, UInt, oscTypeInt)
-        OnMessage(0x1032, "_colorInterfaceLightbox")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceLightbox", UInt, 0x2032, UInt, oscTypeInt)
+        OnMessage(0x2032, "_colorInterfaceLightbox")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceImageWipeMode", UInt, 0x1033, UInt, oscTypeInt)
-        OnMessage(0x1033, "_colorInterfaceImageWipeMode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorInterfaceImageWipeMode", UInt, 0x2033, UInt, oscTypeInt)
+        OnMessage(0x2033, "_colorInterfaceImageWipeMode")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/projectSettings", UInt, 0x1034, UInt, oscTypeInt)
-        OnMessage(0x1034, "_projectSettings")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/projectSettings", UInt, 0x2034, UInt, oscTypeInt)
+        OnMessage(0x2034, "_projectSettings")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/projectSelection", UInt, 0x1035, UInt, oscTypeInt)
-        OnMessage(0x1035, "_projectSelection")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/projectSelection", UInt, 0x2035, UInt, oscTypeInt)
+        OnMessage(0x2035, "_projectSelection")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/davinciSettings", UInt, 0x1036, UInt, oscTypeInt)
-        OnMessage(0x1036, "_davinciSettings")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/davinciSettings", UInt, 0x2036, UInt, oscTypeInt)
+        OnMessage(0x2036, "_davinciSettings")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/copy", UInt, 0x1037, UInt, oscTypeInt)
-        OnMessage(0x1037, "_copy")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/copy", UInt, 0x2037, UInt, oscTypeInt)
+        OnMessage(0x2037, "_copy")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/paste", UInt, 0x1038, UInt, oscTypeInt)
-        OnMessage(0x1038, "_paste")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/paste", UInt, 0x2038, UInt, oscTypeInt)
+        OnMessage(0x2038, "_paste")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/grabStill", UInt, 0x1039, UInt, oscTypeInt)
-        OnMessage(0x1039, "_grabStill")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/grabStill", UInt, 0x2039, UInt, oscTypeInt)
+        OnMessage(0x2039, "_grabStill")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/applyGrade", UInt, 0x1040, UInt, oscTypeInt)
-        OnMessage(0x1040, "_applyGrade")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/applyGrade", UInt, 0x2040, UInt, oscTypeInt)
+        OnMessage(0x2040, "_applyGrade")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/fullView", UInt, 0x1041, UInt, oscTypeInt)
-        OnMessage(0x1041, "_fullView")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/fullView", UInt, 0x2041, UInt, oscTypeInt)
+        OnMessage(0x2041, "_fullView")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/stepFrame", UInt, 0x1042, UInt, oscTypeInt)
-        OnMessage(0x1042, "_stepFrame")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/stepFrame", UInt, 0x2042, UInt, oscTypeInt)
+        OnMessage(0x2042, "_stepFrame")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/previousClip", UInt, 0x1043, UInt, oscTypeInt)
-        OnMessage(0x1043, "_previousClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/previousClip", UInt, 0x2043, UInt, oscTypeInt)
+        OnMessage(0x2043, "_previousClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nextClip", UInt, 0x1044, UInt, oscTypeInt)
-        OnMessage(0x1044, "_nextClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nextClip", UInt, 0x2044, UInt, oscTypeInt)
+        OnMessage(0x2044, "_nextClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGradeAndKeepNodes", UInt, 0x1045, UInt, oscTypeInt)
-        OnMessage(0x1045, "_resetAllNodesGradeAndKeepNodes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGradeAndKeepNodes", UInt, 0x2045, UInt, oscTypeInt)
+        OnMessage(0x2045, "_resetAllNodesGradeAndKeepNodes")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/resetNodeGrade", UInt, 0x1046, UInt, oscTypeInt)
-        OnMessage(0x1046, "_resetNodeGrade")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/resetNodeGrade", UInt, 0x2046, UInt, oscTypeInt)
+        OnMessage(0x2046, "_resetNodeGrade")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/playBackward", UInt, 0x1047, UInt, oscTypeInt)
-        OnMessage(0x1047, "_playBackward")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/playBackward", UInt, 0x2047, UInt, oscTypeInt)
+        OnMessage(0x2047, "_playBackward")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/stop", UInt, 0x1048, UInt, oscTypeInt)
-        OnMessage(0x1048, "_stop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/stop", UInt, 0x2048, UInt, oscTypeInt)
+        OnMessage(0x2048, "_stop")
     
-        DllCall("OSC2AHK.dll\addListener", AStr, "/playForward", UInt, 0x1049, UInt, oscTypeInt)
-        OnMessage(0x1049, "_playForward")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/playForward", UInt, 0x2049, UInt, oscTypeInt)
+        OnMessage(0x2049, "_playForward")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/startStop", UInt, 0x1050, UInt, oscTypeInt)
-        OnMessage(0x1050, "_startStop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/startStop", UInt, 0x2050, UInt, oscTypeInt)
+        OnMessage(0x2050, "_startStop")
         
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGrade", UInt, 0x1051, UInt, oscTypeInt)
-        ;OnMessage(0x1051, "_resetAllNodesGrade")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGrade", UInt, 0x2051, UInt, oscTypeInt)
+        ;OnMessage(0x2051, "_resetAllNodesGrade")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/enableDisableAllNodes", UInt, 0x1052, UInt, oscTypeInt)
-        OnMessage(0x1052, "_enableDisableAllNodes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/enableDisableAllNodes", UInt, 0x2052, UInt, oscTypeInt)
+        OnMessage(0x2052, "_enableDisableAllNodes")
         
         ;Update 2.2.1 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/deleteKeyJogWheel", UInt, 0x1053, UInt, oscTypeInt)
-        OnMessage(0x1053, "_deleteKeyJogWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/deleteKeyJogWheel", UInt, 0x2053, UInt, oscTypeInt)
+        OnMessage(0x2053, "_deleteKeyJogWheel")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/backspaceKeyJogWheel", UInt, 0x1054, UInt, oscTypeInt)
-        OnMessage(0x1054, "_backspaceKeyJogWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/backspaceKeyJogWheel", UInt, 0x2054, UInt, oscTypeInt)
+        OnMessage(0x2054, "_backspaceKeyJogWheel")
         
         ;Update 2.4 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/labelNode", UInt, 0x1055, UInt, oscTypeInt)
-        OnMessage(0x1055, "_labelNode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/labelNode", UInt, 0x2055, UInt, oscTypeInt)
+        OnMessage(0x2055, "_labelNode")
         
         ;Update 2.5 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/editMode", UInt, 0x1056, UInt, oscTypeInt)
-        OnMessage(0x1056, "_editMode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/editMode", UInt, 0x2056, UInt, oscTypeInt)
+        OnMessage(0x2056, "_editMode")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorMode", UInt, 0x1057, UInt, oscTypeInt)
-        OnMessage(0x1057, "_inspectorMode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorMode", UInt, 0x2057, UInt, oscTypeInt)
+        OnMessage(0x2057, "_inspectorMode")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAndScopes", UInt, 0x1058, UInt, oscTypeInt)
-        OnMessage(0x1058, "_nodesAndScopes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAndScopes", UInt, 0x2058, UInt, oscTypeInt)
+        OnMessage(0x2058, "_nodesAndScopes")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLights", UInt, 0x1059, UInt, oscTypeInt)
-        OnMessage(0x1059, "_printerLights")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLights", UInt, 0x2059, UInt, oscTypeInt)
+        OnMessage(0x2059, "_printerLights")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesWheels", UInt, 0x1060, UInt, oscTypeInt)
-        OnMessage(0x1060, "_primariesWheels")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesWheels", UInt, 0x2060, UInt, oscTypeInt)
+        OnMessage(0x2060, "_primariesWheels")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesBars", UInt, 0x1061, UInt, oscTypeInt)
-        OnMessage(0x1061, "_primariesBars")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesBars", UInt, 0x2061, UInt, oscTypeInt)
+        OnMessage(0x2061, "_primariesBars")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logWheels", UInt, 0x1062, UInt, oscTypeInt)
-        OnMessage(0x1062, "_logWheels")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logWheels", UInt, 0x2062, UInt, oscTypeInt)
+        OnMessage(0x2062, "_logWheels")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrWheels", UInt, 0x1063, UInt, oscTypeInt)
-        OnMessage(0x1063, "_hdrWheels")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrWheels", UInt, 0x2063, UInt, oscTypeInt)
+        OnMessage(0x2063, "_hdrWheels")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurves", UInt, 0x1064, UInt, oscTypeInt)
-        OnMessage(0x1064, "_customCurves")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurves", UInt, 0x2064, UInt, oscTypeInt)
+        OnMessage(0x2064, "_customCurves")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurves", UInt, 0x1065, UInt, oscTypeInt)
-        OnMessage(0x1065, "_hueCurves")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurves", UInt, 0x2065, UInt, oscTypeInt)
+        OnMessage(0x2065, "_hueCurves")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifier", UInt, 0x1066, UInt, oscTypeInt)
-        OnMessage(0x1066, "_qualifier")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifier", UInt, 0x2066, UInt, oscTypeInt)
+        OnMessage(0x2066, "_qualifier")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/powerWindows", UInt, 0x1067, UInt, oscTypeInt)
-        OnMessage(0x1067, "_powerWindows")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/powerWindows", UInt, 0x2067, UInt, oscTypeInt)
+        OnMessage(0x2067, "_powerWindows")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/blurSharpenMist", UInt, 0x1068, UInt, oscTypeInt)
-        OnMessage(0x1068, "_blurSharpenMist")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/blurSharpenMist", UInt, 0x2068, UInt, oscTypeInt)
+        OnMessage(0x2068, "_blurSharpenMist")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixer", UInt, 0x1069, UInt, oscTypeInt)
-        OnMessage(0x1069, "_rgbMixer")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixer", UInt, 0x2069, UInt, oscTypeInt)
+        OnMessage(0x2069, "_rgbMixer")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/key", UInt, 0x1070, UInt, oscTypeInt)
-        OnMessage(0x1070, "_key")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/key", UInt, 0x2070, UInt, oscTypeInt)
+        OnMessage(0x2070, "_key")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffects", UInt, 0x1071, UInt, oscTypeInt)
-        OnMessage(0x1071, "_motionEffects")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffects", UInt, 0x2071, UInt, oscTypeInt)
+        OnMessage(0x2071, "_motionEffects")
 
+        ;---------------------------------------------------------------------- High / Low Listeners ID's ----------------------------------------------------------------------
+        
         ;Update 2.5 Listeners - Modes and Color Warper
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelect", UInt, 0x1072, UInt, oscTypeInt)
-        OnMessage(0x1072, "_cwChrLumSelect")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelect", UInt, 0x1588, UInt, oscTypeInt)
+        OnMessage(0x1588, "_cwChrLumSelect")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumDraw", UInt, 0x1073, UInt, oscTypeInt)
-        OnMessage(0x1073, "_cwChrLumDraw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumDraw", UInt, 0x1587, UInt, oscTypeInt)
+        OnMessage(0x1587, "_cwChrLumDraw")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPinDepin", UInt, 0x1074, UInt, oscTypeInt)
-        OnMessage(0x1074, "_cwChrLumPinDepin")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPinDepin", UInt, 0x1586, UInt, oscTypeInt)
+        OnMessage(0x1586, "_cwChrLumPinDepin")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPullPoints", UInt, 0x1075, UInt, oscTypeInt)
-        OnMessage(0x1075, "_cwChrLumPullPoints")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPullPoints", UInt, 0x1585, UInt, oscTypeInt)
+        OnMessage(0x1585, "_cwChrLumPullPoints")
       
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPushPoints", UInt, 0x1076, UInt, oscTypeInt)
-        OnMessage(0x1076, "_cwChrLumPushPoints")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumPushPoints", UInt, 0x1584, UInt, oscTypeInt)
+        OnMessage(0x1584, "_cwChrLumPushPoints")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumIncreaseFalloff", UInt, 0x1077, UInt, oscTypeInt)
-        OnMessage(0x1077, "_cwChrLumIncreaseFalloff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumIncreaseFalloff", UInt, 0x1583, UInt, oscTypeInt)
+        OnMessage(0x1583, "_cwChrLumIncreaseFalloff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumDecreaseFalloff", UInt, 0x1078, UInt, oscTypeInt)
-        OnMessage(0x1078, "_cwChrLumDecreaseFalloff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumDecreaseFalloff", UInt, 0x1582, UInt, oscTypeInt)
+        OnMessage(0x1582, "_cwChrLumDecreaseFalloff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumInvertSelection", UInt, 0x1079, UInt, oscTypeInt)
-        OnMessage(0x1079, "_cwChrLumInvertSelection")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumInvertSelection", UInt, 0x1581, UInt, oscTypeInt)
+        OnMessage(0x1581, "_cwChrLumInvertSelection")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumConvertToPin", UInt, 0x1080, UInt, oscTypeInt)
-        OnMessage(0x1080, "_cwChrLumConvertToPin")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumConvertToPin", UInt, 0x1580, UInt, oscTypeInt)
+        OnMessage(0x1580, "_cwChrLumConvertToPin")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectPinColumn", UInt, 0x1081, UInt, oscTypeInt)
-        OnMessage(0x1081, "_cwChrLumSelectPinColumn")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectPinColumn", UInt, 0x1579, UInt, oscTypeInt)
+        OnMessage(0x1579, "_cwChrLumSelectPinColumn")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectPinRow", UInt, 0x1082, UInt, oscTypeInt)
-        OnMessage(0x1082, "_cwChrLumSelectPinRow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectPinRow", UInt, 0x1578, UInt, oscTypeInt)
+        OnMessage(0x1578, "_cwChrLumSelectPinRow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectDeselectAll", UInt, 0x1083, UInt, oscTypeInt)
-        OnMessage(0x1083, "_cwChrLumSelectDeselectAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSelectDeselectAll", UInt, 0x1577, UInt, oscTypeInt)
+        OnMessage(0x1577, "_cwChrLumSelectDeselectAll")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinColumns", UInt, 0x1084, UInt, oscTypeInt)
-        OnMessage(0x1084, "_cwChrLumAutoPinColumns")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinColumns", UInt, 0x1576, UInt, oscTypeInt)
+        OnMessage(0x1576, "_cwChrLumAutoPinColumns")
       
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinRows", UInt, 0x1085, UInt, oscTypeInt)
-        OnMessage(0x1085, "_cwChrLumAutoPinRows")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinRows", UInt, 0x1575, UInt, oscTypeInt)
+        OnMessage(0x1575, "_cwChrLumAutoPinRows")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinSingle", UInt, 0x1086, UInt, oscTypeInt)
-        OnMessage(0x1086, "_cwChrLumAutoPinSingle")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoPinSingle", UInt, 0x1574, UInt, oscTypeInt)
+        OnMessage(0x1574, "_cwChrLumAutoPinSingle")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumResetSelection", UInt, 0x1087, UInt, oscTypeInt)
-        OnMessage(0x1087, "_cwChrLumResetSelection")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumResetSelection", UInt, 0x1573, UInt, oscTypeInt)
+        OnMessage(0x1573, "_cwChrLumResetSelection")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoLock", UInt, 0x1088, UInt, oscTypeInt)
-        OnMessage(0x1088, "_cwChrLumAutoLock")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAutoLock", UInt, 0x1572, UInt, oscTypeInt)
+        OnMessage(0x1572, "_cwChrLumAutoLock")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumChromaBar", UInt, 0x1089, UInt, oscTypeInt)
-        OnMessage(0x1089, "_cwChrLumChromaBar")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumChromaBar", UInt, 0x1571, UInt, oscTypeInt)
+        OnMessage(0x1571, "_cwChrLumChromaBar")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumLumBar", UInt, 0x1090, UInt, oscTypeInt)
-        OnMessage(0x1090, "_cwChrLumLumBar")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumLumBar", UInt, 0x1570, UInt, oscTypeInt)
+        OnMessage(0x1570, "_cwChrLumLumBar")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAxisAngle", UInt, 0x1091, UInt, oscTypeInt)
-        OnMessage(0x1091, "_cwChrLumAxisAngle")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumAxisAngle", UInt, 0x1569, UInt, oscTypeInt)
+        OnMessage(0x1569, "_cwChrLumAxisAngle")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSmoothChroma", UInt, 0x1092, UInt, oscTypeInt)
-        OnMessage(0x1092, "_cwChrLumSmoothChroma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSmoothChroma", UInt, 0x1568, UInt, oscTypeInt)
+        OnMessage(0x1568, "_cwChrLumSmoothChroma")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSmoothLum", UInt, 0x1093, UInt, oscTypeInt)
-        OnMessage(0x1093, "_cwChrLumSmoothLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumSmoothLum", UInt, 0x1567, UInt, oscTypeInt)
+        OnMessage(0x1567, "_cwChrLumSmoothLum")
       
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumToggleGrids", UInt, 0x1094, UInt, oscTypeInt)
-        OnMessage(0x1094, "_cwChrLumToggleGrids")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumToggleGrids", UInt, 0x1566, UInt, oscTypeInt)
+        OnMessage(0x1566, "_cwChrLumToggleGrids")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumChromaResolution", UInt, 0x1095, UInt, oscTypeInt)
-        OnMessage(0x1095, "_cwChrLumChromaResolution")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumChromaResolution", UInt, 0x1565, UInt, oscTypeInt)
+        OnMessage(0x1565, "_cwChrLumChromaResolution")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumLumResolution", UInt, 0x1096, UInt, oscTypeInt)
-        OnMessage(0x1096, "_cwChrLumLumResolution")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumLumResolution", UInt, 0x1564, UInt, oscTypeInt)
+        OnMessage(0x1564, "_cwChrLumLumResolution")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumColorSpace", UInt, 0x1097, UInt, oscTypeInt)
-        OnMessage(0x1097, "_cwChrLumColorSpace")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwChrLumColorSpace", UInt, 0x1563, UInt, oscTypeInt)
+        OnMessage(0x1563, "_cwChrLumColorSpace")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelect", UInt, 0x1098, UInt, oscTypeInt)
-        OnMessage(0x1098, "_cwHueSatSelect")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelect", UInt, 0x1562, UInt, oscTypeInt)
+        OnMessage(0x1562, "_cwHueSatSelect")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatDraw", UInt, 0x1099, UInt, oscTypeInt)
-        OnMessage(0x1099, "_cwHueSatDraw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatDraw", UInt, 0x1561, UInt, oscTypeInt)
+        OnMessage(0x1561, "_cwHueSatDraw")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPinDepin", UInt, 0x1100, UInt, oscTypeInt)
-        OnMessage(0x1100, "_cwHueSatPinDepin")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPinDepin", UInt, 0x1560, UInt, oscTypeInt)
+        OnMessage(0x1560, "_cwHueSatPinDepin")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPullPoints", UInt, 0x1101, UInt, oscTypeInt)
-        OnMessage(0x1101, "_cwHueSatPullPoints")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPullPoints", UInt, 0x1559, UInt, oscTypeInt)
+        OnMessage(0x1559, "_cwHueSatPullPoints")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPushPoints", UInt, 0x1102, UInt, oscTypeInt)
-        OnMessage(0x1102, "_cwHueSatPushPoints")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatPushPoints", UInt, 0x1558, UInt, oscTypeInt)
+        OnMessage(0x1558, "_cwHueSatPushPoints")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatIncreaseFalloff", UInt, 0x1103, UInt, oscTypeInt)
-        OnMessage(0x1103, "_cwHueSatIncreaseFalloff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatIncreaseFalloff", UInt, 0x1557, UInt, oscTypeInt)
+        OnMessage(0x1557, "_cwHueSatIncreaseFalloff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatDecreaseFalloff", UInt, 0x1104, UInt, oscTypeInt)
-        OnMessage(0x1104, "_cwHueSatDecreaseFalloff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatDecreaseFalloff", UInt, 0x1556, UInt, oscTypeInt)
+        OnMessage(0x1556, "_cwHueSatDecreaseFalloff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatInvertSelection", UInt, 0x1105, UInt, oscTypeInt)
-        OnMessage(0x1105, "_cwHueSatInvertSelection")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatInvertSelection", UInt, 0x1555, UInt, oscTypeInt)
+        OnMessage(0x1555, "_cwHueSatInvertSelection")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatConvertToPin", UInt, 0x1106, UInt, oscTypeInt)
-        OnMessage(0x1106, "_cwHueSatConvertToPin")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatConvertToPin", UInt, 0x1554, UInt, oscTypeInt)
+        OnMessage(0x1554, "_cwHueSatConvertToPin")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectPinColumn", UInt, 0x1107, UInt, oscTypeInt)
-        OnMessage(0x1107, "_cwHueSatSelectPinColumn")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectPinColumn", UInt, 0x1553, UInt, oscTypeInt)
+        OnMessage(0x1553, "_cwHueSatSelectPinColumn")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectPinRing", UInt, 0x1108, UInt, oscTypeInt)
-        OnMessage(0x1108, "_cwHueSatSelectPinRing")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectPinRing", UInt, 0x1552, UInt, oscTypeInt)
+        OnMessage(0x1552, "_cwHueSatSelectPinRing")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectDeselectAll", UInt, 0x1109, UInt, oscTypeInt)
-        OnMessage(0x1109, "_cwHueSatSelectDeselectAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSelectDeselectAll", UInt, 0x1551, UInt, oscTypeInt)
+        OnMessage(0x1551, "_cwHueSatSelectDeselectAll")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatResetSelection", UInt, 0x1110, UInt, oscTypeInt)
-        OnMessage(0x1110, "_cwHueSatResetSelection")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatResetSelection", UInt, 0x1550, UInt, oscTypeInt)
+        OnMessage(0x1550, "_cwHueSatResetSelection")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSmoothHue", UInt, 0x1111, UInt, oscTypeInt)
-        OnMessage(0x1111, "_cwHueSatSmoothHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSmoothHue", UInt, 0x1549, UInt, oscTypeInt)
+        OnMessage(0x1549, "_cwHueSatSmoothHue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSmoothSat", UInt, 0x1112, UInt, oscTypeInt)
-        OnMessage(0x1112, "_cwHueSatSmoothSat")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSmoothSat", UInt, 0x1548, UInt, oscTypeInt)
+        OnMessage(0x1548, "_cwHueSatSmoothSat")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatAutoLock", UInt, 0x1113, UInt, oscTypeInt)
-        OnMessage(0x1113, "_cwHueSatAutoLock")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatAutoLock", UInt, 0x1547, UInt, oscTypeInt)
+        OnMessage(0x1547, "_cwHueSatAutoLock")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatHueBar", UInt, 0x1114, UInt, oscTypeInt)
-        OnMessage(0x1114, "_cwHueSatHueBar")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatHueBar", UInt, 0x1546, UInt, oscTypeInt)
+        OnMessage(0x1546, "_cwHueSatHueBar")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSatBar", UInt, 0x1115, UInt, oscTypeInt)
-        OnMessage(0x1115, "_cwHueSatSatBar")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSatBar", UInt, 0x1545, UInt, oscTypeInt)
+        OnMessage(0x1545, "_cwHueSatSatBar")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatLumaBar", UInt, 0x1116, UInt, oscTypeInt)
-        OnMessage(0x1116, "_cwHueSatLumaBar")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatLumaBar", UInt, 0x1544, UInt, oscTypeInt)
+        OnMessage(0x1544, "_cwHueSatLumaBar")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatHueResolution", UInt, 0x1117, UInt, oscTypeInt)
-        OnMessage(0x1117, "_cwHueSatHueResolution")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatHueResolution", UInt, 0x1543, UInt, oscTypeInt)
+        OnMessage(0x1543, "_cwHueSatHueResolution")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSatResolution", UInt, 0x1118, UInt, oscTypeInt)
-        OnMessage(0x1118, "_cwHueSatSatResolution")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatSatResolution", UInt, 0x1542, UInt, oscTypeInt)
+        OnMessage(0x1542, "_cwHueSatSatResolution")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatColorSpace", UInt, 0x1119, UInt, oscTypeInt)
-        OnMessage(0x1119, "_cwHueSatColorSpace")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwHueSatColorSpace", UInt, 0x1541, UInt, oscTypeInt)
+        OnMessage(0x1541, "_cwHueSatColorSpace")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cwResetColorWarper", UInt, 0x1120, UInt, oscTypeInt)
-        OnMessage(0x1120, "_cwResetColorWarper")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cwResetColorWarper", UInt, 0x1540, UInt, oscTypeInt)
+        OnMessage(0x1540, "_cwResetColorWarper")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperChrLum", UInt, 0x1121, UInt, oscTypeInt)
-        OnMessage(0x1121, "_colorWarperChrLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperChrLum", UInt, 0x1539, UInt, oscTypeInt)
+        OnMessage(0x1539, "_colorWarperChrLum")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperHueSat", UInt, 0x1122, UInt, oscTypeInt)
-        OnMessage(0x1122, "_colorWarperHueSat")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/colorWarperHueSat", UInt, 0x1538, UInt, oscTypeInt)
+        OnMessage(0x1538, "_colorWarperHueSat")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHSLxRGB", UInt, 0x1123, UInt, oscTypeInt)
-        OnMessage(0x1123, "_qualifierHSLxRGB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHSLxRGB", UInt, 0x1537, UInt, oscTypeInt)
+        OnMessage(0x1537, "_qualifierHSLxRGB")
         
         ;Update 2.4 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsFirstJog", UInt, 0x1124, UInt, oscTypeInt)
-        OnMessage(0x1124, "_barsFirstJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsFirstJog", UInt, 0x1536, UInt, oscTypeInt)
+        OnMessage(0x1536, "_barsFirstJog")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsSecondJog", UInt, 0x1125, UInt, oscTypeInt)
-        OnMessage(0x1125, "_barsSecondJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsSecondJog", UInt, 0x1535, UInt, oscTypeInt)
+        OnMessage(0x1535, "_barsSecondJog")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsThirdJog", UInt, 0x1126, UInt, oscTypeInt)
-        OnMessage(0x1126, "_barsThirdJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsThirdJog", UInt, 0x1534, UInt, oscTypeInt)
+        OnMessage(0x1534, "_barsThirdJog")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsFourthJog", UInt, 0x1127, UInt, oscTypeInt)
-        OnMessage(0x1127, "_barsFourthJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsFourthJog", UInt, 0x1533, UInt, oscTypeInt)
+        OnMessage(0x1533, "_barsFourthJog")
                 
         ;Update 2.3 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/navigateClipsUpDown", UInt, 0x1128, UInt, oscTypeInt)
-        OnMessage(0x1128, "_navigateClipsUpDown")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/navigateClipsUpDown", UInt, 0x1532, UInt, oscTypeInt)
+        OnMessage(0x1532, "_navigateClipsUpDown")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/navigateClipsLeftRightAndDelete", UInt, 0x1129, UInt, oscTypeInt)
-        OnMessage(0x1129, "_navigateClipsLeftRightAndDelete")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/navigateClipsLeftRightAndDelete", UInt, 0x1531, UInt, oscTypeInt)
+        OnMessage(0x1531, "_navigateClipsLeftRightAndDelete")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/monitoringVolume", UInt, 0x1130, UInt, oscTypeInt)
-        OnMessage(0x1130, "_monitoringVolume")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/monitoringVolume", UInt, 0x1530, UInt, oscTypeInt)
+        OnMessage(0x1530, "_monitoringVolume")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineViewOptionsAudioWaveforms", UInt, 0x1131, UInt, oscTypeInt)
-        OnMessage(0x1131, "_timelineViewOptionsAudioWaveforms")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineViewOptionsAudioWaveforms", UInt, 0x1529, UInt, oscTypeInt)
+        OnMessage(0x1529, "_timelineViewOptionsAudioWaveforms")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineViewOptionsSubtitleTracks", UInt, 0x1132, UInt, oscTypeInt)
-        OnMessage(0x1132, "_timelineViewOptionsSubtitleTracks")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineViewOptionsSubtitleTracks", UInt, 0x1528, UInt, oscTypeInt)
+        OnMessage(0x1528, "_timelineViewOptionsSubtitleTracks")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineViewOptionsStackedTimelines", UInt, 0x1133, UInt, oscTypeInt)
-        OnMessage(0x1133, "_timelineViewOptionsStackedTimelines")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineViewOptionsStackedTimelines", UInt, 0x1527, UInt, oscTypeInt)
+        OnMessage(0x1527, "_timelineViewOptionsStackedTimelines")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinessePostFilter", UInt, 0x1134, UInt, oscTypeInt)
-        OnMessage(0x1134, "_matteFinessePostFilter")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinessePostFilter", UInt, 0x1526, UInt, oscTypeInt)
+        OnMessage(0x1526, "_matteFinessePostFilter")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseHighlight", UInt, 0x1135, UInt, oscTypeInt)
-        OnMessage(0x1135, "_matteFinesseHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseHighlight", UInt, 0x1525, UInt, oscTypeInt)
+        OnMessage(0x1525, "_matteFinesseHighlight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseMidtone", UInt, 0x1136, UInt, oscTypeInt)
-        OnMessage(0x1136, "_matteFinesseMidtone")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseMidtone", UInt, 0x1524, UInt, oscTypeInt)
+        OnMessage(0x1524, "_matteFinesseMidtone")
 
         ;Update 2.2.2 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierChromaDarkLight", UInt, 0x1137, UInt, oscTypeInt)
-        OnMessage(0x1137, "_qualifierChromaDarkLight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierChromaDarkLight", UInt, 0x1523, UInt, oscTypeInt)
+        OnMessage(0x1523, "_qualifierChromaDarkLight")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierChromaLight", UInt, 0x1138, UInt, oscTypeInt)
-        OnMessage(0x1138, "_qualifierChromaLight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierChromaLight", UInt, 0x1522, UInt, oscTypeInt)
+        OnMessage(0x1522, "_qualifierChromaLight")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierChromaDark", UInt, 0x1139, UInt, oscTypeInt)
-        OnMessage(0x1139, "_qualifierChromaDark")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierChromaDark", UInt, 0x1521, UInt, oscTypeInt)
+        OnMessage(0x1521, "_qualifierChromaDark")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorYellow", UInt, 0x1140, UInt, oscTypeInt)
-        OnMessage(0x1140, "_qualifierSixVectorYellow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorYellow", UInt, 0x1520, UInt, oscTypeInt)
+        OnMessage(0x1520, "_qualifierSixVectorYellow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorRed", UInt, 0x1141, UInt, oscTypeInt)
-        OnMessage(0x1141, "_qualifierSixVectorRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorRed", UInt, 0x1519, UInt, oscTypeInt)
+        OnMessage(0x1519, "_qualifierSixVectorRed")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorMagenta", UInt, 0x1142, UInt, oscTypeInt)
-        OnMessage(0x1142, "_qualifierSixVectorMagenta")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorMagenta", UInt, 0x1518, UInt, oscTypeInt)
+        OnMessage(0x1518, "_qualifierSixVectorMagenta")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorGreen", UInt, 0x1143, UInt, oscTypeInt)
-        OnMessage(0x1143, "_qualifierSixVectorGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorGreen", UInt, 0x1517, UInt, oscTypeInt)
+        OnMessage(0x1517, "_qualifierSixVectorGreen")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorCyan", UInt, 0x1144, UInt, oscTypeInt)
-        OnMessage(0x1144, "_qualifierSixVectorCyan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorCyan", UInt, 0x1516, UInt, oscTypeInt)
+        OnMessage(0x1516, "_qualifierSixVectorCyan")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorBlue", UInt, 0x1145, UInt, oscTypeInt)
-        OnMessage(0x1145, "_qualifierSixVectorBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSixVectorBlue", UInt, 0x1515, UInt, oscTypeInt)
+        OnMessage(0x1515, "_qualifierSixVectorBlue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetKnob", UInt, 0x1146, UInt, oscTypeInt)
-        OnMessage(0x1146, "_qualifierResetKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetKnob", UInt, 0x1514, UInt, oscTypeInt)
+        OnMessage(0x1514, "_qualifierResetKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetLuminanceKnob", UInt, 0x1147, UInt, oscTypeInt)
-        OnMessage(0x1147, "_qualifierResetLuminanceKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetLuminanceKnob", UInt, 0x1513, UInt, oscTypeInt)
+        OnMessage(0x1513, "_qualifierResetLuminanceKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetSaturationKnob", UInt, 0x1148, UInt, oscTypeInt)
-        OnMessage(0x1148, "_qualifierResetSaturationKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetSaturationKnob", UInt, 0x1512, UInt, oscTypeInt)
+        OnMessage(0x1512, "_qualifierResetSaturationKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetHueKnob", UInt, 0x1149, UInt, oscTypeInt)
-        OnMessage(0x1149, "_qualifierResetHueKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetHueKnob", UInt, 0x1511, UInt, oscTypeInt)
+        OnMessage(0x1511, "_qualifierResetHueKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToAll", UInt, 0x1150, UInt, oscTypeInt)
-        OnMessage(0x1150, "_customCurvesCopyToAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToAll", UInt, 0x1510, UInt, oscTypeInt)
+        OnMessage(0x1510, "_customCurvesCopyToAll")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToBlue", UInt, 0x1151, UInt, oscTypeInt)
-        OnMessage(0x1151, "_customCurvesCopyToBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToBlue", UInt, 0x1509, UInt, oscTypeInt)
+        OnMessage(0x1509, "_customCurvesCopyToBlue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToGreen", UInt, 0x1152, UInt, oscTypeInt)
-        OnMessage(0x1152, "_customCurvesCopyToGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToGreen", UInt, 0x1508, UInt, oscTypeInt)
+        OnMessage(0x1508, "_customCurvesCopyToGreen")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToRed", UInt, 0x1153, UInt, oscTypeInt)
-        OnMessage(0x1153, "_customCurvesCopyToRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToRed", UInt, 0x1507, UInt, oscTypeInt)
+        OnMessage(0x1507, "_customCurvesCopyToRed")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToLum", UInt, 0x1154, UInt, oscTypeInt)
-        OnMessage(0x1154, "_customCurvesCopyToLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesCopyToLum", UInt, 0x1506, UInt, oscTypeInt)
+        OnMessage(0x1506, "_customCurvesCopyToLum")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetKnob", UInt, 0x1155, UInt, oscTypeInt)
-        OnMessage(0x1155, "_customCurvesResetKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetKnob", UInt, 0x1505, UInt, oscTypeInt)
+        OnMessage(0x1505, "_customCurvesResetKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetSoftClipKnob", UInt, 0x1156, UInt, oscTypeInt)
-        OnMessage(0x1156, "_customCurvesResetSoftClipKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetSoftClipKnob", UInt, 0x1504, UInt, oscTypeInt)
+        OnMessage(0x1504, "_customCurvesResetSoftClipKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetEditKnob", UInt, 0x1157, UInt, oscTypeInt)
-        OnMessage(0x1157, "_customCurvesResetEditKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetEditKnob", UInt, 0x1503, UInt, oscTypeInt)
+        OnMessage(0x1503, "_customCurvesResetEditKnob")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrNavigateWheels", UInt, 0x1158, UInt, oscTypeInt)
-        OnMessage(0x1158, "_hdrNavigateWheels")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrNavigateWheels", UInt, 0x1502, UInt, oscTypeInt)
+        OnMessage(0x1502, "_hdrNavigateWheels")
         
         ;Update 2.2.1 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/changeClipSpeed", UInt, 0x1159, UInt, oscTypeInt)
-        OnMessage(0x1159, "_changeClipSpeed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/changeClipSpeed", UInt, 0x1501, UInt, oscTypeInt)
+        OnMessage(0x1501, "_changeClipSpeed")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/retime", UInt, 0x1160, UInt, oscTypeInt)
-        OnMessage(0x1160, "_retime")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/retime", UInt, 0x1500, UInt, oscTypeInt)
+        OnMessage(0x1500, "_retime")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/leftRightExpander", UInt, 0x1161, UInt, oscTypeInt)
-        OnMessage(0x1161, "_leftRightExpander")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/leftRightExpander", UInt, 0x1499, UInt, oscTypeInt)
+        OnMessage(0x1499, "_leftRightExpander")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/dynamicTrimTool", UInt, 0x1162, UInt, oscTypeInt)
-        OnMessage(0x1162, "_dynamicTrimTool")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/dynamicTrimTool", UInt, 0x1498, UInt, oscTypeInt)
+        OnMessage(0x1498, "_dynamicTrimTool")
         
         ;Update 2.2 Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openKeyFrameWindowColorPage", UInt, 0x1163, UInt, oscTypeInt)
-        OnMessage(0x1163, "_openKeyFrameWindowColorPage")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openKeyFrameWindowColorPage", UInt, 0x1497, UInt, oscTypeInt)
+        OnMessage(0x1497, "_openKeyFrameWindowColorPage")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/toggleTimelineThumbMode", UInt, 0x1164, UInt, oscTypeInt)
-        OnMessage(0x1164, "_toggleTimelineThumbMode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/toggleTimelineThumbMode", UInt, 0x1496, UInt, oscTypeInt)
+        OnMessage(0x1496, "_toggleTimelineThumbMode")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteAttributesJogWheel", UInt, 0x1165, UInt, oscTypeInt)
-        OnMessage(0x1165, "_pasteAttributesJogWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteAttributesJogWheel", UInt, 0x1495, UInt, oscTypeInt)
+        OnMessage(0x1495, "_pasteAttributesJogWheel")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteJogWheel", UInt, 0x1166, UInt, oscTypeInt)
-        OnMessage(0x1166, "_pasteJogWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteJogWheel", UInt, 0x1494, UInt, oscTypeInt)
+        OnMessage(0x1494, "_pasteJogWheel")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cutJogWheel", UInt, 0x1167, UInt, oscTypeInt)
-        OnMessage(0x1167, "_cutJogWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cutJogWheel", UInt, 0x1493, UInt, oscTypeInt)
+        OnMessage(0x1493, "_cutJogWheel")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/copyJogWheel", UInt, 0x1168, UInt, oscTypeInt)
-        OnMessage(0x1168, "_copyJogWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/copyJogWheel", UInt, 0x1492, UInt, oscTypeInt)
+        OnMessage(0x1492, "_copyJogWheel")
         
         ;Inspector Key Frames
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameTransform", UInt, 0x1169, UInt, oscTypeInt)
-        OnMessage(0x1169, "_inspectorKeyFrameTransform") ;Latest Low
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameTransform", UInt, 0x1491, UInt, oscTypeInt)
+        OnMessage(0x1491, "_inspectorKeyFrameTransform") ;Latest Low
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameVolume", UInt, 0x1170, UInt, oscTypeInt)
-        OnMessage(0x1170, "_inspectorKeyFrameVolume")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameVolume", UInt, 0x1490, UInt, oscTypeInt)
+        OnMessage(0x1490, "_inspectorKeyFrameVolume")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameYaw", UInt, 0x1171, UInt, oscTypeInt)
-        OnMessage(0x1171, "_inspectorKeyFrameYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameYaw", UInt, 0x1489, UInt, oscTypeInt)
+        OnMessage(0x1489, "_inspectorKeyFrameYaw")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameAnchor", UInt, 0x1172, UInt, oscTypeInt)
-        OnMessage(0x1172, "_inspectorKeyFrameAnchor")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameAnchor", UInt, 0x1488, UInt, oscTypeInt)
+        OnMessage(0x1488, "_inspectorKeyFrameAnchor")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFramePitch", UInt, 0x1173, UInt, oscTypeInt)
-        OnMessage(0x1173, "_inspectorKeyFramePitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFramePitch", UInt, 0x1487, UInt, oscTypeInt)
+        OnMessage(0x1487, "_inspectorKeyFramePitch")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFramePosition", UInt, 0x1174, UInt, oscTypeInt)
-        OnMessage(0x1174, "_inspectorKeyFramePosition")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFramePosition", UInt, 0x1486, UInt, oscTypeInt)
+        OnMessage(0x1486, "_inspectorKeyFramePosition")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameRotation", UInt, 0x1175, UInt, oscTypeInt)
-        OnMessage(0x1175, "_inspectorKeyFrameRotation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameRotation", UInt, 0x1485, UInt, oscTypeInt)
+        OnMessage(0x1485, "_inspectorKeyFrameRotation")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameZoom", UInt, 0x1176, UInt, oscTypeInt)
-        OnMessage(0x1176, "_inspectorKeyFrameZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorKeyFrameZoom", UInt, 0x1484, UInt, oscTypeInt)
+        OnMessage(0x1484, "_inspectorKeyFrameZoom")
         
         ;Motion Effects Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialRadius", UInt, 0x1177, UInt, oscTypeInt)
-        OnMessage(0x1177, "_motionEffectsSpatialRadius")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialRadius", UInt, 0x1483, UInt, oscTypeInt)
+        OnMessage(0x1483, "_motionEffectsSpatialRadius")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialMode", UInt, 0x1178, UInt, oscTypeInt)
-        OnMessage(0x1178, "_motionEffectsSpatialMode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialMode", UInt, 0x1482, UInt, oscTypeInt)
+        OnMessage(0x1482, "_motionEffectsSpatialMode")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlurMotionBlur", UInt, 0x1179, UInt, oscTypeInt)
-        OnMessage(0x1179, "_motionEffectsMotionBlurMotionBlur")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlurMotionBlur", UInt, 0x1481, UInt, oscTypeInt)
+        OnMessage(0x1481, "_motionEffectsMotionBlurMotionBlur")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlurMotionRange", UInt, 0x1180, UInt, oscTypeInt)
-        OnMessage(0x1180, "_motionEffectsMotionBlurMotionRange")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlurMotionRange", UInt, 0x1480, UInt, oscTypeInt)
+        OnMessage(0x1480, "_motionEffectsMotionBlurMotionRange")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlurMotionEstType", UInt, 0x1181, UInt, oscTypeInt)
-        OnMessage(0x1181, "_motionEffectsMotionBlurMotionEstType")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlurMotionEstType", UInt, 0x1479, UInt, oscTypeInt)
+        OnMessage(0x1479, "_motionEffectsMotionBlurMotionEstType")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalMotionRange", UInt, 0x1182, UInt, oscTypeInt)
-        OnMessage(0x1182, "_motionEffectsTemporalMotionRange")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalMotionRange", UInt, 0x1478, UInt, oscTypeInt)
+        OnMessage(0x1478, "_motionEffectsTemporalMotionRange")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalMotionEstType", UInt, 0x1183, UInt, oscTypeInt)
-        OnMessage(0x1183, "_motionEffectsTemporalMotionEstType")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalMotionEstType", UInt, 0x1477, UInt, oscTypeInt)
+        OnMessage(0x1477, "_motionEffectsTemporalMotionEstType")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalFrames", UInt, 0x1184, UInt, oscTypeInt)
-        OnMessage(0x1184, "_motionEffectsTemporalFrames")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalFrames", UInt, 0x1476, UInt, oscTypeInt)
+        OnMessage(0x1476, "_motionEffectsTemporalFrames")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialBlend", UInt, 0x1185, UInt, oscTypeInt)
-        OnMessage(0x1185, "_motionEffectsSpatialBlend")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialBlend", UInt, 0x1475, UInt, oscTypeInt)
+        OnMessage(0x1475, "_motionEffectsSpatialBlend")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialChroma", UInt, 0x1186, UInt, oscTypeInt)
-        OnMessage(0x1186, "_motionEffectsSpatialChroma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialChroma", UInt, 0x1474, UInt, oscTypeInt)
+        OnMessage(0x1474, "_motionEffectsSpatialChroma")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialLuma", UInt, 0x1187, UInt, oscTypeInt)
-        OnMessage(0x1187, "_motionEffectsSpatialLuma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialLuma", UInt, 0x1473, UInt, oscTypeInt)
+        OnMessage(0x1473, "_motionEffectsSpatialLuma")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalBlend", UInt, 0x1188, UInt, oscTypeInt)
-        OnMessage(0x1188, "_motionEffectsTemporalBlend")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalBlend", UInt, 0x1472, UInt, oscTypeInt)
+        OnMessage(0x1472, "_motionEffectsTemporalBlend")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalMotion", UInt, 0x1189, UInt, oscTypeInt)
-        OnMessage(0x1189, "_motionEffectsTemporalMotion")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalMotion", UInt, 0x1471, UInt, oscTypeInt)
+        OnMessage(0x1471, "_motionEffectsTemporalMotion")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalChroma", UInt, 0x1190, UInt, oscTypeInt)
-        OnMessage(0x1190, "_motionEffectsTemporalChroma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalChroma", UInt, 0x1470, UInt, oscTypeInt)
+        OnMessage(0x1470, "_motionEffectsTemporalChroma")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalLuma", UInt, 0x1191, UInt, oscTypeInt)
-        OnMessage(0x1191, "_motionEffectsTemporalLuma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalLuma", UInt, 0x1469, UInt, oscTypeInt)
+        OnMessage(0x1469, "_motionEffectsTemporalLuma")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsReset", UInt, 0x1192, UInt, oscTypeInt)
-        OnMessage(0x1192, "_motionEffectsReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsReset", UInt, 0x1468, UInt, oscTypeInt)
+        OnMessage(0x1468, "_motionEffectsReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlur", UInt, 0x1193, UInt, oscTypeInt)
-        OnMessage(0x1193, "_motionEffectsMotionBlur")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsMotionBlur", UInt, 0x1467, UInt, oscTypeInt)
+        OnMessage(0x1467, "_motionEffectsMotionBlur")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialResetThreshold", UInt, 0x1194, UInt, oscTypeInt)
-        OnMessage(0x1194, "_motionEffectsSpatialResetThreshold")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialResetThreshold", UInt, 0x1466, UInt, oscTypeInt)
+        OnMessage(0x1466, "_motionEffectsSpatialResetThreshold")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialResetNR", UInt, 0x1195, UInt, oscTypeInt)
-        OnMessage(0x1195, "_motionEffectsSpatialResetNR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialResetNR", UInt, 0x1465, UInt, oscTypeInt)
+        OnMessage(0x1465, "_motionEffectsSpatialResetNR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalResetThreshold", UInt, 0x1196, UInt, oscTypeInt)
-        OnMessage(0x1196, "_motionEffectsTemporalResetThreshold")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalResetThreshold", UInt, 0x1464, UInt, oscTypeInt)
+        OnMessage(0x1464, "_motionEffectsTemporalResetThreshold")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalResetNR", UInt, 0x1197, UInt, oscTypeInt)
-        OnMessage(0x1197, "_motionEffectsTemporalResetNR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalResetNR", UInt, 0x1463, UInt, oscTypeInt)
+        OnMessage(0x1463, "_motionEffectsTemporalResetNR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialLink", UInt, 0x1198, UInt, oscTypeInt)
-        OnMessage(0x1198, "_motionEffectsSpatialLink")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsSpatialLink", UInt, 0x1462, UInt, oscTypeInt)
+        OnMessage(0x1462, "_motionEffectsSpatialLink")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalLink", UInt, 0x1199, UInt, oscTypeInt)
-        OnMessage(0x1199, "_motionEffectsTemporalLink")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/motionEffectsTemporalLink", UInt, 0x1461, UInt, oscTypeInt)
+        OnMessage(0x1461, "_motionEffectsTemporalLink")
         
         ;Key Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierOffset", UInt, 0x1200, UInt, oscTypeInt)
-        OnMessage(0x1200, "_keyQualifierOffset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierOffset", UInt, 0x1460, UInt, oscTypeInt)
+        OnMessage(0x1460, "_keyQualifierOffset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierGain", UInt, 0x1201, UInt, oscTypeInt)
-        OnMessage(0x1201, "_keyQualifierGain")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierGain", UInt, 0x1459, UInt, oscTypeInt)
+        OnMessage(0x1459, "_keyQualifierGain")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyOutputOffset", UInt, 0x1202, UInt, oscTypeInt)
-        OnMessage(0x1202, "_keyOutputOffset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyOutputOffset", UInt, 0x1458, UInt, oscTypeInt)
+        OnMessage(0x1458, "_keyOutputOffset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyOutputGain", UInt, 0x1203, UInt, oscTypeInt)
-        OnMessage(0x1203, "_keyOutputGain")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyOutputGain", UInt, 0x1457, UInt, oscTypeInt)
+        OnMessage(0x1457, "_keyOutputGain")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputBlurHV", UInt, 0x1204, UInt, oscTypeInt)
-        OnMessage(0x1204, "_keyInputBlurHV")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputBlurHV", UInt, 0x1456, UInt, oscTypeInt)
+        OnMessage(0x1456, "_keyInputBlurHV")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputBlurR", UInt, 0x1205, UInt, oscTypeInt)
-        OnMessage(0x1205, "_keyInputBlurR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputBlurR", UInt, 0x1455, UInt, oscTypeInt)
+        OnMessage(0x1455, "_keyInputBlurR")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputOffset", UInt, 0x1206, UInt, oscTypeInt)
-        OnMessage(0x1206, "_keyInputOffset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputOffset", UInt, 0x1454, UInt, oscTypeInt)
+        OnMessage(0x1454, "_keyInputOffset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputGain", UInt, 0x1207, UInt, oscTypeInt)
-        OnMessage(0x1207, "_keyInputGain")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputGain", UInt, 0x1453, UInt, oscTypeInt)
+        OnMessage(0x1453, "_keyInputGain")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyReset", UInt, 0x1208, UInt, oscTypeInt)
-        OnMessage(0x1208, "_keyReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyReset", UInt, 0x1452, UInt, oscTypeInt)
+        OnMessage(0x1452, "_keyReset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierKey", UInt, 0x1209, UInt, oscTypeInt)
-        OnMessage(0x1209, "_keyQualifierKey")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierKey", UInt, 0x1451, UInt, oscTypeInt)
+        OnMessage(0x1451, "_keyQualifierKey")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierMatteMask", UInt, 0x1210, UInt, oscTypeInt)
-        OnMessage(0x1210, "_keyQualifierMatteMask")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyQualifierMatteMask", UInt, 0x1450, UInt, oscTypeInt)
+        OnMessage(0x1450, "_keyQualifierMatteMask")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyOutputKey", UInt, 0x1211, UInt, oscTypeInt)
-        OnMessage(0x1211, "_keyOutputKey")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyOutputKey", UInt, 0x1449, UInt, oscTypeInt)
+        OnMessage(0x1449, "_keyOutputKey")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputKey", UInt, 0x1212, UInt, oscTypeInt)
-        OnMessage(0x1212, "_keyInputKey")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputKey", UInt, 0x1448, UInt, oscTypeInt)
+        OnMessage(0x1448, "_keyInputKey")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputMatteMask", UInt, 0x1213, UInt, oscTypeInt)
-        OnMessage(0x1213, "_keyInputMatteMask")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/keyInputMatteMask", UInt, 0x1447, UInt, oscTypeInt)
+        OnMessage(0x1447, "_keyInputMatteMask")
 
         ;Qualifier Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinessePreFilter", UInt, 0x1214, UInt, oscTypeInt)
-        OnMessage(0x1214, "_matteFinessePreFilter")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinessePreFilter", UInt, 0x1446, UInt, oscTypeInt)
+        OnMessage(0x1446, "_matteFinessePreFilter")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseCleanBlack", UInt, 0x1215, UInt, oscTypeInt)
-        OnMessage(0x1215, "_matteFinesseCleanBlack")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseCleanBlack", UInt, 0x1445, UInt, oscTypeInt)
+        OnMessage(0x1445, "_matteFinesseCleanBlack")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseCleanWhite", UInt, 0x1216, UInt, oscTypeInt)
-        OnMessage(0x1216, "_matteFinesseCleanWhite")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseCleanWhite", UInt, 0x1444, UInt, oscTypeInt)
+        OnMessage(0x1444, "_matteFinesseCleanWhite")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseBlurRadius", UInt, 0x1217, UInt, oscTypeInt)
-        OnMessage(0x1217, "_matteFinesseBlurRadius")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseBlurRadius", UInt, 0x1443, UInt, oscTypeInt)
+        OnMessage(0x1443, "_matteFinesseBlurRadius")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseInOutRatio", UInt, 0x1218, UInt, oscTypeInt)
-        OnMessage(0x1218, "_matteFinesseInOutRatio")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseInOutRatio", UInt, 0x1442, UInt, oscTypeInt)
+        OnMessage(0x1442, "_matteFinesseInOutRatio")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseMorphMenu", UInt, 0x1219, UInt, oscTypeInt)
-        OnMessage(0x1219, "_matteFinesseMorphMenu")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseMorphMenu", UInt, 0x1441, UInt, oscTypeInt)
+        OnMessage(0x1441, "_matteFinesseMorphMenu")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseDenoise", UInt, 0x1220, UInt, oscTypeInt)
-        OnMessage(0x1220, "_matteFinesseDenoise")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseDenoise", UInt, 0x1440, UInt, oscTypeInt)
+        OnMessage(0x1440, "_matteFinesseDenoise")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseMorphRadius", UInt, 0x1221, UInt, oscTypeInt)
-        OnMessage(0x1221, "_matteFinesseMorphRadius")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseMorphRadius", UInt, 0x1439, UInt, oscTypeInt)
+        OnMessage(0x1439, "_matteFinesseMorphRadius")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseShadow", UInt, 0x1222, UInt, oscTypeInt)
-        OnMessage(0x1222, "_matteFinesseShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseShadow", UInt, 0x1438, UInt, oscTypeInt)
+        OnMessage(0x1438, "_matteFinesseShadow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseBlackClip", UInt, 0x1223, UInt, oscTypeInt)
-        OnMessage(0x1223, "_matteFinesseBlackClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseBlackClip", UInt, 0x1437, UInt, oscTypeInt)
+        OnMessage(0x1437, "_matteFinesseBlackClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseWhiteClip", UInt, 0x1224, UInt, oscTypeInt)
-        OnMessage(0x1224, "_matteFinesseWhiteClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/matteFinesseWhiteClip", UInt, 0x1436, UInt, oscTypeInt)
+        OnMessage(0x1436, "_matteFinesseWhiteClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueHighSoft", UInt, 0x1225, UInt, oscTypeInt)
-        OnMessage(0x1225, "_qualifierBlueHighSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueHighSoft", UInt, 0x1435, UInt, oscTypeInt)
+        OnMessage(0x1435, "_qualifierBlueHighSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueLowSoft", UInt, 0x1226, UInt, oscTypeInt)
-        OnMessage(0x1226, "_qualifierBlueLowSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueLowSoft", UInt, 0x1434, UInt, oscTypeInt)
+        OnMessage(0x1434, "_qualifierBlueLowSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueHigh", UInt, 0x1227, UInt, oscTypeInt)
-        OnMessage(0x1227, "_qualifierBlueHigh")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueHigh", UInt, 0x1433, UInt, oscTypeInt)
+        OnMessage(0x1433, "_qualifierBlueHigh")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueLow", UInt, 0x1228, UInt, oscTypeInt)
-        OnMessage(0x1228, "_qualifierBlueLow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierBlueLow", UInt, 0x1432, UInt, oscTypeInt)
+        OnMessage(0x1432, "_qualifierBlueLow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenHighSoft", UInt, 0x1229, UInt, oscTypeInt)
-        OnMessage(0x1229, "_qualifierGreenHighSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenHighSoft", UInt, 0x1431, UInt, oscTypeInt)
+        OnMessage(0x1431, "_qualifierGreenHighSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenLowSoft", UInt, 0x1230, UInt, oscTypeInt)
-        OnMessage(0x1230, "_qualifierGreenLowSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenLowSoft", UInt, 0x1430, UInt, oscTypeInt)
+        OnMessage(0x1430, "_qualifierGreenLowSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenHigh", UInt, 0x1231, UInt, oscTypeInt)
-        OnMessage(0x1231, "_qualifierGreenHigh")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenHigh", UInt, 0x1429, UInt, oscTypeInt)
+        OnMessage(0x1429, "_qualifierGreenHigh")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenLow", UInt, 0x1232, UInt, oscTypeInt)
-        OnMessage(0x1232, "_qualifierGreenLow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierGreenLow", UInt, 0x1428, UInt, oscTypeInt)
+        OnMessage(0x1428, "_qualifierGreenLow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedHighSoft", UInt, 0x1233, UInt, oscTypeInt)
-        OnMessage(0x1233, "_qualifierRedHighSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedHighSoft", UInt, 0x1427, UInt, oscTypeInt)
+        OnMessage(0x1427, "_qualifierRedHighSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedLowSoft", UInt, 0x1234, UInt, oscTypeInt)
-        OnMessage(0x1234, "_qualifierRedLowSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedLowSoft", UInt, 0x1426, UInt, oscTypeInt)
+        OnMessage(0x1426, "_qualifierRedLowSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedHigh", UInt, 0x1235, UInt, oscTypeInt)
-        OnMessage(0x1235, "_qualifierRedHigh")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedHigh", UInt, 0x1425, UInt, oscTypeInt)
+        OnMessage(0x1425, "_qualifierRedHigh")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedLow", UInt, 0x1236, UInt, oscTypeInt)
-        OnMessage(0x1236, "_qualifierRedLow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierRedLow", UInt, 0x1424, UInt, oscTypeInt)
+        OnMessage(0x1424, "_qualifierRedLow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumHighSoft", UInt, 0x1237, UInt, oscTypeInt)
-        OnMessage(0x1237, "_qualifierLumHighSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumHighSoft", UInt, 0x1423, UInt, oscTypeInt)
+        OnMessage(0x1423, "_qualifierLumHighSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumLowSoft", UInt, 0x1238, UInt, oscTypeInt)
-        OnMessage(0x1238, "_qualifierLumLowSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumLowSoft", UInt, 0x1422, UInt, oscTypeInt)
+        OnMessage(0x1422, "_qualifierLumLowSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumHigh", UInt, 0x1239, UInt, oscTypeInt)
-        OnMessage(0x1239, "_qualifierLumHigh")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumHigh", UInt, 0x1421, UInt, oscTypeInt)
+        OnMessage(0x1421, "_qualifierLumHigh")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumLow", UInt, 0x1240, UInt, oscTypeInt)
-        OnMessage(0x1240, "_qualifierLumLow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLumLow", UInt, 0x1420, UInt, oscTypeInt)
+        OnMessage(0x1420, "_qualifierLumLow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatHighSoft", UInt, 0x1241, UInt, oscTypeInt)
-        OnMessage(0x1241, "_qualifierSatHighSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatHighSoft", UInt, 0x1419, UInt, oscTypeInt)
+        OnMessage(0x1419, "_qualifierSatHighSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatLowSoft", UInt, 0x1242, UInt, oscTypeInt)
-        OnMessage(0x1242, "_qualifierSatLowSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatLowSoft", UInt, 0x1418, UInt, oscTypeInt)
+        OnMessage(0x1418, "_qualifierSatLowSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatHigh", UInt, 0x1243, UInt, oscTypeInt)
-        OnMessage(0x1243, "_qualifierSatHigh")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatHigh", UInt, 0x1417, UInt, oscTypeInt)
+        OnMessage(0x1417, "_qualifierSatHigh")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatLow", UInt, 0x1244, UInt, oscTypeInt)
-        OnMessage(0x1244, "_qualifierSatLow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSatLow", UInt, 0x1416, UInt, oscTypeInt)
+        OnMessage(0x1416, "_qualifierSatLow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueSym", UInt, 0x1245, UInt, oscTypeInt)
-        OnMessage(0x1245, "_qualifierHueSym")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueSym", UInt, 0x1415, UInt, oscTypeInt)
+        OnMessage(0x1415, "_qualifierHueSym")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueSoft", UInt, 0x1246, UInt, oscTypeInt)
-        OnMessage(0x1246, "_qualifierHueSoft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueSoft", UInt, 0x1414, UInt, oscTypeInt)
+        OnMessage(0x1414, "_qualifierHueSoft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueWidth", UInt, 0x1247, UInt, oscTypeInt)
-        OnMessage(0x1247, "_qualifierHueWidth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueWidth", UInt, 0x1413, UInt, oscTypeInt)
+        OnMessage(0x1413, "_qualifierHueWidth")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueCenter", UInt, 0x1248, UInt, oscTypeInt)
-        OnMessage(0x1248, "_qualifierHueCenter")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueCenter", UInt, 0x1412, UInt, oscTypeInt)
+        OnMessage(0x1412, "_qualifierHueCenter")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierReset", UInt, 0x1249, UInt, oscTypeInt)
-        OnMessage(0x1249, "_qualifierReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierReset", UInt, 0x1411, UInt, oscTypeInt)
+        OnMessage(0x1411, "_qualifierReset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetLuminance", UInt, 0x1250, UInt, oscTypeInt)
-        OnMessage(0x1250, "_qualifierResetLuminance")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetLuminance", UInt, 0x1410, UInt, oscTypeInt)
+        OnMessage(0x1410, "_qualifierResetLuminance")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetSaturation", UInt, 0x1251, UInt, oscTypeInt)
-        OnMessage(0x1251, "_qualifierResetSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetSaturation", UInt, 0x1409, UInt, oscTypeInt)
+        OnMessage(0x1409, "_qualifierResetSaturation")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetHue", UInt, 0x1252, UInt, oscTypeInt)
-        OnMessage(0x1252, "_qualifierResetHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierResetHue", UInt, 0x1408, UInt, oscTypeInt)
+        OnMessage(0x1408, "_qualifierResetHue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLuminanceOnOff", UInt, 0x1253, UInt, oscTypeInt)
-        OnMessage(0x1253, "_qualifierLuminanceOnOff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierLuminanceOnOff", UInt, 0x1407, UInt, oscTypeInt)
+        OnMessage(0x1407, "_qualifierLuminanceOnOff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSaturationOnOff", UInt, 0x1254, UInt, oscTypeInt)
-        OnMessage(0x1254, "_qualifierSaturationOnOff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierSaturationOnOff", UInt, 0x1406, UInt, oscTypeInt)
+        OnMessage(0x1406, "_qualifierSaturationOnOff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueOnOff", UInt, 0x1255, UInt, oscTypeInt)
-        OnMessage(0x1255, "_qualifierHueOnOff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierHueOnOff", UInt, 0x1405, UInt, oscTypeInt)
+        OnMessage(0x1405, "_qualifierHueOnOff")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierInvert", UInt, 0x1256, UInt, oscTypeInt)
-        OnMessage(0x1256, "_qualifierInvert")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierInvert", UInt, 0x1404, UInt, oscTypeInt)
+        OnMessage(0x1404, "_qualifierInvert")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierFeatherAdd", UInt, 0x1257, UInt, oscTypeInt)
-        OnMessage(0x1257, "_qualifierFeatherAdd")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierFeatherAdd", UInt, 0x1403, UInt, oscTypeInt)
+        OnMessage(0x1403, "_qualifierFeatherAdd")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierFeatherSubstract", UInt, 0x1258, UInt, oscTypeInt)
-        OnMessage(0x1258, "_qualifierFeatherSubstract")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierFeatherSubstract", UInt, 0x1402, UInt, oscTypeInt)
+        OnMessage(0x1402, "_qualifierFeatherSubstract")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierPickerAdd", UInt, 0x1259, UInt, oscTypeInt)
-        OnMessage(0x1259, "_qualifierPickerAdd")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierPickerAdd", UInt, 0x1401, UInt, oscTypeInt)
+        OnMessage(0x1401, "_qualifierPickerAdd")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierPickerSubstract", UInt, 0x1260, UInt, oscTypeInt)
-        OnMessage(0x1260, "_qualifierPickerSubstract")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierPickerSubstract", UInt, 0x1400, UInt, oscTypeInt)
+        OnMessage(0x1400, "_qualifierPickerSubstract")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierPicker", UInt, 0x1261, UInt, oscTypeInt)
-        OnMessage(0x1261, "_qualifierPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/qualifierPicker", UInt, 0x1399, UInt, oscTypeInt)
+        OnMessage(0x1399, "_qualifierPicker")
 
         ;Nodes and Scopes Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesLowPassFilter", UInt, 0x1262, UInt, oscTypeInt)
-        OnMessage(0x1262, "_scopesLowPassFilter")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesLowPassFilter", UInt, 0x1398, UInt, oscTypeInt)
+        OnMessage(0x1398, "_scopesLowPassFilter")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesDisplayFocus", UInt, 0x1263, UInt, oscTypeInt)
-        OnMessage(0x1263, "_scopesDisplayFocus")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesDisplayFocus", UInt, 0x1397, UInt, oscTypeInt)
+        OnMessage(0x1397, "_scopesDisplayFocus")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesCIE", UInt, 0x1264, UInt, oscTypeInt)
-        OnMessage(0x1264, "_scopesCIE")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesCIE", UInt, 0x1396, UInt, oscTypeInt)
+        OnMessage(0x1396, "_scopesCIE")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesHistogram", UInt, 0x1265, UInt, oscTypeInt)
-        OnMessage(0x1265, "_scopesHistogram")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesHistogram", UInt, 0x1395, UInt, oscTypeInt)
+        OnMessage(0x1395, "_scopesHistogram")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesVectorscope", UInt, 0x1266, UInt, oscTypeInt)
-        OnMessage(0x1266, "_scopesVectorscope")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesVectorscope", UInt, 0x1394, UInt, oscTypeInt)
+        OnMessage(0x1394, "_scopesVectorscope")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesWaveform", UInt, 0x1267, UInt, oscTypeInt)
-        OnMessage(0x1267, "_scopesWaveform")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesWaveform", UInt, 0x1393, UInt, oscTypeInt)
+        OnMessage(0x1393, "_scopesWaveform")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesParade", UInt, 0x1268, UInt, oscTypeInt)
-        OnMessage(0x1268, "_scopesParade")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/scopesParade", UInt, 0x1392, UInt, oscTypeInt)
+        OnMessage(0x1392, "_scopesParade")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGrade", UInt, 0x1269, UInt, oscTypeInt)
-        OnMessage(0x1269, "_resetAllNodesGrade")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/resetAllNodesGrade", UInt, 0x1391, UInt, oscTypeInt)
+        OnMessage(0x1391, "_resetAllNodesGrade")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesExtract", UInt, 0x1270, UInt, oscTypeInt)
-        OnMessage(0x1270, "_nodesExtract")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesExtract", UInt, 0x1390, UInt, oscTypeInt)
+        OnMessage(0x1390, "_nodesExtract")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesSplitterCombiner", UInt, 0x1271, UInt, oscTypeInt)
-        OnMessage(0x1271, "_nodesSplitterCombiner")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesSplitterCombiner", UInt, 0x1389, UInt, oscTypeInt)
+        OnMessage(0x1389, "_nodesSplitterCombiner")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddOutside", UInt, 0x1272, UInt, oscTypeInt)
-        OnMessage(0x1272, "_nodesAddOutside")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddOutside", UInt, 0x1388, UInt, oscTypeInt)
+        OnMessage(0x1388, "_nodesAddOutside")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAppend", UInt, 0x1273, UInt, oscTypeInt)
-        OnMessage(0x1273, "_nodesAppend")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAppend", UInt, 0x1387, UInt, oscTypeInt)
+        OnMessage(0x1387, "_nodesAppend")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddLayer", UInt, 0x1274, UInt, oscTypeInt)
-        OnMessage(0x1274, "_nodesAddLayer")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddLayer", UInt, 0x1386, UInt, oscTypeInt)
+        OnMessage(0x1386, "_nodesAddLayer")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddParallel", UInt, 0x1275, UInt, oscTypeInt)
-        OnMessage(0x1275, "_nodesAddParallel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddParallel", UInt, 0x1385, UInt, oscTypeInt)
+        OnMessage(0x1385, "_nodesAddParallel")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddSerialBefore", UInt, 0x1276, UInt, oscTypeInt)
-        OnMessage(0x1276, "_nodesAddSerialBefore")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddSerialBefore", UInt, 0x1384, UInt, oscTypeInt)
+        OnMessage(0x1384, "_nodesAddSerialBefore")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddSerial", UInt, 0x1277, UInt, oscTypeInt)
-        OnMessage(0x1277, "_nodesAddSerial")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/nodesAddSerial", UInt, 0x1383, UInt, oscTypeInt)
+        OnMessage(0x1383, "_nodesAddSerial")
 
         ;Printer Lights Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterMaster", UInt, 0x1278, UInt, oscTypeInt)
-        OnMessage(0x1278, "_printerLightsQuarterMaster")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterMaster", UInt, 0x1382, UInt, oscTypeInt)
+        OnMessage(0x1382, "_printerLightsQuarterMaster")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterYellow", UInt, 0x1279, UInt, oscTypeInt)
-        OnMessage(0x1279, "_printerLightsQuarterYellow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterYellow", UInt, 0x1381, UInt, oscTypeInt)
+        OnMessage(0x1381, "_printerLightsQuarterYellow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterMagenta", UInt, 0x1280, UInt, oscTypeInt)
-        OnMessage(0x1280, "_printerLightsQuarterMagenta")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterMagenta", UInt, 0x1380, UInt, oscTypeInt)
+        OnMessage(0x1380, "_printerLightsQuarterMagenta")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterCyan", UInt, 0x1281, UInt, oscTypeInt)
-        OnMessage(0x1281, "_printerLightsQuarterCyan")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterCyan", UInt, 0x1379, UInt, oscTypeInt)
+        OnMessage(0x1379, "_printerLightsQuarterCyan")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterBlue", UInt, 0x1282, UInt, oscTypeInt)
-        OnMessage(0x1282, "_printerLightsQuarterBlue")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterBlue", UInt, 0x1378, UInt, oscTypeInt)
+        OnMessage(0x1378, "_printerLightsQuarterBlue")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterGreen", UInt, 0x1283, UInt, oscTypeInt)
-        OnMessage(0x1283, "_printerLightsQuarterGreen")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterGreen", UInt, 0x1377, UInt, oscTypeInt)
+        OnMessage(0x1377, "_printerLightsQuarterGreen")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterRed", UInt, 0x1284, UInt, oscTypeInt)
-        OnMessage(0x1284, "_printerLightsQuarterRed")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsQuarterRed", UInt, 0x1376, UInt, oscTypeInt)
+        OnMessage(0x1376, "_printerLightsQuarterRed")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfMaster", UInt, 0x1285, UInt, oscTypeInt)
-        OnMessage(0x1285, "_printerLightsHalfMaster")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfMaster", UInt, 0x1375, UInt, oscTypeInt)
+        OnMessage(0x1375, "_printerLightsHalfMaster")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfYellow", UInt, 0x1286, UInt, oscTypeInt)
-        OnMessage(0x1286, "_printerLightsHalfYellow")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfYellow", UInt, 0x1374, UInt, oscTypeInt)
+        OnMessage(0x1374, "_printerLightsHalfYellow")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfMagenta", UInt, 0x1287, UInt, oscTypeInt)
-        OnMessage(0x1287, "_printerLightsHalfMagenta")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfMagenta", UInt, 0x1373, UInt, oscTypeInt)
+        OnMessage(0x1373, "_printerLightsHalfMagenta")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfCyan", UInt, 0x1288, UInt, oscTypeInt)
-        OnMessage(0x1288, "_printerLightsHalfCyan")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfCyan", UInt, 0x1372, UInt, oscTypeInt)
+        OnMessage(0x1372, "_printerLightsHalfCyan")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfBlue", UInt, 0x1289, UInt, oscTypeInt)
-        OnMessage(0x1289, "_printerLightsHalfBlue")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfBlue", UInt, 0x1371, UInt, oscTypeInt)
+        OnMessage(0x1371, "_printerLightsHalfBlue")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfGreen", UInt, 0x1290, UInt, oscTypeInt)
-        OnMessage(0x1290, "_printerLightsHalfGreen")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfGreen", UInt, 0x1370, UInt, oscTypeInt)
+        OnMessage(0x1370, "_printerLightsHalfGreen")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfRed", UInt, 0x1291, UInt, oscTypeInt)
-        OnMessage(0x1291, "_printerLightsHalfRed")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsHalfRed", UInt, 0x1369, UInt, oscTypeInt)
+        OnMessage(0x1369, "_printerLightsHalfRed")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullMaster", UInt, 0x1292, UInt, oscTypeInt)
-        OnMessage(0x1292, "_printerLightsFullMaster")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullMaster", UInt, 0x1368, UInt, oscTypeInt)
+        OnMessage(0x1368, "_printerLightsFullMaster")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullYellow", UInt, 0x1293, UInt, oscTypeInt)
-        OnMessage(0x1293, "_printerLightsFullYellow")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullYellow", UInt, 0x1367, UInt, oscTypeInt)
+        OnMessage(0x1367, "_printerLightsFullYellow")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullMagenta", UInt, 0x1294, UInt, oscTypeInt)
-        OnMessage(0x1294, "_printerLightsFullMagenta")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullMagenta", UInt, 0x1366, UInt, oscTypeInt)
+        OnMessage(0x1366, "_printerLightsFullMagenta")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullCyan", UInt, 0x1295, UInt, oscTypeInt)
-        OnMessage(0x1295, "_printerLightsFullCyan")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullCyan", UInt, 0x1365, UInt, oscTypeInt)
+        OnMessage(0x1365, "_printerLightsFullCyan")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullBlue", UInt, 0x1296, UInt, oscTypeInt)
-        OnMessage(0x1296, "_printerLightsFullBlue")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullBlue", UInt, 0x1364, UInt, oscTypeInt)
+        OnMessage(0x1364, "_printerLightsFullBlue")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullGreen", UInt, 0x1297, UInt, oscTypeInt)
-        OnMessage(0x1297, "_printerLightsFullGreen")        
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullGreen", UInt, 0x1363, UInt, oscTypeInt)
+        OnMessage(0x1363, "_printerLightsFullGreen")        
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullRed", UInt, 0x1298, UInt, oscTypeInt)
-        OnMessage(0x1298, "_printerLightsFullRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsFullRed", UInt, 0x1362, UInt, oscTypeInt)
+        OnMessage(0x1362, "_printerLightsFullRed")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsOnOff", UInt, 0x1299, UInt, oscTypeInt)
-        OnMessage(0x1299, "_printerLightsOnOff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/printerLightsOnOff", UInt, 0x1361, UInt, oscTypeInt)
+        OnMessage(0x1361, "_printerLightsOnOff")
 
         ;Power Windows Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft4", UInt, 0x1300, UInt, oscTypeInt)
-        OnMessage(0x1300, "_pwSoft4")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft4", UInt, 0x1360, UInt, oscTypeInt)
+        OnMessage(0x1360, "_pwSoft4")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft3", UInt, 0x1301, UInt, oscTypeInt)
-        OnMessage(0x1301, "_pwSoft3")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft3", UInt, 0x1359, UInt, oscTypeInt)
+        OnMessage(0x1359, "_pwSoft3")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft2", UInt, 0x1302, UInt, oscTypeInt)
-        OnMessage(0x1302, "_pwSoft2")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft2", UInt, 0x1358, UInt, oscTypeInt)
+        OnMessage(0x1358, "_pwSoft2")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft1", UInt, 0x1303, UInt, oscTypeInt)
-        OnMessage(0x1303, "_pwSoft1")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSoft1", UInt, 0x1357, UInt, oscTypeInt)
+        OnMessage(0x1357, "_pwSoft1")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwOutsideSoftness", UInt, 0x1304, UInt, oscTypeInt)
-        OnMessage(0x1304, "_pwOutsideSoftness")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwOutsideSoftness", UInt, 0x1356, UInt, oscTypeInt)
+        OnMessage(0x1356, "_pwOutsideSoftness")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwInsideSoftness", UInt, 0x1305, UInt, oscTypeInt)
-        OnMessage(0x1305, "_pwInsideSoftness")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwInsideSoftness", UInt, 0x1355, UInt, oscTypeInt)
+        OnMessage(0x1355, "_pwInsideSoftness")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwOpacity", UInt, 0x1306, UInt, oscTypeInt)
-        OnMessage(0x1306, "_pwOpacity")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwOpacity", UInt, 0x1354, UInt, oscTypeInt)
+        OnMessage(0x1354, "_pwOpacity")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwRotate", UInt, 0x1307, UInt, oscTypeInt)
-        OnMessage(0x1307, "_pwRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwRotate", UInt, 0x1353, UInt, oscTypeInt)
+        OnMessage(0x1353, "_pwRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwTilt", UInt, 0x1308, UInt, oscTypeInt)
-        OnMessage(0x1308, "_pwTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwTilt", UInt, 0x1352, UInt, oscTypeInt)
+        OnMessage(0x1352, "_pwTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwPan", UInt, 0x1309, UInt, oscTypeInt)
-        OnMessage(0x1309, "_pwPan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwPan", UInt, 0x1351, UInt, oscTypeInt)
+        OnMessage(0x1351, "_pwPan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAspect", UInt, 0x1310, UInt, oscTypeInt)
-        OnMessage(0x1310, "_pwAspect")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAspect", UInt, 0x1350, UInt, oscTypeInt)
+        OnMessage(0x1350, "_pwAspect")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSize", UInt, 0x1311, UInt, oscTypeInt)
-        OnMessage(0x1311, "_pwSize")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwSize", UInt, 0x1349, UInt, oscTypeInt)
+        OnMessage(0x1349, "_pwSize")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodeCurve", UInt, 0x1312, UInt, oscTypeInt)
-        OnMessage(0x1312, "_pwAddNodeCurve")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodeCurve", UInt, 0x1348, UInt, oscTypeInt)
+        OnMessage(0x1348, "_pwAddNodeCurve")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodePolygon", UInt, 0x1313, UInt, oscTypeInt)
-        OnMessage(0x1313, "_pwAddNodePolygon")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodePolygon", UInt, 0x1347, UInt, oscTypeInt)
+        OnMessage(0x1347, "_pwAddNodePolygon")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodeCircle", UInt, 0x1314, UInt, oscTypeInt)
-        OnMessage(0x1314, "_pwAddNodeCircle")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodeCircle", UInt, 0x1346, UInt, oscTypeInt)
+        OnMessage(0x1346, "_pwAddNodeCircle")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodeLinear", UInt, 0x1315, UInt, oscTypeInt)
-        OnMessage(0x1315, "_pwAddNodeLinear")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddNodeLinear", UInt, 0x1345, UInt, oscTypeInt)
+        OnMessage(0x1345, "_pwAddNodeLinear")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwReset", UInt, 0x1316, UInt, oscTypeInt)
-        OnMessage(0x1316, "_pwReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwReset", UInt, 0x1344, UInt, oscTypeInt)
+        OnMessage(0x1344, "_pwReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwDelete", UInt, 0x1317, UInt, oscTypeInt)
-        OnMessage(0x1317, "_pwDelete")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwDelete", UInt, 0x1343, UInt, oscTypeInt)
+        OnMessage(0x1343, "_pwDelete")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwShowHide", UInt, 0x1318, UInt, oscTypeInt)
-        OnMessage(0x1318, "_pwShowHide")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwShowHide", UInt, 0x1342, UInt, oscTypeInt)
+        OnMessage(0x1342, "_pwShowHide")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddGradient", UInt, 0x1319, UInt, oscTypeInt)
-        OnMessage(0x1319, "_pwAddGradient")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddGradient", UInt, 0x1341, UInt, oscTypeInt)
+        OnMessage(0x1341, "_pwAddGradient")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddCurve", UInt, 0x1320, UInt, oscTypeInt)
-        OnMessage(0x1320, "_pwAddCurve")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddCurve", UInt, 0x1340, UInt, oscTypeInt)
+        OnMessage(0x1340, "_pwAddCurve")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddPolygon", UInt, 0x1321, UInt, oscTypeInt)
-        OnMessage(0x1321, "_pwAddPolygon")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddPolygon", UInt, 0x1339, UInt, oscTypeInt)
+        OnMessage(0x1339, "_pwAddPolygon")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddCircle", UInt, 0x1322, UInt, oscTypeInt)
-        OnMessage(0x1322, "_pwAddCircle")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddCircle", UInt, 0x1338, UInt, oscTypeInt)
+        OnMessage(0x1338, "_pwAddCircle")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddLinear", UInt, 0x1323, UInt, oscTypeInt)
-        OnMessage(0x1323, "_pwAddLinear")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pwAddLinear", UInt, 0x1337, UInt, oscTypeInt)
+        OnMessage(0x1337, "_pwAddLinear")
 
         ;Blur, Sharpen and Mist (BSM) Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmMix", UInt, 0x1324, UInt, oscTypeInt)
-        OnMessage(0x1324, "_bsmMix")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmMix", UInt, 0x1336, UInt, oscTypeInt)
+        OnMessage(0x1336, "_bsmMix")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLevel", UInt, 0x1325, UInt, oscTypeInt)
-        OnMessage(0x1325, "_bsmLevel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLevel", UInt, 0x1335, UInt, oscTypeInt)
+        OnMessage(0x1335, "_bsmLevel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmCoringSoftness", UInt, 0x1326, UInt, oscTypeInt)
-        OnMessage(0x1326, "_bsmCoringSoftness")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmCoringSoftness", UInt, 0x1334, UInt, oscTypeInt)
+        OnMessage(0x1334, "_bsmCoringSoftness")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmScalingB", UInt, 0x1327, UInt, oscTypeInt)
-        OnMessage(0x1327, "_bsmScalingB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmScalingB", UInt, 0x1333, UInt, oscTypeInt)
+        OnMessage(0x1333, "_bsmScalingB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmScalingG", UInt, 0x1328, UInt, oscTypeInt)
-        OnMessage(0x1328, "_bsmScalingG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmScalingG", UInt, 0x1332, UInt, oscTypeInt)
+        OnMessage(0x1332, "_bsmScalingG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmScalingR", UInt, 0x1329, UInt, oscTypeInt)
-        OnMessage(0x1329, "_bsmScalingR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmScalingR", UInt, 0x1331, UInt, oscTypeInt)
+        OnMessage(0x1331, "_bsmScalingR")
 
         DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRatioB", UInt, 0x1330, UInt, oscTypeInt)
         OnMessage(0x1330, "_bsmRatioB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRatioG", UInt, 0x1331, UInt, oscTypeInt)
-        OnMessage(0x1331, "_bsmRatioG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRatioG", UInt, 0x1329, UInt, oscTypeInt)
+        OnMessage(0x1329, "_bsmRatioG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRatioR", UInt, 0x1332, UInt, oscTypeInt)
-        OnMessage(0x1332, "_bsmRatioR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRatioR", UInt, 0x1328, UInt, oscTypeInt)
+        OnMessage(0x1328, "_bsmRatioR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRadiusB", UInt, 0x1333, UInt, oscTypeInt)
-        OnMessage(0x1333, "_bsmRadiusB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRadiusB", UInt, 0x1327, UInt, oscTypeInt)
+        OnMessage(0x1327, "_bsmRadiusB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRadiusG", UInt, 0x1334, UInt, oscTypeInt)
-        OnMessage(0x1334, "_bsmRadiusG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRadiusG", UInt, 0x1326, UInt, oscTypeInt)
+        OnMessage(0x1326, "_bsmRadiusG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRadiusR", UInt, 0x1335, UInt, oscTypeInt)
-        OnMessage(0x1335, "_bsmRadiusR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmRadiusR", UInt, 0x1325, UInt, oscTypeInt)
+        OnMessage(0x1325, "_bsmRadiusR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmReset", UInt, 0x1336, UInt, oscTypeInt)
-        OnMessage(0x1336, "_bsmReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmReset", UInt, 0x1324, UInt, oscTypeInt)
+        OnMessage(0x1324, "_bsmReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmMistPanel", UInt, 0x1337, UInt, oscTypeInt)
-        OnMessage(0x1337, "_bsmMistPanel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmMistPanel", UInt, 0x1323, UInt, oscTypeInt)
+        OnMessage(0x1323, "_bsmMistPanel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmSharpenPanel", UInt, 0x1338, UInt, oscTypeInt)
-        OnMessage(0x1338, "_bsmSharpenPanel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmSharpenPanel", UInt, 0x1322, UInt, oscTypeInt)
+        OnMessage(0x1322, "_bsmSharpenPanel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmBlurPanel", UInt, 0x1339, UInt, oscTypeInt)
-        OnMessage(0x1339, "_bsmBlurPanel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmBlurPanel", UInt, 0x1321, UInt, oscTypeInt)
+        OnMessage(0x1321, "_bsmBlurPanel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmResetScaling", UInt, 0x1340, UInt, oscTypeInt)
-        OnMessage(0x1340, "_bsmResetScaling")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmResetScaling", UInt, 0x1320, UInt, oscTypeInt)
+        OnMessage(0x1320, "_bsmResetScaling")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmResetRatio", UInt, 0x1341, UInt, oscTypeInt)
-        OnMessage(0x1341, "_bsmResetRatio")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmResetRatio", UInt, 0x1319, UInt, oscTypeInt)
+        OnMessage(0x1319, "_bsmResetRatio")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmResetRadius", UInt, 0x1342, UInt, oscTypeInt)
-        OnMessage(0x1342, "_bsmResetRadius")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmResetRadius", UInt, 0x1318, UInt, oscTypeInt)
+        OnMessage(0x1318, "_bsmResetRadius")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLinkScaling", UInt, 0x1343, UInt, oscTypeInt)
-        OnMessage(0x1343, "_bsmLinkScaling")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLinkScaling", UInt, 0x1317, UInt, oscTypeInt)
+        OnMessage(0x1317, "_bsmLinkScaling")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLinkRatio", UInt, 0x1344, UInt, oscTypeInt)
-        OnMessage(0x1344, "_bsmLinkRatio")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLinkRatio", UInt, 0x1316, UInt, oscTypeInt)
+        OnMessage(0x1316, "_bsmLinkRatio")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLinkRadius", UInt, 0x1345, UInt, oscTypeInt)
-        OnMessage(0x1345, "_bsmLinkRadius")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bsmLinkRadius", UInt, 0x1315, UInt, oscTypeInt)
+        OnMessage(0x1315, "_bsmLinkRadius")
         
         ;RGB Mixer Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputBlue", UInt, 0x1346, UInt, oscTypeInt)
-        OnMessage(0x1346, "_rgbMixerBlueOutputBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputBlue", UInt, 0x1314, UInt, oscTypeInt)
+        OnMessage(0x1314, "_rgbMixerBlueOutputBlue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputGreen", UInt, 0x1347, UInt, oscTypeInt)
-        OnMessage(0x1347, "_rgbMixerBlueOutputGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputGreen", UInt, 0x1313, UInt, oscTypeInt)
+        OnMessage(0x1313, "_rgbMixerBlueOutputGreen")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputRed", UInt, 0x1348, UInt, oscTypeInt)
-        OnMessage(0x1348, "_rgbMixerBlueOutputRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputRed", UInt, 0x1312, UInt, oscTypeInt)
+        OnMessage(0x1312, "_rgbMixerBlueOutputRed")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputBlue", UInt, 0x1349, UInt, oscTypeInt)
-        OnMessage(0x1349, "_rgbMixerGreenOutputBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputBlue", UInt, 0x1311, UInt, oscTypeInt)
+        OnMessage(0x1311, "_rgbMixerGreenOutputBlue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputGreen", UInt, 0x1350, UInt, oscTypeInt)
-        OnMessage(0x1350, "_rgbMixerGreenOutputGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputGreen", UInt, 0x1310, UInt, oscTypeInt)
+        OnMessage(0x1310, "_rgbMixerGreenOutputGreen")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputRed", UInt, 0x1351, UInt, oscTypeInt)
-        OnMessage(0x1351, "_rgbMixerGreenOutputRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputRed", UInt, 0x1309, UInt, oscTypeInt)
+        OnMessage(0x1309, "_rgbMixerGreenOutputRed")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputBlue", UInt, 0x1352, UInt, oscTypeInt)
-        OnMessage(0x1352, "_rgbMixerRedOutputBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputBlue", UInt, 0x1308, UInt, oscTypeInt)
+        OnMessage(0x1308, "_rgbMixerRedOutputBlue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputGreen", UInt, 0x1353, UInt, oscTypeInt)
-        OnMessage(0x1353, "_rgbMixerRedOutputGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputGreen", UInt, 0x1307, UInt, oscTypeInt)
+        OnMessage(0x1307, "_rgbMixerRedOutputGreen")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputRed", UInt, 0x1354, UInt, oscTypeInt)
-        OnMessage(0x1354, "_rgbMixerRedOutputRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputRed", UInt, 0x1306, UInt, oscTypeInt)
+        OnMessage(0x1306, "_rgbMixerRedOutputRed")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerReset", UInt, 0x1355, UInt, oscTypeInt)
-        OnMessage(0x1355, "_rgbMixerReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerReset", UInt, 0x1305, UInt, oscTypeInt)
+        OnMessage(0x1305, "_rgbMixerReset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerPreserveLuminance", UInt, 0x1356, UInt, oscTypeInt)
-        OnMessage(0x1356, "_rgbMixerPreserveLuminance")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerPreserveLuminance", UInt, 0x1304, UInt, oscTypeInt)
+        OnMessage(0x1304, "_rgbMixerPreserveLuminance")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerMonochrome", UInt, 0x1357, UInt, oscTypeInt)
-        OnMessage(0x1357, "_rgbMixerMonochrome")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerMonochrome", UInt, 0x1303, UInt, oscTypeInt)
+        OnMessage(0x1303, "_rgbMixerMonochrome")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputReset", UInt, 0x1358, UInt, oscTypeInt)
-        OnMessage(0x1358, "_rgbMixerBlueOutputReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerBlueOutputReset", UInt, 0x1302, UInt, oscTypeInt)
+        OnMessage(0x1302, "_rgbMixerBlueOutputReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputReset", UInt, 0x1359, UInt, oscTypeInt)
-        OnMessage(0x1359, "_rgbMixerGreenOutputReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerGreenOutputReset", UInt, 0x1301, UInt, oscTypeInt)
+        OnMessage(0x1301, "_rgbMixerGreenOutputReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputReset", UInt, 0x1360, UInt, oscTypeInt)
-        OnMessage(0x1360, "_rgbMixerRedOutputReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerRedOutputReset", UInt, 0x1300, UInt, oscTypeInt)
+        OnMessage(0x1300, "_rgbMixerRedOutputReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerInvertBlueRed", UInt, 0x1361, UInt, oscTypeInt)
-        OnMessage(0x1361, "_rgbMixerInvertBlueRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerInvertBlueRed", UInt, 0x1299, UInt, oscTypeInt)
+        OnMessage(0x1299, "_rgbMixerInvertBlueRed")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerInvertGreenBlue", UInt, 0x1362, UInt, oscTypeInt)
-        OnMessage(0x1362, "_rgbMixerInvertGreenBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerInvertGreenBlue", UInt, 0x1298, UInt, oscTypeInt)
+        OnMessage(0x1298, "_rgbMixerInvertGreenBlue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerInvertRedGreen", UInt, 0x1363, UInt, oscTypeInt)
-        OnMessage(0x1363, "_rgbMixerInvertRedGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rgbMixerInvertRedGreen", UInt, 0x1297, UInt, oscTypeInt)
+        OnMessage(0x1297, "_rgbMixerInvertRedGreen")
 
         ;Hue Curves Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesDeleteActualDot", UInt, 0x1364, UInt, oscTypeInt)
-        OnMessage(0x1364, "_hueCurvesDeleteActualDot")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesDeleteActualDot", UInt, 0x1296, UInt, oscTypeInt)
+        OnMessage(0x1296, "_hueCurvesDeleteActualDot")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesMoveDotY", UInt, 0x1365, UInt, oscTypeInt)
-        OnMessage(0x1365, "_hueCurvesMoveDotY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesMoveDotY", UInt, 0x1295, UInt, oscTypeInt)
+        OnMessage(0x1295, "_hueCurvesMoveDotY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesMoveDotX", UInt, 0x1366, UInt, oscTypeInt)
-        OnMessage(0x1366, "_hueCurvesMoveDotX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesMoveDotX", UInt, 0x1294, UInt, oscTypeInt)
+        OnMessage(0x1294, "_hueCurvesMoveDotX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesSelectDots", UInt, 0x1367, UInt, oscTypeInt)
-        OnMessage(0x1367, "_hueCurvesSelectDots")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesSelectDots", UInt, 0x1293, UInt, oscTypeInt)
+        OnMessage(0x1293, "_hueCurvesSelectDots")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesSatXLum", UInt, 0x1368, UInt, oscTypeInt)
-        OnMessage(0x1368, "_hueCurvesSatXLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesSatXLum", UInt, 0x1292, UInt, oscTypeInt)
+        OnMessage(0x1292, "_hueCurvesSatXLum")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesSatXSat", UInt, 0x1369, UInt, oscTypeInt)
-        OnMessage(0x1369, "_hueCurvesSatXSat")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesSatXSat", UInt, 0x1291, UInt, oscTypeInt)
+        OnMessage(0x1291, "_hueCurvesSatXSat")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesLumXSat", UInt, 0x1370, UInt, oscTypeInt)
-        OnMessage(0x1370, "_hueCurvesLumXSat")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesLumXSat", UInt, 0x1290, UInt, oscTypeInt)
+        OnMessage(0x1290, "_hueCurvesLumXSat")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueXLum", UInt, 0x1371, UInt, oscTypeInt)
-        OnMessage(0x1371, "_hueCurvesHueXLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueXLum", UInt, 0x1289, UInt, oscTypeInt)
+        OnMessage(0x1289, "_hueCurvesHueXLum")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueXSat", UInt, 0x1372, UInt, oscTypeInt)
-        OnMessage(0x1372, "_hueCurvesHueXSat")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueXSat", UInt, 0x1288, UInt, oscTypeInt)
+        OnMessage(0x1288, "_hueCurvesHueXSat")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueXHue", UInt, 0x1373, UInt, oscTypeInt)
-        OnMessage(0x1373, "_hueCurvesHueXHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueXHue", UInt, 0x1287, UInt, oscTypeInt)
+        OnMessage(0x1287, "_hueCurvesHueXHue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesReset", UInt, 0x1374, UInt, oscTypeInt)
-        OnMessage(0x1374, "_hueCurvesReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesReset", UInt, 0x1286, UInt, oscTypeInt)
+        OnMessage(0x1286, "_hueCurvesReset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesReadDots", UInt, 0x1375, UInt, oscTypeInt)
-        OnMessage(0x1375, "_hueCurvesReadDots")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesReadDots", UInt, 0x1285, UInt, oscTypeInt)
+        OnMessage(0x1285, "_hueCurvesReadDots")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesMagenta", UInt, 0x1376, UInt, oscTypeInt)
-        OnMessage(0x1376, "_hueCurvesMagenta")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesMagenta", UInt, 0x1284, UInt, oscTypeInt)
+        OnMessage(0x1284, "_hueCurvesMagenta")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesBlue", UInt, 0x1377, UInt, oscTypeInt)
-        OnMessage(0x1377, "_hueCurvesBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesBlue", UInt, 0x1283, UInt, oscTypeInt)
+        OnMessage(0x1283, "_hueCurvesBlue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesCyan", UInt, 0x1378, UInt, oscTypeInt)
-        OnMessage(0x1378, "_hueCurvesCyan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesCyan", UInt, 0x1282, UInt, oscTypeInt)
+        OnMessage(0x1282, "_hueCurvesCyan")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesGreen", UInt, 0x1379, UInt, oscTypeInt)
-        OnMessage(0x1379, "_hueCurvesGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesGreen", UInt, 0x1281, UInt, oscTypeInt)
+        OnMessage(0x1281, "_hueCurvesGreen")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesYellow", UInt, 0x1380, UInt, oscTypeInt)
-        OnMessage(0x1380, "_hueCurvesYellow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesYellow", UInt, 0x1280, UInt, oscTypeInt)
+        OnMessage(0x1280, "_hueCurvesYellow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesRed", UInt, 0x1381, UInt, oscTypeInt)
-        OnMessage(0x1381, "_hueCurvesRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesRed", UInt, 0x1279, UInt, oscTypeInt)
+        OnMessage(0x1279, "_hueCurvesRed")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueSatLum", UInt, 0x1382, UInt, oscTypeInt)
-        OnMessage(0x1382, "_hueCurvesHueSatLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesHueSatLum", UInt, 0x1278, UInt, oscTypeInt)
+        OnMessage(0x1278, "_hueCurvesHueSatLum")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesInputHue", UInt, 0x1383, UInt, oscTypeInt)
-        OnMessage(0x1383, "_hueCurvesInputHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hueCurvesInputHue", UInt, 0x1277, UInt, oscTypeInt)
+        OnMessage(0x1277, "_hueCurvesInputHue")
         
         ;Custom Curves Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipB", UInt, 0x1384, UInt, oscTypeInt)
-        OnMessage(0x1384, "_customCurvesSoftClipB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipB", UInt, 0x1276, UInt, oscTypeInt)
+        OnMessage(0x1276, "_customCurvesSoftClipB")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipG", UInt, 0x1385, UInt, oscTypeInt)
-        OnMessage(0x1385, "_customCurvesSoftClipG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipG", UInt, 0x1275, UInt, oscTypeInt)
+        OnMessage(0x1275, "_customCurvesSoftClipG")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipR", UInt, 0x1386, UInt, oscTypeInt)
-        OnMessage(0x1386, "_customCurvesSoftClipR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipR", UInt, 0x1274, UInt, oscTypeInt)
+        OnMessage(0x1274, "_customCurvesSoftClipR")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipAll", UInt, 0x1387, UInt, oscTypeInt)
-        OnMessage(0x1387, "_customCurvesSoftClipAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipAll", UInt, 0x1273, UInt, oscTypeInt)
+        OnMessage(0x1273, "_customCurvesSoftClipAll")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetSoftClip", UInt, 0x1388, UInt, oscTypeInt)
-        OnMessage(0x1388, "_customCurvesResetSoftClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetSoftClip", UInt, 0x1272, UInt, oscTypeInt)
+        OnMessage(0x1272, "_customCurvesResetSoftClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipHS", UInt, 0x1389, UInt, oscTypeInt)
-        OnMessage(0x1389, "_customCurvesSoftClipHS")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipHS", UInt, 0x1271, UInt, oscTypeInt)
+        OnMessage(0x1271, "_customCurvesSoftClipHS")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipLS", UInt, 0x1390, UInt, oscTypeInt)
-        OnMessage(0x1390, "_customCurvesSoftClipLS")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipLS", UInt, 0x1270, UInt, oscTypeInt)
+        OnMessage(0x1270, "_customCurvesSoftClipLS")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipHigh", UInt, 0x1391, UInt, oscTypeInt)
-        OnMessage(0x1391, "_customCurvesSoftClipHigh")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipHigh", UInt, 0x1269, UInt, oscTypeInt)
+        OnMessage(0x1269, "_customCurvesSoftClipHigh")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipLow", UInt, 0x1392, UInt, oscTypeInt)
-        OnMessage(0x1392, "_customCurvesSoftClipLow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSoftClipLow", UInt, 0x1268, UInt, oscTypeInt)
+        OnMessage(0x1268, "_customCurvesSoftClipLow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityBlue", UInt, 0x1393, UInt, oscTypeInt)
-        OnMessage(0x1393, "_customCurvesIntensityBlue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityBlue", UInt, 0x1267, UInt, oscTypeInt)
+        OnMessage(0x1267, "_customCurvesIntensityBlue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityGreen", UInt, 0x1394, UInt, oscTypeInt)
-        OnMessage(0x1394, "_customCurvesIntensityGreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityGreen", UInt, 0x1266, UInt, oscTypeInt)
+        OnMessage(0x1266, "_customCurvesIntensityGreen")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityRed", UInt, 0x1395, UInt, oscTypeInt)
-        OnMessage(0x1395, "_customCurvesIntensityRed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityRed", UInt, 0x1265, UInt, oscTypeInt)
+        OnMessage(0x1265, "_customCurvesIntensityRed")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityLum", UInt, 0x1396, UInt, oscTypeInt)
-        OnMessage(0x1396, "_customCurvesIntensityLum")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesIntensityLum", UInt, 0x1264, UInt, oscTypeInt)
+        OnMessage(0x1264, "_customCurvesIntensityLum")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesReset", UInt, 0x1397, UInt, oscTypeInt)
-        OnMessage(0x1397, "_customCurvesReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesReset", UInt, 0x1263, UInt, oscTypeInt)
+        OnMessage(0x1263, "_customCurvesReset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetEdit", UInt, 0x1398, UInt, oscTypeInt)
-        OnMessage(0x1398, "_customCurvesResetEdit")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesResetEdit", UInt, 0x1262, UInt, oscTypeInt)
+        OnMessage(0x1262, "_customCurvesResetEdit")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesReadDots", UInt, 0x1399, UInt, oscTypeInt)
-        OnMessage(0x1399, "_customCurvesReadDots")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesReadDots", UInt, 0x1261, UInt, oscTypeInt)
+        OnMessage(0x1261, "_customCurvesReadDots")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesMoveDotY", UInt, 0x1400, UInt, oscTypeInt)
-        OnMessage(0x1400, "_customCurvesMoveDotY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesMoveDotY", UInt, 0x1260, UInt, oscTypeInt)
+        OnMessage(0x1260, "_customCurvesMoveDotY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesMoveDotX", UInt, 0x1401, UInt, oscTypeInt)
-        OnMessage(0x1401, "_customCurvesMoveDotX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesMoveDotX", UInt, 0x1259, UInt, oscTypeInt)
+        OnMessage(0x1259, "_customCurvesMoveDotX")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSelectDots", UInt, 0x1402, UInt, oscTypeInt)
-        OnMessage(0x1402, "_customCurvesSelectDots")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesSelectDots", UInt, 0x1258, UInt, oscTypeInt)
+        OnMessage(0x1258, "_customCurvesSelectDots")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesAddDefaultDots", UInt, 0x1403, UInt, oscTypeInt)
-        OnMessage(0x1403, "_customCurvesAddDefaultDots")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesAddDefaultDots", UInt, 0x1257, UInt, oscTypeInt)
+        OnMessage(0x1257, "_customCurvesAddDefaultDots")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesToggleEditableSplines", UInt, 0x1404, UInt, oscTypeInt)
-        OnMessage(0x1404, "_customCurvesToggleEditableSplines")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesToggleEditableSplines", UInt, 0x1256, UInt, oscTypeInt)
+        OnMessage(0x1256, "_customCurvesToggleEditableSplines")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesDeleteActualDot", UInt, 0x1405, UInt, oscTypeInt)
-        OnMessage(0x1405, "_customCurvesDeleteActualDot")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesDeleteActualDot", UInt, 0x1255, UInt, oscTypeInt)
+        OnMessage(0x1255, "_customCurvesDeleteActualDot")
       
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeB", UInt, 0x1406, UInt, oscTypeInt)
-        OnMessage(0x1406, "_customCurvesModeB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeB", UInt, 0x1254, UInt, oscTypeInt)
+        OnMessage(0x1254, "_customCurvesModeB")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeG", UInt, 0x1407, UInt, oscTypeInt)
-        OnMessage(0x1407, "_customCurvesModeG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeG", UInt, 0x1253, UInt, oscTypeInt)
+        OnMessage(0x1253, "_customCurvesModeG")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeR", UInt, 0x1408, UInt, oscTypeInt)
-        OnMessage(0x1408, "_customCurvesModeR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeR", UInt, 0x1252, UInt, oscTypeInt)
+        OnMessage(0x1252, "_customCurvesModeR")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeY", UInt, 0x1409, UInt, oscTypeInt)
-        OnMessage(0x1409, "_customCurvesModeY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeY", UInt, 0x1251, UInt, oscTypeInt)
+        OnMessage(0x1251, "_customCurvesModeY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeAll", UInt, 0x1410, UInt, oscTypeInt)
-        OnMessage(0x1410, "_customCurvesModeAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/customCurvesModeAll", UInt, 0x1250, UInt, oscTypeInt)
+        OnMessage(0x1250, "_customCurvesModeAll")
         
         ;Log Panel Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHue", UInt, 0x1411, UInt, oscTypeInt)
-        OnMessage(0x1411, "_logHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHue", UInt, 0x1249, UInt, oscTypeInt)
+        OnMessage(0x1249, "_logHue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlight", UInt, 0x1412, UInt, oscTypeInt)
-        OnMessage(0x1412, "_logHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlight", UInt, 0x1248, UInt, oscTypeInt)
+        OnMessage(0x1248, "_logHighlight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadow", UInt, 0x1413, UInt, oscTypeInt)
-        OnMessage(0x1413, "_logShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadow", UInt, 0x1247, UInt, oscTypeInt)
+        OnMessage(0x1247, "_logShadow")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidDetail", UInt, 0x1414, UInt, oscTypeInt)
-        OnMessage(0x1414, "_logMidDetail")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidDetail", UInt, 0x1246, UInt, oscTypeInt)
+        OnMessage(0x1246, "_logMidDetail")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logTint", UInt, 0x1415, UInt, oscTypeInt)
-        OnMessage(0x1415, "_logTint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logTint", UInt, 0x1245, UInt, oscTypeInt)
+        OnMessage(0x1245, "_logTint")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logTemperature", UInt, 0x1416, UInt, oscTypeInt)
-        OnMessage(0x1416, "_logTemperature")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logTemperature", UInt, 0x1244, UInt, oscTypeInt)
+        OnMessage(0x1244, "_logTemperature")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logSaturation", UInt, 0x1417, UInt, oscTypeInt)
-        OnMessage(0x1417, "_logSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logSaturation", UInt, 0x1243, UInt, oscTypeInt)
+        OnMessage(0x1243, "_logSaturation")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logCoolBoost", UInt, 0x1418, UInt, oscTypeInt)
-        OnMessage(0x1418, "_logCoolBoost")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logCoolBoost", UInt, 0x1242, UInt, oscTypeInt)
+        OnMessage(0x1242, "_logCoolBoost")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logContrast", UInt, 0x1419, UInt, oscTypeInt)
-        OnMessage(0x1419, "_logContrast")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logContrast", UInt, 0x1241, UInt, oscTypeInt)
+        OnMessage(0x1241, "_logContrast")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighRange", UInt, 0x1420, UInt, oscTypeInt)
-        OnMessage(0x1420, "_logHighRange")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighRange", UInt, 0x1240, UInt, oscTypeInt)
+        OnMessage(0x1240, "_logHighRange")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logLowRange", UInt, 0x1421, UInt, oscTypeInt)
-        OnMessage(0x1421, "_logLowRange")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logLowRange", UInt, 0x1239, UInt, oscTypeInt)
+        OnMessage(0x1239, "_logLowRange")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logPivot", UInt, 0x1422, UInt, oscTypeInt)
-        OnMessage(0x1422, "_logPivot")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logPivot", UInt, 0x1238, UInt, oscTypeInt)
+        OnMessage(0x1238, "_logPivot")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logColorPicker", UInt, 0x1423, UInt, oscTypeInt)
-        OnMessage(0x1423, "_logColorPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logColorPicker", UInt, 0x1237, UInt, oscTypeInt)
+        OnMessage(0x1237, "_logColorPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logAWB", UInt, 0x1424, UInt, oscTypeInt)
-        OnMessage(0x1424, "_logAWB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logAWB", UInt, 0x1236, UInt, oscTypeInt)
+        OnMessage(0x1236, "_logAWB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logResetAll", UInt, 0x1425, UInt, oscTypeInt)
-        OnMessage(0x1425, "_logResetAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logResetAll", UInt, 0x1235, UInt, oscTypeInt)
+        OnMessage(0x1235, "_logResetAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetReset", UInt, 0x1426, UInt, oscTypeInt)
-        OnMessage(0x1426, "_logOffsetReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetReset", UInt, 0x1234, UInt, oscTypeInt)
+        OnMessage(0x1234, "_logOffsetReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsReset", UInt, 0x1427, UInt, oscTypeInt)
-        OnMessage(0x1427, "_logHighlightsReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsReset", UInt, 0x1233, UInt, oscTypeInt)
+        OnMessage(0x1233, "_logHighlightsReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneReset", UInt, 0x1428, UInt, oscTypeInt)
-        OnMessage(0x1428, "_logMidtoneReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneReset", UInt, 0x1232, UInt, oscTypeInt)
+        OnMessage(0x1232, "_logMidtoneReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowReset", UInt, 0x1429, UInt, oscTypeInt)
-        OnMessage(0x1429, "_logShadowReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowReset", UInt, 0x1231, UInt, oscTypeInt)
+        OnMessage(0x1231, "_logShadowReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetB", UInt, 0x1430, UInt, oscTypeInt)
-        OnMessage(0x1430, "_logOffsetB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetB", UInt, 0x1230, UInt, oscTypeInt)
+        OnMessage(0x1230, "_logOffsetB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetG", UInt, 0x1431, UInt, oscTypeInt)
-        OnMessage(0x1431, "_logOffsetG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetG", UInt, 0x1229, UInt, oscTypeInt)
+        OnMessage(0x1229, "_logOffsetG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetR", UInt, 0x1432, UInt, oscTypeInt)
-        OnMessage(0x1432, "_logOffsetR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logOffsetR", UInt, 0x1228, UInt, oscTypeInt)
+        OnMessage(0x1228, "_logOffsetR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsB", UInt, 0x1433, UInt, oscTypeInt)
-        OnMessage(0x1433, "_logHighlightsB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsB", UInt, 0x1227, UInt, oscTypeInt)
+        OnMessage(0x1227, "_logHighlightsB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsG", UInt, 0x1434, UInt, oscTypeInt)
-        OnMessage(0x1434, "_logHighlightsG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsG", UInt, 0x1226, UInt, oscTypeInt)
+        OnMessage(0x1226, "_logHighlightsG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsR", UInt, 0x1435, UInt, oscTypeInt)
-        OnMessage(0x1435, "_logHighlightsR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logHighlightsR", UInt, 0x1225, UInt, oscTypeInt)
+        OnMessage(0x1225, "_logHighlightsR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneB", UInt, 0x1436, UInt, oscTypeInt)
-        OnMessage(0x1436, "_logMidtoneB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneB", UInt, 0x1224, UInt, oscTypeInt)
+        OnMessage(0x1224, "_logMidtoneB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneG", UInt, 0x1437, UInt, oscTypeInt)
-        OnMessage(0x1437, "_logMidtoneG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneG", UInt, 0x1223, UInt, oscTypeInt)
+        OnMessage(0x1223, "_logMidtoneG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneR", UInt, 0x1438, UInt, oscTypeInt)
-        OnMessage(0x1438, "_logMidtoneR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logMidtoneR", UInt, 0x1222, UInt, oscTypeInt)
+        OnMessage(0x1222, "_logMidtoneR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowB", UInt, 0x1439, UInt, oscTypeInt)
-        OnMessage(0x1439, "_logShadowB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowB", UInt, 0x1221, UInt, oscTypeInt)
+        OnMessage(0x1221, "_logShadowB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowG", UInt, 0x1440, UInt, oscTypeInt)
-        OnMessage(0x1440, "_logShadowG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowG", UInt, 0x1220, UInt, oscTypeInt)
+        OnMessage(0x1220, "_logShadowG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowR", UInt, 0x1441, UInt, oscTypeInt)
-        OnMessage(0x1441, "_logShadowR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logShadowR", UInt, 0x1219, UInt, oscTypeInt)
+        OnMessage(0x1219, "_logShadowR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logFourthJog", UInt, 0x1442, UInt, oscTypeInt)
-        OnMessage(0x1442, "_logFourthJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logFourthJog", UInt, 0x1218, UInt, oscTypeInt)
+        OnMessage(0x1218, "_logFourthJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logThirdJog", UInt, 0x1443, UInt, oscTypeInt)
-        OnMessage(0x1443, "_logThirdJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logThirdJog", UInt, 0x1217, UInt, oscTypeInt)
+        OnMessage(0x1217, "_logThirdJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logSecondJog", UInt, 0x1444, UInt, oscTypeInt)
-        OnMessage(0x1444, "_logSecondJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logSecondJog", UInt, 0x1216, UInt, oscTypeInt)
+        OnMessage(0x1216, "_logSecondJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logFirstJog", UInt, 0x1445, UInt, oscTypeInt)
-        OnMessage(0x1445, "_logFirstJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logFirstJog", UInt, 0x1215, UInt, oscTypeInt)
+        OnMessage(0x1215, "_logFirstJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logFourthWheelY", UInt, 0x1446, UInt, oscTypeInt)
-        OnMessage(0x1446, "_logFourthWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logFourthWheelY", UInt, 0x1214, UInt, oscTypeInt)
+        OnMessage(0x1214, "_logFourthWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logFourthWheelX", UInt, 0x1447, UInt, oscTypeInt)
-        OnMessage(0x1447, "_logFourthWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logFourthWheelX", UInt, 0x1213, UInt, oscTypeInt)
+        OnMessage(0x1213, "_logFourthWheelX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logThirdWheelY", UInt, 0x1448, UInt, oscTypeInt)
-        OnMessage(0x1448, "_logThirdWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logThirdWheelY", UInt, 0x1212, UInt, oscTypeInt)
+        OnMessage(0x1212, "_logThirdWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logThirdWheelX", UInt, 0x1449, UInt, oscTypeInt)
-        OnMessage(0x1449, "_logThirdWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logThirdWheelX", UInt, 0x1211, UInt, oscTypeInt)
+        OnMessage(0x1211, "_logThirdWheelX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logSecondWheelY", UInt, 0x1450, UInt, oscTypeInt)
-        OnMessage(0x1450, "_logSecondWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logSecondWheelY", UInt, 0x1210, UInt, oscTypeInt)
+        OnMessage(0x1210, "_logSecondWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logSecondWheelX", UInt, 0x1451, UInt, oscTypeInt)
-        OnMessage(0x1451, "_logSecondWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logSecondWheelX", UInt, 0x1209, UInt, oscTypeInt)
+        OnMessage(0x1209, "_logSecondWheelX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logFirstWheelY", UInt, 0x1452, UInt, oscTypeInt)
-        OnMessage(0x1452, "_logFirstWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logFirstWheelY", UInt, 0x1208, UInt, oscTypeInt)
+        OnMessage(0x1208, "_logFirstWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/logFirstWheelX", UInt, 0x1453, UInt, oscTypeInt)
-        OnMessage(0x1453, "_logFirstWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/logFirstWheelX", UInt, 0x1207, UInt, oscTypeInt)
+        OnMessage(0x1207, "_logFirstWheelX")
 
         ;Bars Panel Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsOffsetB", UInt, 0x1454, UInt, oscTypeInt)
-        OnMessage(0x1454, "_barsOffsetB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsOffsetB", UInt, 0x1206, UInt, oscTypeInt)
+        OnMessage(0x1206, "_barsOffsetB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsOffsetG", UInt, 0x1455, UInt, oscTypeInt)
-        OnMessage(0x1455, "_barsOffsetG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsOffsetG", UInt, 0x1205, UInt, oscTypeInt)
+        OnMessage(0x1205, "_barsOffsetG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsOffsetR", UInt, 0x1456, UInt, oscTypeInt)
-        OnMessage(0x1456, "_barsOffsetR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsOffsetR", UInt, 0x1204, UInt, oscTypeInt)
+        OnMessage(0x1204, "_barsOffsetR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainY", UInt, 0x1457, UInt, oscTypeInt)
-        OnMessage(0x1457, "_barsGainY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainY", UInt, 0x1203, UInt, oscTypeInt)
+        OnMessage(0x1203, "_barsGainY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainB", UInt, 0x1458, UInt, oscTypeInt)
-        OnMessage(0x1458, "_barsGainB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainB", UInt, 0x1202, UInt, oscTypeInt)
+        OnMessage(0x1202, "_barsGainB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainG", UInt, 0x1459, UInt, oscTypeInt)
-        OnMessage(0x1459, "_barsGainG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainG", UInt, 0x1201, UInt, oscTypeInt)
+        OnMessage(0x1201, "_barsGainG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainR", UInt, 0x1460, UInt, oscTypeInt)
-        OnMessage(0x1460, "_barsGainR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGainR", UInt, 0x1200, UInt, oscTypeInt)
+        OnMessage(0x1200, "_barsGainR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaB", UInt, 0x1461, UInt, oscTypeInt)
-        OnMessage(0x1461, "_barsGammaB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaB", UInt, 0x1199, UInt, oscTypeInt)
+        OnMessage(0x1199, "_barsGammaB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaG", UInt, 0x1462, UInt, oscTypeInt)
-        OnMessage(0x1462, "_barsGammaG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaG", UInt, 0x1198, UInt, oscTypeInt)
+        OnMessage(0x1198, "_barsGammaG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaR", UInt, 0x1463, UInt, oscTypeInt)
-        OnMessage(0x1463, "_barsGammaR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaR", UInt, 0x1197, UInt, oscTypeInt)
+        OnMessage(0x1197, "_barsGammaR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaY", UInt, 0x1464, UInt, oscTypeInt)
-        OnMessage(0x1464, "_barsGammaY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsGammaY", UInt, 0x1196, UInt, oscTypeInt)
+        OnMessage(0x1196, "_barsGammaY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftY", UInt, 0x1465, UInt, oscTypeInt)
-        OnMessage(0x1465, "_barsLiftY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftY", UInt, 0x1195, UInt, oscTypeInt)
+        OnMessage(0x1195, "_barsLiftY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftB", UInt, 0x1466, UInt, oscTypeInt)
-        OnMessage(0x1466, "_barsLiftB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftB", UInt, 0x1194, UInt, oscTypeInt)
+        OnMessage(0x1194, "_barsLiftB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftG", UInt, 0x1467, UInt, oscTypeInt)
-        OnMessage(0x1467, "_barsLiftG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftG", UInt, 0x1193, UInt, oscTypeInt)
+        OnMessage(0x1193, "_barsLiftG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftR", UInt, 0x1468, UInt, oscTypeInt)
-        OnMessage(0x1468, "_barsLiftR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLiftR", UInt, 0x1192, UInt, oscTypeInt)
+        OnMessage(0x1192, "_barsLiftR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsWhitePointPicker", UInt, 0x1469, UInt, oscTypeInt)
-        OnMessage(0x1469, "_barsWhitePointPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsWhitePointPicker", UInt, 0x1191, UInt, oscTypeInt)
+        OnMessage(0x1191, "_barsWhitePointPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsBlackPointPicker", UInt, 0x1470, UInt, oscTypeInt)
-        OnMessage(0x1470, "_barsBlackPointPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsBlackPointPicker", UInt, 0x1190, UInt, oscTypeInt)
+        OnMessage(0x1190, "_barsBlackPointPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsColorPicker", UInt, 0x1471, UInt, oscTypeInt)
-        OnMessage(0x1471, "_barsColorPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsColorPicker", UInt, 0x1189, UInt, oscTypeInt)
+        OnMessage(0x1189, "_barsColorPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsAWB", UInt, 0x1472, UInt, oscTypeInt)
-        OnMessage(0x1472, "_barsAWB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsAWB", UInt, 0x1188, UInt, oscTypeInt)
+        OnMessage(0x1188, "_barsAWB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetAll", UInt, 0x1473, UInt, oscTypeInt)
-        OnMessage(0x1473, "_barsResetAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetAll", UInt, 0x1187, UInt, oscTypeInt)
+        OnMessage(0x1187, "_barsResetAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetOffset", UInt, 0x1474, UInt, oscTypeInt)
-        OnMessage(0x1474, "_barsResetOffset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetOffset", UInt, 0x1186, UInt, oscTypeInt)
+        OnMessage(0x1186, "_barsResetOffset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetGain", UInt, 0x1475, UInt, oscTypeInt)
-        OnMessage(0x1475, "_barsResetGain")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetGain", UInt, 0x1185, UInt, oscTypeInt)
+        OnMessage(0x1185, "_barsResetGain")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetGamma", UInt, 0x1476, UInt, oscTypeInt)
-        OnMessage(0x1476, "_barsResetGamma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetGamma", UInt, 0x1184, UInt, oscTypeInt)
+        OnMessage(0x1184, "_barsResetGamma")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetLift", UInt, 0x1477, UInt, oscTypeInt)
-        OnMessage(0x1477, "_barsResetLift")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsResetLift", UInt, 0x1183, UInt, oscTypeInt)
+        OnMessage(0x1183, "_barsResetLift")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLumMix", UInt, 0x1478, UInt, oscTypeInt)
-        OnMessage(0x1478, "_barsLumMix")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsLumMix", UInt, 0x1182, UInt, oscTypeInt)
+        OnMessage(0x1182, "_barsLumMix")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsMidDetail", UInt, 0x1479, UInt, oscTypeInt)
-        OnMessage(0x1479, "_barsMidDetail")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsMidDetail", UInt, 0x1181, UInt, oscTypeInt)
+        OnMessage(0x1181, "_barsMidDetail")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsHue", UInt, 0x1480, UInt, oscTypeInt)
-        OnMessage(0x1480, "_barsHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsHue", UInt, 0x1180, UInt, oscTypeInt)
+        OnMessage(0x1180, "_barsHue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsSaturation", UInt, 0x1481, UInt, oscTypeInt)
-        OnMessage(0x1481, "_barsSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsSaturation", UInt, 0x1179, UInt, oscTypeInt)
+        OnMessage(0x1179, "_barsSaturation")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsHighlight", UInt, 0x1482, UInt, oscTypeInt)
-        OnMessage(0x1482, "_barsHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsHighlight", UInt, 0x1178, UInt, oscTypeInt)
+        OnMessage(0x1178, "_barsHighlight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsShadow", UInt, 0x1483, UInt, oscTypeInt)
-        OnMessage(0x1483, "_barsShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsShadow", UInt, 0x1177, UInt, oscTypeInt)
+        OnMessage(0x1177, "_barsShadow")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsCoolBoost", UInt, 0x1484, UInt, oscTypeInt)
-        OnMessage(0x1484, "_barsCoolBoost")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsCoolBoost", UInt, 0x1176, UInt, oscTypeInt)
+        OnMessage(0x1176, "_barsCoolBoost")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsPivot", UInt, 0x1485, UInt, oscTypeInt)
-        OnMessage(0x1485, "_barsPivot")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsPivot", UInt, 0x1175, UInt, oscTypeInt)
+        OnMessage(0x1175, "_barsPivot")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsContrast", UInt, 0x1486, UInt, oscTypeInt)
-        OnMessage(0x1486, "_barsContrast")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsContrast", UInt, 0x1174, UInt, oscTypeInt)
+        OnMessage(0x1174, "_barsContrast")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsTint", UInt, 0x1487, UInt, oscTypeInt)
-        OnMessage(0x1487, "_barsTint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsTint", UInt, 0x1173, UInt, oscTypeInt)
+        OnMessage(0x1173, "_barsTint")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/barsTemperature", UInt, 0x1488, UInt, oscTypeInt)
-        OnMessage(0x1488, "_barsTemperature")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/barsTemperature", UInt, 0x1172, UInt, oscTypeInt)
+        OnMessage(0x1172, "_barsTemperature")
         
         ;Primaries Panel Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesOffsetB", UInt, 0x1489, UInt, oscTypeInt)
-        OnMessage(0x1489, "_primariesOffsetB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesOffsetB", UInt, 0x1171, UInt, oscTypeInt)
+        OnMessage(0x1171, "_primariesOffsetB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesOffsetG", UInt, 0x1490, UInt, oscTypeInt)
-        OnMessage(0x1490, "_primariesOffsetG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesOffsetG", UInt, 0x1170, UInt, oscTypeInt)
+        OnMessage(0x1170, "_primariesOffsetG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesOffsetR", UInt, 0x1491, UInt, oscTypeInt)
-        OnMessage(0x1491, "_primariesOffsetR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesOffsetR", UInt, 0x1169, UInt, oscTypeInt)
+        OnMessage(0x1169, "_primariesOffsetR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainY", UInt, 0x1492, UInt, oscTypeInt)
-        OnMessage(0x1492, "_primariesGainY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainY", UInt, 0x1168, UInt, oscTypeInt)
+        OnMessage(0x1168, "_primariesGainY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainB", UInt, 0x1493, UInt, oscTypeInt)
-        OnMessage(0x1493, "_primariesGainB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainB", UInt, 0x1167, UInt, oscTypeInt)
+        OnMessage(0x1167, "_primariesGainB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainG", UInt, 0x1494, UInt, oscTypeInt)
-        OnMessage(0x1494, "_primariesGainG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainG", UInt, 0x1166, UInt, oscTypeInt)
+        OnMessage(0x1166, "_primariesGainG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainR", UInt, 0x1495, UInt, oscTypeInt)
-        OnMessage(0x1495, "_primariesGainR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGainR", UInt, 0x1165, UInt, oscTypeInt)
+        OnMessage(0x1165, "_primariesGainR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaB", UInt, 0x1496, UInt, oscTypeInt)
-        OnMessage(0x1496, "_primariesGammaB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaB", UInt, 0x1164, UInt, oscTypeInt)
+        OnMessage(0x1164, "_primariesGammaB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaG", UInt, 0x1497, UInt, oscTypeInt)
-        OnMessage(0x1497, "_primariesGammaG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaG", UInt, 0x1163, UInt, oscTypeInt)
+        OnMessage(0x1163, "_primariesGammaG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaR", UInt, 0x1498, UInt, oscTypeInt)
-        OnMessage(0x1498, "_primariesGammaR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaR", UInt, 0x1162, UInt, oscTypeInt)
+        OnMessage(0x1162, "_primariesGammaR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaY", UInt, 0x1499, UInt, oscTypeInt)
-        OnMessage(0x1499, "_primariesGammaY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesGammaY", UInt, 0x1161, UInt, oscTypeInt)
+        OnMessage(0x1161, "_primariesGammaY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftY", UInt, 0x1500, UInt, oscTypeInt)
-        OnMessage(0x1500, "_primariesLiftY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftY", UInt, 0x1160, UInt, oscTypeInt)
+        OnMessage(0x1160, "_primariesLiftY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftB", UInt, 0x1501, UInt, oscTypeInt)
-        OnMessage(0x1501, "_primariesLiftB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftB", UInt, 0x1159, UInt, oscTypeInt)
+        OnMessage(0x1159, "_primariesLiftB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftG", UInt, 0x1502, UInt, oscTypeInt)
-        OnMessage(0x1502, "_primariesLiftG")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftG", UInt, 0x1158, UInt, oscTypeInt)
+        OnMessage(0x1158, "_primariesLiftG")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftR", UInt, 0x1503, UInt, oscTypeInt)
-        OnMessage(0x1503, "_primariesLiftR")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLiftR", UInt, 0x1157, UInt, oscTypeInt)
+        OnMessage(0x1157, "_primariesLiftR")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesWhitePointPicker", UInt, 0x1504, UInt, oscTypeInt)
-        OnMessage(0x1504, "_primariesWhitePointPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesWhitePointPicker", UInt, 0x1156, UInt, oscTypeInt)
+        OnMessage(0x1156, "_primariesWhitePointPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesBlackPointPicker", UInt, 0x1505, UInt, oscTypeInt)
-        OnMessage(0x1505, "_primariesBlackPointPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesBlackPointPicker", UInt, 0x1155, UInt, oscTypeInt)
+        OnMessage(0x1155, "_primariesBlackPointPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesColorPicker", UInt, 0x1506, UInt, oscTypeInt)
-        OnMessage(0x1506, "_primariesColorPicker")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesColorPicker", UInt, 0x1154, UInt, oscTypeInt)
+        OnMessage(0x1154, "_primariesColorPicker")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesAWB", UInt, 0x1507, UInt, oscTypeInt)
-        OnMessage(0x1507, "_primariesAWB")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesAWB", UInt, 0x1153, UInt, oscTypeInt)
+        OnMessage(0x1153, "_primariesAWB")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetAll", UInt, 0x1508, UInt, oscTypeInt)
-        OnMessage(0x1508, "_primariesResetAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetAll", UInt, 0x1152, UInt, oscTypeInt)
+        OnMessage(0x1152, "_primariesResetAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetOffset", UInt, 0x1509, UInt, oscTypeInt)
-        OnMessage(0x1509, "_primariesResetOffset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetOffset", UInt, 0x1151, UInt, oscTypeInt)
+        OnMessage(0x1151, "_primariesResetOffset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetGain", UInt, 0x1510, UInt, oscTypeInt)
-        OnMessage(0x1510, "_primariesResetGain")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetGain", UInt, 0x1150, UInt, oscTypeInt)
+        OnMessage(0x1150, "_primariesResetGain")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetGamma", UInt, 0x1511, UInt, oscTypeInt)
-        OnMessage(0x1511, "_primariesResetGamma")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetGamma", UInt, 0x1149, UInt, oscTypeInt)
+        OnMessage(0x1149, "_primariesResetGamma")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetLift", UInt, 0x1512, UInt, oscTypeInt)
-        OnMessage(0x1512, "_primariesResetLift")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesResetLift", UInt, 0x1148, UInt, oscTypeInt)
+        OnMessage(0x1148, "_primariesResetLift")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLumMix", UInt, 0x1513, UInt, oscTypeInt)
-        OnMessage(0x1513, "_primariesLumMix")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesLumMix", UInt, 0x1147, UInt, oscTypeInt)
+        OnMessage(0x1147, "_primariesLumMix")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesMidDetail", UInt, 0x1514, UInt, oscTypeInt)
-        OnMessage(0x1514, "_primariesMidDetail")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesMidDetail", UInt, 0x1146, UInt, oscTypeInt)
+        OnMessage(0x1146, "_primariesMidDetail")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesHue", UInt, 0x1515, UInt, oscTypeInt)
-        OnMessage(0x1515, "_primariesHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesHue", UInt, 0x1145, UInt, oscTypeInt)
+        OnMessage(0x1145, "_primariesHue")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSaturation", UInt, 0x1516, UInt, oscTypeInt)
-        OnMessage(0x1516, "_primariesSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSaturation", UInt, 0x1144, UInt, oscTypeInt)
+        OnMessage(0x1144, "_primariesSaturation")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesHighlight", UInt, 0x1517, UInt, oscTypeInt)
-        OnMessage(0x1517, "_primariesHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesHighlight", UInt, 0x1143, UInt, oscTypeInt)
+        OnMessage(0x1143, "_primariesHighlight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesShadow", UInt, 0x1518, UInt, oscTypeInt)
-        OnMessage(0x1518, "_primariesShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesShadow", UInt, 0x1142, UInt, oscTypeInt)
+        OnMessage(0x1142, "_primariesShadow")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesCoolBoost", UInt, 0x1519, UInt, oscTypeInt)
-        OnMessage(0x1519, "_primariesCoolBoost")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesCoolBoost", UInt, 0x1141, UInt, oscTypeInt)
+        OnMessage(0x1141, "_primariesCoolBoost")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesPivot", UInt, 0x1520, UInt, oscTypeInt)
-        OnMessage(0x1520, "_primariesPivot")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesPivot", UInt, 0x1140, UInt, oscTypeInt)
+        OnMessage(0x1140, "_primariesPivot")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesContrast", UInt, 0x1521, UInt, oscTypeInt)
-        OnMessage(0x1521, "_primariesContrast")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesContrast", UInt, 0x1139, UInt, oscTypeInt)
+        OnMessage(0x1139, "_primariesContrast")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesTint", UInt, 0x1522, UInt, oscTypeInt)
-        OnMessage(0x1522, "_primariesTint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesTint", UInt, 0x1138, UInt, oscTypeInt)
+        OnMessage(0x1138, "_primariesTint")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesTemperature", UInt, 0x1523, UInt, oscTypeInt)
-        OnMessage(0x1523, "_primariesTemperature")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesTemperature", UInt, 0x1137, UInt, oscTypeInt)
+        OnMessage(0x1137, "_primariesTemperature")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFourthJog", UInt, 0x1524, UInt, oscTypeInt)
-        OnMessage(0x1524, "_primariesFourthJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFourthJog", UInt, 0x1136, UInt, oscTypeInt)
+        OnMessage(0x1136, "_primariesFourthJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesThirdJog", UInt, 0x1525, UInt, oscTypeInt)
-        OnMessage(0x1525, "_primariesThirdJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesThirdJog", UInt, 0x1135, UInt, oscTypeInt)
+        OnMessage(0x1135, "_primariesThirdJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSecondJog", UInt, 0x1526, UInt, oscTypeInt)
-        OnMessage(0x1526, "_primariesSecondJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSecondJog", UInt, 0x1134, UInt, oscTypeInt)
+        OnMessage(0x1134, "_primariesSecondJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFirstJog", UInt, 0x1527, UInt, oscTypeInt)
-        OnMessage(0x1527, "_primariesFirstJog")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFirstJog", UInt, 0x1133, UInt, oscTypeInt)
+        OnMessage(0x1133, "_primariesFirstJog")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFourthWheelY", UInt, 0x1528, UInt, oscTypeInt)
-        OnMessage(0x1528, "_primariesFourthWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFourthWheelY", UInt, 0x1132, UInt, oscTypeInt)
+        OnMessage(0x1132, "_primariesFourthWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFourthWheelX", UInt, 0x1529, UInt, oscTypeInt)
-        OnMessage(0x1529, "_primariesFourthWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFourthWheelX", UInt, 0x1131, UInt, oscTypeInt)
+        OnMessage(0x1131, "_primariesFourthWheelX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesThirdWheelY", UInt, 0x1530, UInt, oscTypeInt)
-        OnMessage(0x1530, "_primariesThirdWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesThirdWheelY", UInt, 0x1130, UInt, oscTypeInt)
+        OnMessage(0x1130, "_primariesThirdWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesThirdWheelX", UInt, 0x1531, UInt, oscTypeInt)
-        OnMessage(0x1531, "_primariesThirdWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesThirdWheelX", UInt, 0x1129, UInt, oscTypeInt)
+        OnMessage(0x1129, "_primariesThirdWheelX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSecondWheelY", UInt, 0x1532, UInt, oscTypeInt)
-        OnMessage(0x1532, "_primariesSecondWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSecondWheelY", UInt, 0x1128, UInt, oscTypeInt)
+        OnMessage(0x1128, "_primariesSecondWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSecondWheelX", UInt, 0x1533, UInt, oscTypeInt)
-        OnMessage(0x1533, "_primariesSecondWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesSecondWheelX", UInt, 0x1127, UInt, oscTypeInt)
+        OnMessage(0x1127, "_primariesSecondWheelX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFirstWheelY", UInt, 0x1534, UInt, oscTypeInt)
-        OnMessage(0x1534, "_primariesFirstWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFirstWheelY", UInt, 0x1126, UInt, oscTypeInt)
+        OnMessage(0x1126, "_primariesFirstWheelY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFirstWheelX", UInt, 0x1535, UInt, oscTypeInt)
-        OnMessage(0x1535, "_primariesFirstWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/primariesFirstWheelX", UInt, 0x1125, UInt, oscTypeInt)
+        OnMessage(0x1125, "_primariesFirstWheelX")
 
         ;HDR Panel Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneFalloff", UInt, 0x1536, UInt, oscTypeInt)
-        OnMessage(0x1536, "_hdrZoneFalloff")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneFalloff", UInt, 0x1124, UInt, oscTypeInt)
+        OnMessage(0x1124, "_hdrZoneFalloff")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneMaxRange", UInt, 0x1537, UInt, oscTypeInt)
-        OnMessage(0x1537, "_hdrZoneMaxRange")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneMaxRange", UInt, 0x1123, UInt, oscTypeInt)
+        OnMessage(0x1123, "_hdrZoneMaxRange")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideSpecular", UInt, 0x1538, UInt, oscTypeInt)
-        OnMessage(0x1538, "_hdrShowHideSpecular")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideSpecular", UInt, 0x1122, UInt, oscTypeInt)
+        OnMessage(0x1122, "_hdrShowHideSpecular")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideHighlight", UInt, 0x1539, UInt, oscTypeInt)
-        OnMessage(0x1539, "_hdrShowHideHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideHighlight", UInt, 0x1121, UInt, oscTypeInt)
+        OnMessage(0x1121, "_hdrShowHideHighlight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideLight", UInt, 0x1540, UInt, oscTypeInt)
-        OnMessage(0x1540, "_hdrShowHideLight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideLight", UInt, 0x1120, UInt, oscTypeInt)
+        OnMessage(0x1120, "_hdrShowHideLight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideShadow", UInt, 0x1541, UInt, oscTypeInt)
-        OnMessage(0x1541, "_hdrShowHideShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideShadow", UInt, 0x1119, UInt, oscTypeInt)
+        OnMessage(0x1119, "_hdrShowHideShadow")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideDark", UInt, 0x1542, UInt, oscTypeInt)
-        OnMessage(0x1542, "_hdrShowHideDark")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideDark", UInt, 0x1118, UInt, oscTypeInt)
+        OnMessage(0x1118, "_hdrShowHideDark")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideBlack", UInt, 0x1543, UInt, oscTypeInt)
-        OnMessage(0x1543, "_hdrShowHideBlack")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrShowHideBlack", UInt, 0x1117, UInt, oscTypeInt)
+        OnMessage(0x1117, "_hdrShowHideBlack")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffSpecular", UInt, 0x1544, UInt, oscTypeInt)
-        OnMessage(0x1544, "_hdrTurnOnOffSpecular")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffSpecular", UInt, 0x1116, UInt, oscTypeInt)
+        OnMessage(0x1116, "_hdrTurnOnOffSpecular")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffHighlight", UInt, 0x1545, UInt, oscTypeInt)
-        OnMessage(0x1545, "_hdrTurnOnOffHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffHighlight", UInt, 0x1115, UInt, oscTypeInt)
+        OnMessage(0x1115, "_hdrTurnOnOffHighlight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffLight", UInt, 0x1546, UInt, oscTypeInt)
-        OnMessage(0x1546, "_hdrTurnOnOffLight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffLight", UInt, 0x1114, UInt, oscTypeInt)
+        OnMessage(0x1114, "_hdrTurnOnOffLight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffShadow", UInt, 0x1547, UInt, oscTypeInt)
-        OnMessage(0x1547, "_hdrTurnOnOffShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffShadow", UInt, 0x1113, UInt, oscTypeInt)
+        OnMessage(0x1113, "_hdrTurnOnOffShadow")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffDark", UInt, 0x1548, UInt, oscTypeInt)
-        OnMessage(0x1548, "_hdrTurnOnOffDark")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffDark", UInt, 0x1112, UInt, oscTypeInt)
+        OnMessage(0x1112, "_hdrTurnOnOffDark")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffBlack", UInt, 0x1549, UInt, oscTypeInt)
-        OnMessage(0x1549, "_hdrTurnOnOffBlack")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTurnOnOffBlack", UInt, 0x1111, UInt, oscTypeInt)
+        OnMessage(0x1111, "_hdrTurnOnOffBlack")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelReset", UInt, 0x1550, UInt, oscTypeInt)
-        OnMessage(0x1550, "_hdrFourthWheelReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelReset", UInt, 0x1110, UInt, oscTypeInt)
+        OnMessage(0x1110, "_hdrFourthWheelReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelReset", UInt, 0x1551, UInt, oscTypeInt)
-        OnMessage(0x1551, "_hdrThirdWheelReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelReset", UInt, 0x1109, UInt, oscTypeInt)
+        OnMessage(0x1109, "_hdrThirdWheelReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelReset", UInt, 0x1552, UInt, oscTypeInt)
-        OnMessage(0x1552, "_hdrSecondWheelReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelReset", UInt, 0x1108, UInt, oscTypeInt)
+        OnMessage(0x1108, "_hdrSecondWheelReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelReset", UInt, 0x1553, UInt, oscTypeInt)
-        OnMessage(0x1553, "_hdrFirstWheelReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelReset", UInt, 0x1107, UInt, oscTypeInt)
+        OnMessage(0x1107, "_hdrFirstWheelReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelHL", UInt, 0x1554, UInt, oscTypeInt)
-        OnMessage(0x1554, "_hdrThirdWheelHL")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelHL", UInt, 0x1106, UInt, oscTypeInt)
+        OnMessage(0x1106, "_hdrThirdWheelHL")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelHL", UInt, 0x1555, UInt, oscTypeInt)
-        OnMessage(0x1555, "_hdrSecondWheelHL")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelHL", UInt, 0x1105, UInt, oscTypeInt)
+        OnMessage(0x1105, "_hdrSecondWheelHL")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelHL", UInt, 0x1556, UInt, oscTypeInt)
-        OnMessage(0x1556, "_hdrFirstWheelHL")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelHL", UInt, 0x1104, UInt, oscTypeInt)
+        OnMessage(0x1104, "_hdrFirstWheelHL")
         
         ;Removed on version 2.4
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/hdrResetZone", UInt, 0x1557, UInt, oscTypeInt)
-        ;OnMessage(0x1557, "_hdrResetZone")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/hdrResetZone", UInt, 0x1103, UInt, oscTypeInt)
+        ;OnMessage(0x1103, "_hdrResetZone")
         ;
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/hdrResetColor", UInt, 0x1558, UInt, oscTypeInt)
-        ;OnMessage(0x1558, "_hdrResetColor")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/hdrResetColor", UInt, 0x1102, UInt, oscTypeInt)
+        ;OnMessage(0x1102, "_hdrResetColor")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrResetAll", UInt, 0x1559, UInt, oscTypeInt)
-        OnMessage(0x1559, "_hdrResetAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrResetAll", UInt, 0x1101, UInt, oscTypeInt)
+        OnMessage(0x1101, "_hdrResetAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrWheelsRight", UInt, 0x1560, UInt, oscTypeInt)
-        OnMessage(0x1560, "_hdrWheelsRight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrWheelsRight", UInt, 0x1100, UInt, oscTypeInt)
+        OnMessage(0x1100, "_hdrWheelsRight")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrWheelsLeft", UInt, 0x1561, UInt, oscTypeInt)
-        OnMessage(0x1561, "_hdrWheelsLeft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrWheelsLeft", UInt, 0x1099, UInt, oscTypeInt)
+        OnMessage(0x1099, "_hdrWheelsLeft")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneSpecular", UInt, 0x1562, UInt, oscTypeInt)
-        OnMessage(0x1562, "_hdrZoneSpecular")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneSpecular", UInt, 0x1097, UInt, oscTypeInt)
+        OnMessage(0x1097, "_hdrZoneSpecular")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneHighlight", UInt, 0x1563, UInt, oscTypeInt)
-        OnMessage(0x1563, "_hdrZoneHighlight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneHighlight", UInt, 0x1096, UInt, oscTypeInt)
+        OnMessage(0x1096, "_hdrZoneHighlight")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneLight", UInt, 0x1564, UInt, oscTypeInt)
-        OnMessage(0x1564, "_hdrZoneLight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneLight", UInt, 0x1095, UInt, oscTypeInt)
+        OnMessage(0x1095, "_hdrZoneLight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneShadow", UInt, 0x1565, UInt, oscTypeInt)
-        OnMessage(0x1565, "_hdrZoneShadow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneShadow", UInt, 0x1094, UInt, oscTypeInt)
+        OnMessage(0x1094, "_hdrZoneShadow")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneDark", UInt, 0x1566, UInt, oscTypeInt)
-        OnMessage(0x1566, "_hdrZoneDark")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneDark", UInt, 0x1093, UInt, oscTypeInt)
+        OnMessage(0x1093, "_hdrZoneDark")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneBlack", UInt, 0x1567, UInt, oscTypeInt)
-        OnMessage(0x1567, "_hdrZoneBlack")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneBlack", UInt, 0x1092, UInt, oscTypeInt)
+        OnMessage(0x1092, "_hdrZoneBlack")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneOpenClose", UInt, 0x1568, UInt, oscTypeInt)
-        OnMessage(0x1568, "_hdrZoneOpenClose")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrZoneOpenClose", UInt, 0x1091, UInt, oscTypeInt)
+        OnMessage(0x1091, "_hdrZoneOpenClose")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrBlackOffset", UInt, 0x1569, UInt, oscTypeInt)
-        OnMessage(0x1569, "_hdrBlackOffset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrBlackOffset", UInt, 0x1090, UInt, oscTypeInt)
+        OnMessage(0x1090, "_hdrBlackOffset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrMD", UInt, 0x1570, UInt, oscTypeInt)
-        OnMessage(0x1570, "_hdrMD")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrMD", UInt, 0x1089, UInt, oscTypeInt)
+        OnMessage(0x1089, "_hdrMD")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrPivot", UInt, 0x1571, UInt, oscTypeInt)
-        OnMessage(0x1571, "_hdrPivot")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrPivot", UInt, 0x1088, UInt, oscTypeInt)
+        OnMessage(0x1088, "_hdrPivot")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrContrast", UInt, 0x1572, UInt, oscTypeInt)
-        OnMessage(0x1572, "_hdrContrast")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrContrast", UInt, 0x1087, UInt, oscTypeInt)
+        OnMessage(0x1087, "_hdrContrast")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrHue", UInt, 0x1573, UInt, oscTypeInt)
-        OnMessage(0x1573, "_hdrHue")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrHue", UInt, 0x1086, UInt, oscTypeInt)
+        OnMessage(0x1086, "_hdrHue")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTint", UInt, 0x1574, UInt, oscTypeInt)
-        OnMessage(0x1574, "_hdrTint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTint", UInt, 0x1085, UInt, oscTypeInt)
+        OnMessage(0x1085, "_hdrTint")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTemperature", UInt, 0x1575, UInt, oscTypeInt)
-        OnMessage(0x1575, "_hdrTemperature")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrTemperature", UInt, 0x1084, UInt, oscTypeInt)
+        OnMessage(0x1084, "_hdrTemperature")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelSaturation", UInt, 0x1576, UInt, oscTypeInt)
-        OnMessage(0x1576, "_hdrFourthWheelSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelSaturation", UInt, 0x1083, UInt, oscTypeInt)
+        OnMessage(0x1083, "_hdrFourthWheelSaturation")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelExposure", UInt, 0x1577, UInt, oscTypeInt)
-        OnMessage(0x1577, "_hdrFourthWheelExposure")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelExposure", UInt, 0x1082, UInt, oscTypeInt)
+        OnMessage(0x1082, "_hdrFourthWheelExposure")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelSaturation", UInt, 0x1578, UInt, oscTypeInt)
-        OnMessage(0x1578, "_hdrThirdWheelSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelSaturation", UInt, 0x1081, UInt, oscTypeInt)
+        OnMessage(0x1081, "_hdrThirdWheelSaturation")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelExposure", UInt, 0x1579, UInt, oscTypeInt)
-        OnMessage(0x1579, "_hdrThirdWheelExposure")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelExposure", UInt, 0x1080, UInt, oscTypeInt)
+        OnMessage(0x1080, "_hdrThirdWheelExposure")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelSaturation", UInt, 0x1580, UInt, oscTypeInt)
-        OnMessage(0x1580, "_hdrSecondWheelSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelSaturation", UInt, 0x1079, UInt, oscTypeInt)
+        OnMessage(0x1079, "_hdrSecondWheelSaturation")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelExposure", UInt, 0x1581, UInt, oscTypeInt)
-        OnMessage(0x1581, "_hdrSecondWheelExposure")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelExposure", UInt, 0x1078, UInt, oscTypeInt)
+        OnMessage(0x1078, "_hdrSecondWheelExposure")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelSaturation", UInt, 0x1582, UInt, oscTypeInt)
-        OnMessage(0x1582, "_hdrFirstWheelSaturation")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelSaturation", UInt, 0x1077, UInt, oscTypeInt)
+        OnMessage(0x1077, "_hdrFirstWheelSaturation")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelExposure", UInt, 0x1583, UInt, oscTypeInt)
-        OnMessage(0x1583, "_hdrFirstWheelExposure")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelExposure", UInt, 0x1076, UInt, oscTypeInt)
+        OnMessage(0x1076, "_hdrFirstWheelExposure")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/jogHDRFourthWheel", UInt, 0x1584, UInt, oscTypeInt)
-        OnMessage(0x1584, "_jogHDRFourthWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/jogHDRFourthWheel", UInt, 0x1075, UInt, oscTypeInt)
+        OnMessage(0x1075, "_jogHDRFourthWheel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFalloffThirdWheel", UInt, 0x1585, UInt, oscTypeInt)
-        OnMessage(0x1585, "_hdrFalloffThirdWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFalloffThirdWheel", UInt, 0x1074, UInt, oscTypeInt)
+        OnMessage(0x1074, "_hdrFalloffThirdWheel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFalloffSecondWheel", UInt, 0x1586, UInt, oscTypeInt)
-        OnMessage(0x1586, "_hdrFalloffSecondWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFalloffSecondWheel", UInt, 0x1073, UInt, oscTypeInt)
+        OnMessage(0x1073, "_hdrFalloffSecondWheel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFalloffFirstWheel", UInt, 0x1587, UInt, oscTypeInt)
-        OnMessage(0x1587, "_hdrFalloffFirstWheel")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFalloffFirstWheel", UInt, 0x1072, UInt, oscTypeInt)
+        OnMessage(0x1072, "_hdrFalloffFirstWheel")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelY", UInt, 0x1588, UInt, oscTypeInt)
-        OnMessage(0x1588, "_hdrFourthWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelY", UInt, 0x1071, UInt, oscTypeInt)
+        OnMessage(0x1071, "_hdrFourthWheelY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelX", UInt, 0x1589, UInt, oscTypeInt)
-        OnMessage(0x1589, "_hdrFourthWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFourthWheelX", UInt, 0x1070, UInt, oscTypeInt)
+        OnMessage(0x1070, "_hdrFourthWheelX")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelY", UInt, 0x1590, UInt, oscTypeInt)
-        OnMessage(0x1590, "_hdrThirdWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelY", UInt, 0x1069, UInt, oscTypeInt)
+        OnMessage(0x1069, "_hdrThirdWheelY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelX", UInt, 0x1591, UInt, oscTypeInt)
-        OnMessage(0x1591, "_hdrThirdWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrThirdWheelX", UInt, 0x1068, UInt, oscTypeInt)
+        OnMessage(0x1068, "_hdrThirdWheelX")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelY", UInt, 0x1592, UInt, oscTypeInt)
-        OnMessage(0x1592, "_hdrSecondWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelY", UInt, 0x1067, UInt, oscTypeInt)
+        OnMessage(0x1067, "_hdrSecondWheelY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelX", UInt, 0x1593, UInt, oscTypeInt)
-        OnMessage(0x1593, "_hdrSecondWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrSecondWheelX", UInt, 0x1066, UInt, oscTypeInt)
+        OnMessage(0x1066, "_hdrSecondWheelX")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelY", UInt, 0x1594, UInt, oscTypeInt)
-        OnMessage(0x1594, "_hdrFirstWheelY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelY", UInt, 0x1065, UInt, oscTypeInt)
+        OnMessage(0x1065, "_hdrFirstWheelY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelX", UInt, 0x1595, UInt, oscTypeInt)
-        OnMessage(0x1595, "_hdrFirstWheelX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/hdrFirstWheelX", UInt, 0x1064, UInt, oscTypeInt)
+        OnMessage(0x1064, "_hdrFirstWheelX")
 
         ;Inspector Panel Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorLinkUnlinkZoom", UInt, 0x1596, UInt, oscTypeInt)
-        OnMessage(0x1596, "_inspectorLinkUnlinkZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorLinkUnlinkZoom", UInt, 0x1060, UInt, oscTypeInt)
+        OnMessage(0x1060, "_inspectorLinkUnlinkZoom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAudioReset", UInt, 0x1597, UInt, oscTypeInt)
-        OnMessage(0x1597, "_inspectorAudioReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAudioReset", UInt, 0x1059, UInt, oscTypeInt)
+        OnMessage(0x1059, "_inspectorAudioReset")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorTransformReset", UInt, 0x1598, UInt, oscTypeInt)
-        OnMessage(0x1598, "_inspectorTransformReset")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorTransformReset", UInt, 0x1058, UInt, oscTypeInt)
+        OnMessage(0x1058, "_inspectorTransformReset")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAudioVolume", UInt, 0x1599, UInt, oscTypeInt)
-        OnMessage(0x1599, "_inspectorAudioVolume")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAudioVolume", UInt, 0x1057, UInt, oscTypeInt)
+        OnMessage(0x1057, "_inspectorAudioVolume")
 
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/openInspectorAudio", UInt, 0x1600, UInt, oscTypeInt)
-        ;OnMessage(0x1600, "_openInspectorAudio")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/openInspectorAudio", UInt, 0x1056, UInt, oscTypeInt)
+        ;OnMessage(0x1056, "_openInspectorAudio")
 
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/openInspectorVideo", UInt, 0x1601, UInt, oscTypeInt)
-        ;OnMessage(0x1601, "_openInspectorVideo")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/openInspectorVideo", UInt, 0x1055, UInt, oscTypeInt)
+        ;OnMessage(0x1055, "_openInspectorVideo")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorFlip", UInt, 0x1602, UInt, oscTypeInt)
-        OnMessage(0x1602, "_inspectorFlip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorFlip", UInt, 0x1054, UInt, oscTypeInt)
+        OnMessage(0x1054, "_inspectorFlip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorYaw", UInt, 0x1603, UInt, oscTypeInt)
-        OnMessage(0x1603, "_inspectorYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorYaw", UInt, 0x1053, UInt, oscTypeInt)
+        OnMessage(0x1053, "_inspectorYaw")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAnchorPointY", UInt, 0x1604, UInt, oscTypeInt)
-        OnMessage(0x1604, "_inspectorAnchorPointY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAnchorPointY", UInt, 0x1052, UInt, oscTypeInt)
+        OnMessage(0x1052, "_inspectorAnchorPointY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAnchorPointX", UInt, 0x1605, UInt, oscTypeInt)
-        OnMessage(0x1605, "_inspectorAnchorPointX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorAnchorPointX", UInt, 0x1051, UInt, oscTypeInt)
+        OnMessage(0x1051, "_inspectorAnchorPointX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorPitch", UInt, 0x1606, UInt, oscTypeInt)
-        OnMessage(0x1606, "_inspectorPitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorPitch", UInt, 0x1050, UInt, oscTypeInt)
+        OnMessage(0x1050, "_inspectorPitch")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorPositionY", UInt, 0x1607, UInt, oscTypeInt)
-        OnMessage(0x1607, "_inspectorPositionY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorPositionY", UInt, 0x1049, UInt, oscTypeInt)
+        OnMessage(0x1049, "_inspectorPositionY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorPositionX", UInt, 0x1608, UInt, oscTypeInt)
-        OnMessage(0x1608, "_inspectorPositionX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorPositionX", UInt, 0x1048, UInt, oscTypeInt)
+        OnMessage(0x1048, "_inspectorPositionX")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorRotationAngle", UInt, 0x1609, UInt, oscTypeInt)
-        OnMessage(0x1609, "_inspectorRotationAngle")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorRotationAngle", UInt, 0x1047, UInt, oscTypeInt)
+        OnMessage(0x1047, "_inspectorRotationAngle")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorZoomY", UInt, 0x1610, UInt, oscTypeInt)
-        OnMessage(0x1610, "_inspectorZoomY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorZoomY", UInt, 0x1046, UInt, oscTypeInt)
+        OnMessage(0x1046, "_inspectorZoomY")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorZoomX", UInt, 0x1611, UInt, oscTypeInt)
-        OnMessage(0x1611, "_inspectorZoomX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inspectorZoomX", UInt, 0x1045, UInt, oscTypeInt)
+        OnMessage(0x1045, "_inspectorZoomX")
         
         ;Removed Function
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/goToInspectorWindow", UInt, 0x1612, UInt, oscTypeInt)
-        ;OnMessage(0x1612, "_goToInspectorWindow")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/goToInspectorWindow", UInt, 0x1044, UInt, oscTypeInt)
+        ;OnMessage(0x1044, "_goToInspectorWindow")
         
         ;Edit Panel Listeners
-        DllCall("OSC2AHK.dll\addListener", AStr, "/inOut", UInt, 0x1613, UInt, oscTypeInt)
-        OnMessage(0x1613, "_inOut")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/inOut", UInt, 0x1098, UInt, oscTypeInt)
+        OnMessage(0x1098, "_inOut")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/clipEditPointFrameStep", UInt, 0x1614, UInt, oscTypeInt)
-        OnMessage(0x1614, "_clipEditPointFrameStep")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/clipEditPointFrameStep", UInt, 0x1063, UInt, oscTypeInt)
+        OnMessage(0x1063, "_clipEditPointFrameStep")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/moveTimeline", UInt, 0x1615, UInt, oscTypeInt)
-        OnMessage(0x1615, "_moveTimeline")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/moveTimeline", UInt, 0x1062, UInt, oscTypeInt)
+        OnMessage(0x1062, "_moveTimeline")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineZoom", UInt, 0x1616, UInt, oscTypeInt)
-        OnMessage(0x1616, "_timelineZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/timelineZoom", UInt, 0x1061, UInt, oscTypeInt)
+        OnMessage(0x1061, "_timelineZoom")
 
         ;Removed Function
-        ;DllCall("OSC2AHK.dll\addListener", AStr, "/enterEditMode", UInt, 0x1617, UInt, oscTypeInt)
-        ;OnMessage(0x1617, "_enterEditMode")
+        ;DllCall("OSC2AHK.dll\addListener", AStr, "/enterEditMode", UInt, 0x1043, UInt, oscTypeInt)
+        ;OnMessage(0x1043, "_enterEditMode")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/changeEditActiveWindow", UInt, 0x1618, UInt, oscTypeInt)
-        OnMessage(0x1618, "_changeEditActiveWindow")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/changeEditActiveWindow", UInt, 0x1042, UInt, oscTypeInt)
+        OnMessage(0x1042, "_changeEditActiveWindow")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseRightExpander", UInt, 0x1619, UInt, oscTypeInt)
-        OnMessage(0x1619, "_openCloseRightExpander")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseRightExpander", UInt, 0x1041, UInt, oscTypeInt)
+        OnMessage(0x1041, "_openCloseRightExpander")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseInspector", UInt, 0x1620, UInt, oscTypeInt)
-        OnMessage(0x1620, "_openCloseInspector")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseInspector", UInt, 0x1040, UInt, oscTypeInt)
+        OnMessage(0x1040, "_openCloseInspector")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseMetadata", UInt, 0x1621, UInt, oscTypeInt)
-        OnMessage(0x1621, "_openCloseMetadata")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseMetadata", UInt, 0x1039, UInt, oscTypeInt)
+        OnMessage(0x1039, "_openCloseMetadata")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseMixer", UInt, 0x1622, UInt, oscTypeInt)
-        OnMessage(0x1622, "_openCloseMixer")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseMixer", UInt, 0x1038, UInt, oscTypeInt)
+        OnMessage(0x1038, "_openCloseMixer")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseSoundLibrary", UInt, 0x1623, UInt, oscTypeInt)
-        OnMessage(0x1623, "_openCloseSoundLibrary")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseSoundLibrary", UInt, 0x1037, UInt, oscTypeInt)
+        OnMessage(0x1037, "_openCloseSoundLibrary")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseEditIndex", UInt, 0x1624, UInt, oscTypeInt)
-        OnMessage(0x1624, "_openCloseEditIndex")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseEditIndex", UInt, 0x1036, UInt, oscTypeInt)
+        OnMessage(0x1036, "_openCloseEditIndex")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseEffectsLibrary", UInt, 0x1625, UInt, oscTypeInt)
-        OnMessage(0x1625, "_openCloseEffectsLibrary")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseEffectsLibrary", UInt, 0x1035, UInt, oscTypeInt)
+        OnMessage(0x1035, "_openCloseEffectsLibrary")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseMediaPool", UInt, 0x1626, UInt, oscTypeInt)
-        OnMessage(0x1626, "_openCloseMediaPool")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseMediaPool", UInt, 0x1034, UInt, oscTypeInt)
+        OnMessage(0x1034, "_openCloseMediaPool")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseLeftExpander", UInt, 0x1627, UInt, oscTypeInt)
-        OnMessage(0x1627, "_openCloseLeftExpander")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/openCloseLeftExpander", UInt, 0x1033, UInt, oscTypeInt)
+        OnMessage(0x1033, "_openCloseLeftExpander")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/addClipToTheEnd", UInt, 0x1628, UInt, oscTypeInt)
-        OnMessage(0x1628, "_addClipToTheEnd")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/addClipToTheEnd", UInt, 0x1032, UInt, oscTypeInt)
+        OnMessage(0x1032, "_addClipToTheEnd")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/fitToFillClip", UInt, 0x1629, UInt, oscTypeInt)
-        OnMessage(0x1629, "_fitToFillClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/fitToFillClip", UInt, 0x1031, UInt, oscTypeInt)
+        OnMessage(0x1031, "_fitToFillClip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/rippleOverwriteClip", UInt, 0x1630, UInt, oscTypeInt)
-        OnMessage(0x1630, "_rippleOverwriteClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/rippleOverwriteClip", UInt, 0x1030, UInt, oscTypeInt)
+        OnMessage(0x1030, "_rippleOverwriteClip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/replaceClip", UInt, 0x1631, UInt, oscTypeInt)
-        OnMessage(0x1631, "_replaceClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/replaceClip", UInt, 0x1029, UInt, oscTypeInt)
+        OnMessage(0x1029, "_replaceClip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/overwriteClip", UInt, 0x1632, UInt, oscTypeInt)
-        OnMessage(0x1632, "_overwriteClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/overwriteClip", UInt, 0x1028, UInt, oscTypeInt)
+        OnMessage(0x1028, "_overwriteClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/insertClip", UInt, 0x1633, UInt, oscTypeInt)
-        OnMessage(0x1633, "_insertClip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/insertClip", UInt, 0x1027, UInt, oscTypeInt)
+        OnMessage(0x1027, "_insertClip")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/bladeTool", UInt, 0x1634, UInt, oscTypeInt)
-        OnMessage(0x1634, "_bladeTool")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/bladeTool", UInt, 0x1026, UInt, oscTypeInt)
+        OnMessage(0x1026, "_bladeTool")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trimTool", UInt, 0x1635, UInt, oscTypeInt)
-        OnMessage(0x1635, "_trimTool")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trimTool", UInt, 0x1025, UInt, oscTypeInt)
+        OnMessage(0x1025, "_trimTool")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/selectionTool", UInt, 0x1636, UInt, oscTypeInt)
-        OnMessage(0x1636, "_selectionTool")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/selectionTool", UInt, 0x1024, UInt, oscTypeInt)
+        OnMessage(0x1024, "_selectionTool")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/altUpDown", UInt, 0x1637, UInt, oscTypeInt)
-        OnMessage(0x1637, "_altUpDown")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/altUpDown", UInt, 0x1023, UInt, oscTypeInt)
+        OnMessage(0x1023, "_altUpDown")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/leftRightEnter", UInt, 0x1638, UInt, oscTypeInt)
-        OnMessage(0x1638, "_leftRightEnter")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/leftRightEnter", UInt, 0x1022, UInt, oscTypeInt)
+        OnMessage(0x1022, "_leftRightEnter")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/upDownEnter", UInt, 0x1639, UInt, oscTypeInt)
-        OnMessage(0x1639, "_upDownEnter")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/upDownEnter", UInt, 0x1021, UInt, oscTypeInt)
+        OnMessage(0x1021, "_upDownEnter")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/selectFwBwActiveTrack", UInt, 0x1640, UInt, oscTypeInt)
-        OnMessage(0x1640, "_selectFwBwActiveTrack")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/selectFwBwActiveTrack", UInt, 0x1020, UInt, oscTypeInt)
+        OnMessage(0x1020, "_selectFwBwActiveTrack")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/homeEnd", UInt, 0x1641, UInt, oscTypeInt)
-        OnMessage(0x1641, "_homeEnd")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/homeEnd", UInt, 0x1019, UInt, oscTypeInt)
+        OnMessage(0x1019, "_homeEnd")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cut", UInt, 0x1642, UInt, oscTypeInt)
-        OnMessage(0x1642, "_cut")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cut", UInt, 0x1018, UInt, oscTypeInt)
+        OnMessage(0x1018, "_cut")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/addAVTransitions", UInt, 0x1643, UInt, oscTypeInt)
-        OnMessage(0x1643, "_addAVTransitions")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/addAVTransitions", UInt, 0x1017, UInt, oscTypeInt)
+        OnMessage(0x1017, "_addAVTransitions")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/retimeClipSpeed", UInt, 0x1644, UInt, oscTypeInt)
-        OnMessage(0x1644, "_retimeClipSpeed")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/retimeClipSpeed", UInt, 0x1016, UInt, oscTypeInt)
+        OnMessage(0x1016, "_retimeClipSpeed")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/swapClips", UInt, 0x1645, UInt, oscTypeInt)
-        OnMessage(0x1645, "_swapClips")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/swapClips", UInt, 0x1015, UInt, oscTypeInt)
+        OnMessage(0x1015, "_swapClips")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/selectDeselectAll", UInt, 0x1646, UInt, oscTypeInt)
-        OnMessage(0x1646, "_selectDeselectAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/selectDeselectAll", UInt, 0x1014, UInt, oscTypeInt)
+        OnMessage(0x1014, "_selectDeselectAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/selectForwardBackward", UInt, 0x1647, UInt, oscTypeInt)
-        OnMessage(0x1647, "_selectForwardBackward")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/selectForwardBackward", UInt, 0x1013, UInt, oscTypeInt)
+        OnMessage(0x1013, "_selectForwardBackward")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/addRemoveSetMark", UInt, 0x1648, UInt, oscTypeInt)
-        OnMessage(0x1648, "_addRemoveSetMark")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/addRemoveSetMark", UInt, 0x1012, UInt, oscTypeInt)
+        OnMessage(0x1012, "_addRemoveSetMark")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/saveProject", UInt, 0x1649, UInt, oscTypeInt)
-        OnMessage(0x1649, "_saveProject")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/saveProject", UInt, 0x1010, UInt, oscTypeInt)
+        OnMessage(0x1010, "_saveProject")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/toggleFullscreen", UInt, 0x1650, UInt, oscTypeInt)
-        OnMessage(0x1650, "_toggleFullscreen")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/toggleFullscreen", UInt, 0x1009, UInt, oscTypeInt)
+        OnMessage(0x1009, "_toggleFullscreen")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteAttributes", UInt, 0x1651, UInt, oscTypeInt)
-        OnMessage(0x1651, "_pasteAttributes")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteAttributes", UInt, 0x1008, UInt, oscTypeInt)
+        OnMessage(0x1008, "_pasteAttributes")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/linkUnlinkClips", UInt, 0x1652, UInt, oscTypeInt)
-        OnMessage(0x1652, "_linkUnlinkClips")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/linkUnlinkClips", UInt, 0x1007, UInt, oscTypeInt)
+        OnMessage(0x1007, "_linkUnlinkClips")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteKnob", UInt, 0x1653, UInt, oscTypeInt)
-        OnMessage(0x1653, "_pasteKnob")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/pasteKnob", UInt, 0x1006, UInt, oscTypeInt)
+        OnMessage(0x1006, "_pasteKnob")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/closestEditPoint", UInt, 0x1654, UInt, oscTypeInt)
-        OnMessage(0x1654, "_closestEditPoint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/closestEditPoint", UInt, 0x1005, UInt, oscTypeInt)
+        OnMessage(0x1005, "_closestEditPoint")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/closestClipGap", UInt, 0x1655, UInt, oscTypeInt)
-        OnMessage(0x1655, "_closestClipGap")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/closestClipGap", UInt, 0x1004, UInt, oscTypeInt)
+        OnMessage(0x1004, "_closestClipGap")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/delEndToPlayhead", UInt, 0x1656, UInt, oscTypeInt)
-        OnMessage(0x1656, "_delEndToPlayhead")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/delEndToPlayhead", UInt, 0x1003, UInt, oscTypeInt)
+        OnMessage(0x1003, "_delEndToPlayhead")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/delStartToPlayhead", UInt, 0x1657, UInt, oscTypeInt)
-        OnMessage(0x1657, "_delStartToPlayhead")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/delStartToPlayhead", UInt, 0x1002, UInt, oscTypeInt)
+        OnMessage(0x1002, "_delStartToPlayhead")
         
-        DllCall("OSC2AHK.dll\addListener", AStr, "/cutAllTimelines", UInt, 0x1658, UInt, oscTypeInt)
-        OnMessage(0x1658, "_cutAllTimelines")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/cutAllTimelines", UInt, 0x1001, UInt, oscTypeInt)
+        OnMessage(0x1001, "_cutAllTimelines")
         
         ;Update 2.5 Listeners - Tracking and Sizing
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingToggleClipFrame", UInt, 0x1659, oscTypeInt)
-        OnMessage(0x1659, "_trackingToggleClipFrame")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingToggleClipFrame", UInt, 0x1589, oscTypeInt)
+        OnMessage(0x1589, "_trackingToggleClipFrame")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingToggleWindowFX", UInt, 0x1660, oscTypeInt)
-        OnMessage(0x1660, "_trackingToggleWindowFX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingToggleWindowFX", UInt, 0x1590, oscTypeInt)
+        OnMessage(0x1590, "_trackingToggleWindowFX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingStepFramesTrack", UInt, 0x1661, oscTypeInt)
-        OnMessage(0x1661, "_trackingStepFramesTrack")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingStepFramesTrack", UInt, 0x1591, oscTypeInt)
+        OnMessage(0x1591, "_trackingStepFramesTrack")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTrackReverse", UInt, 0x1662, oscTypeInt)
-        OnMessage(0x1662, "_trackingTrackReverse")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTrackReverse", UInt, 0x1592, oscTypeInt)
+        OnMessage(0x1592, "_trackingTrackReverse")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingStopTracking", UInt, 0x1663, oscTypeInt)
-        OnMessage(0x1663, "_trackingStopTracking")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingStopTracking", UInt, 0x1593, oscTypeInt)
+        OnMessage(0x1593, "_trackingStopTracking")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTrackForward", UInt, 0x1664, oscTypeInt)
-        OnMessage(0x1664, "_trackingTrackForward")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTrackForward", UInt, 0x1594, oscTypeInt)
+        OnMessage(0x1594, "_trackingTrackForward")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTrackReverseForward", UInt, 0x1665, oscTypeInt)
-        OnMessage(0x1665, "_trackingTrackReverseForward")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTrackReverseForward", UInt, 0x1595, oscTypeInt)
+        OnMessage(0x1595, "_trackingTrackReverseForward")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingAddPoint", UInt, 0x1666, oscTypeInt)
-        OnMessage(0x1666, "_trackingAddPoint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingAddPoint", UInt, 0x1596, oscTypeInt)
+        OnMessage(0x1596, "_trackingAddPoint")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingRemovePoint", UInt, 0x1667, oscTypeInt)
-        OnMessage(0x1667, "_trackingRemovePoint")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingRemovePoint", UInt, 0x1597, oscTypeInt)
+        OnMessage(0x1597, "_trackingRemovePoint")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingPreviousKeyframe", UInt, 0x1668, oscTypeInt)
-        OnMessage(0x1668, "_trackingPreviousKeyframe")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingPreviousKeyframe", UInt, 0x1598, oscTypeInt)
+        OnMessage(0x1598, "_trackingPreviousKeyframe")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingAddKeyframe", UInt, 0x1669, oscTypeInt)
-        OnMessage(0x1669, "_trackingAddKeyframe")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingAddKeyframe", UInt, 0x1599, oscTypeInt)
+        OnMessage(0x1599, "_trackingAddKeyframe")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingNextKeyframe", UInt, 0x1670, oscTypeInt)
-        OnMessage(0x1670, "_trackingNextKeyframe")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingNextKeyframe", UInt, 0x1600, oscTypeInt)
+        OnMessage(0x1600, "_trackingNextKeyframe")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingPan", UInt, 0x1671, oscTypeInt)
-        OnMessage(0x1671, "_trackingPan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingPan", UInt, 0x1601, oscTypeInt)
+        OnMessage(0x1601, "_trackingPan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTilt", UInt, 0x1672, oscTypeInt)
-        OnMessage(0x1672, "_trackingTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingTilt", UInt, 0x1602, oscTypeInt)
+        OnMessage(0x1602, "_trackingTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingZoom", UInt, 0x1673, oscTypeInt)
-        OnMessage(0x1673, "_trackingZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingZoom", UInt, 0x1603, oscTypeInt)
+        OnMessage(0x1603, "_trackingZoom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingRotate", UInt, 0x1674, oscTypeInt)
-        OnMessage(0x1674, "_trackingRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingRotate", UInt, 0x1604, oscTypeInt)
+        OnMessage(0x1604, "_trackingRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/tracking3D", UInt, 0x1675, oscTypeInt)
-        OnMessage(0x1675, "_tracking3D")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/tracking3D", UInt, 0x1605, oscTypeInt)
+        OnMessage(0x1605, "_tracking3D")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingShowTracking", UInt, 0x1676, oscTypeInt)
-        OnMessage(0x1676, "_trackingShowTracking")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingShowTracking", UInt, 0x1606, oscTypeInt)
+        OnMessage(0x1606, "_trackingShowTracking")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingCopyData", UInt, 0x1677, oscTypeInt)
-        OnMessage(0x1677, "_trackingCopyData")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingCopyData", UInt, 0x1607, oscTypeInt)
+        OnMessage(0x1607, "_trackingCopyData")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingPasteData", UInt, 0x1678, oscTypeInt)
-        OnMessage(0x1678, "_trackingPasteData")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingPasteData", UInt, 0x1608, oscTypeInt)
+        OnMessage(0x1608, "_trackingPasteData")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingResetAll", UInt, 0x1679, oscTypeInt)
-        OnMessage(0x1679, "_trackingResetAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/trackingResetAll", UInt, 0x1609, oscTypeInt)
+        OnMessage(0x1609, "_trackingResetAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeEdit", UInt, 0x1680, oscTypeInt)
-        OnMessage(0x1680, "_sizingModeEdit")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeEdit", UInt, 0x1610, oscTypeInt)
+        OnMessage(0x1610, "_sizingModeEdit")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeInput", UInt, 0x1681, oscTypeInt)
-        OnMessage(0x1681, "_sizingModeInput")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeInput", UInt, 0x1611, oscTypeInt)
+        OnMessage(0x1611, "_sizingModeInput")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeOutput", UInt, 0x1682, oscTypeInt)
-        OnMessage(0x1682, "_sizingModeOutput")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeOutput", UInt, 0x1612, oscTypeInt)
+        OnMessage(0x1612, "_sizingModeOutput")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeNode", UInt, 0x1683, oscTypeInt)
-        OnMessage(0x1683, "_sizingModeNode")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeNode", UInt, 0x1613, oscTypeInt)
+        OnMessage(0x1613, "_sizingModeNode")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeReference", UInt, 0x1684, oscTypeInt)
-        OnMessage(0x1684, "_sizingModeReference")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingModeReference", UInt, 0x1614, oscTypeInt)
+        OnMessage(0x1614, "_sizingModeReference")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingResetAll", UInt, 0x1685, oscTypeInt)
-        OnMessage(0x1685, "_sizingResetAll")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingResetAll", UInt, 0x1615, oscTypeInt)
+        OnMessage(0x1615, "_sizingResetAll")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditPan", UInt, 0x1686, oscTypeInt)
-        OnMessage(0x1686, "_sizingEditPan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditPan", UInt, 0x1616, oscTypeInt)
+        OnMessage(0x1616, "_sizingEditPan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropLeft", UInt, 0x1687, oscTypeInt)
-        OnMessage(0x1687, "_sizingEditCropLeft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropLeft", UInt, 0x1617, oscTypeInt)
+        OnMessage(0x1617, "_sizingEditCropLeft")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditTilt", UInt, 0x1688, oscTypeInt)
-        OnMessage(0x1688, "_sizingEditTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditTilt", UInt, 0x1618, oscTypeInt)
+        OnMessage(0x1618, "_sizingEditTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropRight", UInt, 0x1689, oscTypeInt)
-        OnMessage(0x1689, "_sizingEditCropRight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropRight", UInt, 0x1619, oscTypeInt)
+        OnMessage(0x1619, "_sizingEditCropRight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditRotate", UInt, 0x1690, oscTypeInt)
-        OnMessage(0x1690, "_sizingEditRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditRotate", UInt, 0x1620, oscTypeInt)
+        OnMessage(0x1620, "_sizingEditRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropTop", UInt, 0x1691, oscTypeInt)
-        OnMessage(0x1691, "_sizingEditCropTop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropTop", UInt, 0x1621, oscTypeInt)
+        OnMessage(0x1621, "_sizingEditCropTop")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditDistortion", UInt, 0x1692, oscTypeInt)
-        OnMessage(0x1692, "_sizingEditDistortion")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditDistortion", UInt, 0x1622, oscTypeInt)
+        OnMessage(0x1622, "_sizingEditDistortion")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropBottom", UInt, 0x1693, oscTypeInt)
-        OnMessage(0x1693, "_sizingEditCropBottom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditCropBottom", UInt, 0x1623, oscTypeInt)
+        OnMessage(0x1623, "_sizingEditCropBottom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditFlip", UInt, 0x1694, oscTypeInt)
-        OnMessage(0x1694, "_sizingEditFlip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditFlip", UInt, 0x1624, oscTypeInt)
+        OnMessage(0x1624, "_sizingEditFlip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditZoomX", UInt, 0x1695, oscTypeInt)
-        OnMessage(0x1695, "_sizingEditZoomX")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditZoomX", UInt, 0x1625, oscTypeInt)
+        OnMessage(0x1625, "_sizingEditZoomX")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditSoftness", UInt, 0x1696, oscTypeInt)
-        OnMessage(0x1696, "_sizingEditSoftness")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditSoftness", UInt, 0x1626, oscTypeInt)
+        OnMessage(0x1626, "_sizingEditSoftness")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditZoomY", UInt, 0x1697, oscTypeInt)
-        OnMessage(0x1697, "_sizingEditZoomY")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditZoomY", UInt, 0x1627, oscTypeInt)
+        OnMessage(0x1627, "_sizingEditZoomY")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditPitch", UInt, 0x1698, oscTypeInt)
-        OnMessage(0x1698, "_sizingEditPitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditPitch", UInt, 0x1628, oscTypeInt)
+        OnMessage(0x1628, "_sizingEditPitch")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditYaw", UInt, 0x1699, oscTypeInt)
-        OnMessage(0x1699, "_sizingEditYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditYaw", UInt, 0x1629, oscTypeInt)
+        OnMessage(0x1629, "_sizingEditYaw")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditLensCorrection", UInt, 0x1700, oscTypeInt)
-        OnMessage(0x1700, "_sizingEditLensCorrection")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditLensCorrection", UInt, 0x1630, oscTypeInt)
+        OnMessage(0x1630, "_sizingEditLensCorrection")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditResetSizing", UInt, 0x1701, oscTypeInt)
-        OnMessage(0x1701, "_sizingEditResetSizing")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditResetSizing", UInt, 0x1631, oscTypeInt)
+        OnMessage(0x1631, "_sizingEditResetSizing")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditResetCrop", UInt, 0x1702, oscTypeInt)
-        OnMessage(0x1702, "_sizingEditResetCrop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingEditResetCropBlanking", UInt, 0x1632, oscTypeInt)
+        OnMessage(0x1632, "_sizingEditResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputPan", UInt, 0x1703, oscTypeInt)
-        OnMessage(0x1703, "_sizingInputPan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputPan", UInt, 0x1633, oscTypeInt)
+        OnMessage(0x1633, "_sizingInputPan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingTop", UInt, 0x1704, oscTypeInt)
-        OnMessage(0x1704, "_sizingInputBlankingTop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingTop", UInt, 0x1634, oscTypeInt)
+        OnMessage(0x1634, "_sizingInputBlankingTop")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputTilt", UInt, 0x1705, oscTypeInt)
-        OnMessage(0x1705, "_sizingInputTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputTilt", UInt, 0x1635, oscTypeInt)
+        OnMessage(0x1635, "_sizingInputTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingRight", UInt, 0x1706, oscTypeInt)
-        OnMessage(0x1706, "_sizingInputBlankingRight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingRight", UInt, 0x1636, oscTypeInt)
+        OnMessage(0x1636, "_sizingInputBlankingRight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputZoom", UInt, 0x1707, oscTypeInt)
-        OnMessage(0x1707, "_sizingInputZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputZoom", UInt, 0x1637, oscTypeInt)
+        OnMessage(0x1637, "_sizingInputZoom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingBottom", UInt, 0x1708, oscTypeInt)
-        OnMessage(0x1708, "_sizingInputBlankingBottom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingBottom", UInt, 0x1638, oscTypeInt)
+        OnMessage(0x1638, "_sizingInputBlankingBottom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputRotate", UInt, 0x1709, oscTypeInt)
-        OnMessage(0x1709, "_sizingInputRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputRotate", UInt, 0x1639, oscTypeInt)
+        OnMessage(0x1639, "_sizingInputRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingLeft", UInt, 0x1710, oscTypeInt)
-        OnMessage(0x1710, "_sizingInputBlankingLeft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputBlankingLeft", UInt, 0x1640, oscTypeInt)
+        OnMessage(0x1640, "_sizingInputBlankingLeft")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputFlip", UInt, 0x1711, oscTypeInt)
-        OnMessage(0x1711, "_sizingInputFlip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputFlip", UInt, 0x1641, oscTypeInt)
+        OnMessage(0x1641, "_sizingInputFlip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputWidth", UInt, 0x1712, oscTypeInt)
-        OnMessage(0x1712, "_sizingInputWidth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputWidth", UInt, 0x1642, oscTypeInt)
+        OnMessage(0x1642, "_sizingInputWidth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputHeight", UInt, 0x1713, oscTypeInt)
-        OnMessage(0x1713, "_sizingInputHeight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputHeight", UInt, 0x1643, oscTypeInt)
+        OnMessage(0x1643, "_sizingInputHeight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputPitch", UInt, 0x1714, oscTypeInt)
-        OnMessage(0x1714, "_sizingInputPitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputPitch", UInt, 0x1644, oscTypeInt)
+        OnMessage(0x1644, "_sizingInputPitch")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputYaw", UInt, 0x1715, oscTypeInt)
-        OnMessage(0x1715, "_sizingInputYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputYaw", UInt, 0x1645, oscTypeInt)
+        OnMessage(0x1645, "_sizingInputYaw")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputSmooth", UInt, 0x1716, oscTypeInt)
-        OnMessage(0x1716, "_sizingInputSmooth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputSmooth", UInt, 0x1646, oscTypeInt)
+        OnMessage(0x1646, "_sizingInputSmooth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputResetSizing", UInt, 0x1717, oscTypeInt)
-        OnMessage(0x1717, "_sizingInputResetSizing")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputResetSizing", UInt, 0x1647, oscTypeInt)
+        OnMessage(0x1647, "_sizingInputResetSizing")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputResetBlanking", UInt, 0x1718, oscTypeInt)
-        OnMessage(0x1718, "_sizingInputResetBlanking")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingInputResetCropBlanking", UInt, 0x1648, oscTypeInt)
+        OnMessage(0x1648, "_sizingInputResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputPan", UInt, 0x1719, oscTypeInt)
-        OnMessage(0x1719, "_sizingOutputPan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputPan", UInt, 0x1649, oscTypeInt)
+        OnMessage(0x1649, "_sizingOutputPan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingTop", UInt, 0x1720, oscTypeInt)
-        OnMessage(0x1720, "_sizingOutputBlankingTop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingTop", UInt, 0x1650, oscTypeInt)
+        OnMessage(0x1650, "_sizingOutputBlankingTop")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputTilt", UInt, 0x1721, oscTypeInt)
-        OnMessage(0x1721, "_sizingOutputTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputTilt", UInt, 0x1651, oscTypeInt)
+        OnMessage(0x1651, "_sizingOutputTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingRight", UInt, 0x1722, oscTypeInt)
-        OnMessage(0x1722, "_sizingOutputBlankingRight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingRight", UInt, 0x1652, oscTypeInt)
+        OnMessage(0x1652, "_sizingOutputBlankingRight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputZoom", UInt, 0x1723, oscTypeInt)
-        OnMessage(0x1723, "_sizingOutputZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputZoom", UInt, 0x1653, oscTypeInt)
+        OnMessage(0x1653, "_sizingOutputZoom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingBottom", UInt, 0x1724, oscTypeInt)
-        OnMessage(0x1724, "_sizingOutputBlankingBottom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingBottom", UInt, 0x1654, oscTypeInt)
+        OnMessage(0x1654, "_sizingOutputBlankingBottom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputRotate", UInt, 0x1725, oscTypeInt)
-        OnMessage(0x1725, "_sizingOutputRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputRotate", UInt, 0x1655, oscTypeInt)
+        OnMessage(0x1655, "_sizingOutputRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingLeft", UInt, 0x1726, oscTypeInt)
-        OnMessage(0x1726, "_sizingOutputBlankingLeft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputBlankingLeft", UInt, 0x1656, oscTypeInt)
+        OnMessage(0x1656, "_sizingOutputBlankingLeft")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputFlip", UInt, 0x1727, oscTypeInt)
-        OnMessage(0x1727, "_sizingOutputFlip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputFlip", UInt, 0x1657, oscTypeInt)
+        OnMessage(0x1657, "_sizingOutputFlip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputWidth", UInt, 0x1728, oscTypeInt)
-        OnMessage(0x1728, "_sizingOutputWidth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputWidth", UInt, 0x1658, oscTypeInt)
+        OnMessage(0x1658, "_sizingOutputWidth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputHeight", UInt, 0x1729, oscTypeInt)
-        OnMessage(0x1729, "_sizingOutputHeight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputHeight", UInt, 0x1659, oscTypeInt)
+        OnMessage(0x1659, "_sizingOutputHeight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputPitch", UInt, 0x1730, oscTypeInt)
-        OnMessage(0x1730, "_sizingOutputPitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputPitch", UInt, 0x1660, oscTypeInt)
+        OnMessage(0x1660, "_sizingOutputPitch")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputYaw", UInt, 0x1731, oscTypeInt)
-        OnMessage(0x1731, "_sizingOutputYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputYaw", UInt, 0x1661, oscTypeInt)
+        OnMessage(0x1661, "_sizingOutputYaw")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputSmooth", UInt, 0x1732, oscTypeInt)
-        OnMessage(0x1732, "_sizingOutputSmooth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputSmooth", UInt, 0x1662, oscTypeInt)
+        OnMessage(0x1662, "_sizingOutputSmooth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputResetSizing", UInt, 0x1733, oscTypeInt)
-        OnMessage(0x1733, "_sizingOutputResetSizing")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputResetSizing", UInt, 0x1663, oscTypeInt)
+        OnMessage(0x1663, "_sizingOutputResetSizing")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputResetBlanking", UInt, 0x1734, oscTypeInt)
-        OnMessage(0x1734, "_sizingOutputResetBlanking")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingOutputResetCropBlanking", UInt, 0x1664, oscTypeInt)
+        OnMessage(0x1664, "_sizingOutputResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodePan", UInt, 0x1735, oscTypeInt)
-        OnMessage(0x1735, "_sizingNodePan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodePan", UInt, 0x1665, oscTypeInt)
+        OnMessage(0x1665, "_sizingNodePan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingTop", UInt, 0x1736, oscTypeInt)
-        OnMessage(0x1736, "_sizingNodeBlankingTop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingTop", UInt, 0x1666, oscTypeInt)
+        OnMessage(0x1666, "_sizingNodeBlankingTop")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeTilt", UInt, 0x1737, oscTypeInt)
-        OnMessage(0x1737, "_sizingNodeTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeTilt", UInt, 0x1667, oscTypeInt)
+        OnMessage(0x1667, "_sizingNodeTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingRight", UInt, 0x1738, oscTypeInt)
-        OnMessage(0x1738, "_sizingNodeBlankingRight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingRight", UInt, 0x1668, oscTypeInt)
+        OnMessage(0x1668, "_sizingNodeBlankingRight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeZoom", UInt, 0x1739, oscTypeInt)
-        OnMessage(0x1739, "_sizingNodeZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeZoom", UInt, 0x1669, oscTypeInt)
+        OnMessage(0x1669, "_sizingNodeZoom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingBottom", UInt, 0x1740, oscTypeInt)
-        OnMessage(0x1740, "_sizingNodeBlankingBottom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingBottom", UInt, 0x1670, oscTypeInt)
+        OnMessage(0x1670, "_sizingNodeBlankingBottom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeRotate", UInt, 0x1741, oscTypeInt)
-        OnMessage(0x1741, "_sizingNodeRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeRotate", UInt, 0x1671, oscTypeInt)
+        OnMessage(0x1671, "_sizingNodeRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingLeft", UInt, 0x1742, oscTypeInt)
-        OnMessage(0x1742, "_sizingNodeBlankingLeft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeBlankingLeft", UInt, 0x1672, oscTypeInt)
+        OnMessage(0x1672, "_sizingNodeBlankingLeft")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeFlip", UInt, 0x1743, oscTypeInt)
-        OnMessage(0x1743, "_sizingNodeFlip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeFlip", UInt, 0x1673, oscTypeInt)
+        OnMessage(0x1673, "_sizingNodeFlip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeWidth", UInt, 0x1744, oscTypeInt)
-        OnMessage(0x1744, "_sizingNodeWidth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeWidth", UInt, 0x1674, oscTypeInt)
+        OnMessage(0x1674, "_sizingNodeWidth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeHeight", UInt, 0x1745, oscTypeInt)
-        OnMessage(0x1745, "_sizingNodeHeight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeHeight", UInt, 0x1675, oscTypeInt)
+        OnMessage(0x1675, "_sizingNodeHeight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodePitch", UInt, 0x1746, oscTypeInt)
-        OnMessage(0x1746, "_sizingNodePitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodePitch", UInt, 0x1676, oscTypeInt)
+        OnMessage(0x1676, "_sizingNodePitch")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeYaw", UInt, 0x1747, oscTypeInt)
-        OnMessage(0x1747, "_sizingNodeYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeYaw", UInt, 0x1677, oscTypeInt)
+        OnMessage(0x1677, "_sizingNodeYaw")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeKeyLock", UInt, 0x1748, oscTypeInt)
-        OnMessage(0x1748, "_sizingNodeKeyLock")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeKeyLock", UInt, 0x1678, oscTypeInt)
+        OnMessage(0x1678, "_sizingNodeKeyLock")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeSmooth", UInt, 0x1749, oscTypeInt)
-        OnMessage(0x1749, "_sizingNodeSmooth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeSmooth", UInt, 0x1679, oscTypeInt)
+        OnMessage(0x1679, "_sizingNodeSmooth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeResetSizing", UInt, 0x1750, oscTypeInt)
-        OnMessage(0x1750, "_sizingNodeResetSizing")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeResetSizing", UInt, 0x1680, oscTypeInt)
+        OnMessage(0x1680, "_sizingNodeResetSizing")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeResetBlanking", UInt, 0x1751, oscTypeInt)
-        OnMessage(0x1751, "_sizingNodeResetBlanking")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingNodeResetCropBlanking", UInt, 0x1681, oscTypeInt)
+        OnMessage(0x1681, "_sizingNodeResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferencePan", UInt, 0x1752, oscTypeInt)
-        OnMessage(0x1752, "_sizingReferencePan")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferencePan", UInt, 0x1682, oscTypeInt)
+        OnMessage(0x1682, "_sizingReferencePan")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingTop", UInt, 0x1753, oscTypeInt)
-        OnMessage(0x1753, "_sizingReferenceBlankingTop")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingTop", UInt, 0x1683, oscTypeInt)
+        OnMessage(0x1683, "_sizingReferenceBlankingTop")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceTilt", UInt, 0x1754, oscTypeInt)
-        OnMessage(0x1754, "_sizingReferenceTilt")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceTilt", UInt, 0x1684, oscTypeInt)
+        OnMessage(0x1684, "_sizingReferenceTilt")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingRight", UInt, 0x1755, oscTypeInt)
-        OnMessage(0x1755, "_sizingReferenceBlankingRight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingRight", UInt, 0x1685, oscTypeInt)
+        OnMessage(0x1685, "_sizingReferenceBlankingRight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceZoom", UInt, 0x1756, oscTypeInt)
-        OnMessage(0x1756, "_sizingReferenceZoom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceZoom", UInt, 0x1686, oscTypeInt)
+        OnMessage(0x1686, "_sizingReferenceZoom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingBottom", UInt, 0x1757, oscTypeInt)
-        OnMessage(0x1757, "_sizingReferenceBlankingBottom")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingBottom", UInt, 0x1687, oscTypeInt)
+        OnMessage(0x1687, "_sizingReferenceBlankingBottom")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceRotate", UInt, 0x1758, oscTypeInt)
-        OnMessage(0x1758, "_sizingReferenceRotate")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceRotate", UInt, 0x1688, oscTypeInt)
+        OnMessage(0x1688, "_sizingReferenceRotate")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingLeft", UInt, 0x1759, oscTypeInt)
-        OnMessage(0x1759, "_sizingReferenceBlankingLeft")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceBlankingLeft", UInt, 0x1689, oscTypeInt)
+        OnMessage(0x1689, "_sizingReferenceBlankingLeft")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceFlip", UInt, 0x1760, oscTypeInt)
-        OnMessage(0x1760, "_sizingReferenceFlip")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceFlip", UInt, 0x1690, oscTypeInt)
+        OnMessage(0x1690, "_sizingReferenceFlip")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceWidth", UInt, 0x1761, oscTypeInt)
-        OnMessage(0x1761, "_sizingReferenceWidth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceWidth", UInt, 0x1691, oscTypeInt)
+        OnMessage(0x1691, "_sizingReferenceWidth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceHeight", UInt, 0x1762, oscTypeInt)
-        OnMessage(0x1762, "_sizingReferenceHeight")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceHeight", UInt, 0x1692, oscTypeInt)
+        OnMessage(0x1692, "_sizingReferenceHeight")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferencePitch", UInt, 0x1763, oscTypeInt)
-        OnMessage(0x1763, "_sizingReferencePitch")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferencePitch", UInt, 0x1693, oscTypeInt)
+        OnMessage(0x1693, "_sizingReferencePitch")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceYaw", UInt, 0x1764, oscTypeInt)
-        OnMessage(0x1764, "_sizingReferenceYaw")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceYaw", UInt, 0x1694, oscTypeInt)
+        OnMessage(0x1694, "_sizingReferenceYaw")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceSmooth", UInt, 0x1765, oscTypeInt)
-        OnMessage(0x1765, "_sizingReferenceSmooth")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceSmooth", UInt, 0x1695, oscTypeInt)
+        OnMessage(0x1695, "_sizingReferenceSmooth")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceResetSizing", UInt, 0x1766, oscTypeInt)
-        OnMessage(0x1766, "_sizingReferenceResetSizing")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceResetSizing", UInt, 0x1696, oscTypeInt)
+        OnMessage(0x1696, "_sizingReferenceResetSizing")
 
-        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceResetBlanking", UInt, 0x1767, oscTypeInt)
-        OnMessage(0x1767, "_sizingReferenceResetBlanking")
+        DllCall("OSC2AHK.dll\addListener", AStr, "/sizingReferenceResetCropBlanking", UInt, 0x1697, oscTypeInt)
+        OnMessage(0x1697, "_sizingReferenceResetCropBlanking")
     }Else{
         ;All Panels Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/undo", UInt, 0x1000, UInt, oscTypeInt)
-        OnMessage(0x1000, "_undo")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/undo", UInt, 0x2000, UInt, oscTypeInt)
+        OnMessage(0x2000, "_undo")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/redo", UInt, 0x1001, UInt, oscTypeInt)
-        OnMessage(0x1001, "_redo")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/redo", UInt, 0x2001, UInt, oscTypeInt)
+        OnMessage(0x2001, "_redo")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorPageScrollThumbnails", UInt, 0x1002, UInt, oscTypeInt)
-        OnMessage(0x1002, "_colorPageScrollThumbnails")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorPageScrollThumbnails", UInt, 0x2002, UInt, oscTypeInt)
+        OnMessage(0x2002, "_colorPageScrollThumbnails")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/navigateNodes", UInt, 0x1003, UInt, oscTypeInt)
-        OnMessage(0x1003, "_navigateNodes")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/navigateNodes", UInt, 0x2003, UInt, oscTypeInt)
+        OnMessage(0x2003, "_navigateNodes")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetDefaultState", UInt, 0x1004, UInt, oscTypeInt)
-        OnMessage(0x1004, "_resetDefaultState")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetDefaultState", UInt, 0x2004, UInt, oscTypeInt)
+        OnMessage(0x2004, "_resetDefaultState")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/enableDisableSelectedNodes", UInt, 0x1005, UInt, oscTypeInt)
-        OnMessage(0x1005, "_enableDisableSelectedNodes")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/enableDisableSelectedNodes", UInt, 0x2005, UInt, oscTypeInt)
+        OnMessage(0x2005, "_enableDisableSelectedNodes")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bypassColorGrading", UInt, 0x1006, UInt, oscTypeInt)
-        OnMessage(0x1006, "_bypassColorGrading")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bypassColorGrading", UInt, 0x2006, UInt, oscTypeInt)
+        OnMessage(0x2006, "_bypassColorGrading")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadA", UInt, 0x1007, UInt, oscTypeInt)
-        OnMessage(0x1007, "_playheadA")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadA", UInt, 0x2007, UInt, oscTypeInt)
+        OnMessage(0x2007, "_playheadA")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadB", UInt, 0x1008, UInt, oscTypeInt)
-        OnMessage(0x1008, "_playheadB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadB", UInt, 0x2008, UInt, oscTypeInt)
+        OnMessage(0x2008, "_playheadB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadC", UInt, 0x1009, UInt, oscTypeInt)
-        OnMessage(0x1009, "_playheadC")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadC", UInt, 0x2009, UInt, oscTypeInt)
+        OnMessage(0x2009, "_playheadC")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadD", UInt, 0x1010, UInt, oscTypeInt)
-        OnMessage(0x1010, "_playheadD")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/playheadD", UInt, 0x2010, UInt, oscTypeInt)
+        OnMessage(0x2010, "_playheadD")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetPlayheads", UInt, 0x1011, UInt, oscTypeInt)
-        OnMessage(0x1011, "_resetPlayheads")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetPlayheads", UInt, 0x2011, UInt, oscTypeInt)
+        OnMessage(0x2011, "_resetPlayheads")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rippleNodesToSelectedClips", UInt, 0x1012, UInt, oscTypeInt)
-        OnMessage(0x1012, "_rippleNodesToSelectedClips")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rippleNodesToSelectedClips", UInt, 0x2012, UInt, oscTypeInt)
+        OnMessage(0x2012, "_rippleNodesToSelectedClips")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/fastNavigateClips", UInt, 0x1013, UInt, oscTypeInt)
-        OnMessage(0x1013, "_fastNavigateClips")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/fastNavigateClips", UInt, 0x2013, UInt, oscTypeInt)
+        OnMessage(0x2013, "_fastNavigateClips")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/deleteKey", UInt, 0x1014, UInt, oscTypeInt)
-        OnMessage(0x1014, "_deleteKey")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/deleteKey", UInt, 0x2014, UInt, oscTypeInt)
+        OnMessage(0x2014, "_deleteKey")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/backspaceKey", UInt, 0x1015, UInt, oscTypeInt)
-        OnMessage(0x1015, "_backspaceKey")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/backspaceKey", UInt, 0x2015, UInt, oscTypeInt)
+        OnMessage(0x2015, "_backspaceKey")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceImageWipe", UInt, 0x1016, UInt, oscTypeInt)
-        OnMessage(0x1016, "_colorInterfaceImageWipe")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceImageWipe", UInt, 0x2016, UInt, oscTypeInt)
+        OnMessage(0x2016, "_colorInterfaceImageWipe")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceSplitScreen", UInt, 0x1017, UInt, oscTypeInt)
-        OnMessage(0x1017, "_colorInterfaceSplitScreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceSplitScreen", UInt, 0x2017, UInt, oscTypeInt)
+        OnMessage(0x2017, "_colorInterfaceSplitScreen")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceHighlight", UInt, 0x1018, UInt, oscTypeInt)
-        OnMessage(0x1018, "_colorInterfaceHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceHighlight", UInt, 0x2018, UInt, oscTypeInt)
+        OnMessage(0x2018, "_colorInterfaceHighlight")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceZoomView", UInt, 0x1019, UInt, oscTypeInt)
-        OnMessage(0x1019, "_colorInterfaceZoomView")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceZoomView", UInt, 0x2019, UInt, oscTypeInt)
+        OnMessage(0x2019, "_colorInterfaceZoomView")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceCursorHand", UInt, 0x1020, UInt, oscTypeInt)
-        OnMessage(0x1020, "_colorInterfaceCursorHand")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceCursorHand", UInt, 0x2020, UInt, oscTypeInt)
+        OnMessage(0x2020, "_colorInterfaceCursorHand")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode1", UInt, 0x1021, UInt, oscTypeInt)
-        OnMessage(0x1021, "_colorInterfaceNodeMode1")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode1", UInt, 0x2021, UInt, oscTypeInt)
+        OnMessage(0x2021, "_colorInterfaceNodeMode1")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode2", UInt, 0x1022, UInt, oscTypeInt)
-        OnMessage(0x1022, "_colorInterfaceNodeMode2")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode2", UInt, 0x2022, UInt, oscTypeInt)
+        OnMessage(0x2022, "_colorInterfaceNodeMode2")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode3", UInt, 0x1023, UInt, oscTypeInt)
-        OnMessage(0x1023, "_colorInterfaceNodeMode3")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode3", UInt, 0x2023, UInt, oscTypeInt)
+        OnMessage(0x2023, "_colorInterfaceNodeMode3")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode4", UInt, 0x1024, UInt, oscTypeInt)
-        OnMessage(0x1024, "_colorInterfaceNodeMode4")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodeMode4", UInt, 0x2024, UInt, oscTypeInt)
+        OnMessage(0x2024, "_colorInterfaceNodeMode4")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceGallery", UInt, 0x1025, UInt, oscTypeInt)
-        OnMessage(0x1025, "_colorInterfaceGallery")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceGallery", UInt, 0x2025, UInt, oscTypeInt)
+        OnMessage(0x2025, "_colorInterfaceGallery")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceLuts", UInt, 0x1026, UInt, oscTypeInt)
-        OnMessage(0x1026, "_colorInterfaceLuts")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceLuts", UInt, 0x2026, UInt, oscTypeInt)
+        OnMessage(0x2026, "_colorInterfaceLuts")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceMediaPool", UInt, 0x1027, UInt, oscTypeInt)
-        OnMessage(0x1027, "_colorInterfaceMediaPool")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceMediaPool", UInt, 0x2027, UInt, oscTypeInt)
+        OnMessage(0x2027, "_colorInterfaceMediaPool")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceTimeline", UInt, 0x1028, UInt, oscTypeInt)
-        OnMessage(0x1028, "_colorInterfaceTimeline")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceTimeline", UInt, 0x2028, UInt, oscTypeInt)
+        OnMessage(0x2028, "_colorInterfaceTimeline")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceClips", UInt, 0x1029, UInt, oscTypeInt)
-        OnMessage(0x1029, "_colorInterfaceClips")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceClips", UInt, 0x2029, UInt, oscTypeInt)
+        OnMessage(0x2029, "_colorInterfaceClips")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodes", UInt, 0x1030, UInt, oscTypeInt)
-        OnMessage(0x1030, "_colorInterfaceNodes")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceNodes", UInt, 0x2030, UInt, oscTypeInt)
+        OnMessage(0x2030, "_colorInterfaceNodes")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceOpenFX", UInt, 0x1031, UInt, oscTypeInt)
-        OnMessage(0x1031, "_colorInterfaceOpenFX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceOpenFX", UInt, 0x2031, UInt, oscTypeInt)
+        OnMessage(0x2031, "_colorInterfaceOpenFX")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceLightbox", UInt, 0x1032, UInt, oscTypeInt)
-        OnMessage(0x1032, "_colorInterfaceLightbox")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceLightbox", UInt, 0x2032, UInt, oscTypeInt)
+        OnMessage(0x2032, "_colorInterfaceLightbox")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceImageWipeMode", UInt, 0x1033, UInt, oscTypeInt)
-        OnMessage(0x1033, "_colorInterfaceImageWipeMode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorInterfaceImageWipeMode", UInt, 0x2033, UInt, oscTypeInt)
+        OnMessage(0x2033, "_colorInterfaceImageWipeMode")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/projectSettings", UInt, 0x1034, UInt, oscTypeInt)
-        OnMessage(0x1034, "_projectSettings")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/projectSettings", UInt, 0x2034, UInt, oscTypeInt)
+        OnMessage(0x2034, "_projectSettings")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/projectSelection", UInt, 0x1035, UInt, oscTypeInt)
-        OnMessage(0x1035, "_projectSelection")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/projectSelection", UInt, 0x2035, UInt, oscTypeInt)
+        OnMessage(0x2035, "_projectSelection")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/davinciSettings", UInt, 0x1036, UInt, oscTypeInt)
-        OnMessage(0x1036, "_davinciSettings")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/davinciSettings", UInt, 0x2036, UInt, oscTypeInt)
+        OnMessage(0x2036, "_davinciSettings")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/copy", UInt, 0x1037, UInt, oscTypeInt)
-        OnMessage(0x1037, "_copy")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/copy", UInt, 0x2037, UInt, oscTypeInt)
+        OnMessage(0x2037, "_copy")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/paste", UInt, 0x1038, UInt, oscTypeInt)
-        OnMessage(0x1038, "_paste")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/paste", UInt, 0x2038, UInt, oscTypeInt)
+        OnMessage(0x2038, "_paste")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/grabStill", UInt, 0x1039, UInt, oscTypeInt)
-        OnMessage(0x1039, "_grabStill")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/grabStill", UInt, 0x2039, UInt, oscTypeInt)
+        OnMessage(0x2039, "_grabStill")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/applyGrade", UInt, 0x1040, UInt, oscTypeInt)
-        OnMessage(0x1040, "_applyGrade")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/applyGrade", UInt, 0x2040, UInt, oscTypeInt)
+        OnMessage(0x2040, "_applyGrade")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/fullView", UInt, 0x1041, UInt, oscTypeInt)
-        OnMessage(0x1041, "_fullView")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/fullView", UInt, 0x2041, UInt, oscTypeInt)
+        OnMessage(0x2041, "_fullView")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/stepFrame", UInt, 0x1042, UInt, oscTypeInt)
-        OnMessage(0x1042, "_stepFrame")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/stepFrame", UInt, 0x2042, UInt, oscTypeInt)
+        OnMessage(0x2042, "_stepFrame")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/previousClip", UInt, 0x1043, UInt, oscTypeInt)
-        OnMessage(0x1043, "_previousClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/previousClip", UInt, 0x2043, UInt, oscTypeInt)
+        OnMessage(0x2043, "_previousClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nextClip", UInt, 0x1044, UInt, oscTypeInt)
-        OnMessage(0x1044, "_nextClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nextClip", UInt, 0x2044, UInt, oscTypeInt)
+        OnMessage(0x2044, "_nextClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGradeAndKeepNodes", UInt, 0x1045, UInt, oscTypeInt)
-        OnMessage(0x1045, "_resetAllNodesGradeAndKeepNodes")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGradeAndKeepNodes", UInt, 0x2045, UInt, oscTypeInt)
+        OnMessage(0x2045, "_resetAllNodesGradeAndKeepNodes")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetNodeGrade", UInt, 0x1046, UInt, oscTypeInt)
-        OnMessage(0x1046, "_resetNodeGrade")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetNodeGrade", UInt, 0x2046, UInt, oscTypeInt)
+        OnMessage(0x2046, "_resetNodeGrade")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/playBackward", UInt, 0x1047, UInt, oscTypeInt)
-        OnMessage(0x1047, "_playBackward")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/playBackward", UInt, 0x2047, UInt, oscTypeInt)
+        OnMessage(0x2047, "_playBackward")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/stop", UInt, 0x1048, UInt, oscTypeInt)
-        OnMessage(0x1048, "_stop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/stop", UInt, 0x2048, UInt, oscTypeInt)
+        OnMessage(0x2048, "_stop")
     
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/playForward", UInt, 0x1049, UInt, oscTypeInt)
-        OnMessage(0x1049, "_playForward")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/playForward", UInt, 0x2049, UInt, oscTypeInt)
+        OnMessage(0x2049, "_playForward")
         
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/startStop", UInt, 0x1050, UInt, oscTypeInt)
-        ;OnMessage(0x1050, "_startStop")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/startStop", UInt, 0x2050, UInt, oscTypeInt)
+        ;OnMessage(0x2050, "_startStop") ;This listener cannot be removed otherwise will be impossible restart the app using the shortcut key. Keep this commented
         
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x1051, UInt, oscTypeInt)
-        ;OnMessage(0x1051, "_resetAllNodesGrade")
-        
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/enableDisableAllNodes", UInt, 0x1052, UInt, oscTypeInt)
-        OnMessage(0x1052, "_enableDisableAllNodes")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x2051, UInt, oscTypeInt)
+        ;OnMessage(0x2051, "_resetAllNodesGrade")
         
         ;Update 2.2.1 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/deleteKeyJogWheel", UInt, 0x1053, UInt, oscTypeInt)
-        OnMessage(0x1053, "_deleteKeyJogWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/deleteKeyJogWheel", UInt, 0x2053, UInt, oscTypeInt)
+        OnMessage(0x2053, "_deleteKeyJogWheel")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/backspaceKeyJogWheel", UInt, 0x1054, UInt, oscTypeInt)
-        OnMessage(0x1054, "_backspaceKeyJogWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/backspaceKeyJogWheel", UInt, 0x2054, UInt, oscTypeInt)
+        OnMessage(0x2054, "_backspaceKeyJogWheel")
         
         ;Update 2.4 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/labelNode", UInt, 0x1055, UInt, oscTypeInt)
-        OnMessage(0x1055, "_labelNode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/labelNode", UInt, 0x2055, UInt, oscTypeInt)
+        OnMessage(0x2055, "_labelNode")
         
         ;Update 2.5 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/editMode", UInt, 0x1056, UInt, oscTypeInt)
-        OnMessage(0x1056, "_editMode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/editMode", UInt, 0x2056, UInt, oscTypeInt)
+        OnMessage(0x2056, "_editMode")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorMode", UInt, 0x1057, UInt, oscTypeInt)
-        OnMessage(0x1057, "_inspectorMode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorMode", UInt, 0x2057, UInt, oscTypeInt)
+        OnMessage(0x2057, "_inspectorMode")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAndScopes", UInt, 0x1058, UInt, oscTypeInt)
-        OnMessage(0x1058, "_nodesAndScopes")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAndScopes", UInt, 0x2058, UInt, oscTypeInt)
+        OnMessage(0x2058, "_nodesAndScopes")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLights", UInt, 0x1059, UInt, oscTypeInt)
-        OnMessage(0x1059, "_printerLights")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLights", UInt, 0x2059, UInt, oscTypeInt)
+        OnMessage(0x2059, "_printerLights")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesWheels", UInt, 0x1060, UInt, oscTypeInt)
-        OnMessage(0x1060, "_primariesWheels")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesWheels", UInt, 0x2060, UInt, oscTypeInt)
+        OnMessage(0x2060, "_primariesWheels")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesBars", UInt, 0x1061, UInt, oscTypeInt)
-        OnMessage(0x1061, "_primariesBars")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesBars", UInt, 0x2061, UInt, oscTypeInt)
+        OnMessage(0x2061, "_primariesBars")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logWheels", UInt, 0x1062, UInt, oscTypeInt)
-        OnMessage(0x1062, "_logWheels")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logWheels", UInt, 0x2062, UInt, oscTypeInt)
+        OnMessage(0x2062, "_logWheels")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrWheels", UInt, 0x1063, UInt, oscTypeInt)
-        OnMessage(0x1063, "_hdrWheels")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrWheels", UInt, 0x2063, UInt, oscTypeInt)
+        OnMessage(0x2063, "_hdrWheels")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurves", UInt, 0x1064, UInt, oscTypeInt)
-        OnMessage(0x1064, "_customCurves")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurves", UInt, 0x2064, UInt, oscTypeInt)
+        OnMessage(0x2064, "_customCurves")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurves", UInt, 0x1065, UInt, oscTypeInt)
-        OnMessage(0x1065, "_hueCurves")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurves", UInt, 0x2065, UInt, oscTypeInt)
+        OnMessage(0x2065, "_hueCurves")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifier", UInt, 0x1066, UInt, oscTypeInt)
-        OnMessage(0x1066, "_qualifier")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifier", UInt, 0x2066, UInt, oscTypeInt)
+        OnMessage(0x2066, "_qualifier")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/powerWindows", UInt, 0x1067, UInt, oscTypeInt)
-        OnMessage(0x1067, "_powerWindows")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/powerWindows", UInt, 0x2067, UInt, oscTypeInt)
+        OnMessage(0x2067, "_powerWindows")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/blurSharpenMist", UInt, 0x1068, UInt, oscTypeInt)
-        OnMessage(0x1068, "_blurSharpenMist")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/blurSharpenMist", UInt, 0x2068, UInt, oscTypeInt)
+        OnMessage(0x2068, "_blurSharpenMist")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixer", UInt, 0x1069, UInt, oscTypeInt)
-        OnMessage(0x1069, "_rgbMixer")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixer", UInt, 0x2069, UInt, oscTypeInt)
+        OnMessage(0x2069, "_rgbMixer")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/key", UInt, 0x1070, UInt, oscTypeInt)
-        OnMessage(0x1070, "_key")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/key", UInt, 0x2070, UInt, oscTypeInt)
+        OnMessage(0x2070, "_key")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffects", UInt, 0x1071, UInt, oscTypeInt)
-        OnMessage(0x1071, "_motionEffects")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffects", UInt, 0x2071, UInt, oscTypeInt)
+        OnMessage(0x2071, "_motionEffects")
 
+        ;---------------------------------------------------------------------- High / Low Listeners ID's ----------------------------------------------------------------------
+        
         ;Update 2.5 Listeners - Modes and Color Warper
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelect", UInt, 0x1072, UInt, oscTypeInt)
-        OnMessage(0x1072, "_cwChrLumSelect")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelect", UInt, 0x1588, UInt, oscTypeInt)
+        OnMessage(0x1588, "_cwChrLumSelect")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumDraw", UInt, 0x1073, UInt, oscTypeInt)
-        OnMessage(0x1073, "_cwChrLumDraw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumDraw", UInt, 0x1587, UInt, oscTypeInt)
+        OnMessage(0x1587, "_cwChrLumDraw")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPinDepin", UInt, 0x1074, UInt, oscTypeInt)
-        OnMessage(0x1074, "_cwChrLumPinDepin")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPinDepin", UInt, 0x1586, UInt, oscTypeInt)
+        OnMessage(0x1586, "_cwChrLumPinDepin")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPullPoints", UInt, 0x1075, UInt, oscTypeInt)
-        OnMessage(0x1075, "_cwChrLumPullPoints")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPullPoints", UInt, 0x1585, UInt, oscTypeInt)
+        OnMessage(0x1585, "_cwChrLumPullPoints")
       
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPushPoints", UInt, 0x1076, UInt, oscTypeInt)
-        OnMessage(0x1076, "_cwChrLumPushPoints")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumPushPoints", UInt, 0x1584, UInt, oscTypeInt)
+        OnMessage(0x1584, "_cwChrLumPushPoints")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumIncreaseFalloff", UInt, 0x1077, UInt, oscTypeInt)
-        OnMessage(0x1077, "_cwChrLumIncreaseFalloff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumIncreaseFalloff", UInt, 0x1583, UInt, oscTypeInt)
+        OnMessage(0x1583, "_cwChrLumIncreaseFalloff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumDecreaseFalloff", UInt, 0x1078, UInt, oscTypeInt)
-        OnMessage(0x1078, "_cwChrLumDecreaseFalloff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumDecreaseFalloff", UInt, 0x1582, UInt, oscTypeInt)
+        OnMessage(0x1582, "_cwChrLumDecreaseFalloff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumInvertSelection", UInt, 0x1079, UInt, oscTypeInt)
-        OnMessage(0x1079, "_cwChrLumInvertSelection")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumInvertSelection", UInt, 0x1581, UInt, oscTypeInt)
+        OnMessage(0x1581, "_cwChrLumInvertSelection")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumConvertToPin", UInt, 0x1080, UInt, oscTypeInt)
-        OnMessage(0x1080, "_cwChrLumConvertToPin")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumConvertToPin", UInt, 0x1580, UInt, oscTypeInt)
+        OnMessage(0x1580, "_cwChrLumConvertToPin")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectPinColumn", UInt, 0x1081, UInt, oscTypeInt)
-        OnMessage(0x1081, "_cwChrLumSelectPinColumn")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectPinColumn", UInt, 0x1579, UInt, oscTypeInt)
+        OnMessage(0x1579, "_cwChrLumSelectPinColumn")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectPinRow", UInt, 0x1082, UInt, oscTypeInt)
-        OnMessage(0x1082, "_cwChrLumSelectPinRow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectPinRow", UInt, 0x1578, UInt, oscTypeInt)
+        OnMessage(0x1578, "_cwChrLumSelectPinRow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectDeselectAll", UInt, 0x1083, UInt, oscTypeInt)
-        OnMessage(0x1083, "_cwChrLumSelectDeselectAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSelectDeselectAll", UInt, 0x1577, UInt, oscTypeInt)
+        OnMessage(0x1577, "_cwChrLumSelectDeselectAll")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinColumns", UInt, 0x1084, UInt, oscTypeInt)
-        OnMessage(0x1084, "_cwChrLumAutoPinColumns")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinColumns", UInt, 0x1576, UInt, oscTypeInt)
+        OnMessage(0x1576, "_cwChrLumAutoPinColumns")
       
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinRows", UInt, 0x1085, UInt, oscTypeInt)
-        OnMessage(0x1085, "_cwChrLumAutoPinRows")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinRows", UInt, 0x1575, UInt, oscTypeInt)
+        OnMessage(0x1575, "_cwChrLumAutoPinRows")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinSingle", UInt, 0x1086, UInt, oscTypeInt)
-        OnMessage(0x1086, "_cwChrLumAutoPinSingle")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoPinSingle", UInt, 0x1574, UInt, oscTypeInt)
+        OnMessage(0x1574, "_cwChrLumAutoPinSingle")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumResetSelection", UInt, 0x1087, UInt, oscTypeInt)
-        OnMessage(0x1087, "_cwChrLumResetSelection")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumResetSelection", UInt, 0x1573, UInt, oscTypeInt)
+        OnMessage(0x1573, "_cwChrLumResetSelection")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoLock", UInt, 0x1088, UInt, oscTypeInt)
-        OnMessage(0x1088, "_cwChrLumAutoLock")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAutoLock", UInt, 0x1572, UInt, oscTypeInt)
+        OnMessage(0x1572, "_cwChrLumAutoLock")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumChromaBar", UInt, 0x1089, UInt, oscTypeInt)
-        OnMessage(0x1089, "_cwChrLumChromaBar")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumChromaBar", UInt, 0x1571, UInt, oscTypeInt)
+        OnMessage(0x1571, "_cwChrLumChromaBar")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumLumBar", UInt, 0x1090, UInt, oscTypeInt)
-        OnMessage(0x1090, "_cwChrLumLumBar")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumLumBar", UInt, 0x1570, UInt, oscTypeInt)
+        OnMessage(0x1570, "_cwChrLumLumBar")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAxisAngle", UInt, 0x1091, UInt, oscTypeInt)
-        OnMessage(0x1091, "_cwChrLumAxisAngle")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumAxisAngle", UInt, 0x1569, UInt, oscTypeInt)
+        OnMessage(0x1569, "_cwChrLumAxisAngle")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSmoothChroma", UInt, 0x1092, UInt, oscTypeInt)
-        OnMessage(0x1092, "_cwChrLumSmoothChroma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSmoothChroma", UInt, 0x1568, UInt, oscTypeInt)
+        OnMessage(0x1568, "_cwChrLumSmoothChroma")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSmoothLum", UInt, 0x1093, UInt, oscTypeInt)
-        OnMessage(0x1093, "_cwChrLumSmoothLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumSmoothLum", UInt, 0x1567, UInt, oscTypeInt)
+        OnMessage(0x1567, "_cwChrLumSmoothLum")
       
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumToggleGrids", UInt, 0x1094, UInt, oscTypeInt)
-        OnMessage(0x1094, "_cwChrLumToggleGrids")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumToggleGrids", UInt, 0x1566, UInt, oscTypeInt)
+        OnMessage(0x1566, "_cwChrLumToggleGrids")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumChromaResolution", UInt, 0x1095, UInt, oscTypeInt)
-        OnMessage(0x1095, "_cwChrLumChromaResolution")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumChromaResolution", UInt, 0x1565, UInt, oscTypeInt)
+        OnMessage(0x1565, "_cwChrLumChromaResolution")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumLumResolution", UInt, 0x1096, UInt, oscTypeInt)
-        OnMessage(0x1096, "_cwChrLumLumResolution")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumLumResolution", UInt, 0x1564, UInt, oscTypeInt)
+        OnMessage(0x1564, "_cwChrLumLumResolution")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumColorSpace", UInt, 0x1097, UInt, oscTypeInt)
-        OnMessage(0x1097, "_cwChrLumColorSpace")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwChrLumColorSpace", UInt, 0x1563, UInt, oscTypeInt)
+        OnMessage(0x1563, "_cwChrLumColorSpace")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelect", UInt, 0x1098, UInt, oscTypeInt)
-        OnMessage(0x1098, "_cwHueSatSelect")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelect", UInt, 0x1562, UInt, oscTypeInt)
+        OnMessage(0x1562, "_cwHueSatSelect")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatDraw", UInt, 0x1099, UInt, oscTypeInt)
-        OnMessage(0x1099, "_cwHueSatDraw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatDraw", UInt, 0x1561, UInt, oscTypeInt)
+        OnMessage(0x1561, "_cwHueSatDraw")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPinDepin", UInt, 0x1100, UInt, oscTypeInt)
-        OnMessage(0x1100, "_cwHueSatPinDepin")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPinDepin", UInt, 0x1560, UInt, oscTypeInt)
+        OnMessage(0x1560, "_cwHueSatPinDepin")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPullPoints", UInt, 0x1101, UInt, oscTypeInt)
-        OnMessage(0x1101, "_cwHueSatPullPoints")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPullPoints", UInt, 0x1559, UInt, oscTypeInt)
+        OnMessage(0x1559, "_cwHueSatPullPoints")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPushPoints", UInt, 0x1102, UInt, oscTypeInt)
-        OnMessage(0x1102, "_cwHueSatPushPoints")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatPushPoints", UInt, 0x1558, UInt, oscTypeInt)
+        OnMessage(0x1558, "_cwHueSatPushPoints")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatIncreaseFalloff", UInt, 0x1103, UInt, oscTypeInt)
-        OnMessage(0x1103, "_cwHueSatIncreaseFalloff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatIncreaseFalloff", UInt, 0x1557, UInt, oscTypeInt)
+        OnMessage(0x1557, "_cwHueSatIncreaseFalloff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatDecreaseFalloff", UInt, 0x1104, UInt, oscTypeInt)
-        OnMessage(0x1104, "_cwHueSatDecreaseFalloff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatDecreaseFalloff", UInt, 0x1556, UInt, oscTypeInt)
+        OnMessage(0x1556, "_cwHueSatDecreaseFalloff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatInvertSelection", UInt, 0x1105, UInt, oscTypeInt)
-        OnMessage(0x1105, "_cwHueSatInvertSelection")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatInvertSelection", UInt, 0x1555, UInt, oscTypeInt)
+        OnMessage(0x1555, "_cwHueSatInvertSelection")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatConvertToPin", UInt, 0x1106, UInt, oscTypeInt)
-        OnMessage(0x1106, "_cwHueSatConvertToPin")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatConvertToPin", UInt, 0x1554, UInt, oscTypeInt)
+        OnMessage(0x1554, "_cwHueSatConvertToPin")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectPinColumn", UInt, 0x1107, UInt, oscTypeInt)
-        OnMessage(0x1107, "_cwHueSatSelectPinColumn")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectPinColumn", UInt, 0x1553, UInt, oscTypeInt)
+        OnMessage(0x1553, "_cwHueSatSelectPinColumn")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectPinRing", UInt, 0x1108, UInt, oscTypeInt)
-        OnMessage(0x1108, "_cwHueSatSelectPinRing")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectPinRing", UInt, 0x1552, UInt, oscTypeInt)
+        OnMessage(0x1552, "_cwHueSatSelectPinRing")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectDeselectAll", UInt, 0x1109, UInt, oscTypeInt)
-        OnMessage(0x1109, "_cwHueSatSelectDeselectAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSelectDeselectAll", UInt, 0x1551, UInt, oscTypeInt)
+        OnMessage(0x1551, "_cwHueSatSelectDeselectAll")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatResetSelection", UInt, 0x1110, UInt, oscTypeInt)
-        OnMessage(0x1110, "_cwHueSatResetSelection")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatResetSelection", UInt, 0x1550, UInt, oscTypeInt)
+        OnMessage(0x1550, "_cwHueSatResetSelection")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSmoothHue", UInt, 0x1111, UInt, oscTypeInt)
-        OnMessage(0x1111, "_cwHueSatSmoothHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSmoothHue", UInt, 0x1549, UInt, oscTypeInt)
+        OnMessage(0x1549, "_cwHueSatSmoothHue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSmoothSat", UInt, 0x1112, UInt, oscTypeInt)
-        OnMessage(0x1112, "_cwHueSatSmoothSat")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSmoothSat", UInt, 0x1548, UInt, oscTypeInt)
+        OnMessage(0x1548, "_cwHueSatSmoothSat")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatAutoLock", UInt, 0x1113, UInt, oscTypeInt)
-        OnMessage(0x1113, "_cwHueSatAutoLock")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatAutoLock", UInt, 0x1547, UInt, oscTypeInt)
+        OnMessage(0x1547, "_cwHueSatAutoLock")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatHueBar", UInt, 0x1114, UInt, oscTypeInt)
-        OnMessage(0x1114, "_cwHueSatHueBar")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatHueBar", UInt, 0x1546, UInt, oscTypeInt)
+        OnMessage(0x1546, "_cwHueSatHueBar")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSatBar", UInt, 0x1115, UInt, oscTypeInt)
-        OnMessage(0x1115, "_cwHueSatSatBar")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSatBar", UInt, 0x1545, UInt, oscTypeInt)
+        OnMessage(0x1545, "_cwHueSatSatBar")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatLumaBar", UInt, 0x1116, UInt, oscTypeInt)
-        OnMessage(0x1116, "_cwHueSatLumaBar")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatLumaBar", UInt, 0x1544, UInt, oscTypeInt)
+        OnMessage(0x1544, "_cwHueSatLumaBar")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatHueResolution", UInt, 0x1117, UInt, oscTypeInt)
-        OnMessage(0x1117, "_cwHueSatHueResolution")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatHueResolution", UInt, 0x1543, UInt, oscTypeInt)
+        OnMessage(0x1543, "_cwHueSatHueResolution")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSatResolution", UInt, 0x1118, UInt, oscTypeInt)
-        OnMessage(0x1118, "_cwHueSatSatResolution")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatSatResolution", UInt, 0x1542, UInt, oscTypeInt)
+        OnMessage(0x1542, "_cwHueSatSatResolution")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatColorSpace", UInt, 0x1119, UInt, oscTypeInt)
-        OnMessage(0x1119, "_cwHueSatColorSpace")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwHueSatColorSpace", UInt, 0x1541, UInt, oscTypeInt)
+        OnMessage(0x1541, "_cwHueSatColorSpace")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwResetColorWarper", UInt, 0x1120, UInt, oscTypeInt)
-        OnMessage(0x1120, "_cwResetColorWarper")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cwResetColorWarper", UInt, 0x1540, UInt, oscTypeInt)
+        OnMessage(0x1540, "_cwResetColorWarper")
+                
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperChrLum", UInt, 0x1539, UInt, oscTypeInt)
+        OnMessage(0x1539, "_colorWarperChrLum")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperChrLum", UInt, 0x1121, UInt, oscTypeInt)
-        OnMessage(0x1121, "_colorWarperChrLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperHueSat", UInt, 0x1538, UInt, oscTypeInt)
+        OnMessage(0x1538, "_colorWarperHueSat")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/colorWarperHueSat", UInt, 0x1122, UInt, oscTypeInt)
-        OnMessage(0x1122, "_colorWarperHueSat")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHSLxRGB", UInt, 0x1123, UInt, oscTypeInt)
-        OnMessage(0x1123, "_qualifierHSLxRGB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHSLxRGB", UInt, 0x1537, UInt, oscTypeInt)
+        OnMessage(0x1537, "_qualifierHSLxRGB")
         
         ;Update 2.4 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsFirstJog", UInt, 0x1124, UInt, oscTypeInt)
-        OnMessage(0x1124, "_barsFirstJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsFirstJog", UInt, 0x1536, UInt, oscTypeInt)
+        OnMessage(0x1536, "_barsFirstJog")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsSecondJog", UInt, 0x1125, UInt, oscTypeInt)
-        OnMessage(0x1125, "_barsSecondJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsSecondJog", UInt, 0x1535, UInt, oscTypeInt)
+        OnMessage(0x1535, "_barsSecondJog")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsThirdJog", UInt, 0x1126, UInt, oscTypeInt)
-        OnMessage(0x1126, "_barsThirdJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsThirdJog", UInt, 0x1534, UInt, oscTypeInt)
+        OnMessage(0x1534, "_barsThirdJog")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsFourthJog", UInt, 0x1127, UInt, oscTypeInt)
-        OnMessage(0x1127, "_barsFourthJog")
-                
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsFourthJog", UInt, 0x1533, UInt, oscTypeInt)
+        OnMessage(0x1533, "_barsFourthJog")
+        
         ;Update 2.3 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/navigateClipsUpDown", UInt, 0x1128, UInt, oscTypeInt)
-        OnMessage(0x1128, "_navigateClipsUpDown")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/navigateClipsUpDown", UInt, 0x1532, UInt, oscTypeInt)
+        OnMessage(0x1532, "_navigateClipsUpDown")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/navigateClipsLeftRightAndDelete", UInt, 0x1129, UInt, oscTypeInt)
-        OnMessage(0x1129, "_navigateClipsLeftRightAndDelete")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/navigateClipsLeftRightAndDelete", UInt, 0x1531, UInt, oscTypeInt)
+        OnMessage(0x1531, "_navigateClipsLeftRightAndDelete")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/monitoringVolume", UInt, 0x1130, UInt, oscTypeInt)
-        OnMessage(0x1130, "_monitoringVolume")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/monitoringVolume", UInt, 0x1530, UInt, oscTypeInt)
+        OnMessage(0x1530, "_monitoringVolume")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineViewOptionsAudioWaveforms", UInt, 0x1131, UInt, oscTypeInt)
-        OnMessage(0x1131, "_timelineViewOptionsAudioWaveforms")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineViewOptionsAudioWaveforms", UInt, 0x1529, UInt, oscTypeInt)
+        OnMessage(0x1529, "_timelineViewOptionsAudioWaveforms")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineViewOptionsSubtitleTracks", UInt, 0x1132, UInt, oscTypeInt)
-        OnMessage(0x1132, "_timelineViewOptionsSubtitleTracks")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineViewOptionsSubtitleTracks", UInt, 0x1528, UInt, oscTypeInt)
+        OnMessage(0x1528, "_timelineViewOptionsSubtitleTracks")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineViewOptionsStackedTimelines", UInt, 0x1133, UInt, oscTypeInt)
-        OnMessage(0x1133, "_timelineViewOptionsStackedTimelines")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineViewOptionsStackedTimelines", UInt, 0x1527, UInt, oscTypeInt)
+        OnMessage(0x1527, "_timelineViewOptionsStackedTimelines")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinessePostFilter", UInt, 0x1134, UInt, oscTypeInt)
-        OnMessage(0x1134, "_matteFinessePostFilter")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinessePostFilter", UInt, 0x1526, UInt, oscTypeInt)
+        OnMessage(0x1526, "_matteFinessePostFilter")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseHighlight", UInt, 0x1135, UInt, oscTypeInt)
-        OnMessage(0x1135, "_matteFinesseHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseHighlight", UInt, 0x1525, UInt, oscTypeInt)
+        OnMessage(0x1525, "_matteFinesseHighlight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseMidtone", UInt, 0x1136, UInt, oscTypeInt)
-        OnMessage(0x1136, "_matteFinesseMidtone")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseMidtone", UInt, 0x1524, UInt, oscTypeInt)
+        OnMessage(0x1524, "_matteFinesseMidtone")
 
         ;Update 2.2.2 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierChromaDarkLight", UInt, 0x1137, UInt, oscTypeInt)
-        OnMessage(0x1137, "_qualifierChromaDarkLight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierChromaDarkLight", UInt, 0x1523, UInt, oscTypeInt)
+        OnMessage(0x1523, "_qualifierChromaDarkLight")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierChromaLight", UInt, 0x1138, UInt, oscTypeInt)
-        OnMessage(0x1138, "_qualifierChromaLight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierChromaLight", UInt, 0x1522, UInt, oscTypeInt)
+        OnMessage(0x1522, "_qualifierChromaLight")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierChromaDark", UInt, 0x1139, UInt, oscTypeInt)
-        OnMessage(0x1139, "_qualifierChromaDark")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierChromaDark", UInt, 0x1521, UInt, oscTypeInt)
+        OnMessage(0x1521, "_qualifierChromaDark")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorYellow", UInt, 0x1140, UInt, oscTypeInt)
-        OnMessage(0x1140, "_qualifierSixVectorYellow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorYellow", UInt, 0x1520, UInt, oscTypeInt)
+        OnMessage(0x1520, "_qualifierSixVectorYellow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorRed", UInt, 0x1141, UInt, oscTypeInt)
-        OnMessage(0x1141, "_qualifierSixVectorRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorRed", UInt, 0x1519, UInt, oscTypeInt)
+        OnMessage(0x1519, "_qualifierSixVectorRed")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorMagenta", UInt, 0x1142, UInt, oscTypeInt)
-        OnMessage(0x1142, "_qualifierSixVectorMagenta")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorMagenta", UInt, 0x1518, UInt, oscTypeInt)
+        OnMessage(0x1518, "_qualifierSixVectorMagenta")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorGreen", UInt, 0x1143, UInt, oscTypeInt)
-        OnMessage(0x1143, "_qualifierSixVectorGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorGreen", UInt, 0x1517, UInt, oscTypeInt)
+        OnMessage(0x1517, "_qualifierSixVectorGreen")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorCyan", UInt, 0x1144, UInt, oscTypeInt)
-        OnMessage(0x1144, "_qualifierSixVectorCyan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorCyan", UInt, 0x1516, UInt, oscTypeInt)
+        OnMessage(0x1516, "_qualifierSixVectorCyan")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorBlue", UInt, 0x1145, UInt, oscTypeInt)
-        OnMessage(0x1145, "_qualifierSixVectorBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSixVectorBlue", UInt, 0x1515, UInt, oscTypeInt)
+        OnMessage(0x1515, "_qualifierSixVectorBlue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetKnob", UInt, 0x1146, UInt, oscTypeInt)
-        OnMessage(0x1146, "_qualifierResetKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetKnob", UInt, 0x1514, UInt, oscTypeInt)
+        OnMessage(0x1514, "_qualifierResetKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetLuminanceKnob", UInt, 0x1147, UInt, oscTypeInt)
-        OnMessage(0x1147, "_qualifierResetLuminanceKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetLuminanceKnob", UInt, 0x1513, UInt, oscTypeInt)
+        OnMessage(0x1513, "_qualifierResetLuminanceKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetSaturationKnob", UInt, 0x1148, UInt, oscTypeInt)
-        OnMessage(0x1148, "_qualifierResetSaturationKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetSaturationKnob", UInt, 0x1512, UInt, oscTypeInt)
+        OnMessage(0x1512, "_qualifierResetSaturationKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetHueKnob", UInt, 0x1149, UInt, oscTypeInt)
-        OnMessage(0x1149, "_qualifierResetHueKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetHueKnob", UInt, 0x1511, UInt, oscTypeInt)
+        OnMessage(0x1511, "_qualifierResetHueKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToAll", UInt, 0x1150, UInt, oscTypeInt)
-        OnMessage(0x1150, "_customCurvesCopyToAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToAll", UInt, 0x1510, UInt, oscTypeInt)
+        OnMessage(0x1510, "_customCurvesCopyToAll")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToBlue", UInt, 0x1151, UInt, oscTypeInt)
-        OnMessage(0x1151, "_customCurvesCopyToBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToBlue", UInt, 0x1509, UInt, oscTypeInt)
+        OnMessage(0x1509, "_customCurvesCopyToBlue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToGreen", UInt, 0x1152, UInt, oscTypeInt)
-        OnMessage(0x1152, "_customCurvesCopyToGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToGreen", UInt, 0x1508, UInt, oscTypeInt)
+        OnMessage(0x1508, "_customCurvesCopyToGreen")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToRed", UInt, 0x1153, UInt, oscTypeInt)
-        OnMessage(0x1153, "_customCurvesCopyToRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToRed", UInt, 0x1507, UInt, oscTypeInt)
+        OnMessage(0x1507, "_customCurvesCopyToRed")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToLum", UInt, 0x1154, UInt, oscTypeInt)
-        OnMessage(0x1154, "_customCurvesCopyToLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesCopyToLum", UInt, 0x1506, UInt, oscTypeInt)
+        OnMessage(0x1506, "_customCurvesCopyToLum")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetKnob", UInt, 0x1155, UInt, oscTypeInt)
-        OnMessage(0x1155, "_customCurvesResetKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetKnob", UInt, 0x1505, UInt, oscTypeInt)
+        OnMessage(0x1505, "_customCurvesResetKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetSoftClipKnob", UInt, 0x1156, UInt, oscTypeInt)
-        OnMessage(0x1156, "_customCurvesResetSoftClipKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetSoftClipKnob", UInt, 0x1504, UInt, oscTypeInt)
+        OnMessage(0x1504, "_customCurvesResetSoftClipKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetEditKnob", UInt, 0x1157, UInt, oscTypeInt)
-        OnMessage(0x1157, "_customCurvesResetEditKnob")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrNavigateWheels", UInt, 0x1158, UInt, oscTypeInt)
-        OnMessage(0x1158, "_hdrNavigateWheels")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetEditKnob", UInt, 0x1503, UInt, oscTypeInt)
+        OnMessage(0x1503, "_customCurvesResetEditKnob")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrNavigateWheels", UInt, 0x1502, UInt, oscTypeInt)
+        OnMessage(0x1502, "_hdrNavigateWheels")
         
         ;Update 2.2.1 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/changeClipSpeed", UInt, 0x1159, UInt, oscTypeInt)
-        OnMessage(0x1159, "_changeClipSpeed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/changeClipSpeed", UInt, 0x1501, UInt, oscTypeInt)
+        OnMessage(0x1501, "_changeClipSpeed")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/retime", UInt, 0x1160, UInt, oscTypeInt)
-        OnMessage(0x1160, "_retime")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/retime", UInt, 0x1500, UInt, oscTypeInt)
+        OnMessage(0x1500, "_retime")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/leftRightExpander", UInt, 0x1161, UInt, oscTypeInt)
-        OnMessage(0x1161, "_leftRightExpander")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/leftRightExpander", UInt, 0x1499, UInt, oscTypeInt)
+        OnMessage(0x1499, "_leftRightExpander")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/dynamicTrimTool", UInt, 0x1162, UInt, oscTypeInt)
-        OnMessage(0x1162, "_dynamicTrimTool")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/dynamicTrimTool", UInt, 0x1498, UInt, oscTypeInt)
+        OnMessage(0x1498, "_dynamicTrimTool")
         
         ;Update 2.2 Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openKeyFrameWindowColorPage", UInt, 0x1163, UInt, oscTypeInt)
-        OnMessage(0x1163, "_openKeyFrameWindowColorPage")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openKeyFrameWindowColorPage", UInt, 0x1497, UInt, oscTypeInt)
+        OnMessage(0x1497, "_openKeyFrameWindowColorPage")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/toggleTimelineThumbMode", UInt, 0x1164, UInt, oscTypeInt)
-        OnMessage(0x1164, "_toggleTimelineThumbMode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/toggleTimelineThumbMode", UInt, 0x1496, UInt, oscTypeInt)
+        OnMessage(0x1496, "_toggleTimelineThumbMode")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteAttributesJogWheel", UInt, 0x1165, UInt, oscTypeInt)
-        OnMessage(0x1165, "_pasteAttributesJogWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteAttributesJogWheel", UInt, 0x1495, UInt, oscTypeInt)
+        OnMessage(0x1495, "_pasteAttributesJogWheel")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteJogWheel", UInt, 0x1166, UInt, oscTypeInt)
-        OnMessage(0x1166, "_pasteJogWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteJogWheel", UInt, 0x1494, UInt, oscTypeInt)
+        OnMessage(0x1494, "_pasteJogWheel")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cutJogWheel", UInt, 0x1167, UInt, oscTypeInt)
-        OnMessage(0x1167, "_cutJogWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cutJogWheel", UInt, 0x1493, UInt, oscTypeInt)
+        OnMessage(0x1493, "_cutJogWheel")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/copyJogWheel", UInt, 0x1168, UInt, oscTypeInt)
-        OnMessage(0x1168, "_copyJogWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/copyJogWheel", UInt, 0x1492, UInt, oscTypeInt)
+        OnMessage(0x1492, "_copyJogWheel")
         
         ;Inspector Key Frames
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameTransform", UInt, 0x1169, UInt, oscTypeInt)
-        OnMessage(0x1169, "_inspectorKeyFrameTransform") ;Latest Low
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameTransform", UInt, 0x1491, UInt, oscTypeInt)
+        OnMessage(0x1491, "_inspectorKeyFrameTransform")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameVolume", UInt, 0x1170, UInt, oscTypeInt)
-        OnMessage(0x1170, "_inspectorKeyFrameVolume")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameVolume", UInt, 0x1490, UInt, oscTypeInt)
+        OnMessage(0x1490, "_inspectorKeyFrameVolume")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameYaw", UInt, 0x1171, UInt, oscTypeInt)
-        OnMessage(0x1171, "_inspectorKeyFrameYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameYaw", UInt, 0x1489, UInt, oscTypeInt)
+        OnMessage(0x1489, "_inspectorKeyFrameYaw")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameAnchor", UInt, 0x1172, UInt, oscTypeInt)
-        OnMessage(0x1172, "_inspectorKeyFrameAnchor")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameAnchor", UInt, 0x1488, UInt, oscTypeInt)
+        OnMessage(0x1488, "_inspectorKeyFrameAnchor")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFramePitch", UInt, 0x1173, UInt, oscTypeInt)
-        OnMessage(0x1173, "_inspectorKeyFramePitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFramePitch", UInt, 0x1487, UInt, oscTypeInt)
+        OnMessage(0x1487, "_inspectorKeyFramePitch")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFramePosition", UInt, 0x1174, UInt, oscTypeInt)
-        OnMessage(0x1174, "_inspectorKeyFramePosition")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFramePosition", UInt, 0x1486, UInt, oscTypeInt)
+        OnMessage(0x1486, "_inspectorKeyFramePosition")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameRotation", UInt, 0x1175, UInt, oscTypeInt)
-        OnMessage(0x1175, "_inspectorKeyFrameRotation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/Key Frame Rotation", UInt, 0x1485, UInt, oscTypeInt)
+        OnMessage(0x1485, "_inspectorKeyFrameRotation")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameZoom", UInt, 0x1176, UInt, oscTypeInt)
-        OnMessage(0x1176, "_inspectorKeyFrameZoom")
-        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorKeyFrameZoom", UInt, 0x1484, UInt, oscTypeInt)
+        OnMessage(0x1484, "_inspectorKeyFrameZoom")
+
         ;Motion Effects Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialRadius", UInt, 0x1177, UInt, oscTypeInt)
-        OnMessage(0x1177, "_motionEffectsSpatialRadius")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialRadius", UInt, 0x1483, UInt, oscTypeInt)
+        OnMessage(0x1483, "_motionEffectsSpatialRadius")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialMode", UInt, 0x1178, UInt, oscTypeInt)
-        OnMessage(0x1178, "_motionEffectsSpatialMode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialMode", UInt, 0x1482, UInt, oscTypeInt)
+        OnMessage(0x1482, "_motionEffectsSpatialMode")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlurMotionBlur", UInt, 0x1179, UInt, oscTypeInt)
-        OnMessage(0x1179, "_motionEffectsMotionBlurMotionBlur")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlurMotionBlur", UInt, 0x1481, UInt, oscTypeInt)
+        OnMessage(0x1481, "_motionEffectsMotionBlurMotionBlur")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlurMotionRange", UInt, 0x1180, UInt, oscTypeInt)
-        OnMessage(0x1180, "_motionEffectsMotionBlurMotionRange")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlurMotionRange", UInt, 0x1480, UInt, oscTypeInt)
+        OnMessage(0x1480, "_motionEffectsMotionBlurMotionRange")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlurMotionEstType", UInt, 0x1181, UInt, oscTypeInt)
-        OnMessage(0x1181, "_motionEffectsMotionBlurMotionEstType")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlurMotionEstType", UInt, 0x1479, UInt, oscTypeInt)
+        OnMessage(0x1479, "_motionEffectsMotionBlurMotionEstType")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalMotionRange", UInt, 0x1182, UInt, oscTypeInt)
-        OnMessage(0x1182, "_motionEffectsTemporalMotionRange")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalMotionRange", UInt, 0x1478, UInt, oscTypeInt)
+        OnMessage(0x1478, "_motionEffectsTemporalMotionRange")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalMotionEstType", UInt, 0x1183, UInt, oscTypeInt)
-        OnMessage(0x1183, "_motionEffectsTemporalMotionEstType")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalMotionEstType", UInt, 0x1477, UInt, oscTypeInt)
+        OnMessage(0x1477, "_motionEffectsTemporalMotionEstType")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalFrames", UInt, 0x1184, UInt, oscTypeInt)
-        OnMessage(0x1184, "_motionEffectsTemporalFrames")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalFrames", UInt, 0x1476, UInt, oscTypeInt)
+        OnMessage(0x1476, "_motionEffectsTemporalFrames")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialBlend", UInt, 0x1185, UInt, oscTypeInt)
-        OnMessage(0x1185, "_motionEffectsSpatialBlend")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialBlend", UInt, 0x1475, UInt, oscTypeInt)
+        OnMessage(0x1475, "_motionEffectsSpatialBlend")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialChroma", UInt, 0x1186, UInt, oscTypeInt)
-        OnMessage(0x1186, "_motionEffectsSpatialChroma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialChroma", UInt, 0x1474, UInt, oscTypeInt)
+        OnMessage(0x1474, "_motionEffectsSpatialChroma")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialLuma", UInt, 0x1187, UInt, oscTypeInt)
-        OnMessage(0x1187, "_motionEffectsSpatialLuma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialLuma", UInt, 0x1473, UInt, oscTypeInt)
+        OnMessage(0x1473, "_motionEffectsSpatialLuma")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalBlend", UInt, 0x1188, UInt, oscTypeInt)
-        OnMessage(0x1188, "_motionEffectsTemporalBlend")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalBlend", UInt, 0x1472, UInt, oscTypeInt)
+        OnMessage(0x1472, "_motionEffectsTemporalBlend")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalMotion", UInt, 0x1189, UInt, oscTypeInt)
-        OnMessage(0x1189, "_motionEffectsTemporalMotion")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalMotion", UInt, 0x1471, UInt, oscTypeInt)
+        OnMessage(0x1471, "_motionEffectsTemporalMotion")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalChroma", UInt, 0x1190, UInt, oscTypeInt)
-        OnMessage(0x1190, "_motionEffectsTemporalChroma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalChroma", UInt, 0x1470, UInt, oscTypeInt)
+        OnMessage(0x1470, "_motionEffectsTemporalChroma")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalLuma", UInt, 0x1191, UInt, oscTypeInt)
-        OnMessage(0x1191, "_motionEffectsTemporalLuma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalLuma", UInt, 0x1469, UInt, oscTypeInt)
+        OnMessage(0x1469, "_motionEffectsTemporalLuma")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsReset", UInt, 0x1192, UInt, oscTypeInt)
-        OnMessage(0x1192, "_motionEffectsReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsReset", UInt, 0x1468, UInt, oscTypeInt)
+        OnMessage(0x1468, "_motionEffectsReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlur", UInt, 0x1193, UInt, oscTypeInt)
-        OnMessage(0x1193, "_motionEffectsMotionBlur")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsMotionBlur", UInt, 0x1467, UInt, oscTypeInt)
+        OnMessage(0x1467, "_motionEffectsMotionBlur")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialResetThreshold", UInt, 0x1194, UInt, oscTypeInt)
-        OnMessage(0x1194, "_motionEffectsSpatialResetThreshold")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialResetThreshold", UInt, 0x1466, UInt, oscTypeInt)
+        OnMessage(0x1466, "_motionEffectsSpatialResetThreshold")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialResetNR", UInt, 0x1195, UInt, oscTypeInt)
-        OnMessage(0x1195, "_motionEffectsSpatialResetNR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialResetNR", UInt, 0x1465, UInt, oscTypeInt)
+        OnMessage(0x1465, "_motionEffectsSpatialResetNR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalResetThreshold", UInt, 0x1196, UInt, oscTypeInt)
-        OnMessage(0x1196, "_motionEffectsTemporalResetThreshold")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalResetThreshold", UInt, 0x1464, UInt, oscTypeInt)
+        OnMessage(0x1464, "_motionEffectsTemporalResetThreshold")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalResetNR", UInt, 0x1197, UInt, oscTypeInt)
-        OnMessage(0x1197, "_motionEffectsTemporalResetNR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalResetNR", UInt, 0x1463, UInt, oscTypeInt)
+        OnMessage(0x1463, "_motionEffectsTemporalResetNR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialLink", UInt, 0x1198, UInt, oscTypeInt)
-        OnMessage(0x1198, "_motionEffectsSpatialLink")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsSpatialLink", UInt, 0x1462, UInt, oscTypeInt)
+        OnMessage(0x1462, "_motionEffectsSpatialLink")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalLink", UInt, 0x1199, UInt, oscTypeInt)
-        OnMessage(0x1199, "_motionEffectsTemporalLink")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/motionEffectsTemporalLink", UInt, 0x1461, UInt, oscTypeInt)
+        OnMessage(0x1461, "_motionEffectsTemporalLink")
         
         ;Key Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierOffset", UInt, 0x1200, UInt, oscTypeInt)
-        OnMessage(0x1200, "_keyQualifierOffset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierOffset", UInt, 0x1460, UInt, oscTypeInt)
+        OnMessage(0x1460, "_keyQualifierOffset") ;Latest Low
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierGain", UInt, 0x1201, UInt, oscTypeInt)
-        OnMessage(0x1201, "_keyQualifierGain")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierGain", UInt, 0x1459, UInt, oscTypeInt)
+        OnMessage(0x1459, "_keyQualifierGain")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyOutputOffset", UInt, 0x1202, UInt, oscTypeInt)
-        OnMessage(0x1202, "_keyOutputOffset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyOutputOffset", UInt, 0x1458, UInt, oscTypeInt)
+        OnMessage(0x1458, "_keyOutputOffset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyOutputGain", UInt, 0x1203, UInt, oscTypeInt)
-        OnMessage(0x1203, "_keyOutputGain")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyOutputGain", UInt, 0x1457, UInt, oscTypeInt)
+        OnMessage(0x1457, "_keyOutputGain")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputBlurHV", UInt, 0x1204, UInt, oscTypeInt)
-        OnMessage(0x1204, "_keyInputBlurHV")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputBlurHV", UInt, 0x1456, UInt, oscTypeInt)
+        OnMessage(0x1456, "_keyInputBlurHV")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputBlurR", UInt, 0x1205, UInt, oscTypeInt)
-        OnMessage(0x1205, "_keyInputBlurR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputBlurR", UInt, 0x1455, UInt, oscTypeInt)
+        OnMessage(0x1455, "_keyInputBlurR")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputOffset", UInt, 0x1206, UInt, oscTypeInt)
-        OnMessage(0x1206, "_keyInputOffset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputOffset", UInt, 0x1454, UInt, oscTypeInt)
+        OnMessage(0x1454, "_keyInputOffset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputGain", UInt, 0x1207, UInt, oscTypeInt)
-        OnMessage(0x1207, "_keyInputGain")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputGain", UInt, 0x1453, UInt, oscTypeInt)
+        OnMessage(0x1453, "_keyInputGain")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyReset", UInt, 0x1208, UInt, oscTypeInt)
-        OnMessage(0x1208, "_keyReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyReset", UInt, 0x1452, UInt, oscTypeInt)
+        OnMessage(0x1452, "_keyReset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierKey", UInt, 0x1209, UInt, oscTypeInt)
-        OnMessage(0x1209, "_keyQualifierKey")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierKey", UInt, 0x1451, UInt, oscTypeInt)
+        OnMessage(0x1451, "_keyQualifierKey")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierMatteMask", UInt, 0x1210, UInt, oscTypeInt)
-        OnMessage(0x1210, "_keyQualifierMatteMask")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyQualifierMatteMask", UInt, 0x1450, UInt, oscTypeInt)
+        OnMessage(0x1450, "_keyQualifierMatteMask")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyOutputKey", UInt, 0x1211, UInt, oscTypeInt)
-        OnMessage(0x1211, "_keyOutputKey")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyOutputKey", UInt, 0x1449, UInt, oscTypeInt)
+        OnMessage(0x1449, "_keyOutputKey")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputKey", UInt, 0x1212, UInt, oscTypeInt)
-        OnMessage(0x1212, "_keyInputKey")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputKey", UInt, 0x1448, UInt, oscTypeInt)
+        OnMessage(0x1448, "_keyInputKey")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputMatteMask", UInt, 0x1213, UInt, oscTypeInt)
-        OnMessage(0x1213, "_keyInputMatteMask")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/keyInputMatteMask", UInt, 0x1447, UInt, oscTypeInt)
+        OnMessage(0x1447, "_keyInputMatteMask")
 
         ;Qualifier Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinessePreFilter", UInt, 0x1214, UInt, oscTypeInt)
-        OnMessage(0x1214, "_matteFinessePreFilter")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinessePreFilter", UInt, 0x1446, UInt, oscTypeInt)
+        OnMessage(0x1446, "_matteFinessePreFilter")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseCleanBlack", UInt, 0x1215, UInt, oscTypeInt)
-        OnMessage(0x1215, "_matteFinesseCleanBlack")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseCleanBlack", UInt, 0x1445, UInt, oscTypeInt)
+        OnMessage(0x1445, "_matteFinesseCleanBlack")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseCleanWhite", UInt, 0x1216, UInt, oscTypeInt)
-        OnMessage(0x1216, "_matteFinesseCleanWhite")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseCleanWhite", UInt, 0x1444, UInt, oscTypeInt)
+        OnMessage(0x1444, "_matteFinesseCleanWhite")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseBlurRadius", UInt, 0x1217, UInt, oscTypeInt)
-        OnMessage(0x1217, "_matteFinesseBlurRadius")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseBlurRadius", UInt, 0x1443, UInt, oscTypeInt)
+        OnMessage(0x1443, "_matteFinesseBlurRadius")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseInOutRatio", UInt, 0x1218, UInt, oscTypeInt)
-        OnMessage(0x1218, "_matteFinesseInOutRatio")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseInOutRatio", UInt, 0x1442, UInt, oscTypeInt)
+        OnMessage(0x1442, "_matteFinesseInOutRatio")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseMorphMenu", UInt, 0x1219, UInt, oscTypeInt)
-        OnMessage(0x1219, "_matteFinesseMorphMenu")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseMorphMenu", UInt, 0x1441, UInt, oscTypeInt)
+        OnMessage(0x1441, "_matteFinesseMorphMenu")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseDenoise", UInt, 0x1220, UInt, oscTypeInt)
-        OnMessage(0x1220, "_matteFinesseDenoise")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseDenoise", UInt, 0x1440, UInt, oscTypeInt)
+        OnMessage(0x1440, "_matteFinesseDenoise")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseMorphRadius", UInt, 0x1221, UInt, oscTypeInt)
-        OnMessage(0x1221, "_matteFinesseMorphRadius")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseMorphRadius", UInt, 0x1439, UInt, oscTypeInt)
+        OnMessage(0x1439, "_matteFinesseMorphRadius")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseShadow", UInt, 0x1222, UInt, oscTypeInt)
-        OnMessage(0x1222, "_matteFinesseShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseShadow", UInt, 0x1438, UInt, oscTypeInt)
+        OnMessage(0x1438, "_matteFinesseShadow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseBlackClip", UInt, 0x1223, UInt, oscTypeInt)
-        OnMessage(0x1223, "_matteFinesseBlackClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseBlackClip", UInt, 0x1437, UInt, oscTypeInt)
+        OnMessage(0x1437, "_matteFinesseBlackClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseWhiteClip", UInt, 0x1224, UInt, oscTypeInt)
-        OnMessage(0x1224, "_matteFinesseWhiteClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/matteFinesseWhiteClip", UInt, 0x1436, UInt, oscTypeInt)
+        OnMessage(0x1436, "_matteFinesseWhiteClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueHighSoft", UInt, 0x1225, UInt, oscTypeInt)
-        OnMessage(0x1225, "_qualifierBlueHighSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueHighSoft", UInt, 0x1435, UInt, oscTypeInt)
+        OnMessage(0x1435, "_qualifierBlueHighSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueLowSoft", UInt, 0x1226, UInt, oscTypeInt)
-        OnMessage(0x1226, "_qualifierBlueLowSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueLowSoft", UInt, 0x1434, UInt, oscTypeInt)
+        OnMessage(0x1434, "_qualifierBlueLowSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueHigh", UInt, 0x1227, UInt, oscTypeInt)
-        OnMessage(0x1227, "_qualifierBlueHigh")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueHigh", UInt, 0x1433, UInt, oscTypeInt)
+        OnMessage(0x1433, "_qualifierBlueHigh")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueLow", UInt, 0x1228, UInt, oscTypeInt)
-        OnMessage(0x1228, "_qualifierBlueLow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierBlueLow", UInt, 0x1432, UInt, oscTypeInt)
+        OnMessage(0x1432, "_qualifierBlueLow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenHighSoft", UInt, 0x1229, UInt, oscTypeInt)
-        OnMessage(0x1229, "_qualifierGreenHighSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenHighSoft", UInt, 0x1431, UInt, oscTypeInt)
+        OnMessage(0x1431, "_qualifierGreenHighSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenLowSoft", UInt, 0x1230, UInt, oscTypeInt)
-        OnMessage(0x1230, "_qualifierGreenLowSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenLowSoft", UInt, 0x1430, UInt, oscTypeInt)
+        OnMessage(0x1430, "_qualifierGreenLowSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenHigh", UInt, 0x1231, UInt, oscTypeInt)
-        OnMessage(0x1231, "_qualifierGreenHigh")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenHigh", UInt, 0x1429, UInt, oscTypeInt)
+        OnMessage(0x1429, "_qualifierGreenHigh")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenLow", UInt, 0x1232, UInt, oscTypeInt)
-        OnMessage(0x1232, "_qualifierGreenLow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierGreenLow", UInt, 0x1428, UInt, oscTypeInt)
+        OnMessage(0x1428, "_qualifierGreenLow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedHighSoft", UInt, 0x1233, UInt, oscTypeInt)
-        OnMessage(0x1233, "_qualifierRedHighSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedHighSoft", UInt, 0x1427, UInt, oscTypeInt)
+        OnMessage(0x1427, "_qualifierRedHighSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedLowSoft", UInt, 0x1234, UInt, oscTypeInt)
-        OnMessage(0x1234, "_qualifierRedLowSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedLowSoft", UInt, 0x1426, UInt, oscTypeInt)
+        OnMessage(0x1426, "_qualifierRedLowSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedHigh", UInt, 0x1235, UInt, oscTypeInt)
-        OnMessage(0x1235, "_qualifierRedHigh")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedHigh", UInt, 0x1425, UInt, oscTypeInt)
+        OnMessage(0x1425, "_qualifierRedHigh")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedLow", UInt, 0x1236, UInt, oscTypeInt)
-        OnMessage(0x1236, "_qualifierRedLow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierRedLow", UInt, 0x1424, UInt, oscTypeInt)
+        OnMessage(0x1424, "_qualifierRedLow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumHighSoft", UInt, 0x1237, UInt, oscTypeInt)
-        OnMessage(0x1237, "_qualifierLumHighSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumHighSoft", UInt, 0x1423, UInt, oscTypeInt)
+        OnMessage(0x1423, "_qualifierLumHighSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumLowSoft", UInt, 0x1238, UInt, oscTypeInt)
-        OnMessage(0x1238, "_qualifierLumLowSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumLowSoft", UInt, 0x1422, UInt, oscTypeInt)
+        OnMessage(0x1422, "_qualifierLumLowSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumHigh", UInt, 0x1239, UInt, oscTypeInt)
-        OnMessage(0x1239, "_qualifierLumHigh")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumHigh", UInt, 0x1421, UInt, oscTypeInt)
+        OnMessage(0x1421, "_qualifierLumHigh")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumLow", UInt, 0x1240, UInt, oscTypeInt)
-        OnMessage(0x1240, "_qualifierLumLow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLumLow", UInt, 0x1420, UInt, oscTypeInt)
+        OnMessage(0x1420, "_qualifierLumLow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatHighSoft", UInt, 0x1241, UInt, oscTypeInt)
-        OnMessage(0x1241, "_qualifierSatHighSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatHighSoft", UInt, 0x1419, UInt, oscTypeInt)
+        OnMessage(0x1419, "_qualifierSatHighSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatLowSoft", UInt, 0x1242, UInt, oscTypeInt)
-        OnMessage(0x1242, "_qualifierSatLowSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatLowSoft", UInt, 0x1418, UInt, oscTypeInt)
+        OnMessage(0x1418, "_qualifierSatLowSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatHigh", UInt, 0x1243, UInt, oscTypeInt)
-        OnMessage(0x1243, "_qualifierSatHigh")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatHigh", UInt, 0x1417, UInt, oscTypeInt)
+        OnMessage(0x1417, "_qualifierSatHigh")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatLow", UInt, 0x1244, UInt, oscTypeInt)
-        OnMessage(0x1244, "_qualifierSatLow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSatLow", UInt, 0x1416, UInt, oscTypeInt)
+        OnMessage(0x1416, "_qualifierSatLow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueSym", UInt, 0x1245, UInt, oscTypeInt)
-        OnMessage(0x1245, "_qualifierHueSym")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueSym", UInt, 0x1415, UInt, oscTypeInt)
+        OnMessage(0x1415, "_qualifierHueSym")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueSoft", UInt, 0x1246, UInt, oscTypeInt)
-        OnMessage(0x1246, "_qualifierHueSoft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueSoft", UInt, 0x1414, UInt, oscTypeInt)
+        OnMessage(0x1414, "_qualifierHueSoft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueWidth", UInt, 0x1247, UInt, oscTypeInt)
-        OnMessage(0x1247, "_qualifierHueWidth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueWidth", UInt, 0x1413, UInt, oscTypeInt)
+        OnMessage(0x1413, "_qualifierHueWidth")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueCenter", UInt, 0x1248, UInt, oscTypeInt)
-        OnMessage(0x1248, "_qualifierHueCenter")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueCenter", UInt, 0x1412, UInt, oscTypeInt)
+        OnMessage(0x1412, "_qualifierHueCenter")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierReset", UInt, 0x1249, UInt, oscTypeInt)
-        OnMessage(0x1249, "_qualifierReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierReset", UInt, 0x1411, UInt, oscTypeInt)
+        OnMessage(0x1411, "_qualifierReset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetLuminance", UInt, 0x1250, UInt, oscTypeInt)
-        OnMessage(0x1250, "_qualifierResetLuminance")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetLuminance", UInt, 0x1410, UInt, oscTypeInt)
+        OnMessage(0x1410, "_qualifierResetLuminance")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetSaturation", UInt, 0x1251, UInt, oscTypeInt)
-        OnMessage(0x1251, "_qualifierResetSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetSaturation", UInt, 0x1409, UInt, oscTypeInt)
+        OnMessage(0x1409, "_qualifierResetSaturation")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetHue", UInt, 0x1252, UInt, oscTypeInt)
-        OnMessage(0x1252, "_qualifierResetHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierResetHue", UInt, 0x1408, UInt, oscTypeInt)
+        OnMessage(0x1408, "_qualifierResetHue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLuminanceOnOff", UInt, 0x1253, UInt, oscTypeInt)
-        OnMessage(0x1253, "_qualifierLuminanceOnOff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierLuminanceOnOff", UInt, 0x1407, UInt, oscTypeInt)
+        OnMessage(0x1407, "_qualifierLuminanceOnOff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSaturationOnOff", UInt, 0x1254, UInt, oscTypeInt)
-        OnMessage(0x1254, "_qualifierSaturationOnOff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierSaturationOnOff", UInt, 0x1406, UInt, oscTypeInt)
+        OnMessage(0x1406, "_qualifierSaturationOnOff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueOnOff", UInt, 0x1255, UInt, oscTypeInt)
-        OnMessage(0x1255, "_qualifierHueOnOff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierHueOnOff", UInt, 0x1405, UInt, oscTypeInt)
+        OnMessage(0x1405, "_qualifierHueOnOff")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierInvert", UInt, 0x1256, UInt, oscTypeInt)
-        OnMessage(0x1256, "_qualifierInvert")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierInvert", UInt, 0x1404, UInt, oscTypeInt)
+        OnMessage(0x1404, "_qualifierInvert")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierFeatherAdd", UInt, 0x1257, UInt, oscTypeInt)
-        OnMessage(0x1257, "_qualifierFeatherAdd")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierFeatherAdd", UInt, 0x1403, UInt, oscTypeInt)
+        OnMessage(0x1403, "_qualifierFeatherAdd")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierFeatherSubstract", UInt, 0x1258, UInt, oscTypeInt)
-        OnMessage(0x1258, "_qualifierFeatherSubstract")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierFeatherSubstract", UInt, 0x1402, UInt, oscTypeInt)
+        OnMessage(0x1402, "_qualifierFeatherSubstract")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierPickerAdd", UInt, 0x1259, UInt, oscTypeInt)
-        OnMessage(0x1259, "_qualifierPickerAdd")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierPickerAdd", UInt, 0x1401, UInt, oscTypeInt)
+        OnMessage(0x1401, "_qualifierPickerAdd")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierPickerSubstract", UInt, 0x1260, UInt, oscTypeInt)
-        OnMessage(0x1260, "_qualifierPickerSubstract")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierPickerSubstract", UInt, 0x1400, UInt, oscTypeInt)
+        OnMessage(0x1400, "_qualifierPickerSubstract")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierPicker", UInt, 0x1261, UInt, oscTypeInt)
-        OnMessage(0x1261, "_qualifierPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/qualifierPicker", UInt, 0x1399, UInt, oscTypeInt)
+        OnMessage(0x1399, "_qualifierPicker")
 
         ;Nodes and Scopes Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesLowPassFilter", UInt, 0x1262, UInt, oscTypeInt)
-        OnMessage(0x1262, "_scopesLowPassFilter")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesLowPassFilter", UInt, 0x1398, UInt, oscTypeInt)
+        OnMessage(0x1398, "_scopesLowPassFilter")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesDisplayFocus", UInt, 0x1263, UInt, oscTypeInt)
-        OnMessage(0x1263, "_scopesDisplayFocus")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesDisplayFocus", UInt, 0x1397, UInt, oscTypeInt)
+        OnMessage(0x1397, "_scopesDisplayFocus")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesCIE", UInt, 0x1264, UInt, oscTypeInt)
-        OnMessage(0x1264, "_scopesCIE")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesCIE", UInt, 0x1396, UInt, oscTypeInt)
+        OnMessage(0x1396, "_scopesCIE")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesHistogram", UInt, 0x1265, UInt, oscTypeInt)
-        OnMessage(0x1265, "_scopesHistogram")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesHistogram", UInt, 0x1395, UInt, oscTypeInt)
+        OnMessage(0x1395, "_scopesHistogram")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesVectorscope", UInt, 0x1266, UInt, oscTypeInt)
-        OnMessage(0x1266, "_scopesVectorscope")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesVectorscope", UInt, 0x1394, UInt, oscTypeInt)
+        OnMessage(0x1394, "_scopesVectorscope")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesWaveform", UInt, 0x1267, UInt, oscTypeInt)
-        OnMessage(0x1267, "_scopesWaveform")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesWaveform", UInt, 0x1393, UInt, oscTypeInt)
+        OnMessage(0x1393, "_scopesWaveform")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesParade", UInt, 0x1268, UInt, oscTypeInt)
-        OnMessage(0x1268, "_scopesParade")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/scopesParade", UInt, 0x1392, UInt, oscTypeInt)
+        OnMessage(0x1392, "_scopesParade")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x1269, UInt, oscTypeInt)
-        OnMessage(0x1269, "_resetAllNodesGrade")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/resetAllNodesGrade", UInt, 0x1391, UInt, oscTypeInt)
+        ;OnMessage(0x1391, "_resetAllNodesGrade")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesExtract", UInt, 0x1270, UInt, oscTypeInt)
-        OnMessage(0x1270, "_nodesExtract")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesExtract", UInt, 0x1390, UInt, oscTypeInt)
+        OnMessage(0x1390, "_nodesExtract")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesSplitterCombiner", UInt, 0x1271, UInt, oscTypeInt)
-        OnMessage(0x1271, "_nodesSplitterCombiner")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesSplitterCombiner", UInt, 0x1389, UInt, oscTypeInt)
+        OnMessage(0x1389, "_nodesSplitterCombiner")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddOutside", UInt, 0x1272, UInt, oscTypeInt)
-        OnMessage(0x1272, "_nodesAddOutside")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddOutside", UInt, 0x1388, UInt, oscTypeInt)
+        OnMessage(0x1388, "_nodesAddOutside")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAppend", UInt, 0x1273, UInt, oscTypeInt)
-        OnMessage(0x1273, "_nodesAppend")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAppend", UInt, 0x1387, UInt, oscTypeInt)
+        OnMessage(0x1387, "_nodesAppend")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddLayer", UInt, 0x1274, UInt, oscTypeInt)
-        OnMessage(0x1274, "_nodesAddLayer")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddLayer", UInt, 0x1386, UInt, oscTypeInt)
+        OnMessage(0x1386, "_nodesAddLayer")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddParallel", UInt, 0x1275, UInt, oscTypeInt)
-        OnMessage(0x1275, "_nodesAddParallel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddParallel", UInt, 0x1385, UInt, oscTypeInt)
+        OnMessage(0x1385, "_nodesAddParallel")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddSerialBefore", UInt, 0x1276, UInt, oscTypeInt)
-        OnMessage(0x1276, "_nodesAddSerialBefore")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddSerialBefore", UInt, 0x1384, UInt, oscTypeInt)
+        OnMessage(0x1384, "_nodesAddSerialBefore")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddSerial", UInt, 0x1277, UInt, oscTypeInt)
-        OnMessage(0x1277, "_nodesAddSerial")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/nodesAddSerial", UInt, 0x1383, UInt, oscTypeInt)
+        OnMessage(0x1383, "_nodesAddSerial")
 
         ;Printer Lights Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterMaster", UInt, 0x1278, UInt, oscTypeInt)
-        OnMessage(0x1278, "_printerLightsQuarterMaster")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterMaster", UInt, 0x1382, UInt, oscTypeInt)
+        OnMessage(0x1382, "_printerLightsQuarterMaster")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterYellow", UInt, 0x1279, UInt, oscTypeInt)
-        OnMessage(0x1279, "_printerLightsQuarterYellow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterYellow", UInt, 0x1381, UInt, oscTypeInt)
+        OnMessage(0x1381, "_printerLightsQuarterYellow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterMagenta", UInt, 0x1280, UInt, oscTypeInt)
-        OnMessage(0x1280, "_printerLightsQuarterMagenta")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterMagenta", UInt, 0x1380, UInt, oscTypeInt)
+        OnMessage(0x1380, "_printerLightsQuarterMagenta")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterCyan", UInt, 0x1281, UInt, oscTypeInt)
-        OnMessage(0x1281, "_printerLightsQuarterCyan")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterCyan", UInt, 0x1379, UInt, oscTypeInt)
+        OnMessage(0x1379, "_printerLightsQuarterCyan")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterBlue", UInt, 0x1282, UInt, oscTypeInt)
-        OnMessage(0x1282, "_printerLightsQuarterBlue")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterBlue", UInt, 0x1378, UInt, oscTypeInt)
+        OnMessage(0x1378, "_printerLightsQuarterBlue")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterGreen", UInt, 0x1283, UInt, oscTypeInt)
-        OnMessage(0x1283, "_printerLightsQuarterGreen")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterGreen", UInt, 0x1377, UInt, oscTypeInt)
+        OnMessage(0x1377, "_printerLightsQuarterGreen")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterRed", UInt, 0x1284, UInt, oscTypeInt)
-        OnMessage(0x1284, "_printerLightsQuarterRed")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsQuarterRed", UInt, 0x1376, UInt, oscTypeInt)
+        OnMessage(0x1376, "_printerLightsQuarterRed")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfMaster", UInt, 0x1285, UInt, oscTypeInt)
-        OnMessage(0x1285, "_printerLightsHalfMaster")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfMaster", UInt, 0x1375, UInt, oscTypeInt)
+        OnMessage(0x1375, "_printerLightsHalfMaster")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfYellow", UInt, 0x1286, UInt, oscTypeInt)
-        OnMessage(0x1286, "_printerLightsHalfYellow")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfYellow", UInt, 0x1374, UInt, oscTypeInt)
+        OnMessage(0x1374, "_printerLightsHalfYellow")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfMagenta", UInt, 0x1287, UInt, oscTypeInt)
-        OnMessage(0x1287, "_printerLightsHalfMagenta")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfMagenta", UInt, 0x1373, UInt, oscTypeInt)
+        OnMessage(0x1373, "_printerLightsHalfMagenta")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfCyan", UInt, 0x1288, UInt, oscTypeInt)
-        OnMessage(0x1288, "_printerLightsHalfCyan")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfCyan", UInt, 0x1372, UInt, oscTypeInt)
+        OnMessage(0x1372, "_printerLightsHalfCyan")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfBlue", UInt, 0x1289, UInt, oscTypeInt)
-        OnMessage(0x1289, "_printerLightsHalfBlue")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfBlue", UInt, 0x1371, UInt, oscTypeInt)
+        OnMessage(0x1371, "_printerLightsHalfBlue")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfGreen", UInt, 0x1290, UInt, oscTypeInt)
-        OnMessage(0x1290, "_printerLightsHalfGreen")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfGreen", UInt, 0x1370, UInt, oscTypeInt)
+        OnMessage(0x1370, "_printerLightsHalfGreen")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfRed", UInt, 0x1291, UInt, oscTypeInt)
-        OnMessage(0x1291, "_printerLightsHalfRed")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsHalfRed", UInt, 0x1369, UInt, oscTypeInt)
+        OnMessage(0x1369, "_printerLightsHalfRed")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullMaster", UInt, 0x1292, UInt, oscTypeInt)
-        OnMessage(0x1292, "_printerLightsFullMaster")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullMaster", UInt, 0x1368, UInt, oscTypeInt)
+        OnMessage(0x1368, "_printerLightsFullMaster")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullYellow", UInt, 0x1293, UInt, oscTypeInt)
-        OnMessage(0x1293, "_printerLightsFullYellow")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullYellow", UInt, 0x1367, UInt, oscTypeInt)
+        OnMessage(0x1367, "_printerLightsFullYellow")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullMagenta", UInt, 0x1294, UInt, oscTypeInt)
-        OnMessage(0x1294, "_printerLightsFullMagenta")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullMagenta", UInt, 0x1366, UInt, oscTypeInt)
+        OnMessage(0x1366, "_printerLightsFullMagenta")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullCyan", UInt, 0x1295, UInt, oscTypeInt)
-        OnMessage(0x1295, "_printerLightsFullCyan")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullCyan", UInt, 0x1365, UInt, oscTypeInt)
+        OnMessage(0x1365, "_printerLightsFullCyan")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullBlue", UInt, 0x1296, UInt, oscTypeInt)
-        OnMessage(0x1296, "_printerLightsFullBlue")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullBlue", UInt, 0x1364, UInt, oscTypeInt)
+        OnMessage(0x1364, "_printerLightsFullBlue")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullGreen", UInt, 0x1297, UInt, oscTypeInt)
-        OnMessage(0x1297, "_printerLightsFullGreen")        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullGreen", UInt, 0x1363, UInt, oscTypeInt)
+        OnMessage(0x1363, "_printerLightsFullGreen")        
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullRed", UInt, 0x1298, UInt, oscTypeInt)
-        OnMessage(0x1298, "_printerLightsFullRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsFullRed", UInt, 0x1362, UInt, oscTypeInt)
+        OnMessage(0x1362, "_printerLightsFullRed")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsOnOff", UInt, 0x1299, UInt, oscTypeInt)
-        OnMessage(0x1299, "_printerLightsOnOff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/printerLightsOnOff", UInt, 0x1361, UInt, oscTypeInt)
+        OnMessage(0x1361, "_printerLightsOnOff")
 
         ;Power Windows Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft4", UInt, 0x1300, UInt, oscTypeInt)
-        OnMessage(0x1300, "_pwSoft4")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft4", UInt, 0x1360, UInt, oscTypeInt)
+        OnMessage(0x1360, "_pwSoft4")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft3", UInt, 0x1301, UInt, oscTypeInt)
-        OnMessage(0x1301, "_pwSoft3")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft3", UInt, 0x1359, UInt, oscTypeInt)
+        OnMessage(0x1359, "_pwSoft3")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft2", UInt, 0x1302, UInt, oscTypeInt)
-        OnMessage(0x1302, "_pwSoft2")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft2", UInt, 0x1358, UInt, oscTypeInt)
+        OnMessage(0x1358, "_pwSoft2")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft1", UInt, 0x1303, UInt, oscTypeInt)
-        OnMessage(0x1303, "_pwSoft1")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSoft1", UInt, 0x1357, UInt, oscTypeInt)
+        OnMessage(0x1357, "_pwSoft1")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwOutsideSoftness", UInt, 0x1304, UInt, oscTypeInt)
-        OnMessage(0x1304, "_pwOutsideSoftness")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwOutsideSoftness", UInt, 0x1356, UInt, oscTypeInt)
+        OnMessage(0x1356, "_pwOutsideSoftness")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwInsideSoftness", UInt, 0x1305, UInt, oscTypeInt)
-        OnMessage(0x1305, "_pwInsideSoftness")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwInsideSoftness", UInt, 0x1355, UInt, oscTypeInt)
+        OnMessage(0x1355, "_pwInsideSoftness")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwOpacity", UInt, 0x1306, UInt, oscTypeInt)
-        OnMessage(0x1306, "_pwOpacity")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwOpacity", UInt, 0x1354, UInt, oscTypeInt)
+        OnMessage(0x1354, "_pwOpacity")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwRotate", UInt, 0x1307, UInt, oscTypeInt)
-        OnMessage(0x1307, "_pwRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwRotate", UInt, 0x1353, UInt, oscTypeInt)
+        OnMessage(0x1353, "_pwRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwTilt", UInt, 0x1308, UInt, oscTypeInt)
-        OnMessage(0x1308, "_pwTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwTilt", UInt, 0x1352, UInt, oscTypeInt)
+        OnMessage(0x1352, "_pwTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwPan", UInt, 0x1309, UInt, oscTypeInt)
-        OnMessage(0x1309, "_pwPan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwPan", UInt, 0x1351, UInt, oscTypeInt)
+        OnMessage(0x1351, "_pwPan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAspect", UInt, 0x1310, UInt, oscTypeInt)
-        OnMessage(0x1310, "_pwAspect")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAspect", UInt, 0x1350, UInt, oscTypeInt)
+        OnMessage(0x1350, "_pwAspect")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSize", UInt, 0x1311, UInt, oscTypeInt)
-        OnMessage(0x1311, "_pwSize")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwSize", UInt, 0x1349, UInt, oscTypeInt)
+        OnMessage(0x1349, "_pwSize")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodeCurve", UInt, 0x1312, UInt, oscTypeInt)
-        OnMessage(0x1312, "_pwAddNodeCurve")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodeCurve", UInt, 0x1348, UInt, oscTypeInt)
+        OnMessage(0x1348, "_pwAddNodeCurve")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodePolygon", UInt, 0x1313, UInt, oscTypeInt)
-        OnMessage(0x1313, "_pwAddNodePolygon")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodePolygon", UInt, 0x1347, UInt, oscTypeInt)
+        OnMessage(0x1347, "_pwAddNodePolygon")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodeCircle", UInt, 0x1314, UInt, oscTypeInt)
-        OnMessage(0x1314, "_pwAddNodeCircle")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodeCircle", UInt, 0x1346, UInt, oscTypeInt)
+        OnMessage(0x1346, "_pwAddNodeCircle")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodeLinear", UInt, 0x1315, UInt, oscTypeInt)
-        OnMessage(0x1315, "_pwAddNodeLinear")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddNodeLinear", UInt, 0x1345, UInt, oscTypeInt)
+        OnMessage(0x1345, "_pwAddNodeLinear")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwReset", UInt, 0x1316, UInt, oscTypeInt)
-        OnMessage(0x1316, "_pwReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwReset", UInt, 0x1344, UInt, oscTypeInt)
+        OnMessage(0x1344, "_pwReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwDelete", UInt, 0x1317, UInt, oscTypeInt)
-        OnMessage(0x1317, "_pwDelete")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwDelete", UInt, 0x1343, UInt, oscTypeInt)
+        OnMessage(0x1343, "_pwDelete")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwShowHide", UInt, 0x1318, UInt, oscTypeInt)
-        OnMessage(0x1318, "_pwShowHide")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwShowHide", UInt, 0x1342, UInt, oscTypeInt)
+        OnMessage(0x1342, "_pwShowHide")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddGradient", UInt, 0x1319, UInt, oscTypeInt)
-        OnMessage(0x1319, "_pwAddGradient")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddGradient", UInt, 0x1341, UInt, oscTypeInt)
+        OnMessage(0x1341, "_pwAddGradient")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddCurve", UInt, 0x1320, UInt, oscTypeInt)
-        OnMessage(0x1320, "_pwAddCurve")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddCurve", UInt, 0x1340, UInt, oscTypeInt)
+        OnMessage(0x1340, "_pwAddCurve")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddPolygon", UInt, 0x1321, UInt, oscTypeInt)
-        OnMessage(0x1321, "_pwAddPolygon")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddPolygon", UInt, 0x1339, UInt, oscTypeInt)
+        OnMessage(0x1339, "_pwAddPolygon")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddCircle", UInt, 0x1322, UInt, oscTypeInt)
-        OnMessage(0x1322, "_pwAddCircle")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddCircle", UInt, 0x1338, UInt, oscTypeInt)
+        OnMessage(0x1338, "_pwAddCircle")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddLinear", UInt, 0x1323, UInt, oscTypeInt)
-        OnMessage(0x1323, "_pwAddLinear")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pwAddLinear", UInt, 0x1337, UInt, oscTypeInt)
+        OnMessage(0x1337, "_pwAddLinear")
 
         ;Blur, Sharpen and Mist (BSM) Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmMix", UInt, 0x1324, UInt, oscTypeInt)
-        OnMessage(0x1324, "_bsmMix")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmMix", UInt, 0x1336, UInt, oscTypeInt)
+        OnMessage(0x1336, "_bsmMix")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLevel", UInt, 0x1325, UInt, oscTypeInt)
-        OnMessage(0x1325, "_bsmLevel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLevel", UInt, 0x1335, UInt, oscTypeInt)
+        OnMessage(0x1335, "_bsmLevel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmCoringSoftness", UInt, 0x1326, UInt, oscTypeInt)
-        OnMessage(0x1326, "_bsmCoringSoftness")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmCoringSoftness", UInt, 0x1334, UInt, oscTypeInt)
+        OnMessage(0x1334, "_bsmCoringSoftness")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmScalingB", UInt, 0x1327, UInt, oscTypeInt)
-        OnMessage(0x1327, "_bsmScalingB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmScalingB", UInt, 0x1333, UInt, oscTypeInt)
+        OnMessage(0x1333, "_bsmScalingB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmScalingG", UInt, 0x1328, UInt, oscTypeInt)
-        OnMessage(0x1328, "_bsmScalingG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmScalingG", UInt, 0x1332, UInt, oscTypeInt)
+        OnMessage(0x1332, "_bsmScalingG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmScalingR", UInt, 0x1329, UInt, oscTypeInt)
-        OnMessage(0x1329, "_bsmScalingR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmScalingR", UInt, 0x1331, UInt, oscTypeInt)
+        OnMessage(0x1331, "_bsmScalingR")
 
         DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRatioB", UInt, 0x1330, UInt, oscTypeInt)
         OnMessage(0x1330, "_bsmRatioB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRatioG", UInt, 0x1331, UInt, oscTypeInt)
-        OnMessage(0x1331, "_bsmRatioG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRatioG", UInt, 0x1329, UInt, oscTypeInt)
+        OnMessage(0x1329, "_bsmRatioG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRatioR", UInt, 0x1332, UInt, oscTypeInt)
-        OnMessage(0x1332, "_bsmRatioR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRatioR", UInt, 0x1328, UInt, oscTypeInt)
+        OnMessage(0x1328, "_bsmRatioR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRadiusB", UInt, 0x1333, UInt, oscTypeInt)
-        OnMessage(0x1333, "_bsmRadiusB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRadiusB", UInt, 0x1327, UInt, oscTypeInt)
+        OnMessage(0x1327, "_bsmRadiusB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRadiusG", UInt, 0x1334, UInt, oscTypeInt)
-        OnMessage(0x1334, "_bsmRadiusG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRadiusG", UInt, 0x1326, UInt, oscTypeInt)
+        OnMessage(0x1326, "_bsmRadiusG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRadiusR", UInt, 0x1335, UInt, oscTypeInt)
-        OnMessage(0x1335, "_bsmRadiusR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmRadiusR", UInt, 0x1325, UInt, oscTypeInt)
+        OnMessage(0x1325, "_bsmRadiusR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmReset", UInt, 0x1336, UInt, oscTypeInt)
-        OnMessage(0x1336, "_bsmReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmReset", UInt, 0x1324, UInt, oscTypeInt)
+        OnMessage(0x1324, "_bsmReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmMistPanel", UInt, 0x1337, UInt, oscTypeInt)
-        OnMessage(0x1337, "_bsmMistPanel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmMistPanel", UInt, 0x1323, UInt, oscTypeInt)
+        OnMessage(0x1323, "_bsmMistPanel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmSharpenPanel", UInt, 0x1338, UInt, oscTypeInt)
-        OnMessage(0x1338, "_bsmSharpenPanel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmSharpenPanel", UInt, 0x1322, UInt, oscTypeInt)
+        OnMessage(0x1322, "_bsmSharpenPanel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmBlurPanel", UInt, 0x1339, UInt, oscTypeInt)
-        OnMessage(0x1339, "_bsmBlurPanel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmBlurPanel", UInt, 0x1321, UInt, oscTypeInt)
+        OnMessage(0x1321, "_bsmBlurPanel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmResetScaling", UInt, 0x1340, UInt, oscTypeInt)
-        OnMessage(0x1340, "_bsmResetScaling")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmResetScaling", UInt, 0x1320, UInt, oscTypeInt)
+        OnMessage(0x1320, "_bsmResetScaling")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmResetRatio", UInt, 0x1341, UInt, oscTypeInt)
-        OnMessage(0x1341, "_bsmResetRatio")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmResetRatio", UInt, 0x1319, UInt, oscTypeInt)
+        OnMessage(0x1319, "_bsmResetRatio")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmResetRadius", UInt, 0x1342, UInt, oscTypeInt)
-        OnMessage(0x1342, "_bsmResetRadius")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmResetRadius", UInt, 0x1318, UInt, oscTypeInt)
+        OnMessage(0x1318, "_bsmResetRadius")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLinkScaling", UInt, 0x1343, UInt, oscTypeInt)
-        OnMessage(0x1343, "_bsmLinkScaling")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLinkScaling", UInt, 0x1317, UInt, oscTypeInt)
+        OnMessage(0x1317, "_bsmLinkScaling")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLinkRatio", UInt, 0x1344, UInt, oscTypeInt)
-        OnMessage(0x1344, "_bsmLinkRatio")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLinkRatio", UInt, 0x1316, UInt, oscTypeInt)
+        OnMessage(0x1316, "_bsmLinkRatio")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLinkRadius", UInt, 0x1345, UInt, oscTypeInt)
-        OnMessage(0x1345, "_bsmLinkRadius")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bsmLinkRadius", UInt, 0x1315, UInt, oscTypeInt)
+        OnMessage(0x1315, "_bsmLinkRadius")
         
         ;RGB Mixer Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputBlue", UInt, 0x1346, UInt, oscTypeInt)
-        OnMessage(0x1346, "_rgbMixerBlueOutputBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputBlue", UInt, 0x1314, UInt, oscTypeInt)
+        OnMessage(0x1314, "_rgbMixerBlueOutputBlue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputGreen", UInt, 0x1347, UInt, oscTypeInt)
-        OnMessage(0x1347, "_rgbMixerBlueOutputGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputGreen", UInt, 0x1313, UInt, oscTypeInt)
+        OnMessage(0x1313, "_rgbMixerBlueOutputGreen")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputRed", UInt, 0x1348, UInt, oscTypeInt)
-        OnMessage(0x1348, "_rgbMixerBlueOutputRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputRed", UInt, 0x1312, UInt, oscTypeInt)
+        OnMessage(0x1312, "_rgbMixerBlueOutputRed")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputBlue", UInt, 0x1349, UInt, oscTypeInt)
-        OnMessage(0x1349, "_rgbMixerGreenOutputBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputBlue", UInt, 0x1311, UInt, oscTypeInt)
+        OnMessage(0x1311, "_rgbMixerGreenOutputBlue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputGreen", UInt, 0x1350, UInt, oscTypeInt)
-        OnMessage(0x1350, "_rgbMixerGreenOutputGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputGreen", UInt, 0x1310, UInt, oscTypeInt)
+        OnMessage(0x1310, "_rgbMixerGreenOutputGreen")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputRed", UInt, 0x1351, UInt, oscTypeInt)
-        OnMessage(0x1351, "_rgbMixerGreenOutputRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputRed", UInt, 0x1309, UInt, oscTypeInt)
+        OnMessage(0x1309, "_rgbMixerGreenOutputRed")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputBlue", UInt, 0x1352, UInt, oscTypeInt)
-        OnMessage(0x1352, "_rgbMixerRedOutputBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputBlue", UInt, 0x1308, UInt, oscTypeInt)
+        OnMessage(0x1308, "_rgbMixerRedOutputBlue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputGreen", UInt, 0x1353, UInt, oscTypeInt)
-        OnMessage(0x1353, "_rgbMixerRedOutputGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputGreen", UInt, 0x1307, UInt, oscTypeInt)
+        OnMessage(0x1307, "_rgbMixerRedOutputGreen")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputRed", UInt, 0x1354, UInt, oscTypeInt)
-        OnMessage(0x1354, "_rgbMixerRedOutputRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputRed", UInt, 0x1306, UInt, oscTypeInt)
+        OnMessage(0x1306, "_rgbMixerRedOutputRed")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerReset", UInt, 0x1355, UInt, oscTypeInt)
-        OnMessage(0x1355, "_rgbMixerReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerReset", UInt, 0x1305, UInt, oscTypeInt)
+        OnMessage(0x1305, "_rgbMixerReset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerPreserveLuminance", UInt, 0x1356, UInt, oscTypeInt)
-        OnMessage(0x1356, "_rgbMixerPreserveLuminance")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerPreserveLuminance", UInt, 0x1304, UInt, oscTypeInt)
+        OnMessage(0x1304, "_rgbMixerPreserveLuminance")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerMonochrome", UInt, 0x1357, UInt, oscTypeInt)
-        OnMessage(0x1357, "_rgbMixerMonochrome")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerMonochrome", UInt, 0x1303, UInt, oscTypeInt)
+        OnMessage(0x1303, "_rgbMixerMonochrome")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputReset", UInt, 0x1358, UInt, oscTypeInt)
-        OnMessage(0x1358, "_rgbMixerBlueOutputReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerBlueOutputReset", UInt, 0x1302, UInt, oscTypeInt)
+        OnMessage(0x1302, "_rgbMixerBlueOutputReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputReset", UInt, 0x1359, UInt, oscTypeInt)
-        OnMessage(0x1359, "_rgbMixerGreenOutputReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerGreenOutputReset", UInt, 0x1301, UInt, oscTypeInt)
+        OnMessage(0x1301, "_rgbMixerGreenOutputReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputReset", UInt, 0x1360, UInt, oscTypeInt)
-        OnMessage(0x1360, "_rgbMixerRedOutputReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerRedOutputReset", UInt, 0x1300, UInt, oscTypeInt)
+        OnMessage(0x1300, "_rgbMixerRedOutputReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerInvertBlueRed", UInt, 0x1361, UInt, oscTypeInt)
-        OnMessage(0x1361, "_rgbMixerInvertBlueRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerInvertBlueRed", UInt, 0x1299, UInt, oscTypeInt)
+        OnMessage(0x1299, "_rgbMixerInvertBlueRed")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerInvertGreenBlue", UInt, 0x1362, UInt, oscTypeInt)
-        OnMessage(0x1362, "_rgbMixerInvertGreenBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerInvertGreenBlue", UInt, 0x1298, UInt, oscTypeInt)
+        OnMessage(0x1298, "_rgbMixerInvertGreenBlue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerInvertRedGreen", UInt, 0x1363, UInt, oscTypeInt)
-        OnMessage(0x1363, "_rgbMixerInvertRedGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rgbMixerInvertRedGreen", UInt, 0x1297, UInt, oscTypeInt)
+        OnMessage(0x1297, "_rgbMixerInvertRedGreen")
 
         ;Hue Curves Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesDeleteActualDot", UInt, 0x1364, UInt, oscTypeInt)
-        OnMessage(0x1364, "_hueCurvesDeleteActualDot")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesDeleteActualDot", UInt, 0x1296, UInt, oscTypeInt)
+        OnMessage(0x1296, "_hueCurvesDeleteActualDot")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesMoveDotY", UInt, 0x1365, UInt, oscTypeInt)
-        OnMessage(0x1365, "_hueCurvesMoveDotY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesMoveDotY", UInt, 0x1295, UInt, oscTypeInt)
+        OnMessage(0x1295, "_hueCurvesMoveDotY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesMoveDotX", UInt, 0x1366, UInt, oscTypeInt)
-        OnMessage(0x1366, "_hueCurvesMoveDotX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesMoveDotX", UInt, 0x1294, UInt, oscTypeInt)
+        OnMessage(0x1294, "_hueCurvesMoveDotX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesSelectDots", UInt, 0x1367, UInt, oscTypeInt)
-        OnMessage(0x1367, "_hueCurvesSelectDots")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesSelectDots", UInt, 0x1293, UInt, oscTypeInt)
+        OnMessage(0x1293, "_hueCurvesSelectDots")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesSatXLum", UInt, 0x1368, UInt, oscTypeInt)
-        OnMessage(0x1368, "_hueCurvesSatXLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesSatXLum", UInt, 0x1292, UInt, oscTypeInt)
+        OnMessage(0x1292, "_hueCurvesSatXLum")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesSatXSat", UInt, 0x1369, UInt, oscTypeInt)
-        OnMessage(0x1369, "_hueCurvesSatXSat")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesSatXSat", UInt, 0x1291, UInt, oscTypeInt)
+        OnMessage(0x1291, "_hueCurvesSatXSat")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesLumXSat", UInt, 0x1370, UInt, oscTypeInt)
-        OnMessage(0x1370, "_hueCurvesLumXSat")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesLumXSat", UInt, 0x1290, UInt, oscTypeInt)
+        OnMessage(0x1290, "_hueCurvesLumXSat")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueXLum", UInt, 0x1371, UInt, oscTypeInt)
-        OnMessage(0x1371, "_hueCurvesHueXLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueXLum", UInt, 0x1289, UInt, oscTypeInt)
+        OnMessage(0x1289, "_hueCurvesHueXLum")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueXSat", UInt, 0x1372, UInt, oscTypeInt)
-        OnMessage(0x1372, "_hueCurvesHueXSat")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueXSat", UInt, 0x1288, UInt, oscTypeInt)
+        OnMessage(0x1288, "_hueCurvesHueXSat")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueXHue", UInt, 0x1373, UInt, oscTypeInt)
-        OnMessage(0x1373, "_hueCurvesHueXHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueXHue", UInt, 0x1287, UInt, oscTypeInt)
+        OnMessage(0x1287, "_hueCurvesHueXHue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesReset", UInt, 0x1374, UInt, oscTypeInt)
-        OnMessage(0x1374, "_hueCurvesReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesReset", UInt, 0x1286, UInt, oscTypeInt)
+        OnMessage(0x1286, "_hueCurvesReset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesReadDots", UInt, 0x1375, UInt, oscTypeInt)
-        OnMessage(0x1375, "_hueCurvesReadDots")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesReadDots", UInt, 0x1285, UInt, oscTypeInt)
+        OnMessage(0x1285, "_hueCurvesReadDots")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesMagenta", UInt, 0x1376, UInt, oscTypeInt)
-        OnMessage(0x1376, "_hueCurvesMagenta")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesMagenta", UInt, 0x1284, UInt, oscTypeInt)
+        OnMessage(0x1284, "_hueCurvesMagenta")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesBlue", UInt, 0x1377, UInt, oscTypeInt)
-        OnMessage(0x1377, "_hueCurvesBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesBlue", UInt, 0x1283, UInt, oscTypeInt)
+        OnMessage(0x1283, "_hueCurvesBlue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesCyan", UInt, 0x1378, UInt, oscTypeInt)
-        OnMessage(0x1378, "_hueCurvesCyan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesCyan", UInt, 0x1282, UInt, oscTypeInt)
+        OnMessage(0x1282, "_hueCurvesCyan")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesGreen", UInt, 0x1379, UInt, oscTypeInt)
-        OnMessage(0x1379, "_hueCurvesGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesGreen", UInt, 0x1281, UInt, oscTypeInt)
+        OnMessage(0x1281, "_hueCurvesGreen")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesYellow", UInt, 0x1380, UInt, oscTypeInt)
-        OnMessage(0x1380, "_hueCurvesYellow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesYellow", UInt, 0x1280, UInt, oscTypeInt)
+        OnMessage(0x1280, "_hueCurvesYellow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesRed", UInt, 0x1381, UInt, oscTypeInt)
-        OnMessage(0x1381, "_hueCurvesRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesRed", UInt, 0x1279, UInt, oscTypeInt)
+        OnMessage(0x1279, "_hueCurvesRed")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueSatLum", UInt, 0x1382, UInt, oscTypeInt)
-        OnMessage(0x1382, "_hueCurvesHueSatLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesHueSatLum", UInt, 0x1278, UInt, oscTypeInt)
+        OnMessage(0x1278, "_hueCurvesHueSatLum")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesInputHue", UInt, 0x1383, UInt, oscTypeInt)
-        OnMessage(0x1383, "_hueCurvesInputHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hueCurvesInputHue", UInt, 0x1277, UInt, oscTypeInt)
+        OnMessage(0x1277, "_hueCurvesInputHue")
         
         ;Custom Curves Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipB", UInt, 0x1384, UInt, oscTypeInt)
-        OnMessage(0x1384, "_customCurvesSoftClipB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipB", UInt, 0x1276, UInt, oscTypeInt)
+        OnMessage(0x1276, "_customCurvesSoftClipB")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipG", UInt, 0x1385, UInt, oscTypeInt)
-        OnMessage(0x1385, "_customCurvesSoftClipG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipG", UInt, 0x1275, UInt, oscTypeInt)
+        OnMessage(0x1275, "_customCurvesSoftClipG")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipR", UInt, 0x1386, UInt, oscTypeInt)
-        OnMessage(0x1386, "_customCurvesSoftClipR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipR", UInt, 0x1274, UInt, oscTypeInt)
+        OnMessage(0x1274, "_customCurvesSoftClipR")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipAll", UInt, 0x1387, UInt, oscTypeInt)
-        OnMessage(0x1387, "_customCurvesSoftClipAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipAll", UInt, 0x1273, UInt, oscTypeInt)
+        OnMessage(0x1273, "_customCurvesSoftClipAll")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetSoftClip", UInt, 0x1388, UInt, oscTypeInt)
-        OnMessage(0x1388, "_customCurvesResetSoftClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetSoftClip", UInt, 0x1272, UInt, oscTypeInt)
+        OnMessage(0x1272, "_customCurvesResetSoftClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipHS", UInt, 0x1389, UInt, oscTypeInt)
-        OnMessage(0x1389, "_customCurvesSoftClipHS")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipHS", UInt, 0x1271, UInt, oscTypeInt)
+        OnMessage(0x1271, "_customCurvesSoftClipHS")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipLS", UInt, 0x1390, UInt, oscTypeInt)
-        OnMessage(0x1390, "_customCurvesSoftClipLS")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipLS", UInt, 0x1270, UInt, oscTypeInt)
+        OnMessage(0x1270, "_customCurvesSoftClipLS")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipHigh", UInt, 0x1391, UInt, oscTypeInt)
-        OnMessage(0x1391, "_customCurvesSoftClipHigh")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipHigh", UInt, 0x1269, UInt, oscTypeInt)
+        OnMessage(0x1269, "_customCurvesSoftClipHigh")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipLow", UInt, 0x1392, UInt, oscTypeInt)
-        OnMessage(0x1392, "_customCurvesSoftClipLow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSoftClipLow", UInt, 0x1268, UInt, oscTypeInt)
+        OnMessage(0x1268, "_customCurvesSoftClipLow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityBlue", UInt, 0x1393, UInt, oscTypeInt)
-        OnMessage(0x1393, "_customCurvesIntensityBlue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityBlue", UInt, 0x1267, UInt, oscTypeInt)
+        OnMessage(0x1267, "_customCurvesIntensityBlue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityGreen", UInt, 0x1394, UInt, oscTypeInt)
-        OnMessage(0x1394, "_customCurvesIntensityGreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityGreen", UInt, 0x1266, UInt, oscTypeInt)
+        OnMessage(0x1266, "_customCurvesIntensityGreen")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityRed", UInt, 0x1395, UInt, oscTypeInt)
-        OnMessage(0x1395, "_customCurvesIntensityRed")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityRed", UInt, 0x1265, UInt, oscTypeInt)
+        OnMessage(0x1265, "_customCurvesIntensityRed")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityLum", UInt, 0x1396, UInt, oscTypeInt)
-        OnMessage(0x1396, "_customCurvesIntensityLum")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesIntensityLum", UInt, 0x1264, UInt, oscTypeInt)
+        OnMessage(0x1264, "_customCurvesIntensityLum")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesReset", UInt, 0x1397, UInt, oscTypeInt)
-        OnMessage(0x1397, "_customCurvesReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesReset", UInt, 0x1263, UInt, oscTypeInt)
+        OnMessage(0x1263, "_customCurvesReset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetEdit", UInt, 0x1398, UInt, oscTypeInt)
-        OnMessage(0x1398, "_customCurvesResetEdit")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesResetEdit", UInt, 0x1262, UInt, oscTypeInt)
+        OnMessage(0x1262, "_customCurvesResetEdit")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesReadDots", UInt, 0x1399, UInt, oscTypeInt)
-        OnMessage(0x1399, "_customCurvesReadDots")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesReadDots", UInt, 0x1261, UInt, oscTypeInt)
+        OnMessage(0x1261, "_customCurvesReadDots")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesMoveDotY", UInt, 0x1400, UInt, oscTypeInt)
-        OnMessage(0x1400, "_customCurvesMoveDotY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesMoveDotY", UInt, 0x1260, UInt, oscTypeInt)
+        OnMessage(0x1260, "_customCurvesMoveDotY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesMoveDotX", UInt, 0x1401, UInt, oscTypeInt)
-        OnMessage(0x1401, "_customCurvesMoveDotX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesMoveDotX", UInt, 0x1259, UInt, oscTypeInt)
+        OnMessage(0x1259, "_customCurvesMoveDotX")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSelectDots", UInt, 0x1402, UInt, oscTypeInt)
-        OnMessage(0x1402, "_customCurvesSelectDots")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesSelectDots", UInt, 0x1258, UInt, oscTypeInt)
+        OnMessage(0x1258, "_customCurvesSelectDots")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesAddDefaultDots", UInt, 0x1403, UInt, oscTypeInt)
-        OnMessage(0x1403, "_customCurvesAddDefaultDots")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesAddDefaultDots", UInt, 0x1257, UInt, oscTypeInt)
+        OnMessage(0x1257, "_customCurvesAddDefaultDots")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesToggleEditableSplines", UInt, 0x1404, UInt, oscTypeInt)
-        OnMessage(0x1404, "_customCurvesToggleEditableSplines")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesToggleEditableSplines", UInt, 0x1256, UInt, oscTypeInt)
+        OnMessage(0x1256, "_customCurvesToggleEditableSplines")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesDeleteActualDot", UInt, 0x1405, UInt, oscTypeInt)
-        OnMessage(0x1405, "_customCurvesDeleteActualDot")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesDeleteActualDot", UInt, 0x1255, UInt, oscTypeInt)
+        OnMessage(0x1255, "_customCurvesDeleteActualDot")
       
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeB", UInt, 0x1406, UInt, oscTypeInt)
-        OnMessage(0x1406, "_customCurvesModeB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeB", UInt, 0x1254, UInt, oscTypeInt)
+        OnMessage(0x1254, "_customCurvesModeB")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeG", UInt, 0x1407, UInt, oscTypeInt)
-        OnMessage(0x1407, "_customCurvesModeG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeG", UInt, 0x1253, UInt, oscTypeInt)
+        OnMessage(0x1253, "_customCurvesModeG")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeR", UInt, 0x1408, UInt, oscTypeInt)
-        OnMessage(0x1408, "_customCurvesModeR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeR", UInt, 0x1252, UInt, oscTypeInt)
+        OnMessage(0x1252, "_customCurvesModeR")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeY", UInt, 0x1409, UInt, oscTypeInt)
-        OnMessage(0x1409, "_customCurvesModeY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeY", UInt, 0x1251, UInt, oscTypeInt)
+        OnMessage(0x1251, "_customCurvesModeY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeAll", UInt, 0x1410, UInt, oscTypeInt)
-        OnMessage(0x1410, "_customCurvesModeAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/customCurvesModeAll", UInt, 0x1250, UInt, oscTypeInt)
+        OnMessage(0x1250, "_customCurvesModeAll")
         
         ;Log Panel Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHue", UInt, 0x1411, UInt, oscTypeInt)
-        OnMessage(0x1411, "_logHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHue", UInt, 0x1249, UInt, oscTypeInt)
+        OnMessage(0x1249, "_logHue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlight", UInt, 0x1412, UInt, oscTypeInt)
-        OnMessage(0x1412, "_logHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlight", UInt, 0x1248, UInt, oscTypeInt)
+        OnMessage(0x1248, "_logHighlight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadow", UInt, 0x1413, UInt, oscTypeInt)
-        OnMessage(0x1413, "_logShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadow", UInt, 0x1247, UInt, oscTypeInt)
+        OnMessage(0x1247, "_logShadow")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidDetail", UInt, 0x1414, UInt, oscTypeInt)
-        OnMessage(0x1414, "_logMidDetail")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidDetail", UInt, 0x1246, UInt, oscTypeInt)
+        OnMessage(0x1246, "_logMidDetail")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logTint", UInt, 0x1415, UInt, oscTypeInt)
-        OnMessage(0x1415, "_logTint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logTint", UInt, 0x1245, UInt, oscTypeInt)
+        OnMessage(0x1245, "_logTint")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logTemperature", UInt, 0x1416, UInt, oscTypeInt)
-        OnMessage(0x1416, "_logTemperature")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logTemperature", UInt, 0x1244, UInt, oscTypeInt)
+        OnMessage(0x1244, "_logTemperature")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSaturation", UInt, 0x1417, UInt, oscTypeInt)
-        OnMessage(0x1417, "_logSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSaturation", UInt, 0x1243, UInt, oscTypeInt)
+        OnMessage(0x1243, "_logSaturation")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logCoolBoost", UInt, 0x1418, UInt, oscTypeInt)
-        OnMessage(0x1418, "_logCoolBoost")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logCoolBoost", UInt, 0x1242, UInt, oscTypeInt)
+        OnMessage(0x1242, "_logCoolBoost")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logContrast", UInt, 0x1419, UInt, oscTypeInt)
-        OnMessage(0x1419, "_logContrast")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logContrast", UInt, 0x1241, UInt, oscTypeInt)
+        OnMessage(0x1241, "_logContrast")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighRange", UInt, 0x1420, UInt, oscTypeInt)
-        OnMessage(0x1420, "_logHighRange")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighRange", UInt, 0x1240, UInt, oscTypeInt)
+        OnMessage(0x1240, "_logHighRange")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logLowRange", UInt, 0x1421, UInt, oscTypeInt)
-        OnMessage(0x1421, "_logLowRange")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logLowRange", UInt, 0x1239, UInt, oscTypeInt)
+        OnMessage(0x1239, "_logLowRange")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logPivot", UInt, 0x1422, UInt, oscTypeInt)
-        OnMessage(0x1422, "_logPivot")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logPivot", UInt, 0x1238, UInt, oscTypeInt)
+        OnMessage(0x1238, "_logPivot")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logColorPicker", UInt, 0x1423, UInt, oscTypeInt)
-        OnMessage(0x1423, "_logColorPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logColorPicker", UInt, 0x1237, UInt, oscTypeInt)
+        OnMessage(0x1237, "_logColorPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logAWB", UInt, 0x1424, UInt, oscTypeInt)
-        OnMessage(0x1424, "_logAWB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logAWB", UInt, 0x1236, UInt, oscTypeInt)
+        OnMessage(0x1236, "_logAWB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logResetAll", UInt, 0x1425, UInt, oscTypeInt)
-        OnMessage(0x1425, "_logResetAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logResetAll", UInt, 0x1235, UInt, oscTypeInt)
+        OnMessage(0x1235, "_logResetAll")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetReset", UInt, 0x1426, UInt, oscTypeInt)
-        OnMessage(0x1426, "_logOffsetReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetReset", UInt, 0x1234, UInt, oscTypeInt)
+        OnMessage(0x1234, "_logOffsetReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsReset", UInt, 0x1427, UInt, oscTypeInt)
-        OnMessage(0x1427, "_logHighlightsReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsReset", UInt, 0x1233, UInt, oscTypeInt)
+        OnMessage(0x1233, "_logHighlightsReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneReset", UInt, 0x1428, UInt, oscTypeInt)
-        OnMessage(0x1428, "_logMidtoneReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneReset", UInt, 0x1232, UInt, oscTypeInt)
+        OnMessage(0x1232, "_logMidtoneReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowReset", UInt, 0x1429, UInt, oscTypeInt)
-        OnMessage(0x1429, "_logShadowReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowReset", UInt, 0x1231, UInt, oscTypeInt)
+        OnMessage(0x1231, "_logShadowReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetB", UInt, 0x1430, UInt, oscTypeInt)
-        OnMessage(0x1430, "_logOffsetB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetB", UInt, 0x1230, UInt, oscTypeInt)
+        OnMessage(0x1230, "_logOffsetB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetG", UInt, 0x1431, UInt, oscTypeInt)
-        OnMessage(0x1431, "_logOffsetG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetG", UInt, 0x1229, UInt, oscTypeInt)
+        OnMessage(0x1229, "_logOffsetG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetR", UInt, 0x1432, UInt, oscTypeInt)
-        OnMessage(0x1432, "_logOffsetR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logOffsetR", UInt, 0x1228, UInt, oscTypeInt)
+        OnMessage(0x1228, "_logOffsetR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsB", UInt, 0x1433, UInt, oscTypeInt)
-        OnMessage(0x1433, "_logHighlightsB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsB", UInt, 0x1227, UInt, oscTypeInt)
+        OnMessage(0x1227, "_logHighlightsB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsG", UInt, 0x1434, UInt, oscTypeInt)
-        OnMessage(0x1434, "_logHighlightsG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsG", UInt, 0x1226, UInt, oscTypeInt)
+        OnMessage(0x1226, "_logHighlightsG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsR", UInt, 0x1435, UInt, oscTypeInt)
-        OnMessage(0x1435, "_logHighlightsR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logHighlightsR", UInt, 0x1225, UInt, oscTypeInt)
+        OnMessage(0x1225, "_logHighlightsR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneB", UInt, 0x1436, UInt, oscTypeInt)
-        OnMessage(0x1436, "_logMidtoneB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneB", UInt, 0x1224, UInt, oscTypeInt)
+        OnMessage(0x1224, "_logMidtoneB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneG", UInt, 0x1437, UInt, oscTypeInt)
-        OnMessage(0x1437, "_logMidtoneG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneG", UInt, 0x1223, UInt, oscTypeInt)
+        OnMessage(0x1223, "_logMidtoneG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneR", UInt, 0x1438, UInt, oscTypeInt)
-        OnMessage(0x1438, "_logMidtoneR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logMidtoneR", UInt, 0x1222, UInt, oscTypeInt)
+        OnMessage(0x1222, "_logMidtoneR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowB", UInt, 0x1439, UInt, oscTypeInt)
-        OnMessage(0x1439, "_logShadowB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowB", UInt, 0x1221, UInt, oscTypeInt)
+        OnMessage(0x1221, "_logShadowB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowG", UInt, 0x1440, UInt, oscTypeInt)
-        OnMessage(0x1440, "_logShadowG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowG", UInt, 0x1220, UInt, oscTypeInt)
+        OnMessage(0x1220, "_logShadowG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowR", UInt, 0x1441, UInt, oscTypeInt)
-        OnMessage(0x1441, "_logShadowR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logShadowR", UInt, 0x1219, UInt, oscTypeInt)
+        OnMessage(0x1219, "_logShadowR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFourthJog", UInt, 0x1442, UInt, oscTypeInt)
-        OnMessage(0x1442, "_logFourthJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFourthJog", UInt, 0x1218, UInt, oscTypeInt)
+        OnMessage(0x1218, "_logFourthJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logThirdJog", UInt, 0x1443, UInt, oscTypeInt)
-        OnMessage(0x1443, "_logThirdJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logThirdJog", UInt, 0x1217, UInt, oscTypeInt)
+        OnMessage(0x1217, "_logThirdJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSecondJog", UInt, 0x1444, UInt, oscTypeInt)
-        OnMessage(0x1444, "_logSecondJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSecondJog", UInt, 0x1216, UInt, oscTypeInt)
+        OnMessage(0x1216, "_logSecondJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFirstJog", UInt, 0x1445, UInt, oscTypeInt)
-        OnMessage(0x1445, "_logFirstJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFirstJog", UInt, 0x1215, UInt, oscTypeInt)
+        OnMessage(0x1215, "_logFirstJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFourthWheelY", UInt, 0x1446, UInt, oscTypeInt)
-        OnMessage(0x1446, "_logFourthWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFourthWheelY", UInt, 0x1214, UInt, oscTypeInt)
+        OnMessage(0x1214, "_logFourthWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFourthWheelX", UInt, 0x1447, UInt, oscTypeInt)
-        OnMessage(0x1447, "_logFourthWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFourthWheelX", UInt, 0x1213, UInt, oscTypeInt)
+        OnMessage(0x1213, "_logFourthWheelX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logThirdWheelY", UInt, 0x1448, UInt, oscTypeInt)
-        OnMessage(0x1448, "_logThirdWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logThirdWheelY", UInt, 0x1212, UInt, oscTypeInt)
+        OnMessage(0x1212, "_logThirdWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logThirdWheelX", UInt, 0x1449, UInt, oscTypeInt)
-        OnMessage(0x1449, "_logThirdWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logThirdWheelX", UInt, 0x1211, UInt, oscTypeInt)
+        OnMessage(0x1211, "_logThirdWheelX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSecondWheelY", UInt, 0x1450, UInt, oscTypeInt)
-        OnMessage(0x1450, "_logSecondWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSecondWheelY", UInt, 0x1210, UInt, oscTypeInt)
+        OnMessage(0x1210, "_logSecondWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSecondWheelX", UInt, 0x1451, UInt, oscTypeInt)
-        OnMessage(0x1451, "_logSecondWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logSecondWheelX", UInt, 0x1209, UInt, oscTypeInt)
+        OnMessage(0x1209, "_logSecondWheelX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFirstWheelY", UInt, 0x1452, UInt, oscTypeInt)
-        OnMessage(0x1452, "_logFirstWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFirstWheelY", UInt, 0x1208, UInt, oscTypeInt)
+        OnMessage(0x1208, "_logFirstWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFirstWheelX", UInt, 0x1453, UInt, oscTypeInt)
-        OnMessage(0x1453, "_logFirstWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/logFirstWheelX", UInt, 0x1207, UInt, oscTypeInt)
+        OnMessage(0x1207, "_logFirstWheelX")
 
         ;Bars Panel Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsOffsetB", UInt, 0x1454, UInt, oscTypeInt)
-        OnMessage(0x1454, "_barsOffsetB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsOffsetB", UInt, 0x1206, UInt, oscTypeInt)
+        OnMessage(0x1206, "_barsOffsetB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsOffsetG", UInt, 0x1455, UInt, oscTypeInt)
-        OnMessage(0x1455, "_barsOffsetG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsOffsetG", UInt, 0x1205, UInt, oscTypeInt)
+        OnMessage(0x1205, "_barsOffsetG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsOffsetR", UInt, 0x1456, UInt, oscTypeInt)
-        OnMessage(0x1456, "_barsOffsetR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsOffsetR", UInt, 0x1204, UInt, oscTypeInt)
+        OnMessage(0x1204, "_barsOffsetR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainY", UInt, 0x1457, UInt, oscTypeInt)
-        OnMessage(0x1457, "_barsGainY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainY", UInt, 0x1203, UInt, oscTypeInt)
+        OnMessage(0x1203, "_barsGainY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainB", UInt, 0x1458, UInt, oscTypeInt)
-        OnMessage(0x1458, "_barsGainB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainB", UInt, 0x1202, UInt, oscTypeInt)
+        OnMessage(0x1202, "_barsGainB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainG", UInt, 0x1459, UInt, oscTypeInt)
-        OnMessage(0x1459, "_barsGainG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainG", UInt, 0x1201, UInt, oscTypeInt)
+        OnMessage(0x1201, "_barsGainG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainR", UInt, 0x1460, UInt, oscTypeInt)
-        OnMessage(0x1460, "_barsGainR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGainR", UInt, 0x1200, UInt, oscTypeInt)
+        OnMessage(0x1200, "_barsGainR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaB", UInt, 0x1461, UInt, oscTypeInt)
-        OnMessage(0x1461, "_barsGammaB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaB", UInt, 0x1199, UInt, oscTypeInt)
+        OnMessage(0x1199, "_barsGammaB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaG", UInt, 0x1462, UInt, oscTypeInt)
-        OnMessage(0x1462, "_barsGammaG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaG", UInt, 0x1198, UInt, oscTypeInt)
+        OnMessage(0x1198, "_barsGammaG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaR", UInt, 0x1463, UInt, oscTypeInt)
-        OnMessage(0x1463, "_barsGammaR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaR", UInt, 0x1197, UInt, oscTypeInt)
+        OnMessage(0x1197, "_barsGammaR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaY", UInt, 0x1464, UInt, oscTypeInt)
-        OnMessage(0x1464, "_barsGammaY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsGammaY", UInt, 0x1196, UInt, oscTypeInt)
+        OnMessage(0x1196, "_barsGammaY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftY", UInt, 0x1465, UInt, oscTypeInt)
-        OnMessage(0x1465, "_barsLiftY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftY", UInt, 0x1195, UInt, oscTypeInt)
+        OnMessage(0x1195, "_barsLiftY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftB", UInt, 0x1466, UInt, oscTypeInt)
-        OnMessage(0x1466, "_barsLiftB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftB", UInt, 0x1194, UInt, oscTypeInt)
+        OnMessage(0x1194, "_barsLiftB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftG", UInt, 0x1467, UInt, oscTypeInt)
-        OnMessage(0x1467, "_barsLiftG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftG", UInt, 0x1193, UInt, oscTypeInt)
+        OnMessage(0x1193, "_barsLiftG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftR", UInt, 0x1468, UInt, oscTypeInt)
-        OnMessage(0x1468, "_barsLiftR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLiftR", UInt, 0x1192, UInt, oscTypeInt)
+        OnMessage(0x1192, "_barsLiftR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsWhitePointPicker", UInt, 0x1469, UInt, oscTypeInt)
-        OnMessage(0x1469, "_barsWhitePointPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsWhitePointPicker", UInt, 0x1191, UInt, oscTypeInt)
+        OnMessage(0x1191, "_barsWhitePointPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsBlackPointPicker", UInt, 0x1470, UInt, oscTypeInt)
-        OnMessage(0x1470, "_barsBlackPointPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsBlackPointPicker", UInt, 0x1190, UInt, oscTypeInt)
+        OnMessage(0x1190, "_barsBlackPointPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsColorPicker", UInt, 0x1471, UInt, oscTypeInt)
-        OnMessage(0x1471, "_barsColorPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsColorPicker", UInt, 0x1189, UInt, oscTypeInt)
+        OnMessage(0x1189, "_barsColorPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsAWB", UInt, 0x1472, UInt, oscTypeInt)
-        OnMessage(0x1472, "_barsAWB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsAWB", UInt, 0x1188, UInt, oscTypeInt)
+        OnMessage(0x1188, "_barsAWB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetAll", UInt, 0x1473, UInt, oscTypeInt)
-        OnMessage(0x1473, "_barsResetAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetAll", UInt, 0x1187, UInt, oscTypeInt)
+        OnMessage(0x1187, "_barsResetAll")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetOffset", UInt, 0x1474, UInt, oscTypeInt)
-        OnMessage(0x1474, "_barsResetOffset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetOffset", UInt, 0x1186, UInt, oscTypeInt)
+        OnMessage(0x1186, "_barsResetOffset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetGain", UInt, 0x1475, UInt, oscTypeInt)
-        OnMessage(0x1475, "_barsResetGain")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetGain", UInt, 0x1185, UInt, oscTypeInt)
+        OnMessage(0x1185, "_barsResetGain")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetGamma", UInt, 0x1476, UInt, oscTypeInt)
-        OnMessage(0x1476, "_barsResetGamma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetGamma", UInt, 0x1184, UInt, oscTypeInt)
+        OnMessage(0x1184, "_barsResetGamma")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetLift", UInt, 0x1477, UInt, oscTypeInt)
-        OnMessage(0x1477, "_barsResetLift")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsResetLift", UInt, 0x1183, UInt, oscTypeInt)
+        OnMessage(0x1183, "_barsResetLift")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLumMix", UInt, 0x1478, UInt, oscTypeInt)
-        OnMessage(0x1478, "_barsLumMix")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsLumMix", UInt, 0x1182, UInt, oscTypeInt)
+        OnMessage(0x1182, "_barsLumMix")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsMidDetail", UInt, 0x1479, UInt, oscTypeInt)
-        OnMessage(0x1479, "_barsMidDetail")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsMidDetail", UInt, 0x1181, UInt, oscTypeInt)
+        OnMessage(0x1181, "_barsMidDetail")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsHue", UInt, 0x1480, UInt, oscTypeInt)
-        OnMessage(0x1480, "_barsHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsHue", UInt, 0x1180, UInt, oscTypeInt)
+        OnMessage(0x1180, "_barsHue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsSaturation", UInt, 0x1481, UInt, oscTypeInt)
-        OnMessage(0x1481, "_barsSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsSaturation", UInt, 0x1179, UInt, oscTypeInt)
+        OnMessage(0x1179, "_barsSaturation")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsHighlight", UInt, 0x1482, UInt, oscTypeInt)
-        OnMessage(0x1482, "_barsHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsHighlight", UInt, 0x1178, UInt, oscTypeInt)
+        OnMessage(0x1178, "_barsHighlight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsShadow", UInt, 0x1483, UInt, oscTypeInt)
-        OnMessage(0x1483, "_barsShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsShadow", UInt, 0x1177, UInt, oscTypeInt)
+        OnMessage(0x1177, "_barsShadow")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsCoolBoost", UInt, 0x1484, UInt, oscTypeInt)
-        OnMessage(0x1484, "_barsCoolBoost")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsCoolBoost", UInt, 0x1176, UInt, oscTypeInt)
+        OnMessage(0x1176, "_barsCoolBoost")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsPivot", UInt, 0x1485, UInt, oscTypeInt)
-        OnMessage(0x1485, "_barsPivot")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsPivot", UInt, 0x1175, UInt, oscTypeInt)
+        OnMessage(0x1175, "_barsPivot")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsContrast", UInt, 0x1486, UInt, oscTypeInt)
-        OnMessage(0x1486, "_barsContrast")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsContrast", UInt, 0x1174, UInt, oscTypeInt)
+        OnMessage(0x1174, "_barsContrast")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsTint", UInt, 0x1487, UInt, oscTypeInt)
-        OnMessage(0x1487, "_barsTint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsTint", UInt, 0x1173, UInt, oscTypeInt)
+        OnMessage(0x1173, "_barsTint")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsTemperature", UInt, 0x1488, UInt, oscTypeInt)
-        OnMessage(0x1488, "_barsTemperature")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/barsTemperature", UInt, 0x1172, UInt, oscTypeInt)
+        OnMessage(0x1172, "_barsTemperature")
         
         ;Primaries Panel Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesOffsetB", UInt, 0x1489, UInt, oscTypeInt)
-        OnMessage(0x1489, "_primariesOffsetB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesOffsetB", UInt, 0x1171, UInt, oscTypeInt)
+        OnMessage(0x1171, "_primariesOffsetB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesOffsetG", UInt, 0x1490, UInt, oscTypeInt)
-        OnMessage(0x1490, "_primariesOffsetG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesOffsetG", UInt, 0x1170, UInt, oscTypeInt)
+        OnMessage(0x1170, "_primariesOffsetG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesOffsetR", UInt, 0x1491, UInt, oscTypeInt)
-        OnMessage(0x1491, "_primariesOffsetR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesOffsetR", UInt, 0x1169, UInt, oscTypeInt)
+        OnMessage(0x1169, "_primariesOffsetR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainY", UInt, 0x1492, UInt, oscTypeInt)
-        OnMessage(0x1492, "_primariesGainY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainY", UInt, 0x1168, UInt, oscTypeInt)
+        OnMessage(0x1168, "_primariesGainY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainB", UInt, 0x1493, UInt, oscTypeInt)
-        OnMessage(0x1493, "_primariesGainB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainB", UInt, 0x1167, UInt, oscTypeInt)
+        OnMessage(0x1167, "_primariesGainB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainG", UInt, 0x1494, UInt, oscTypeInt)
-        OnMessage(0x1494, "_primariesGainG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainG", UInt, 0x1166, UInt, oscTypeInt)
+        OnMessage(0x1166, "_primariesGainG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainR", UInt, 0x1495, UInt, oscTypeInt)
-        OnMessage(0x1495, "_primariesGainR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGainR", UInt, 0x1165, UInt, oscTypeInt)
+        OnMessage(0x1165, "_primariesGainR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaB", UInt, 0x1496, UInt, oscTypeInt)
-        OnMessage(0x1496, "_primariesGammaB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaB", UInt, 0x1164, UInt, oscTypeInt)
+        OnMessage(0x1164, "_primariesGammaB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaG", UInt, 0x1497, UInt, oscTypeInt)
-        OnMessage(0x1497, "_primariesGammaG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaG", UInt, 0x1163, UInt, oscTypeInt)
+        OnMessage(0x1163, "_primariesGammaG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaR", UInt, 0x1498, UInt, oscTypeInt)
-        OnMessage(0x1498, "_primariesGammaR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaR", UInt, 0x1162, UInt, oscTypeInt)
+        OnMessage(0x1162, "_primariesGammaR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaY", UInt, 0x1499, UInt, oscTypeInt)
-        OnMessage(0x1499, "_primariesGammaY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesGammaY", UInt, 0x1161, UInt, oscTypeInt)
+        OnMessage(0x1161, "_primariesGammaY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftY", UInt, 0x1500, UInt, oscTypeInt)
-        OnMessage(0x1500, "_primariesLiftY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftY", UInt, 0x1160, UInt, oscTypeInt)
+        OnMessage(0x1160, "_primariesLiftY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftB", UInt, 0x1501, UInt, oscTypeInt)
-        OnMessage(0x1501, "_primariesLiftB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftB", UInt, 0x1159, UInt, oscTypeInt)
+        OnMessage(0x1159, "_primariesLiftB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftG", UInt, 0x1502, UInt, oscTypeInt)
-        OnMessage(0x1502, "_primariesLiftG")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftG", UInt, 0x1158, UInt, oscTypeInt)
+        OnMessage(0x1158, "_primariesLiftG")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftR", UInt, 0x1503, UInt, oscTypeInt)
-        OnMessage(0x1503, "_primariesLiftR")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLiftR", UInt, 0x1157, UInt, oscTypeInt)
+        OnMessage(0x1157, "_primariesLiftR")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesWhitePointPicker", UInt, 0x1504, UInt, oscTypeInt)
-        OnMessage(0x1504, "_primariesWhitePointPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesWhitePointPicker", UInt, 0x1156, UInt, oscTypeInt)
+        OnMessage(0x1156, "_primariesWhitePointPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesBlackPointPicker", UInt, 0x1505, UInt, oscTypeInt)
-        OnMessage(0x1505, "_primariesBlackPointPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesBlackPointPicker", UInt, 0x1155, UInt, oscTypeInt)
+        OnMessage(0x1155, "_primariesBlackPointPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesColorPicker", UInt, 0x1506, UInt, oscTypeInt)
-        OnMessage(0x1506, "_primariesColorPicker")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesColorPicker", UInt, 0x1154, UInt, oscTypeInt)
+        OnMessage(0x1154, "_primariesColorPicker")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesAWB", UInt, 0x1507, UInt, oscTypeInt)
-        OnMessage(0x1507, "_primariesAWB")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesAWB", UInt, 0x1153, UInt, oscTypeInt)
+        OnMessage(0x1153, "_primariesAWB")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetAll", UInt, 0x1508, UInt, oscTypeInt)
-        OnMessage(0x1508, "_primariesResetAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetAll", UInt, 0x1152, UInt, oscTypeInt)
+        OnMessage(0x1152, "_primariesResetAll")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetOffset", UInt, 0x1509, UInt, oscTypeInt)
-        OnMessage(0x1509, "_primariesResetOffset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetOffset", UInt, 0x1151, UInt, oscTypeInt)
+        OnMessage(0x1151, "_primariesResetOffset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetGain", UInt, 0x1510, UInt, oscTypeInt)
-        OnMessage(0x1510, "_primariesResetGain")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetGain", UInt, 0x1150, UInt, oscTypeInt)
+        OnMessage(0x1150, "_primariesResetGain")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetGamma", UInt, 0x1511, UInt, oscTypeInt)
-        OnMessage(0x1511, "_primariesResetGamma")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetGamma", UInt, 0x1149, UInt, oscTypeInt)
+        OnMessage(0x1149, "_primariesResetGamma")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetLift", UInt, 0x1512, UInt, oscTypeInt)
-        OnMessage(0x1512, "_primariesResetLift")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesResetLift", UInt, 0x1148, UInt, oscTypeInt)
+        OnMessage(0x1148, "_primariesResetLift")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLumMix", UInt, 0x1513, UInt, oscTypeInt)
-        OnMessage(0x1513, "_primariesLumMix")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesLumMix", UInt, 0x1147, UInt, oscTypeInt)
+        OnMessage(0x1147, "_primariesLumMix")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesMidDetail", UInt, 0x1514, UInt, oscTypeInt)
-        OnMessage(0x1514, "_primariesMidDetail")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesMidDetail", UInt, 0x1146, UInt, oscTypeInt)
+        OnMessage(0x1146, "_primariesMidDetail")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesHue", UInt, 0x1515, UInt, oscTypeInt)
-        OnMessage(0x1515, "_primariesHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesHue", UInt, 0x1145, UInt, oscTypeInt)
+        OnMessage(0x1145, "_primariesHue")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSaturation", UInt, 0x1516, UInt, oscTypeInt)
-        OnMessage(0x1516, "_primariesSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSaturation", UInt, 0x1144, UInt, oscTypeInt)
+        OnMessage(0x1144, "_primariesSaturation")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesHighlight", UInt, 0x1517, UInt, oscTypeInt)
-        OnMessage(0x1517, "_primariesHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesHighlight", UInt, 0x1143, UInt, oscTypeInt)
+        OnMessage(0x1143, "_primariesHighlight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesShadow", UInt, 0x1518, UInt, oscTypeInt)
-        OnMessage(0x1518, "_primariesShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesShadow", UInt, 0x1142, UInt, oscTypeInt)
+        OnMessage(0x1142, "_primariesShadow")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesCoolBoost", UInt, 0x1519, UInt, oscTypeInt)
-        OnMessage(0x1519, "_primariesCoolBoost")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesCoolBoost", UInt, 0x1141, UInt, oscTypeInt)
+        OnMessage(0x1141, "_primariesCoolBoost")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesPivot", UInt, 0x1520, UInt, oscTypeInt)
-        OnMessage(0x1520, "_primariesPivot")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesPivot", UInt, 0x1140, UInt, oscTypeInt)
+        OnMessage(0x1140, "_primariesPivot")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesContrast", UInt, 0x1521, UInt, oscTypeInt)
-        OnMessage(0x1521, "_primariesContrast")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesContrast", UInt, 0x1139, UInt, oscTypeInt)
+        OnMessage(0x1139, "_primariesContrast")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesTint", UInt, 0x1522, UInt, oscTypeInt)
-        OnMessage(0x1522, "_primariesTint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesTint", UInt, 0x1138, UInt, oscTypeInt)
+        OnMessage(0x1138, "_primariesTint")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesTemperature", UInt, 0x1523, UInt, oscTypeInt)
-        OnMessage(0x1523, "_primariesTemperature")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesTemperature", UInt, 0x1137, UInt, oscTypeInt)
+        OnMessage(0x1137, "_primariesTemperature")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFourthJog", UInt, 0x1524, UInt, oscTypeInt)
-        OnMessage(0x1524, "_primariesFourthJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFourthJog", UInt, 0x1136, UInt, oscTypeInt)
+        OnMessage(0x1136, "_primariesFourthJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesThirdJog", UInt, 0x1525, UInt, oscTypeInt)
-        OnMessage(0x1525, "_primariesThirdJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesThirdJog", UInt, 0x1135, UInt, oscTypeInt)
+        OnMessage(0x1135, "_primariesThirdJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSecondJog", UInt, 0x1526, UInt, oscTypeInt)
-        OnMessage(0x1526, "_primariesSecondJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSecondJog", UInt, 0x1134, UInt, oscTypeInt)
+        OnMessage(0x1134, "_primariesSecondJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFirstJog", UInt, 0x1527, UInt, oscTypeInt)
-        OnMessage(0x1527, "_primariesFirstJog")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFirstJog", UInt, 0x1133, UInt, oscTypeInt)
+        OnMessage(0x1133, "_primariesFirstJog")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFourthWheelY", UInt, 0x1528, UInt, oscTypeInt)
-        OnMessage(0x1528, "_primariesFourthWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFourthWheelY", UInt, 0x1132, UInt, oscTypeInt)
+        OnMessage(0x1132, "_primariesFourthWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFourthWheelX", UInt, 0x1529, UInt, oscTypeInt)
-        OnMessage(0x1529, "_primariesFourthWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFourthWheelX", UInt, 0x1131, UInt, oscTypeInt)
+        OnMessage(0x1131, "_primariesFourthWheelX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesThirdWheelY", UInt, 0x1530, UInt, oscTypeInt)
-        OnMessage(0x1530, "_primariesThirdWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesThirdWheelY", UInt, 0x1130, UInt, oscTypeInt)
+        OnMessage(0x1130, "_primariesThirdWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesThirdWheelX", UInt, 0x1531, UInt, oscTypeInt)
-        OnMessage(0x1531, "_primariesThirdWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesThirdWheelX", UInt, 0x1129, UInt, oscTypeInt)
+        OnMessage(0x1129, "_primariesThirdWheelX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSecondWheelY", UInt, 0x1532, UInt, oscTypeInt)
-        OnMessage(0x1532, "_primariesSecondWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSecondWheelY", UInt, 0x1128, UInt, oscTypeInt)
+        OnMessage(0x1128, "_primariesSecondWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSecondWheelX", UInt, 0x1533, UInt, oscTypeInt)
-        OnMessage(0x1533, "_primariesSecondWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesSecondWheelX", UInt, 0x1127, UInt, oscTypeInt)
+        OnMessage(0x1127, "_primariesSecondWheelX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFirstWheelY", UInt, 0x1534, UInt, oscTypeInt)
-        OnMessage(0x1534, "_primariesFirstWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFirstWheelY", UInt, 0x1126, UInt, oscTypeInt)
+        OnMessage(0x1126, "_primariesFirstWheelY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFirstWheelX", UInt, 0x1535, UInt, oscTypeInt)
-        OnMessage(0x1535, "_primariesFirstWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/primariesFirstWheelX", UInt, 0x1125, UInt, oscTypeInt)
+        OnMessage(0x1125, "_primariesFirstWheelX")
 
         ;HDR Panel Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneFalloff", UInt, 0x1536, UInt, oscTypeInt)
-        OnMessage(0x1536, "_hdrZoneFalloff")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneFalloff", UInt, 0x1124, UInt, oscTypeInt)
+        OnMessage(0x1124, "_hdrZoneFalloff")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneMaxRange", UInt, 0x1537, UInt, oscTypeInt)
-        OnMessage(0x1537, "_hdrZoneMaxRange")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneMaxRange", UInt, 0x1123, UInt, oscTypeInt)
+        OnMessage(0x1123, "_hdrZoneMaxRange")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideSpecular", UInt, 0x1538, UInt, oscTypeInt)
-        OnMessage(0x1538, "_hdrShowHideSpecular")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideSpecular", UInt, 0x1122, UInt, oscTypeInt)
+        OnMessage(0x1122, "_hdrShowHideSpecular")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideHighlight", UInt, 0x1539, UInt, oscTypeInt)
-        OnMessage(0x1539, "_hdrShowHideHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideHighlight", UInt, 0x1121, UInt, oscTypeInt)
+        OnMessage(0x1121, "_hdrShowHideHighlight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideLight", UInt, 0x1540, UInt, oscTypeInt)
-        OnMessage(0x1540, "_hdrShowHideLight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideLight", UInt, 0x1120, UInt, oscTypeInt)
+        OnMessage(0x1120, "_hdrShowHideLight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideShadow", UInt, 0x1541, UInt, oscTypeInt)
-        OnMessage(0x1541, "_hdrShowHideShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideShadow", UInt, 0x1119, UInt, oscTypeInt)
+        OnMessage(0x1119, "_hdrShowHideShadow")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideDark", UInt, 0x1542, UInt, oscTypeInt)
-        OnMessage(0x1542, "_hdrShowHideDark")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideDark", UInt, 0x1118, UInt, oscTypeInt)
+        OnMessage(0x1118, "_hdrShowHideDark")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideBlack", UInt, 0x1543, UInt, oscTypeInt)
-        OnMessage(0x1543, "_hdrShowHideBlack")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrShowHideBlack", UInt, 0x1117, UInt, oscTypeInt)
+        OnMessage(0x1117, "_hdrShowHideBlack")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffSpecular", UInt, 0x1544, UInt, oscTypeInt)
-        OnMessage(0x1544, "_hdrTurnOnOffSpecular")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffSpecular", UInt, 0x1116, UInt, oscTypeInt)
+        OnMessage(0x1116, "_hdrTurnOnOffSpecular")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffHighlight", UInt, 0x1545, UInt, oscTypeInt)
-        OnMessage(0x1545, "_hdrTurnOnOffHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffHighlight", UInt, 0x1115, UInt, oscTypeInt)
+        OnMessage(0x1115, "_hdrTurnOnOffHighlight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffLight", UInt, 0x1546, UInt, oscTypeInt)
-        OnMessage(0x1546, "_hdrTurnOnOffLight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffLight", UInt, 0x1114, UInt, oscTypeInt)
+        OnMessage(0x1114, "_hdrTurnOnOffLight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffShadow", UInt, 0x1547, UInt, oscTypeInt)
-        OnMessage(0x1547, "_hdrTurnOnOffShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffShadow", UInt, 0x1113, UInt, oscTypeInt)
+        OnMessage(0x1113, "_hdrTurnOnOffShadow")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffDark", UInt, 0x1548, UInt, oscTypeInt)
-        OnMessage(0x1548, "_hdrTurnOnOffDark")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffDark", UInt, 0x1112, UInt, oscTypeInt)
+        OnMessage(0x1112, "_hdrTurnOnOffDark")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffBlack", UInt, 0x1549, UInt, oscTypeInt)
-        OnMessage(0x1549, "_hdrTurnOnOffBlack")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTurnOnOffBlack", UInt, 0x1111, UInt, oscTypeInt)
+        OnMessage(0x1111, "_hdrTurnOnOffBlack")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelReset", UInt, 0x1550, UInt, oscTypeInt)
-        OnMessage(0x1550, "_hdrFourthWheelReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelReset", UInt, 0x1110, UInt, oscTypeInt)
+        OnMessage(0x1110, "_hdrFourthWheelReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelReset", UInt, 0x1551, UInt, oscTypeInt)
-        OnMessage(0x1551, "_hdrThirdWheelReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelReset", UInt, 0x1109, UInt, oscTypeInt)
+        OnMessage(0x1109, "_hdrThirdWheelReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelReset", UInt, 0x1552, UInt, oscTypeInt)
-        OnMessage(0x1552, "_hdrSecondWheelReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelReset", UInt, 0x1108, UInt, oscTypeInt)
+        OnMessage(0x1108, "_hdrSecondWheelReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelReset", UInt, 0x1553, UInt, oscTypeInt)
-        OnMessage(0x1553, "_hdrFirstWheelReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelReset", UInt, 0x1107, UInt, oscTypeInt)
+        OnMessage(0x1107, "_hdrFirstWheelReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelHL", UInt, 0x1554, UInt, oscTypeInt)
-        OnMessage(0x1554, "_hdrThirdWheelHL")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelHL", UInt, 0x1106, UInt, oscTypeInt)
+        OnMessage(0x1106, "_hdrThirdWheelHL")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelHL", UInt, 0x1555, UInt, oscTypeInt)
-        OnMessage(0x1555, "_hdrSecondWheelHL")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelHL", UInt, 0x1105, UInt, oscTypeInt)
+        OnMessage(0x1105, "_hdrSecondWheelHL")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelHL", UInt, 0x1556, UInt, oscTypeInt)
-        OnMessage(0x1556, "_hdrFirstWheelHL")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelHL", UInt, 0x1104, UInt, oscTypeInt)
+        OnMessage(0x1104, "_hdrFirstWheelHL")
         
         ;Removed on version 2.4
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrResetZone", UInt, 0x1557, UInt, oscTypeInt)
-        ;OnMessage(0x1557, "_hdrResetZone")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrResetZone", UInt, 0x1103, UInt, oscTypeInt)
+        ;OnMessage(0x1103, "_hdrResetZone")
         ;
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrResetColor", UInt, 0x1558, UInt, oscTypeInt)
-        ;OnMessage(0x1558, "_hdrResetColor")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrResetColor", UInt, 0x1102, UInt, oscTypeInt)
+        ;OnMessage(0x1102, "_hdrResetColor")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrResetAll", UInt, 0x1559, UInt, oscTypeInt)
-        OnMessage(0x1559, "_hdrResetAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrResetAll", UInt, 0x1101, UInt, oscTypeInt)
+        OnMessage(0x1101, "_hdrResetAll")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrWheelsRight", UInt, 0x1560, UInt, oscTypeInt)
-        OnMessage(0x1560, "_hdrWheelsRight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrWheelsRight", UInt, 0x1100, UInt, oscTypeInt)
+        OnMessage(0x1100, "_hdrWheelsRight")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrWheelsLeft", UInt, 0x1561, UInt, oscTypeInt)
-        OnMessage(0x1561, "_hdrWheelsLeft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrWheelsLeft", UInt, 0x1099, UInt, oscTypeInt)
+        OnMessage(0x1099, "_hdrWheelsLeft")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneSpecular", UInt, 0x1562, UInt, oscTypeInt)
-        OnMessage(0x1562, "_hdrZoneSpecular")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneSpecular", UInt, 0x1097, UInt, oscTypeInt)
+        OnMessage(0x1097, "_hdrZoneSpecular")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneHighlight", UInt, 0x1563, UInt, oscTypeInt)
-        OnMessage(0x1563, "_hdrZoneHighlight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneHighlight", UInt, 0x1096, UInt, oscTypeInt)
+        OnMessage(0x1096, "_hdrZoneHighlight")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneLight", UInt, 0x1564, UInt, oscTypeInt)
-        OnMessage(0x1564, "_hdrZoneLight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneLight", UInt, 0x1095, UInt, oscTypeInt)
+        OnMessage(0x1095, "_hdrZoneLight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneShadow", UInt, 0x1565, UInt, oscTypeInt)
-        OnMessage(0x1565, "_hdrZoneShadow")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneShadow", UInt, 0x1094, UInt, oscTypeInt)
+        OnMessage(0x1094, "_hdrZoneShadow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneDark", UInt, 0x1566, UInt, oscTypeInt)
-        OnMessage(0x1566, "_hdrZoneDark")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneDark", UInt, 0x1093, UInt, oscTypeInt)
+        OnMessage(0x1093, "_hdrZoneDark")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneBlack", UInt, 0x1567, UInt, oscTypeInt)
-        OnMessage(0x1567, "_hdrZoneBlack")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneBlack", UInt, 0x1092, UInt, oscTypeInt)
+        OnMessage(0x1092, "_hdrZoneBlack")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneOpenClose", UInt, 0x1568, UInt, oscTypeInt)
-        OnMessage(0x1568, "_hdrZoneOpenClose")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrZoneOpenClose", UInt, 0x1091, UInt, oscTypeInt)
+        OnMessage(0x1091, "_hdrZoneOpenClose")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrBlackOffset", UInt, 0x1569, UInt, oscTypeInt)
-        OnMessage(0x1569, "_hdrBlackOffset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrBlackOffset", UInt, 0x1090, UInt, oscTypeInt)
+        OnMessage(0x1090, "_hdrBlackOffset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrMD", UInt, 0x1570, UInt, oscTypeInt)
-        OnMessage(0x1570, "_hdrMD")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrMD", UInt, 0x1089, UInt, oscTypeInt)
+        OnMessage(0x1089, "_hdrMD")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrPivot", UInt, 0x1571, UInt, oscTypeInt)
-        OnMessage(0x1571, "_hdrPivot")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrPivot", UInt, 0x1088, UInt, oscTypeInt)
+        OnMessage(0x1088, "_hdrPivot")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrContrast", UInt, 0x1572, UInt, oscTypeInt)
-        OnMessage(0x1572, "_hdrContrast")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrContrast", UInt, 0x1087, UInt, oscTypeInt)
+        OnMessage(0x1087, "_hdrContrast")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrHue", UInt, 0x1573, UInt, oscTypeInt)
-        OnMessage(0x1573, "_hdrHue")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrHue", UInt, 0x1086, UInt, oscTypeInt)
+        OnMessage(0x1086, "_hdrHue")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTint", UInt, 0x1574, UInt, oscTypeInt)
-        OnMessage(0x1574, "_hdrTint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTint", UInt, 0x1085, UInt, oscTypeInt)
+        OnMessage(0x1085, "_hdrTint")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTemperature", UInt, 0x1575, UInt, oscTypeInt)
-        OnMessage(0x1575, "_hdrTemperature")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrTemperature", UInt, 0x1084, UInt, oscTypeInt)
+        OnMessage(0x1084, "_hdrTemperature")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelSaturation", UInt, 0x1576, UInt, oscTypeInt)
-        OnMessage(0x1576, "_hdrFourthWheelSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelSaturation", UInt, 0x1083, UInt, oscTypeInt)
+        OnMessage(0x1083, "_hdrFourthWheelSaturation")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelExposure", UInt, 0x1577, UInt, oscTypeInt)
-        OnMessage(0x1577, "_hdrFourthWheelExposure")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelExposure", UInt, 0x1082, UInt, oscTypeInt)
+        OnMessage(0x1082, "_hdrFourthWheelExposure")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelSaturation", UInt, 0x1578, UInt, oscTypeInt)
-        OnMessage(0x1578, "_hdrThirdWheelSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelSaturation", UInt, 0x1081, UInt, oscTypeInt)
+        OnMessage(0x1081, "_hdrThirdWheelSaturation")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelExposure", UInt, 0x1579, UInt, oscTypeInt)
-        OnMessage(0x1579, "_hdrThirdWheelExposure")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelExposure", UInt, 0x1080, UInt, oscTypeInt)
+        OnMessage(0x1080, "_hdrThirdWheelExposure")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelSaturation", UInt, 0x1580, UInt, oscTypeInt)
-        OnMessage(0x1580, "_hdrSecondWheelSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelSaturation", UInt, 0x1079, UInt, oscTypeInt)
+        OnMessage(0x1079, "_hdrSecondWheelSaturation")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelExposure", UInt, 0x1581, UInt, oscTypeInt)
-        OnMessage(0x1581, "_hdrSecondWheelExposure")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelExposure", UInt, 0x1078, UInt, oscTypeInt)
+        OnMessage(0x1078, "_hdrSecondWheelExposure")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelSaturation", UInt, 0x1582, UInt, oscTypeInt)
-        OnMessage(0x1582, "_hdrFirstWheelSaturation")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelSaturation", UInt, 0x1077, UInt, oscTypeInt)
+        OnMessage(0x1077, "_hdrFirstWheelSaturation")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelExposure", UInt, 0x1583, UInt, oscTypeInt)
-        OnMessage(0x1583, "_hdrFirstWheelExposure")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelExposure", UInt, 0x1076, UInt, oscTypeInt)
+        OnMessage(0x1076, "_hdrFirstWheelExposure")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/jogHDRFourthWheel", UInt, 0x1584, UInt, oscTypeInt)
-        OnMessage(0x1584, "_jogHDRFourthWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/jogHDRFourthWheel", UInt, 0x1075, UInt, oscTypeInt)
+        OnMessage(0x1075, "_jogHDRFourthWheel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFalloffThirdWheel", UInt, 0x1585, UInt, oscTypeInt)
-        OnMessage(0x1585, "_hdrFalloffThirdWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFalloffThirdWheel", UInt, 0x1074, UInt, oscTypeInt)
+        OnMessage(0x1074, "_hdrFalloffThirdWheel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFalloffSecondWheel", UInt, 0x1586, UInt, oscTypeInt)
-        OnMessage(0x1586, "_hdrFalloffSecondWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFalloffSecondWheel", UInt, 0x1073, UInt, oscTypeInt)
+        OnMessage(0x1073, "_hdrFalloffSecondWheel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFalloffFirstWheel", UInt, 0x1587, UInt, oscTypeInt)
-        OnMessage(0x1587, "_hdrFalloffFirstWheel")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFalloffFirstWheel", UInt, 0x1072, UInt, oscTypeInt)
+        OnMessage(0x1072, "_hdrFalloffFirstWheel")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelY", UInt, 0x1588, UInt, oscTypeInt)
-        OnMessage(0x1588, "_hdrFourthWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelY", UInt, 0x1071, UInt, oscTypeInt)
+        OnMessage(0x1071, "_hdrFourthWheelY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelX", UInt, 0x1589, UInt, oscTypeInt)
-        OnMessage(0x1589, "_hdrFourthWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFourthWheelX", UInt, 0x1070, UInt, oscTypeInt)
+        OnMessage(0x1070, "_hdrFourthWheelX")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelY", UInt, 0x1590, UInt, oscTypeInt)
-        OnMessage(0x1590, "_hdrThirdWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelY", UInt, 0x1069, UInt, oscTypeInt)
+        OnMessage(0x1069, "_hdrThirdWheelY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelX", UInt, 0x1591, UInt, oscTypeInt)
-        OnMessage(0x1591, "_hdrThirdWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrThirdWheelX", UInt, 0x1068, UInt, oscTypeInt)
+        OnMessage(0x1068, "_hdrThirdWheelX")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelY", UInt, 0x1592, UInt, oscTypeInt)
-        OnMessage(0x1592, "_hdrSecondWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelY", UInt, 0x1067, UInt, oscTypeInt)
+        OnMessage(0x1067, "_hdrSecondWheelY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelX", UInt, 0x1593, UInt, oscTypeInt)
-        OnMessage(0x1593, "_hdrSecondWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrSecondWheelX", UInt, 0x1066, UInt, oscTypeInt)
+        OnMessage(0x1066, "_hdrSecondWheelX")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelY", UInt, 0x1594, UInt, oscTypeInt)
-        OnMessage(0x1594, "_hdrFirstWheelY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelY", UInt, 0x1065, UInt, oscTypeInt)
+        OnMessage(0x1065, "_hdrFirstWheelY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelX", UInt, 0x1595, UInt, oscTypeInt)
-        OnMessage(0x1595, "_hdrFirstWheelX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/hdrFirstWheelX", UInt, 0x1064, UInt, oscTypeInt)
+        OnMessage(0x1064, "_hdrFirstWheelX")
 
         ;Inspector Panel Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorLinkUnlinkZoom", UInt, 0x1596, UInt, oscTypeInt)
-        OnMessage(0x1596, "_inspectorLinkUnlinkZoom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorLinkUnlinkZoom", UInt, 0x1060, UInt, oscTypeInt)
+        OnMessage(0x1060, "_inspectorLinkUnlinkZoom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAudioReset", UInt, 0x1597, UInt, oscTypeInt)
-        OnMessage(0x1597, "_inspectorAudioReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAudioReset", UInt, 0x1059, UInt, oscTypeInt)
+        OnMessage(0x1059, "_inspectorAudioReset")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorTransformReset", UInt, 0x1598, UInt, oscTypeInt)
-        OnMessage(0x1598, "_inspectorTransformReset")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorTransformReset", UInt, 0x1058, UInt, oscTypeInt)
+        OnMessage(0x1058, "_inspectorTransformReset")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAudioVolume", UInt, 0x1599, UInt, oscTypeInt)
-        OnMessage(0x1599, "_inspectorAudioVolume")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAudioVolume", UInt, 0x1057, UInt, oscTypeInt)
+        OnMessage(0x1057, "_inspectorAudioVolume")
 
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/openInspectorAudio", UInt, 0x1600, UInt, oscTypeInt)
-        ;OnMessage(0x1600, "_openInspectorAudio")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/openInspectorAudio", UInt, 0x1056, UInt, oscTypeInt)
+        ;OnMessage(0x1056, "_openInspectorAudio")
 
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/openInspectorVideo", UInt, 0x1601, UInt, oscTypeInt)
-        ;OnMessage(0x1601, "_openInspectorVideo")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/openInspectorVideo", UInt, 0x1055, UInt, oscTypeInt)
+        ;OnMessage(0x1055, "_openInspectorVideo")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorFlip", UInt, 0x1602, UInt, oscTypeInt)
-        OnMessage(0x1602, "_inspectorFlip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorFlip", UInt, 0x1054, UInt, oscTypeInt)
+        OnMessage(0x1054, "_inspectorFlip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorYaw", UInt, 0x1603, UInt, oscTypeInt)
-        OnMessage(0x1603, "_inspectorYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorYaw", UInt, 0x1053, UInt, oscTypeInt)
+        OnMessage(0x1053, "_inspectorYaw")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAnchorPointY", UInt, 0x1604, UInt, oscTypeInt)
-        OnMessage(0x1604, "_inspectorAnchorPointY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAnchorPointY", UInt, 0x1052, UInt, oscTypeInt)
+        OnMessage(0x1052, "_inspectorAnchorPointY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAnchorPointX", UInt, 0x1605, UInt, oscTypeInt)
-        OnMessage(0x1605, "_inspectorAnchorPointX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorAnchorPointX", UInt, 0x1051, UInt, oscTypeInt)
+        OnMessage(0x1051, "_inspectorAnchorPointX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorPitch", UInt, 0x1606, UInt, oscTypeInt)
-        OnMessage(0x1606, "_inspectorPitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorPitch", UInt, 0x1050, UInt, oscTypeInt)
+        OnMessage(0x1050, "_inspectorPitch")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorPositionY", UInt, 0x1607, UInt, oscTypeInt)
-        OnMessage(0x1607, "_inspectorPositionY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorPositionY", UInt, 0x1049, UInt, oscTypeInt)
+        OnMessage(0x1049, "_inspectorPositionY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorPositionX", UInt, 0x1608, UInt, oscTypeInt)
-        OnMessage(0x1608, "_inspectorPositionX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorPositionX", UInt, 0x1048, UInt, oscTypeInt)
+        OnMessage(0x1048, "_inspectorPositionX")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorRotationAngle", UInt, 0x1609, UInt, oscTypeInt)
-        OnMessage(0x1609, "_inspectorRotationAngle")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorRotationAngle", UInt, 0x1047, UInt, oscTypeInt)
+        OnMessage(0x1047, "_inspectorRotationAngle")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorZoomY", UInt, 0x1610, UInt, oscTypeInt)
-        OnMessage(0x1610, "_inspectorZoomY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorZoomY", UInt, 0x1046, UInt, oscTypeInt)
+        OnMessage(0x1046, "_inspectorZoomY")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorZoomX", UInt, 0x1611, UInt, oscTypeInt)
-        OnMessage(0x1611, "_inspectorZoomX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inspectorZoomX", UInt, 0x1045, UInt, oscTypeInt)
+        OnMessage(0x1045, "_inspectorZoomX")
         
         ;Removed Function
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/goToInspectorWindow", UInt, 0x1612, UInt, oscTypeInt)
-        ;OnMessage(0x1612, "_goToInspectorWindow")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/goToInspectorWindow", UInt, 0x1044, UInt, oscTypeInt)
+        ;OnMessage(0x1044, "_goToInspectorWindow")
         
         ;Edit Panel Listeners
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/inOut", UInt, 0x1613, UInt, oscTypeInt)
-        OnMessage(0x1613, "_inOut")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/inOut", UInt, 0x1098, UInt, oscTypeInt)
+        OnMessage(0x1098, "_inOut")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/clipEditPointFrameStep", UInt, 0x1614, UInt, oscTypeInt)
-        OnMessage(0x1614, "_clipEditPointFrameStep")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/clipEditPointFrameStep", UInt, 0x1063, UInt, oscTypeInt)
+        OnMessage(0x1063, "_clipEditPointFrameStep")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/moveTimeline", UInt, 0x1615, UInt, oscTypeInt)
-        OnMessage(0x1615, "_moveTimeline")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/moveTimeline", UInt, 0x1062, UInt, oscTypeInt)
+        OnMessage(0x1062, "_moveTimeline")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineZoom", UInt, 0x1616, UInt, oscTypeInt)
-        OnMessage(0x1616, "_timelineZoom")
-
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/timelineZoom", UInt, 0x1061, UInt, oscTypeInt)
+        OnMessage(0x1061, "_timelineZoom")
+        
         ;Removed Function
-        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/enterEditMode", UInt, 0x1617, UInt, oscTypeInt)
-        ;OnMessage(0x1617, "_enterEditMode")
+        ;DllCall("OSC2AHK.dll\removeListener", AStr, "/enterEditMode", UInt, 0x1043, UInt, oscTypeInt)
+        ;OnMessage(0x1043, "_enterEditMode")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/changeEditActiveWindow", UInt, 0x1618, UInt, oscTypeInt)
-        OnMessage(0x1618, "_changeEditActiveWindow")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseRightExpander", UInt, 0x1619, UInt, oscTypeInt)
-        OnMessage(0x1619, "_openCloseRightExpander")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/changeEditActiveWindow", UInt, 0x1042, UInt, oscTypeInt)
+        OnMessage(0x1042, "_changeEditActiveWindow")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseInspector", UInt, 0x1620, UInt, oscTypeInt)
-        OnMessage(0x1620, "_openCloseInspector")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseMetadata", UInt, 0x1621, UInt, oscTypeInt)
-        OnMessage(0x1621, "_openCloseMetadata")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseMixer", UInt, 0x1622, UInt, oscTypeInt)
-        OnMessage(0x1622, "_openCloseMixer")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseSoundLibrary", UInt, 0x1623, UInt, oscTypeInt)
-        OnMessage(0x1623, "_openCloseSoundLibrary")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseEditIndex", UInt, 0x1624, UInt, oscTypeInt)
-        OnMessage(0x1624, "_openCloseEditIndex")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseEffectsLibrary", UInt, 0x1625, UInt, oscTypeInt)
-        OnMessage(0x1625, "_openCloseEffectsLibrary")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseRightExpander", UInt, 0x1041, UInt, oscTypeInt)
+        OnMessage(0x1041, "_openCloseRightExpander")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseMediaPool", UInt, 0x1626, UInt, oscTypeInt)
-        OnMessage(0x1626, "_openCloseMediaPool")
-        
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseLeftExpander", UInt, 0x1627, UInt, oscTypeInt)
-        OnMessage(0x1627, "_openCloseLeftExpander")
-        
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/addClipToTheEnd", UInt, 0x1628, UInt, oscTypeInt)
-        OnMessage(0x1628, "_addClipToTheEnd")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseInspector", UInt, 0x1040, UInt, oscTypeInt)
+        OnMessage(0x1040, "_openCloseInspector")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/fitToFillClip", UInt, 0x1629, UInt, oscTypeInt)
-        OnMessage(0x1629, "_fitToFillClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseMetadata", UInt, 0x1039, UInt, oscTypeInt)
+        OnMessage(0x1039, "_openCloseMetadata")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/rippleOverwriteClip", UInt, 0x1630, UInt, oscTypeInt)
-        OnMessage(0x1630, "_rippleOverwriteClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseMixer", UInt, 0x1038, UInt, oscTypeInt)
+        OnMessage(0x1038, "_openCloseMixer")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/replaceClip", UInt, 0x1631, UInt, oscTypeInt)
-        OnMessage(0x1631, "_replaceClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseSoundLibrary", UInt, 0x1037, UInt, oscTypeInt)
+        OnMessage(0x1037, "_openCloseSoundLibrary")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/overwriteClip", UInt, 0x1632, UInt, oscTypeInt)
-        OnMessage(0x1632, "_overwriteClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseEditIndex", UInt, 0x1036, UInt, oscTypeInt)
+        OnMessage(0x1036, "_openCloseEditIndex")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseEffectsLibrary", UInt, 0x1035, UInt, oscTypeInt)
+        OnMessage(0x1035, "_openCloseEffectsLibrary")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/insertClip", UInt, 0x1633, UInt, oscTypeInt)
-        OnMessage(0x1633, "_insertClip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseMediaPool", UInt, 0x1034, UInt, oscTypeInt)
+        OnMessage(0x1034, "_openCloseMediaPool")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/bladeTool", UInt, 0x1634, UInt, oscTypeInt)
-        OnMessage(0x1634, "_bladeTool")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/openCloseLeftExpander", UInt, 0x1033, UInt, oscTypeInt)
+        OnMessage(0x1033, "_openCloseLeftExpander")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trimTool", UInt, 0x1635, UInt, oscTypeInt)
-        OnMessage(0x1635, "_trimTool")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/addClipToTheEnd", UInt, 0x1032, UInt, oscTypeInt)
+        OnMessage(0x1032, "_addClipToTheEnd")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectionTool", UInt, 0x1636, UInt, oscTypeInt)
-        OnMessage(0x1636, "_selectionTool")
-        
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/altUpDown", UInt, 0x1637, UInt, oscTypeInt)
-        OnMessage(0x1637, "_altUpDown")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/fitToFillClip", UInt, 0x1031, UInt, oscTypeInt)
+        OnMessage(0x1031, "_fitToFillClip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/leftRightEnter", UInt, 0x1638, UInt, oscTypeInt)
-        OnMessage(0x1638, "_leftRightEnter")
-        
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/upDownEnter", UInt, 0x1639, UInt, oscTypeInt)
-        OnMessage(0x1639, "_upDownEnter")
-        
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectFwBwActiveTrack", UInt, 0x1640, UInt, oscTypeInt)
-        OnMessage(0x1640, "_selectFwBwActiveTrack")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/rippleOverwriteClip", UInt, 0x1030, UInt, oscTypeInt)
+        OnMessage(0x1030, "_rippleOverwriteClip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/homeEnd", UInt, 0x1641, UInt, oscTypeInt)
-        OnMessage(0x1641, "_homeEnd")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/replaceClip", UInt, 0x1029, UInt, oscTypeInt)
+        OnMessage(0x1029, "_replaceClip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cut", UInt, 0x1642, UInt, oscTypeInt)
-        OnMessage(0x1642, "_cut")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/overwriteClip", UInt, 0x1028, UInt, oscTypeInt)
+        OnMessage(0x1028, "_overwriteClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/addAVTransitions", UInt, 0x1643, UInt, oscTypeInt)
-        OnMessage(0x1643, "_addAVTransitions")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/retimeClipSpeed", UInt, 0x1644, UInt, oscTypeInt)
-        OnMessage(0x1644, "_retimeClipSpeed")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/swapClips", UInt, 0x1645, UInt, oscTypeInt)
-        OnMessage(0x1645, "_swapClips")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/insertClip", UInt, 0x1027, UInt, oscTypeInt)
+        OnMessage(0x1027, "_insertClip")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectDeselectAll", UInt, 0x1646, UInt, oscTypeInt)
-        OnMessage(0x1646, "_selectDeselectAll")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectForwardBackward", UInt, 0x1647, UInt, oscTypeInt)
-        OnMessage(0x1647, "_selectForwardBackward")
-
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/addRemoveSetMark", UInt, 0x1648, UInt, oscTypeInt)
-        OnMessage(0x1648, "_addRemoveSetMark")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/bladeTool", UInt, 0x1026, UInt, oscTypeInt)
+        OnMessage(0x1026, "_bladeTool")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/saveProject", UInt, 0x1649, UInt, oscTypeInt)
-        OnMessage(0x1649, "_saveProject")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trimTool", UInt, 0x1025, UInt, oscTypeInt)
+        OnMessage(0x1025, "_trimTool")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/toggleFullscreen", UInt, 0x1650, UInt, oscTypeInt)
-        OnMessage(0x1650, "_toggleFullscreen")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectionTool", UInt, 0x1024, UInt, oscTypeInt)
+        OnMessage(0x1024, "_selectionTool")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/altUpDown", UInt, 0x1023, UInt, oscTypeInt)
+        OnMessage(0x1023, "_altUpDown")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteAttributes", UInt, 0x1651, UInt, oscTypeInt)
-        OnMessage(0x1651, "_pasteAttributes")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/leftRightEnter", UInt, 0x1022, UInt, oscTypeInt)
+        OnMessage(0x1022, "_leftRightEnter")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/upDownEnter", UInt, 0x1021, UInt, oscTypeInt)
+        OnMessage(0x1021, "_upDownEnter")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectFwBwActiveTrack", UInt, 0x1020, UInt, oscTypeInt)
+        OnMessage(0x1020, "_selectFwBwActiveTrack")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/linkUnlinkClips", UInt, 0x1652, UInt, oscTypeInt)
-        OnMessage(0x1652, "_linkUnlinkClips")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/homeEnd", UInt, 0x1019, UInt, oscTypeInt)
+        OnMessage(0x1019, "_homeEnd")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteKnob", UInt, 0x1653, UInt, oscTypeInt)
-        OnMessage(0x1653, "_pasteKnob")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cut", UInt, 0x1018, UInt, oscTypeInt)
+        OnMessage(0x1018, "_cut")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/closestEditPoint", UInt, 0x1654, UInt, oscTypeInt)
-        OnMessage(0x1654, "_closestEditPoint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/addAVTransitions", UInt, 0x1017, UInt, oscTypeInt)
+        OnMessage(0x1017, "_addAVTransitions")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/retimeClipSpeed", UInt, 0x1016, UInt, oscTypeInt)
+        OnMessage(0x1016, "_retimeClipSpeed")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/swapClips", UInt, 0x1015, UInt, oscTypeInt)
+        OnMessage(0x1015, "_swapClips")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/closestClipGap", UInt, 0x1655, UInt, oscTypeInt)
-        OnMessage(0x1655, "_closestClipGap")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectDeselectAll", UInt, 0x1014, UInt, oscTypeInt)
+        OnMessage(0x1014, "_selectDeselectAll")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/selectForwardBackward", UInt, 0x1013, UInt, oscTypeInt)
+        OnMessage(0x1013, "_selectForwardBackward")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/addRemoveSetMark", UInt, 0x1012, UInt, oscTypeInt)
+        OnMessage(0x1012, "_addRemoveSetMark")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/delEndToPlayhead", UInt, 0x1656, UInt, oscTypeInt)
-        OnMessage(0x1656, "_delEndToPlayhead")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/saveProject", UInt, 0x1010, UInt, oscTypeInt)
+        OnMessage(0x1010, "_saveProject")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/toggleFullscreen", UInt, 0x1009, UInt, oscTypeInt)
+        OnMessage(0x1009, "_toggleFullscreen")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteAttributes", UInt, 0x1008, UInt, oscTypeInt)
+        OnMessage(0x1008, "_pasteAttributes")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/linkUnlinkClips", UInt, 0x1007, UInt, oscTypeInt)
+        OnMessage(0x1007, "_linkUnlinkClips")
+
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/pasteKnob", UInt, 0x1006, UInt, oscTypeInt)
+        OnMessage(0x1006, "_pasteKnob")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/delStartToPlayhead", UInt, 0x1657, UInt, oscTypeInt)
-        OnMessage(0x1657, "_delStartToPlayhead")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/closestEditPoint", UInt, 0x1005, UInt, oscTypeInt)
+        OnMessage(0x1005, "_closestEditPoint")
         
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/cutAllTimelines", UInt, 0x1658, UInt, oscTypeInt)
-        OnMessage(0x1658, "_cutAllTimelines")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/closestClipGap", UInt, 0x1004, UInt, oscTypeInt)
+        OnMessage(0x1004, "_closestClipGap")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/delEndToPlayhead", UInt, 0x1003, UInt, oscTypeInt)
+        OnMessage(0x1003, "_delEndToPlayhead")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/delStartToPlayhead", UInt, 0x1002, UInt, oscTypeInt)
+        OnMessage(0x1002, "_delStartToPlayhead")
+        
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/cutAllTimelines", UInt, 0x1001, UInt, oscTypeInt)
+        OnMessage(0x1001, "_cutAllTimelines")
         
         ;Update 2.5 Listeners - Tracking and Sizing
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingToggleClipFrame", UInt, 0x1659, oscTypeInt)
-        OnMessage(0x1659, "_trackingToggleClipFrame")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingToggleClipFrame", UInt, 0x1589, oscTypeInt)
+        OnMessage(0x1589, "_trackingToggleClipFrame")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingToggleWindowFX", UInt, 0x1660, oscTypeInt)
-        OnMessage(0x1660, "_trackingToggleWindowFX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingToggleWindowFX", UInt, 0x1590, oscTypeInt)
+        OnMessage(0x1590, "_trackingToggleWindowFX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingStepFramesTrack", UInt, 0x1661, oscTypeInt)
-        OnMessage(0x1661, "_trackingStepFramesTrack")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingStepFramesTrack", UInt, 0x1591, oscTypeInt)
+        OnMessage(0x1591, "_trackingStepFramesTrack")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTrackReverse", UInt, 0x1662, oscTypeInt)
-        OnMessage(0x1662, "_trackingTrackReverse")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTrackReverse", UInt, 0x1592, oscTypeInt)
+        OnMessage(0x1592, "_trackingTrackReverse")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingStopTracking", UInt, 0x1663, oscTypeInt)
-        OnMessage(0x1663, "_trackingStopTracking")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingStopTracking", UInt, 0x1593, oscTypeInt)
+        OnMessage(0x1593, "_trackingStopTracking")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTrackForward", UInt, 0x1664, oscTypeInt)
-        OnMessage(0x1664, "_trackingTrackForward")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTrackForward", UInt, 0x1594, oscTypeInt)
+        OnMessage(0x1594, "_trackingTrackForward")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTrackReverseForward", UInt, 0x1665, oscTypeInt)
-        OnMessage(0x1665, "_trackingTrackReverseForward")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTrackReverseForward", UInt, 0x1595, oscTypeInt)
+        OnMessage(0x1595, "_trackingTrackReverseForward")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingAddPoint", UInt, 0x1666, oscTypeInt)
-        OnMessage(0x1666, "_trackingAddPoint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingAddPoint", UInt, 0x1596, oscTypeInt)
+        OnMessage(0x1596, "_trackingAddPoint")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingRemovePoint", UInt, 0x1667, oscTypeInt)
-        OnMessage(0x1667, "_trackingRemovePoint")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingRemovePoint", UInt, 0x1597, oscTypeInt)
+        OnMessage(0x1597, "_trackingRemovePoint")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingPreviousKeyframe", UInt, 0x1668, oscTypeInt)
-        OnMessage(0x1668, "_trackingPreviousKeyframe")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingPreviousKeyframe", UInt, 0x1598, oscTypeInt)
+        OnMessage(0x1598, "_trackingPreviousKeyframe")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingAddKeyframe", UInt, 0x1669, oscTypeInt)
-        OnMessage(0x1669, "_trackingAddKeyframe")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingAddKeyframe", UInt, 0x1599, oscTypeInt)
+        OnMessage(0x1599, "_trackingAddKeyframe")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingNextKeyframe", UInt, 0x1670, oscTypeInt)
-        OnMessage(0x1670, "_trackingNextKeyframe")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingNextKeyframe", UInt, 0x1600, oscTypeInt)
+        OnMessage(0x1600, "_trackingNextKeyframe")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingPan", UInt, 0x1671, oscTypeInt)
-        OnMessage(0x1671, "_trackingPan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingPan", UInt, 0x1601, oscTypeInt)
+        OnMessage(0x1601, "_trackingPan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTilt", UInt, 0x1672, oscTypeInt)
-        OnMessage(0x1672, "_trackingTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingTilt", UInt, 0x1602, oscTypeInt)
+        OnMessage(0x1602, "_trackingTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingZoom", UInt, 0x1673, oscTypeInt)
-        OnMessage(0x1673, "_trackingZoom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingZoom", UInt, 0x1603, oscTypeInt)
+        OnMessage(0x1603, "_trackingZoom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingRotate", UInt, 0x1674, oscTypeInt)
-        OnMessage(0x1674, "_trackingRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingRotate", UInt, 0x1604, oscTypeInt)
+        OnMessage(0x1604, "_trackingRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/tracking3D", UInt, 0x1675, oscTypeInt)
-        OnMessage(0x1675, "_tracking3D")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/tracking3D", UInt, 0x1605, oscTypeInt)
+        OnMessage(0x1605, "_tracking3D")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingShowTracking", UInt, 0x1676, oscTypeInt)
-        OnMessage(0x1676, "_trackingShowTracking")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingShowTracking", UInt, 0x1606, oscTypeInt)
+        OnMessage(0x1606, "_trackingShowTracking")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingCopyData", UInt, 0x1677, oscTypeInt)
-        OnMessage(0x1677, "_trackingCopyData")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingCopyData", UInt, 0x1607, oscTypeInt)
+        OnMessage(0x1607, "_trackingCopyData")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingPasteData", UInt, 0x1678, oscTypeInt)
-        OnMessage(0x1678, "_trackingPasteData")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingPasteData", UInt, 0x1608, oscTypeInt)
+        OnMessage(0x1608, "_trackingPasteData")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingResetAll", UInt, 0x1679, oscTypeInt)
-        OnMessage(0x1679, "_trackingResetAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/trackingResetAll", UInt, 0x1609, oscTypeInt)
+        OnMessage(0x1609, "_trackingResetAll")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeEdit", UInt, 0x1680, oscTypeInt)
-        OnMessage(0x1680, "_sizingModeEdit")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeEdit", UInt, 0x1610, oscTypeInt)
+        OnMessage(0x1610, "_sizingModeEdit")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeInput", UInt, 0x1681, oscTypeInt)
-        OnMessage(0x1681, "_sizingModeInput")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeInput", UInt, 0x1611, oscTypeInt)
+        OnMessage(0x1611, "_sizingModeInput")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeOutput", UInt, 0x1682, oscTypeInt)
-        OnMessage(0x1682, "_sizingModeOutput")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeOutput", UInt, 0x1612, oscTypeInt)
+        OnMessage(0x1612, "_sizingModeOutput")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeNode", UInt, 0x1683, oscTypeInt)
-        OnMessage(0x1683, "_sizingModeNode")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeNode", UInt, 0x1613, oscTypeInt)
+        OnMessage(0x1613, "_sizingModeNode")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeReference", UInt, 0x1684, oscTypeInt)
-        OnMessage(0x1684, "_sizingModeReference")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingModeReference", UInt, 0x1614, oscTypeInt)
+        OnMessage(0x1614, "_sizingModeReference")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingResetAll", UInt, 0x1685, oscTypeInt)
-        OnMessage(0x1685, "_sizingResetAll")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingResetAll", UInt, 0x1615, oscTypeInt)
+        OnMessage(0x1615, "_sizingResetAll")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditPan", UInt, 0x1686, oscTypeInt)
-        OnMessage(0x1686, "_sizingEditPan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditPan", UInt, 0x1616, oscTypeInt)
+        OnMessage(0x1616, "_sizingEditPan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropLeft", UInt, 0x1687, oscTypeInt)
-        OnMessage(0x1687, "_sizingEditCropLeft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropLeft", UInt, 0x1617, oscTypeInt)
+        OnMessage(0x1617, "_sizingEditCropLeft")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditTilt", UInt, 0x1688, oscTypeInt)
-        OnMessage(0x1688, "_sizingEditTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditTilt", UInt, 0x1618, oscTypeInt)
+        OnMessage(0x1618, "_sizingEditTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropRight", UInt, 0x1689, oscTypeInt)
-        OnMessage(0x1689, "_sizingEditCropRight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropRight", UInt, 0x1619, oscTypeInt)
+        OnMessage(0x1619, "_sizingEditCropRight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditRotate", UInt, 0x1690, oscTypeInt)
-        OnMessage(0x1690, "_sizingEditRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditRotate", UInt, 0x1620, oscTypeInt)
+        OnMessage(0x1620, "_sizingEditRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropTop", UInt, 0x1691, oscTypeInt)
-        OnMessage(0x1691, "_sizingEditCropTop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropTop", UInt, 0x1621, oscTypeInt)
+        OnMessage(0x1621, "_sizingEditCropTop")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditDistortion", UInt, 0x1692, oscTypeInt)
-        OnMessage(0x1692, "_sizingEditDistortion")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditDistortion", UInt, 0x1622, oscTypeInt)
+        OnMessage(0x1622, "_sizingEditDistortion")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropBottom", UInt, 0x1693, oscTypeInt)
-        OnMessage(0x1693, "_sizingEditCropBottom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditCropBottom", UInt, 0x1623, oscTypeInt)
+        OnMessage(0x1623, "_sizingEditCropBottom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditFlip", UInt, 0x1694, oscTypeInt)
-        OnMessage(0x1694, "_sizingEditFlip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditFlip", UInt, 0x1624, oscTypeInt)
+        OnMessage(0x1624, "_sizingEditFlip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditZoomX", UInt, 0x1695, oscTypeInt)
-        OnMessage(0x1695, "_sizingEditZoomX")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditZoomX", UInt, 0x1625, oscTypeInt)
+        OnMessage(0x1625, "_sizingEditZoomX")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditSoftness", UInt, 0x1696, oscTypeInt)
-        OnMessage(0x1696, "_sizingEditSoftness")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditSoftness", UInt, 0x1626, oscTypeInt)
+        OnMessage(0x1626, "_sizingEditSoftness")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditZoomY", UInt, 0x1697, oscTypeInt)
-        OnMessage(0x1697, "_sizingEditZoomY")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditZoomY", UInt, 0x1627, oscTypeInt)
+        OnMessage(0x1627, "_sizingEditZoomY")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditPitch", UInt, 0x1698, oscTypeInt)
-        OnMessage(0x1698, "_sizingEditPitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditPitch", UInt, 0x1628, oscTypeInt)
+        OnMessage(0x1628, "_sizingEditPitch")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditYaw", UInt, 0x1699, oscTypeInt)
-        OnMessage(0x1699, "_sizingEditYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditYaw", UInt, 0x1629, oscTypeInt)
+        OnMessage(0x1629, "_sizingEditYaw")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditLensCorrection", UInt, 0x1700, oscTypeInt)
-        OnMessage(0x1700, "_sizingEditLensCorrection")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditLensCorrection", UInt, 0x1630, oscTypeInt)
+        OnMessage(0x1630, "_sizingEditLensCorrection")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditResetSizing", UInt, 0x1701, oscTypeInt)
-        OnMessage(0x1701, "_sizingEditResetSizing")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditResetSizing", UInt, 0x1631, oscTypeInt)
+        OnMessage(0x1631, "_sizingEditResetSizing")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditResetCrop", UInt, 0x1702, oscTypeInt)
-        OnMessage(0x1702, "_sizingEditResetCrop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingEditResetCropBlanking", UInt, 0x1632, oscTypeInt)
+        OnMessage(0x1632, "_sizingEditResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputPan", UInt, 0x1703, oscTypeInt)
-        OnMessage(0x1703, "_sizingInputPan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputPan", UInt, 0x1633, oscTypeInt)
+        OnMessage(0x1633, "_sizingInputPan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingTop", UInt, 0x1704, oscTypeInt)
-        OnMessage(0x1704, "_sizingInputBlankingTop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingTop", UInt, 0x1634, oscTypeInt)
+        OnMessage(0x1634, "_sizingInputBlankingTop")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputTilt", UInt, 0x1705, oscTypeInt)
-        OnMessage(0x1705, "_sizingInputTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputTilt", UInt, 0x1635, oscTypeInt)
+        OnMessage(0x1635, "_sizingInputTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingRight", UInt, 0x1706, oscTypeInt)
-        OnMessage(0x1706, "_sizingInputBlankingRight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingRight", UInt, 0x1636, oscTypeInt)
+        OnMessage(0x1636, "_sizingInputBlankingRight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputZoom", UInt, 0x1707, oscTypeInt)
-        OnMessage(0x1707, "_sizingInputZoom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputZoom", UInt, 0x1637, oscTypeInt)
+        OnMessage(0x1637, "_sizingInputZoom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingBottom", UInt, 0x1708, oscTypeInt)
-        OnMessage(0x1708, "_sizingInputBlankingBottom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingBottom", UInt, 0x1638, oscTypeInt)
+        OnMessage(0x1638, "_sizingInputBlankingBottom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputRotate", UInt, 0x1709, oscTypeInt)
-        OnMessage(0x1709, "_sizingInputRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputRotate", UInt, 0x1639, oscTypeInt)
+        OnMessage(0x1639, "_sizingInputRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingLeft", UInt, 0x1710, oscTypeInt)
-        OnMessage(0x1710, "_sizingInputBlankingLeft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputBlankingLeft", UInt, 0x1640, oscTypeInt)
+        OnMessage(0x1640, "_sizingInputBlankingLeft")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputFlip", UInt, 0x1711, oscTypeInt)
-        OnMessage(0x1711, "_sizingInputFlip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputFlip", UInt, 0x1641, oscTypeInt)
+        OnMessage(0x1641, "_sizingInputFlip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputWidth", UInt, 0x1712, oscTypeInt)
-        OnMessage(0x1712, "_sizingInputWidth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputWidth", UInt, 0x1642, oscTypeInt)
+        OnMessage(0x1642, "_sizingInputWidth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputHeight", UInt, 0x1713, oscTypeInt)
-        OnMessage(0x1713, "_sizingInputHeight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputHeight", UInt, 0x1643, oscTypeInt)
+        OnMessage(0x1643, "_sizingInputHeight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputPitch", UInt, 0x1714, oscTypeInt)
-        OnMessage(0x1714, "_sizingInputPitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputPitch", UInt, 0x1644, oscTypeInt)
+        OnMessage(0x1644, "_sizingInputPitch")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputYaw", UInt, 0x1715, oscTypeInt)
-        OnMessage(0x1715, "_sizingInputYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputYaw", UInt, 0x1645, oscTypeInt)
+        OnMessage(0x1645, "_sizingInputYaw")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputSmooth", UInt, 0x1716, oscTypeInt)
-        OnMessage(0x1716, "_sizingInputSmooth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputSmooth", UInt, 0x1646, oscTypeInt)
+        OnMessage(0x1646, "_sizingInputSmooth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputResetSizing", UInt, 0x1717, oscTypeInt)
-        OnMessage(0x1717, "_sizingInputResetSizing")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputResetSizing", UInt, 0x1647, oscTypeInt)
+        OnMessage(0x1647, "_sizingInputResetSizing")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputResetBlanking", UInt, 0x1718, oscTypeInt)
-        OnMessage(0x1718, "_sizingInputResetBlanking")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingInputResetCropBlanking", UInt, 0x1648, oscTypeInt)
+        OnMessage(0x1648, "_sizingInputResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputPan", UInt, 0x1719, oscTypeInt)
-        OnMessage(0x1719, "_sizingOutputPan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputPan", UInt, 0x1649, oscTypeInt)
+        OnMessage(0x1649, "_sizingOutputPan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingTop", UInt, 0x1720, oscTypeInt)
-        OnMessage(0x1720, "_sizingOutputBlankingTop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingTop", UInt, 0x1650, oscTypeInt)
+        OnMessage(0x1650, "_sizingOutputBlankingTop")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputTilt", UInt, 0x1721, oscTypeInt)
-        OnMessage(0x1721, "_sizingOutputTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputTilt", UInt, 0x1651, oscTypeInt)
+        OnMessage(0x1651, "_sizingOutputTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingRight", UInt, 0x1722, oscTypeInt)
-        OnMessage(0x1722, "_sizingOutputBlankingRight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingRight", UInt, 0x1652, oscTypeInt)
+        OnMessage(0x1652, "_sizingOutputBlankingRight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputZoom", UInt, 0x1723, oscTypeInt)
-        OnMessage(0x1723, "_sizingOutputZoom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputZoom", UInt, 0x1653, oscTypeInt)
+        OnMessage(0x1653, "_sizingOutputZoom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingBottom", UInt, 0x1724, oscTypeInt)
-        OnMessage(0x1724, "_sizingOutputBlankingBottom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingBottom", UInt, 0x1654, oscTypeInt)
+        OnMessage(0x1654, "_sizingOutputBlankingBottom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputRotate", UInt, 0x1725, oscTypeInt)
-        OnMessage(0x1725, "_sizingOutputRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputRotate", UInt, 0x1655, oscTypeInt)
+        OnMessage(0x1655, "_sizingOutputRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingLeft", UInt, 0x1726, oscTypeInt)
-        OnMessage(0x1726, "_sizingOutputBlankingLeft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputBlankingLeft", UInt, 0x1656, oscTypeInt)
+        OnMessage(0x1656, "_sizingOutputBlankingLeft")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputFlip", UInt, 0x1727, oscTypeInt)
-        OnMessage(0x1727, "_sizingOutputFlip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputFlip", UInt, 0x1657, oscTypeInt)
+        OnMessage(0x1657, "_sizingOutputFlip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputWidth", UInt, 0x1728, oscTypeInt)
-        OnMessage(0x1728, "_sizingOutputWidth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputWidth", UInt, 0x1658, oscTypeInt)
+        OnMessage(0x1658, "_sizingOutputWidth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputHeight", UInt, 0x1729, oscTypeInt)
-        OnMessage(0x1729, "_sizingOutputHeight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputHeight", UInt, 0x1659, oscTypeInt)
+        OnMessage(0x1659, "_sizingOutputHeight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputPitch", UInt, 0x1730, oscTypeInt)
-        OnMessage(0x1730, "_sizingOutputPitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputPitch", UInt, 0x1660, oscTypeInt)
+        OnMessage(0x1660, "_sizingOutputPitch")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputYaw", UInt, 0x1731, oscTypeInt)
-        OnMessage(0x1731, "_sizingOutputYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputYaw", UInt, 0x1661, oscTypeInt)
+        OnMessage(0x1661, "_sizingOutputYaw")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputSmooth", UInt, 0x1732, oscTypeInt)
-        OnMessage(0x1732, "_sizingOutputSmooth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputSmooth", UInt, 0x1662, oscTypeInt)
+        OnMessage(0x1662, "_sizingOutputSmooth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputResetSizing", UInt, 0x1733, oscTypeInt)
-        OnMessage(0x1733, "_sizingOutputResetSizing")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputResetSizing", UInt, 0x1663, oscTypeInt)
+        OnMessage(0x1663, "_sizingOutputResetSizing")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputResetBlanking", UInt, 0x1734, oscTypeInt)
-        OnMessage(0x1734, "_sizingOutputResetBlanking")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingOutputResetCropBlanking", UInt, 0x1664, oscTypeInt)
+        OnMessage(0x1664, "_sizingOutputResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodePan", UInt, 0x1735, oscTypeInt)
-        OnMessage(0x1735, "_sizingNodePan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodePan", UInt, 0x1665, oscTypeInt)
+        OnMessage(0x1665, "_sizingNodePan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingTop", UInt, 0x1736, oscTypeInt)
-        OnMessage(0x1736, "_sizingNodeBlankingTop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingTop", UInt, 0x1666, oscTypeInt)
+        OnMessage(0x1666, "_sizingNodeBlankingTop")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeTilt", UInt, 0x1737, oscTypeInt)
-        OnMessage(0x1737, "_sizingNodeTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeTilt", UInt, 0x1667, oscTypeInt)
+        OnMessage(0x1667, "_sizingNodeTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingRight", UInt, 0x1738, oscTypeInt)
-        OnMessage(0x1738, "_sizingNodeBlankingRight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingRight", UInt, 0x1668, oscTypeInt)
+        OnMessage(0x1668, "_sizingNodeBlankingRight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeZoom", UInt, 0x1739, oscTypeInt)
-        OnMessage(0x1739, "_sizingNodeZoom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeZoom", UInt, 0x1669, oscTypeInt)
+        OnMessage(0x1669, "_sizingNodeZoom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingBottom", UInt, 0x1740, oscTypeInt)
-        OnMessage(0x1740, "_sizingNodeBlankingBottom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingBottom", UInt, 0x1670, oscTypeInt)
+        OnMessage(0x1670, "_sizingNodeBlankingBottom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeRotate", UInt, 0x1741, oscTypeInt)
-        OnMessage(0x1741, "_sizingNodeRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeRotate", UInt, 0x1671, oscTypeInt)
+        OnMessage(0x1671, "_sizingNodeRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingLeft", UInt, 0x1742, oscTypeInt)
-        OnMessage(0x1742, "_sizingNodeBlankingLeft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeBlankingLeft", UInt, 0x1672, oscTypeInt)
+        OnMessage(0x1672, "_sizingNodeBlankingLeft")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeFlip", UInt, 0x1743, oscTypeInt)
-        OnMessage(0x1743, "_sizingNodeFlip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeFlip", UInt, 0x1673, oscTypeInt)
+        OnMessage(0x1673, "_sizingNodeFlip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeWidth", UInt, 0x1744, oscTypeInt)
-        OnMessage(0x1744, "_sizingNodeWidth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeWidth", UInt, 0x1674, oscTypeInt)
+        OnMessage(0x1674, "_sizingNodeWidth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeHeight", UInt, 0x1745, oscTypeInt)
-        OnMessage(0x1745, "_sizingNodeHeight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeHeight", UInt, 0x1675, oscTypeInt)
+        OnMessage(0x1675, "_sizingNodeHeight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodePitch", UInt, 0x1746, oscTypeInt)
-        OnMessage(0x1746, "_sizingNodePitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodePitch", UInt, 0x1676, oscTypeInt)
+        OnMessage(0x1676, "_sizingNodePitch")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeYaw", UInt, 0x1747, oscTypeInt)
-        OnMessage(0x1747, "_sizingNodeYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeYaw", UInt, 0x1677, oscTypeInt)
+        OnMessage(0x1677, "_sizingNodeYaw")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeKeyLock", UInt, 0x1748, oscTypeInt)
-        OnMessage(0x1748, "_sizingNodeKeyLock")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeKeyLock", UInt, 0x1678, oscTypeInt)
+        OnMessage(0x1678, "_sizingNodeKeyLock")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeSmooth", UInt, 0x1749, oscTypeInt)
-        OnMessage(0x1749, "_sizingNodeSmooth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeSmooth", UInt, 0x1679, oscTypeInt)
+        OnMessage(0x1679, "_sizingNodeSmooth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeResetSizing", UInt, 0x1750, oscTypeInt)
-        OnMessage(0x1750, "_sizingNodeResetSizing")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeResetSizing", UInt, 0x1680, oscTypeInt)
+        OnMessage(0x1680, "_sizingNodeResetSizing")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeResetBlanking", UInt, 0x1751, oscTypeInt)
-        OnMessage(0x1751, "_sizingNodeResetBlanking")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingNodeResetCropBlanking", UInt, 0x1681, oscTypeInt)
+        OnMessage(0x1681, "_sizingNodeResetCropBlanking")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferencePan", UInt, 0x1752, oscTypeInt)
-        OnMessage(0x1752, "_sizingReferencePan")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferencePan", UInt, 0x1682, oscTypeInt)
+        OnMessage(0x1682, "_sizingReferencePan")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingTop", UInt, 0x1753, oscTypeInt)
-        OnMessage(0x1753, "_sizingReferenceBlankingTop")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingTop", UInt, 0x1683, oscTypeInt)
+        OnMessage(0x1683, "_sizingReferenceBlankingTop")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceTilt", UInt, 0x1754, oscTypeInt)
-        OnMessage(0x1754, "_sizingReferenceTilt")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceTilt", UInt, 0x1684, oscTypeInt)
+        OnMessage(0x1684, "_sizingReferenceTilt")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingRight", UInt, 0x1755, oscTypeInt)
-        OnMessage(0x1755, "_sizingReferenceBlankingRight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingRight", UInt, 0x1685, oscTypeInt)
+        OnMessage(0x1685, "_sizingReferenceBlankingRight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceZoom", UInt, 0x1756, oscTypeInt)
-        OnMessage(0x1756, "_sizingReferenceZoom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceZoom", UInt, 0x1686, oscTypeInt)
+        OnMessage(0x1686, "_sizingReferenceZoom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingBottom", UInt, 0x1757, oscTypeInt)
-        OnMessage(0x1757, "_sizingReferenceBlankingBottom")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingBottom", UInt, 0x1687, oscTypeInt)
+        OnMessage(0x1687, "_sizingReferenceBlankingBottom")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceRotate", UInt, 0x1758, oscTypeInt)
-        OnMessage(0x1758, "_sizingReferenceRotate")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceRotate", UInt, 0x1688, oscTypeInt)
+        OnMessage(0x1688, "_sizingReferenceRotate")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingLeft", UInt, 0x1759, oscTypeInt)
-        OnMessage(0x1759, "_sizingReferenceBlankingLeft")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceBlankingLeft", UInt, 0x1689, oscTypeInt)
+        OnMessage(0x1689, "_sizingReferenceBlankingLeft")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceFlip", UInt, 0x1760, oscTypeInt)
-        OnMessage(0x1760, "_sizingReferenceFlip")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceFlip", UInt, 0x1690, oscTypeInt)
+        OnMessage(0x1690, "_sizingReferenceFlip")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceWidth", UInt, 0x1761, oscTypeInt)
-        OnMessage(0x1761, "_sizingReferenceWidth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceWidth", UInt, 0x1691, oscTypeInt)
+        OnMessage(0x1691, "_sizingReferenceWidth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceHeight", UInt, 0x1762, oscTypeInt)
-        OnMessage(0x1762, "_sizingReferenceHeight")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceHeight", UInt, 0x1692, oscTypeInt)
+        OnMessage(0x1692, "_sizingReferenceHeight")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferencePitch", UInt, 0x1763, oscTypeInt)
-        OnMessage(0x1763, "_sizingReferencePitch")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferencePitch", UInt, 0x1693, oscTypeInt)
+        OnMessage(0x1693, "_sizingReferencePitch")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceYaw", UInt, 0x1764, oscTypeInt)
-        OnMessage(0x1764, "_sizingReferenceYaw")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceYaw", UInt, 0x1694, oscTypeInt)
+        OnMessage(0x1694, "_sizingReferenceYaw")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceSmooth", UInt, 0x1765, oscTypeInt)
-        OnMessage(0x1765, "_sizingReferenceSmooth")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceSmooth", UInt, 0x1695, oscTypeInt)
+        OnMessage(0x1695, "_sizingReferenceSmooth")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceResetSizing", UInt, 0x1766, oscTypeInt)
-        OnMessage(0x1766, "_sizingReferenceResetSizing")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceResetSizing", UInt, 0x1696, oscTypeInt)
+        OnMessage(0x1696, "_sizingReferenceResetSizing")
 
-        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceResetBlanking", UInt, 0x1767, oscTypeInt)
-        OnMessage(0x1767, "_sizingReferenceResetBlanking")
+        DllCall("OSC2AHK.dll\removeListener", AStr, "/sizingReferenceResetCropBlanking", UInt, 0x1697, oscTypeInt)
+        OnMessage(0x1697, "_sizingReferenceResetCropBlanking")
     }
 }
 

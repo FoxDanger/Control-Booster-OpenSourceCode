@@ -244,8 +244,6 @@ StartAutoPositions(){
 
                 address := SubStr(A_Loopfield, startingPos + 1)
                 
-                
-                
                 ;Define some special cases
                 Switch (actualObjectName){
                     Case "pos_hdr_first_wheel_hl":
@@ -312,7 +310,7 @@ startUserPositions(){
     Gui Add, Text, x0 y100 w1280 h3 +0x10
     
     ;Remove the comment to skip the user position configuration
-    _actualTool := 100
+    ;_actualTool := 100
     
     Switch (_actualTool){
         Case 1:
@@ -649,10 +647,10 @@ StartSetup(){
 ResetDefaultState(){
     FileCopy %A_ScriptDir%\default_ini_files\windows_status.ini, %A_ScriptDir%, 1
 
-    ;Send ^{F1}
-    ;Sleep 1000
-    ;Send ^{F2}
-    ;Sleep 1000
+    Send ^{F1}
+    Sleep 1000
+    Send ^{F2}
+    Sleep 1000
 }
 
 ChangePositionVariable(){

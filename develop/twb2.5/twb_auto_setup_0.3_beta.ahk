@@ -266,7 +266,7 @@ StartAutoPositions(){
                     
                     nextClick := False
                     
-                    Sleep 500
+                    Sleep 200
                 }Else{
                     MouseMove accObject.posX, accObject.posY
                 }
@@ -736,7 +736,7 @@ Enter::
     }
 Return
 
-F2::
+ESC::
     ExitApp
 Return
 

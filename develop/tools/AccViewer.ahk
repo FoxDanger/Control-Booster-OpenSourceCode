@@ -192,6 +192,24 @@ ShowMainGui:
 return
 }
 
+F2::
+    SetBatchLines, -1
+    Hotkey, ~RButton Up, On
+    {
+        GuiControl, Hide, HBar
+        GuiControl, Hide, VBar
+        CrossHair(CH:=false)
+    }
+    RButton_Pressed := True
+    Stored.Chwnd := ""
+    Gui Acc: Default
+    GuiControl, Disable, TView
+    while, RButton_Pressed
+        GetAccInfo()
+    SetBatchLines, 10ms
+	return
+Return
+
 #if Not RButton_Pressed
 ^/::
 {

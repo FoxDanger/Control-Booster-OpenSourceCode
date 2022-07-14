@@ -1,0 +1,2443 @@
+﻿Version 2.5
+
+===== How to use these functions =====
+
+1 - You have to setup these functions in some mapping software with OSC Support.
+
+2 - Setup the IP for the Local IP 127.0.0.1 if you have this option, otherwise this is already default for softwares that doesn't has the IP option.
+
+3 - Setup and free some door for OSC communication.
+
+4 - Copy the function for whatever button or knob you want. You can have the same function in more than on place at the same time.
+
+===== Some tips about functions =====
+
+Tip 1: Jog wheels functions can be setup on Knobs.
+
+Tip 2: Trackball functions can be setup on Knobs. Just setup the X function for a knob and the Y function for another knob.
+
+Tip 3: Knob functions can be setup on jog wheels, but most of knob functions has a reset feature when you press the knob. So if you setup a knob function for a Jog wheel (that can't be pressed) you gonna lose the reset feature. So you have to live with that or create a new reset function (button) on the code and setup the new function for some button on your controller.
+
+Tip 4: If your controller has knobs without that can't be pressed, than you gonna lose the feature as well. Same solution for the jogs so...
+
+Tip 5: The Jog/Knob sensitivity are sugestions based on Tangent Panels knobs and jogs. They probably can be different in other MIDI Controllers. Test and use as you like it.
+
+Tip 6: As you use my code, you still need use the Davinci Shortcuts map that I provide with Tangent Booster 2 on your Davinci, otherwise, some functions that use non-default shortcuts, will not work correctly.
+
+===== ALL OSC FUNCTIONS FOR Tangent Booster 2 =====
+
+***** Motion Effects mode functions *****
+
+- Knob - Run through Spatial NR Radius options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsSpatialRadius
+
+- Knob - Run through Spatial NR Mode options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsSpatialMode
+
+- Knob - Increment, decrement or reset Motion Blur on Motion Effects Motion Blur Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsMotionBlurMotionBlur
+
+- Knob - Run through Motion Blur Motion Range options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsMotionBlurMotionRange
+
+- Knob - Run through Motion Blur Motion Estimation Type options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsMotionBlurMotionEstType
+
+- Knob - Run through Temporal NR Motion Range options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsTemporalMotionRange
+
+- Knob - Run through Temporal NR Motion Estimation Type options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsTemporalMotionEstType
+
+- Knob - Run through Temporal NR Frames options on Motion Effects Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/motionEffectsTemporalFrames
+
+- Knob - Increment, decrement or reset Blend on Motion Effects Spatial NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsSpatialBlend
+
+- Knob - Increment, decrement or reset Chroma on Motion Effects Spatial NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsSpatialChroma
+
+- Knob - Increment, decrement or reset Luma on Motion Effects Spatial NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsSpatialLuma
+
+- Knob - Increment, decrement or reset Blend on Motion Effects Temporal NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsTemporalBlend
+
+- Knob - Increment, decrement or reset Motion on Motion Effects Temporal NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsTemporalMotion
+
+- Knob - Increment, decrement or reset Chroma on Motion Effects Temporal NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsTemporalChroma
+
+- Knob - Increment, decrement or reset Luma on Motion Effects Temporal NR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/motionEffectsTemporalLuma
+
+- Button - Reset Motion Effects
+/motionEffectsReset
+
+- Button - Reset Motion Blur on Motion Effects Panel
+/motionEffectsMotionBlur
+
+- Button - Reset Spatial Threshold on Motion Effects Panel
+/motionEffectsSpatialResetThreshold
+
+- Button - Reset Spatial NR on Motion Effects Panel
+/motionEffectsSpatialResetNR
+
+- Button - Reset Temporal Threshold on Motion Effects Panel
+/motionEffectsTemporalResetThreshold
+
+- Button - Reset Temporal NR on Motion Effects Panel
+/motionEffectsTemporalResetNR
+
+- Button - Link/Unlink Chroma and Luma on Motion Effects Spatial NR Panel
+/motionEffectsSpatialLink
+
+- Button - Link/Unlink Chroma and Luma on Motion Effects Temporal NR Panel
+/motionEffectsTemporalLink
+
+***** End of Motion Effects mode functions *****
+
+***** Key mode functions *****
+
+- Knob - Increment, decrement or reset Qualifier Offset on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyQualifierOffset
+
+- Knob - Increment, decrement or reset Qualifier Gain on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyQualifierGain
+
+- Knob - Increment, decrement or reset Output Offset on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyOutputOffset
+
+- Knob - Increment, decrement or reset Output Gain on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyOutputGain
+
+- Knob - Increment, decrement or reset Input Blur H/V on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyInputBlurHV
+
+- Knob - Increment, decrement or reset Input Blur R. on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyInputBlurR
+
+- Knob - Increment, decrement or reset Input Offset on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyInputOffset
+
+- Knob - Increment, decrement or reset Input Gain on Key Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/keyInputGain
+
+- Button - Reset Key
+/keyReset
+
+- Button - Invert Qualifier Key on Key panel
+/keyQualifierKey
+
+- Button - Invert Qualifier Matte Mask on Key panel
+/keyQualifierMatteMask
+
+- Button - Invert Output Key on Key panel
+/keyOutputKey
+
+- Button - Invert Input Key on Key panel
+/keyInputKey
+
+- Button - Invert Input Matte Mask on Key panel
+/keyInputMatteMask
+
+***** End of Key mode functions *****
+
+***** Qualifier mode functions *****
+
+- Knob - Increment, decrement or reset Post Filter at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinessePostFilter
+
+- Knob - Increment, decrement or reset Highlight at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinesseHighlight
+
+- Knob - Increment, decrement or reset Midtone at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinesseMidtone
+
+- Knob - Increment, decrement or reset Shadow at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinesseShadow
+
+- Knob - Increment, decrement or reset Denoise at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed the matteFinesseIterations to matteFinesseDenoise)
+/matteFinesseDenoise
+
+- Knob - Increment, decrement or reset Morph Radius at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed the matteFinesseRadius to matteFinesseMorphRadius)
+/matteFinesseMorphRadius
+
+- Knob - Change the options or reset Morph Menu at Page 2 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse (Update 2.3 changed the matteFinesseMode to matteFinesseMorphMenu)
+/matteFinesseMorphMenu
+
+- Knob - Increment, decrement or reset In/Out Ratio at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/matteFinesseInOutRatio
+
+- Knob - Increment, decrement or reset Blur Radius at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/matteFinesseBlurRadius
+
+- Knob - Increment, decrement or reset White Clip at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed from page 2 to page 1)
+/matteFinesseWhiteClip
+
+- Knob - Increment, decrement or reset Black Clip at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Update 2.3 changed from page 2 to page 1)
+/matteFinesseBlackClip
+
+- Knob - Increment, decrement or reset Clean White at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/matteFinesseCleanWhite
+
+- Knob - Increment, decrement or reset Clean Black at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/matteFinesseCleanBlack
+
+- Knob - Increment, decrement or reset Pre-Filter at Page 1 of Matte Finesse on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Implemented on update 2.3)
+/matteFinessePreFilter
+
+- Knob - Increment, decrement or reset Blue High Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierBlueHighSoft
+
+- Knob - Increment, decrement or reset Blue Low Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierBlueLowSoft
+
+- Knob - Increment, decrement or reset Blue High value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierBlueHigh
+
+- Knob - Increment, decrement or reset Blue Low value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierBlueLow
+
+- Knob - Increment, decrement or reset Green High Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierGreenHighSoft
+
+- Knob - Increment, decrement or reset Green Low Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierGreenLowSoft
+
+- Knob - Increment, decrement or reset Green High value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierGreenHigh
+
+- Knob - Increment, decrement or reset Green Low value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierGreenLow
+
+- Knob - Increment, decrement or reset Red High Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierRedHighSoft
+
+- Knob - Increment, decrement or reset Red Low Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierRedLowSoft
+
+- Knob - Increment, decrement or reset Red High value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierRedHigh
+
+- Knob - Increment, decrement or reset Red Low value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierRedLow
+
+- Knob - Increment, decrement or reset Luminance High Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierLumHighSoft
+
+- Knob - Increment, decrement or reset Luminance Low Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierLumLowSoft
+
+- Knob - Increment, decrement or reset Luminance High value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierLumHigh
+
+- Knob - Increment, decrement or reset Luminance Low value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierLumLow
+
+- Knob - Increment, decrement or reset Saturation High Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierSatHighSoft
+
+- Knob - Increment, decrement or reset Saturation Low Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierSatLowSoft
+
+- Knob - Increment, decrement or reset Saturation High value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierSatHigh
+
+- Knob - Increment, decrement or reset Saturation Low value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierSatLow
+
+- Knob - Increment, decrement or reset Hue Sym value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierHueSym
+
+- Knob - Increment, decrement or reset Hue Soft value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierHueSoft
+
+- Knob - Increment, decrement or reset Hue Width value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierHueWidth
+
+- Knob - Increment, decrement or reset Hue Center value on Qualifier HSL Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierHueCenter
+
+- Button - Reset all Qualifier
+/qualifierReset
+
+- Button - Reset Luminance or Blue Qualifier on Qualifier Panel (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierResetLuminance
+
+- Button - Reset Saturation or Green Qualifier on Qualifier Panel (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierResetSaturation
+
+- Button - Reset Hue or Red Qualifier on Qualifier Panel (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierResetHue
+
+- Button - Turn On/Off Luminance or Blue Qualifier on Qualifier Panel (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierLuminanceOnOff
+
+- Button - Turn On/Off Saturation or Green Qualifier on Qualifier Panel (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierSaturationOnOff
+
+- Button - Turn On/Off Hue or Red Qualifier on Qualifier Panel (it use the same position for both panels so the name of the object is the HSL one, but works for both HSL and RGB)
+/qualifierHueOnOff
+
+- Button - Invert the Qualifier
+/qualifierInvert
+
+- Button - Select the Feather Add on Qualifier panel
+/qualifierFeatherAdd
+
+- Button - Select the Feather Substract on Qualifier panel
+/qualifierFeatherSubstract
+
+- Button - Select the Picker Add on Qualifier panel
+/qualifierPickerAdd
+
+- Button - Select the Picker Substract on Qualifier panel
+/qualifierPickerSubstract
+
+- Button - Select the Picker on Qualifier panel
+
+***** End Of Qualifier mode functions *****
+
+***** Nodes and Scopes mode functions *****
+
+- Button - Turn on/off Low Pass Filter on Scopes
+/scopesLowPassFilter
+
+- Button - Turn on/off Display Qualifier Focus on Scopes
+/scopesDisplayFocus
+
+- Button - Open CIE Chromaticity Scopes
+/scopesCIE
+
+- Button - Open Histogram Scopes
+/scopesHistogram
+
+- Button - Open Vectorscope Scopes
+/scopesVectorscope
+
+- Button - Open Waveform Scopes
+/scopesWaveform
+
+- Button - Open Parade Scopes
+/scopesParade
+
+- Button - Reset All Nodes Grades - Davinci Resolve default shortcut: Ctrl + Home
+/resetAllNodesGrade
+
+- Button - Extract a Node - Davinci Resolve default shortcut: E
+/nodesExtract
+
+- Button - Add a Splitter Combiner Nodes - Davinci Resolve default shortcut: Alt + Y
+/nodesSplitterCombiner
+
+- Button - Add a Outside Node - Davinci Resolve default shortcut: Alt + O
+/nodesAddOutside
+
+- Button - Append a Node - Davinci Resolve default shortcut: Alt + K
+/nodesAppend
+
+- Button - Add a Layer Node - Davinci Resolve default shortcut: Alt + L
+/nodesAddLayer
+
+- Button - Add a Parallel Node - Davinci Resolve default shortcut: Alt + P
+/nodesAddParallel
+
+- Button - Add a Serial Node Before the current node - Davinci Resolve default shortcut: Shift + S
+/nodesAddSerialBefore
+
+- Button - Add a Serial Node - Davinci Resolve default shortcut: Alt + S
+/nodesAddSerial
+
+***** End of Nodes and Scopes mode functions *****
+
+***** Printer Lights mode functions *****
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Master - Davinci Resolve default shortcut: Ctrl + Numpad Enter and Ctrl + Numpad Add  - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterMaster
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Yellow - Davinci Resolve default shortcut: Ctrl + Numpad Mult and Ctrl + Numpad 3 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterYellow
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Magenta - Davinci Resolve default shortcut: Ctrl + Numpad 0 and Ctrl + Numpad 2 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterMagenta
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Cyan - Davinci Resolve default shortcut: Ctrl + Numpad Sub and Ctrl + Numpad 1  - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterCyan
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Blue - Davinci Resolve default shortcut: Ctrl + Numpad 6 and Ctrl + Numpad 9  - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterBlue
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Green - Davinci Resolve default shortcut: Ctrl + Numpad 5 and Ctrl + Numpad 8 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterGreen
+
+- Jog to Shortcut - Quarter Increment/Decrement Printer Lights Red - Davinci Resolve default shortcut: Ctrl + Numpad 4 and Ctrl + Numpad 7 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterRed
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Master - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad Enter and Ctrl + Alt + Numpad Add  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfMaster
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Yellow - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad Mult and Ctrl + Alt + Numpad 3 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfYellow
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Magenta - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad 0 and Ctrl + Alt + Numpad 2 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfMagenta
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Cyan - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad Sub and Ctrl + Alt + Numpad 1  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfCyan
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Blue - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad 6 and Ctrl + Alt + Numpad 9  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfBlue
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Green - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad 5 and Ctrl + Alt + Numpad 8 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfGreen
+
+- Knob to Shortcut - Half Increment/Decrement Printer Lights Red - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad 4 and Ctrl + Alt + Numpad 7 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfRed
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Master - Davinci Resolve default shortcut: Numpad Enter and Numpad Add  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullMaster
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Yellow - Davinci Resolve default shortcut: Numpad Dot and Numpad 3 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullYellow
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Magenta - Davinci Resolve default shortcut: Numpad 0 and Numpad 2 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullMagenta
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Cyan - Davinci Resolve default shortcut: Numpad Sub and Numpad 1  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullCyan
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Blue - Davinci Resolve default shortcut: Numpad 6 and Numpad 9  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullBlue
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Green - Davinci Resolve default shortcut: Numpad 5 and Numpad 8 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullGreen
+
+- Knob to Shortcut - Full Increment/Decrement Printer Lights Red - Davinci Resolve default shortcut: Numpad 4 and Numpad 7 - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsFullRed
+
+- Button - Turn on/off Printer Lights - Davinci Resolve NON-default shortcut (replace the original shortcut Ctrl + Alt + `):  Ctrl + Alt + Q
+/printerLightsOnOff
+
+***** End Of Printer Lights mode functions *****
+
+***** Power Windows mode functions *****
+
+- Knob - Increment, decrement or reset Soft 4 on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwSoft4
+
+- Knob - Increment, decrement or reset Soft 3 on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwSoft3
+
+- Knob - Increment, decrement or reset Soft 2 on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwSoft2
+
+- Knob - Increment, decrement or reset Soft 1 on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwSoft1
+
+- Knob - Increment, decrement or reset Outside Softness on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwOutsideSoftness
+
+- Knob - Increment, decrement or reset Inside Softness on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwInsideSoftness
+
+- Knob - Increment, decrement or reset Opacity on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwOpacity
+
+- Knob - Increment, decrement or reset Rotate on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwRotate
+
+- Knob - Increment, decrement or reset Tilt on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwTilt
+
+- Knob - Increment, decrement or reset Pan on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwPan
+
+- Knob - Increment, decrement or reset Aspect on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwAspect
+
+- Knob - Increment, decrement or reset Size on Power Windows Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/pwSize
+
+- Button - Add a node with a linear Power Window - Davinci Resolve default shortcut: ALT + B
+/pwAddNodeCurve
+
+- Button - Add a node with a linear Power Window - Davinci Resolve default shortcut: ALT + G
+/pwAddNodePolygon
+
+- Button - Add a node with a linear Power Window - Davinci Resolve default shortcut: ALT + C
+/pwAddNodeCircle
+
+- Button - Add a node with a linear Power Window - Davinci Resolve default shortcut: ALT + Q
+/pwAddNodeLinear
+
+- Button - Delete a Power Window on Power Windows Panel
+/pwReset
+
+- Button - Delete a Power Window on Power Windows Panel
+/pwDelete
+
+- Button - Show/Hide a Power Window on Power Windows Panel - Davinci Resolve default shortcut: ALT + H (there's a bug on Davinci and to hide you need press the button 2 times)
+/pwShowHide
+
+- Button - Add a Gradient Power Window on Power Windows Panel
+/pwAddGradient
+
+- Button - Add a Curve Power Window on Power Windows Panel
+/pwAddCurve
+
+- Button - Add a Polygon Power Window on Power Windows Panel
+/pwAddPolygon
+
+- Button - Add a Circle Power Window on Power Windows Panel
+/pwAddCircle
+
+- Button - Add a Linear Power Window on Power Windows Panel
+/pwAddLinear
+
+***** End Of Power Windows mode functions *****
+
+***** Blur, Sharpen and Mist (BSM) mode functions *****
+
+- Knob - Increment, decrement or reset Mix of Mist on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/bsmMix
+
+- Knob - Increment, decrement or reset Level of Sharpen on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/bsmLevel
+
+- Knob - Increment, decrement or reset Coring Softness of Sharpen on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/bsmCoringSoftness
+
+- Knob - Increment, decrement or reset Blue channel of Scaling on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmScalingB
+
+- Knob - Increment, decrement or reset Green channel of Scaling on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmScalingG
+
+- Knob - Increment, decrement or reset Red channel of Scaling on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmScalingR
+
+- Knob - Increment, decrement or reset Blue channel of H/V Ratio on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmRatioB
+
+- Knob - Increment, decrement or reset Green channel of H/V Ratio on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmRatioG
+
+- Knob - Increment, decrement or reset Red channel of H/V Ratio on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmRatioR
+
+- Knob - Increment, decrement or reset Blue channel of Radius on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmRadiusB
+
+- Knob - Increment, decrement or reset Green channel of Radius on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmRadiusG
+
+- Knob - Increment, decrement or reset Red channel of Radius on BSM Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/bsmRadiusR
+
+- Button - Reset BSM
+/bsmReset
+
+- Button - Open Mist Panel on BSM Panel
+/bsmMistPanel
+
+- Button - Open Sharpen Panel on BSM Panel
+/bsmSharpenPanel
+
+- Button - Open Blur Panel on BSM Panel
+/bsmBlurPanel
+
+- Button - Reset Scaling
+/bsmResetScaling
+
+- Button - Reset H/V Ratio
+/bsmResetRatio
+
+- Button - Reset Radius
+/bsmResetRadius
+
+- Button - Link/Unlink Scaling
+/bsmLinkScaling
+
+- Button - Link/Unlink H/V Ratio
+/bsmLinkRatio
+
+- Button - Link/Unlink Radius
+/bsmLinkRadius
+
+***** End of Blur, Sharpen and Mist (BSM) mode functions *****
+
+***** RGB Mixer mode functions *****
+
+- Knob - Increment, decrement or reset Blue channel of Blue Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerBlueOutputBlue
+
+- Knob - Increment, decrement or reset Green channel of Blue Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerBlueOutputGreen
+
+- Knob - Increment, decrement or reset Red channel of Blue Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerBlueOutputRed
+
+- Knob - Increment, decrement or reset Blue channel of Green Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerGreenOutputBlue
+
+- Knob - Increment, decrement or reset Green channel of Green Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerGreenOutputGreen
+
+- Knob - Increment, decrement or reset Red channel of Green Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerGreenOutputRed
+
+- Knob - Increment, decrement or reset Blue channel of Red Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerRedOutputBlue
+
+- Knob - Increment, decrement or reset Green channel of Red Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerRedOutputGreen
+
+- Knob - Increment, decrement or reset Red channel of Red Output on RGB Mixer Panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/rgbMixerRedOutputRed
+
+- Button - Reset RGB Mixer Panel
+/rgbMixerReset
+
+- Button - Check/Uncheck Preserve Luminance Checkbox on RGB Mixer Panel
+/rgbMixerPreserveLuminance
+
+- Button - Check/Uncheck Monochrome Checkbox on RGB Mixer Panel
+/rgbMixerMonochrome
+
+- Button - Reset Blue Output on RGB Mixer Panel
+/rgbMixerBlueOutputReset
+
+- Button - Reset Green Output on RGB Mixer Panel
+/rgbMixerGreenOutputReset
+
+- Button - Reset Red Output on RGB Mixer Panel
+/rgbMixerRedOutputReset
+
+- Button - Invert blue with red on RGB Mixer Panel
+/rgbMixerInvertBlueRed
+
+- Button - Invert green with blue on RGB Mixer Panel
+/rgbMixerInvertGreenBlue
+
+- Button - Invert rked with green on RGB Mixer Panel
+/rgbMixerInvertRedGreen
+
+***** Endo Of RGB Mixer mode functions *****
+
+***** Hue vs Hue mode functions *****
+
+- Trackball - Move up/down the trackball to move the selected Hue Curves Dot on Y axis - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hueCurvesMoveDotY
+
+- Trackball - Move Left/Right the trackball to move the selected Hue Curves Dot on X axis - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hueCurvesMoveDotX
+
+- Jog - Move to select next (right) or previous (left) dot on Hue Curves Panel - Default Jog Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse (Different of the other tools, this one doesn't change automatically the panel for hue curves, you need change the panel using one of the buttons or knobs. This is for prevent some possible bugs with the hue curves dots. But, like the other tools, this one just work when you are in the correct hue curves panel)
+/hueCurvesSelectDots
+
+- Button - Open Sat x Lum Panel
+/hueCurvesSatXLum
+
+- Button - Open Sat x Sat Panel
+/hueCurvesSatXSat
+
+- Button - Open Lum x Sat Panel
+/hueCurvesLumXSat
+
+- Button - Open Hue x Lum Panel
+/hueCurvesHueXLum
+
+- Button - Open Hue x Sat Panel
+/hueCurvesHueXSat
+
+- Button - Open Hue x Hue Panel
+/hueCurvesHueXHue
+
+- Button - Reset the actual Hue Curves panel
+/hueCurvesReset
+
+- Button - If you're not using the preset dots or if some bug happens and the dots are not read correctly, you can press this button to read all the dots again (for hue curves this will NOT read half dots that are in the limits of left or right side)
+/hueCurvesReadDots
+
+- Button - Delete actual selected dot on Hue Curves Panel
+/hueCurvesDeleteActualDot
+
+- Button - Select Magenta Dot on Hue Curves Panel
+/hueCurvesMagenta
+
+- Button - Select Blue Dot on Hue Curves Panel
+/hueCurvesBlue
+
+- Button - Select Cyan Dot on Hue Curves Panel
+/hueCurvesCyan
+
+- Button - Select Green Dot on Hue Curves Panel
+/hueCurvesGreen
+
+- Button - Select Yellow Dot on Hue Curves Panel
+/hueCurvesYellow
+
+- Button - Select Red Dot on Hue Curves Panel
+/hueCurvesRed
+
+- Knob - Increment, decrement or reset Hue Rotate/Saturation/Lum Gain and Saturation/Output Sat/Lum on Hue Curves (Pressing ALT button you have the boosted version to move faster) - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse - Default Knob Sensitivity for boosted speed: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hueCurvesHueSatLum
+
+- Knob - Increment, decrement or reset Input Hue on Hue Curves (Pressing ALT button you have the boosted version to move faster) - Default Knob Sensitivity for normal: Min: 0 - Max: 200 - Step: 1 - Coarse - Default Knob Sensitivity for boosted speed: Min: 0 - Max: 10000 - Step: 1 - Coarse
+/hueCurvesInputHue
+
+***** End of Hue vs Hue mode functions *****
+
+***** Custom Curves mode functions *****
+
+- Knob - Increment, decrement or reset Soft Clip High Smoothness on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesSoftClipHS
+
+- Knob - Increment, decrement or reset Soft Clip Low Smoothness on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesSoftClipLS
+
+- Knob - Increment, decrement or reset Soft Clip High on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesSoftClipHigh
+
+- Knob - Increment, decrement or reset Soft Clip Low on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesSoftClipLow
+
+- Knob - Increment, decrement or reset Blue Intensity on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesIntensityBlue
+
+- Knob - Increment, decrement or reset Green Intensity on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesIntensityGreen
+
+- Knob - Increment, decrement or reset Red Intensity on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesIntensityRed
+
+- Knob - Increment, decrement or reset Lum Intensity on Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/customCurvesIntensityLum
+
+- Trackball - Move up/down the trackball to move the selected Custom Curves Dot on Y axis - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/customCurvesMoveDotY
+
+- Trackball - Move Left/Right the trackball to move the selected Custom Curves Dot on X axis - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/customCurvesMoveDotX
+
+- Jog - Move to select next (right) or previous (left) dot on Custom Curves Panel - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Different of the other tools, this one doesn't change automatically the panel for custom curves, you need change the panel using one of the buttons or knobs. This is for prevent some possible bugs with the custom curves dots. But, like the other tools, this one just work when you are in the correct custom curves panel)
+/customCurvesSelectDots
+
+- Button - Reset all Custom Curves
+/customCurvesReset
+
+- Button - Reset Soft Clip only
+/customCurvesResetSoftClip
+
+- Button - Reset all Custom Curves only, not intensity and soft parameters
+/customCurvesResetEdit
+
+- Button - If some bug happens and the dots are not read correctly or whatever you want, you can press this button to read all the dots again
+/customCurvesReadDots
+
+- Button - Add default anchors on Custom Curves
+/customCurvesAddDefaultDots
+
+- Button - Toggle On/Off the Editable Splines on Custom Curves
+/customCurvesToggleEditableSplines
+
+- Button - Delete the actual selected dot on Custom Curves
+/customCurvesDeleteActualDot
+
+- Button - Active Soft Clip Blue
+/customCurvesSoftClipB
+
+- Button - Active Soft Clip Green
+/customCurvesSoftClipG
+
+- Button - Active Soft Clip Red
+/customCurvesSoftClipR
+
+- Button - Active Soft Clip All (link)
+/customCurvesSoftClipAll
+
+- Button - Go to Custom Curves and active B Custom Curves Edit mode
+/customCurvesModeB
+
+- Button - Go to Custom Curves and active G Custom Curves Edit mode
+/customCurvesModeG
+
+- Button - Go to Custom Curves and active R Custom Curves Edit mode
+/customCurvesModeR
+
+- Button - Go to Custom Curves and active Y Custom Curves Edit mode
+/customCurvesModeY
+
+- Button - Go to Custom Curves and active All Custom Curves Edit mode
+/customCurvesModeAll
+
+***** End of Custom Curves mode functions *****
+
+***** LOG Wheels mode functions *****
+
+- Knob - Increment, decrement or reset Hue value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logHue
+
+- Knob - Increment, decrement or reset Highlight value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logHighlight
+
+- Knob - Increment, decrement or reset Shadow value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logShadow
+
+- Knob - Increment, decrement or reset Mid Detail value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logMidDetail
+
+- Knob - Increment, decrement or reset Tint value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logTint
+
+- Knob - Increment, decrement or reset Temperature value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logTemperature
+
+- Knob - Increment, decrement or reset Saturation value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logSaturation
+
+- Knob - Increment, decrement or reset Cool Boost value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logCoolBoost
+
+- Knob - Increment, decrement or reset Contrast value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logContrast
+
+- Knob - Increment, decrement or reset High Range value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logHighRange
+
+- Knob - Increment, decrement or reset Low Range value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logLowRange
+
+- Knob - Increment, decrement or reset Pivot value on Log panel - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/logPivot
+
+- Button - Select Color Picker on Log Panel
+/logColorPicker
+
+- Button - Auto Balance Colors on Log Panel
+/logAWB
+
+- Button - Reset All Log Panel
+/logResetAll
+
+- Button - Reset Offset Wheel on Log Panel
+/logOffsetReset
+
+- Button - Reset Highlights Wheel on Log Panel
+/logHighlightsReset
+
+- Button - Reset Midtone Wheel on Log Panel
+/logMidtoneReset
+
+- Button - Reset Shadow Wheel on Log Panel
+/logShadowReset
+
+- Knob - Increment, decrement or reset Offset R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logOffsetB
+
+- Knob - Increment, decrement or reset Offset R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logOffsetG
+
+- Knob - Increment, decrement or reset Offset R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logOffsetR
+
+- Knob - Increment, decrement or reset Highlights R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logHighlightsB
+
+- Knob - Increment, decrement or reset Highlights R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logHighlightsG
+
+- Knob - Increment, decrement or reset Highlights R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logHighlightsR
+
+- Knob - Increment, decrement or reset Midtone R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logMidtoneB
+
+- Knob - Increment, decrement or reset Midtone R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logMidtoneG
+
+- Knob - Increment, decrement or reset Midtone R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logMidtoneR
+
+- Knob - Increment, decrement or reset Shadow B valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logShadowB
+
+- Knob - Increment, decrement or reset Shadow G valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logShadowG
+
+- Knob - Increment, decrement or reset Shadow R valeu in LOG - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logShadowR
+
+- Jog - Increment (right) or decrement (left) the LOG Offset Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFourthJog
+
+- Jog - Increment (right) or decrement (left) the LOG Highlights Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logThirdJog
+
+- Jog - Increment (right) or decrement (left) the LOG Midtones Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logSecondJog
+
+- Jog - Increment (right) or decrement (left) the LOG Shadow Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFirstJog
+
+- Trackball - Move up/down the trackball to move the Y axis at the LOG Offset - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFourthWheelY
+
+- Trackball - Move up/down the trackball to move the X axis at the LOG Offset - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFourthWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the LOG Highlights - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logThirdWheelY
+
+- Trackball - Move up/down the trackball to move the X axis at the LOG Highlights - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logThirdWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the LOG Midtones - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logSecondWheelY
+
+- Trackball - Move up/down the trackball to move the X axis at the LOG Midtones - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logSecondWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the LOG Shadow - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFirstWheelY
+
+- Trackball - Move up/down the trackball to move the X axis at the LOG Shadow - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFirstWheelX
+
+***** End Of Log Wheels mode functions *****
+
+***** Primaries Bars mode functions *****
+
+- Knob - Increment, decrement or reset Offset Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsOffsetB
+
+- Knob - Increment, decrement or reset Offset Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsOffsetG
+
+- Knob - Increment, decrement or reset Offset Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsOffsetR
+
+- Knob - Increment, decrement or reset Gain Luma value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGainY
+
+- Knob - Increment, decrement or reset Gain Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGainB
+
+- Knob - Increment, decrement or reset Gain Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGainG
+
+- Knob - Increment, decrement or reset Gain Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGainR
+
+- Knob - Increment, decrement or reset Gamma Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGammaB
+
+- Knob - Increment, decrement or reset Gamma Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGammaG
+
+- Knob - Increment, decrement or reset Gamma Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGammaR
+
+- Knob - Increment, decrement or reset Gamma Luma value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsGammaY
+
+- Knob - Increment, decrement or reset Lift Luma value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsLiftY
+
+- Knob - Increment, decrement or reset Lift Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsLiftB
+
+- Knob - Increment, decrement or reset Lift Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsLiftG
+
+- Knob - Increment, decrement or reset Lift Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsLiftR
+
+- Button - Select White Point Picker on Primaries Panel
+/barsWhitePointPicker
+
+- Button - Select Black Point Picker on Primaries Panel
+/barsBlackPointPicker
+
+- Button - Select Color Picker on Primaries Panel
+/barsColorPicker
+
+- Button - Auto Balance Colors on Primaries Panel
+/barsAWB
+
+- Button - Reset All Bars Panel
+/barsResetAll
+
+- Button - Reset Offset Wheel on Primaries Panel
+/barsResetOffset
+
+- Button - Reset Gain Wheel on Primaries Panel
+/barsResetGain
+
+- Button - Reset Gamma Wheel on Primaries Panel
+/barsResetGamma
+
+- Button - Reset Lift Wheel on Primaries Panel
+/barsResetLift
+
+- Knob - Increment, decrement or reset Lum Mix value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsLumMix
+
+- Knob - Increment, decrement or reset Mid Detail value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsMidDetail
+
+- Knob - Increment, decrement or reset Hue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsHue
+
+- Knob - Increment, decrement or reset Saturation value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsSaturation
+
+- Knob - Increment, decrement or reset Highlight value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsHighlight
+
+- Knob - Increment, decrement or reset Shadow value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsShadow
+
+- Knob - Increment, decrement or reset Cool Boost value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsCoolBoost
+
+- Knob - Increment, decrement or reset Pivot value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsPivot
+
+- Knob - Increment, decrement or reset Contrast value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsContrast
+
+- Knob - Increment, decrement or reset Tint value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsTint
+
+- Knob - Increment, decrement or reset Temperature value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/barsTemperature
+
+***** End of Primaries Bars mode functions *****
+
+***** Primaries Wheels mode functions *****
+
+- Knob - Increment, decrement or reset Offset Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesOffsetB
+
+- Knob - Increment, decrement or reset Offset Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesOffsetG
+
+- Knob - Increment, decrement or reset Offset Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesOffsetR
+
+- Knob - Increment, decrement or reset Gain Luma value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGainY
+
+- Knob - Increment, decrement or reset Gain Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGainB
+
+- Knob - Increment, decrement or reset Gain Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGainG
+
+- Knob - Increment, decrement or reset Gain Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGainR
+
+- Knob - Increment, decrement or reset Gamma Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGammaB
+
+- Knob - Increment, decrement or reset Gamma Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGammaG
+
+- Knob - Increment, decrement or reset Gamma Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGammaR
+
+- Knob - Increment, decrement or reset Gamma Luma value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesGammaY
+
+- Knob - Increment, decrement or reset Lift Luma value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesLiftY
+
+- Knob - Increment, decrement or reset Lift Blue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesLiftB
+
+- Knob - Increment, decrement or reset Lift Green value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesLiftG
+
+- Knob - Increment, decrement or reset Lift Red value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesLiftR
+
+- Button - Select White Point Picker on Primaries Panel
+/primariesWhitePointPicker
+
+- Button - Select Black Point Picker on Primaries Panel
+/primariesBlackPointPicker
+
+- Button - Select Color Picker on Primaries Panel
+/primariesColorPicker
+
+- Button - Auto Balance Colors on Primaries Panel
+/primariesAWB
+
+- Button - Reset All Primaries Panel
+/primariesResetAll
+
+- Button - Reset Offset Wheel on Primaries Panel
+/primariesResetOffset
+
+- Button - Reset Gain Wheel on Primaries Panel
+/primariesResetGain
+
+- Button - Reset Gamma Wheel on Primaries Panel
+/primariesResetGamma
+
+- Button - Reset Lift Wheel on Primaries Panel
+/primariesResetLift
+
+- Knob - Increment, decrement or reset Lum Mix value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesLumMix
+
+- Knob - Increment, decrement or reset Mid Detail value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesMidDetail
+
+- Knob - Increment, decrement or reset Hue value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesHue
+
+- Knob - Increment, decrement or reset Saturation value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesSaturation
+
+- Knob - Increment, decrement or reset Highlight value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesHighlight
+
+- Knob - Increment, decrement or reset Shadow value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesShadow
+
+- Knob - Increment, decrement or reset Cool Boost value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesCoolBoost
+
+- Knob - Increment, decrement or reset Pivot value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesPivot
+
+- Knob - Increment, decrement or reset Contrast value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesContrast
+
+- Knob - Increment, decrement or reset Tint value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesTint
+
+- Knob - Increment, decrement or reset Temperature value on Primaries - Default Knob Sensitivity: Min: 0 - Max: 200 - Step: 1 - Coarse
+/primariesTemperature
+
+- Jog - Increment (right) or decrement (left) the Primaries Offset Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFourthJog
+
+- Jog - Increment (right) or decrement (left) the Primaries Gain Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesThirdJog
+
+- Jog - Increment (right) or decrement (left) the Primaries Gamma Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesSecondJog
+
+- Jog - Increment (right) or decrement (left) the Primaries Lift Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFirstJog
+
+- Trackball - Move up/down the trackball to move the Y axis at the Primaries Offset - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFourthWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the Primaries Offset - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFourthWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the Primaries Gain - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesThirdWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the Primaries Gain - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesThirdWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the Primaries Gamma - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesSecondWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the Primaries Gamma - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesSecondWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the Primaries Lift - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFirstWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the Primaries Lift - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFirstWheelX
+
+***** End of Primaries Wheels mode functions *****
+
+***** HDR Panel Functions *****
+
+- Button - Reset Falloff on HDR Zone Panel
+/hdrZoneFalloffReset
+
+- Button - Reset Min/Max Range on HDR Zone Panel
+/hdrZoneMinMaxRangeReset
+
+- Jog - Increment (right) or decrement (left) Max Range Value on HDR Zones - Default Jog Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/hdrZoneFalloff
+
+- Jog - Increment (right) or decrement (left) Max Range Value on HDR Zones - Default Jog Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/hdrZoneMaxRange
+
+- Button - Turn on/off Specular zone on HDR Panel
+/hdrShowHideSpecular
+
+- Button - Turn on/off Highlight zone on HDR Panel
+/hdrShowHideHighlight
+
+- Button - Turn on/off Light zone on HDR Panel
+/hdrShowHideLight
+
+- Button - Turn on/off Shadow zone on HDR Panel
+/hdrShowHideShadow
+
+- Button - Turn on/off Dark zone on HDR Panel
+/hdrShowHideDark
+
+- Button - Turn on/off Black zone on HDR Panel
+/hdrShowHideBlack
+
+- Button - Turn on/off Specular zone on HDR Panel
+/hdrTurnOnOffSpecular
+
+- Button - Turn on/off Highlight zone on HDR Panel
+/hdrTurnOnOffHighlight
+
+- Button - Turn on/off Light zone on HDR Panel
+/hdrTurnOnOffLight
+
+- Button - Turn on/off Shadow zone on HDR Panel
+/hdrTurnOnOffShadow
+
+- Button - Turn on/off Dark zone on HDR Panel
+/hdrTurnOnOffDark
+
+- Button - Turn on/off Black zone on HDR Panel
+/hdrTurnOnOffBlack
+
+- Button - Reset only the Fourth Wheel on HDR Wheels
+/hdrFourthWheelReset
+
+- Button - Reset only the Third Wheel on HDR Wheels
+/hdrThirdWheelReset
+
+- Button - Reset only the Second Wheel on HDR Wheels
+/hdrSecondWheelReset
+
+- Button - Reset only the First Wheel on HDR Wheels
+/hdrFirstWheelReset
+
+- Button - Keep pressed to show HDR Third Wheel Highlight and release to turn off
+/hdrThirdWheelHL
+
+- Button - Keep pressed to show HDR Second Wheel Highlight and release to turn off
+/hdrSecondWheelHL
+
+- Button - Keep pressed to show HDR First Wheel Highlight and release to turn off
+/hdrFirstWheelHL
+
+- Button - Reset only HDR Zone modifications
+/hdrResetZone
+
+- Button - Reset only HDR Color modifications
+/hdrResetColor
+
+- Button - Reset all HDR modifications
+/hdrResetAll
+
+- Button - Move HDR Wheels panels to the right
+/hdrWheelsRight
+
+- Button - Move HDR Wheels panels to the left
+/hdrWheelsLeft
+
+- Button - select Light zone on HDR Zone Panel
+/hdrZoneSpecular
+
+- Button - select Light zone on HDR Zone Panel
+/hdrZoneHighlight
+
+- Button - select Light zone on HDR Zone Panel
+/hdrZoneLight
+
+- Button - select Shadow zone on HDR Zone Panel
+/hdrZoneShadow
+
+- Button - select Dark zone on HDR Zone Panel
+/hdrZoneDark
+
+- Button - select Black zone on HDR Zone Panel
+/hdrZoneBlack
+
+- Button - Open or Close the HDR Zone Panel (Toggle). The status of the panel is saved on windows/status.ini and is 0 to closed and 1 to open
+/hdrZoneOpenClose
+
+- Knob - Increment, decrement or reset MD value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrBlackOffset
+
+- Knob - Increment, decrement or reset MD value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrMD
+
+- Knob - Increment, decrement or reset Pivot value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrPivot
+
+- Knob - Increment, decrement or reset Contrast value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrContrast
+
+- Knob - Increment, decrement or reset Hue value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrHue
+
+- Knob - Increment, decrement or reset Tint value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrTint
+
+- Knob - Increment, decrement or reset Temperature value on HDR Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrTemperature
+
+- Knob - Increment, decrement or reset saturation value on HDR Fourth Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrFourthWheelSaturation
+
+- Knob - Increment, decrement or reset exposure value on HDR Fourth Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFourthWheelExposure
+
+- Knob - Turn left/right to increment or decrement falloff value on the third HDR Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrFalloffThirdWheel
+
+- Knob - Increment, decrement or reset saturation value on HDR Third Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrThirdWheelSaturation
+
+- Knob - Increment, decrement or reset exposure value on HDR Third Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrThirdWheelExposure
+
+- Knob - Turn left/right to increment or decrement falloff value on the second HDR Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrFalloffSecondWheel
+
+- Knob - Increment, decrement or reset saturation value on HDR Second Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrSecondWheelSaturation
+
+- Knob - Increment, decrement or reset exposure value on HDR Second Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrSecondWheelExposure
+
+- Knob - Turn left/right to increment or decrement falloff value on the first HDR Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrFalloffFirstWheel
+
+- Knob - Increment, decrement or reset saturation value on HDR First Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
+/hdrFirstWheelSaturation
+
+- Knob - Increment, decrement or reset exposure value on HDR First Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFirstWheelExposure
+
+- Trackball - Move up/down the trackball to move the Y axis at the fourth HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFourthWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the fourth HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFourthWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the third HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrThirdWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the third HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrThirdWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the second HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrSecondWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the second HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrSecondWheelX
+
+- Trackball - Move up/down the trackball to move the Y axis at the first HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFirstWheelY
+
+- Trackball - Move left/right the trackball to move the X axis at the first HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFirstWheelX
+
+***** End of HDR Panel Functions *****
+
+***** Color Interface Functions *****
+
+- Button - Reset All Nodes Grade - Davinci Resolve default shortcut: Ctrl + Shift + Home
+/resetAllNodesGradeAndKeepNodes
+
+- Button - Reset Node Grade - Davinci Resolve default shortcut: Shift + Home
+/resetNodeGrade
+
+- Button - Go to full view (not full screen) on Color Page Preview - Davinci Resolve default shortcut: Shift + F
+/fullView
+
+- Button - Apply Grade on Color Page Preview - Davinci Resolve NON-default shortcut: Ctrl + H
+/applyGrade
+
+- Button - Run through Image Wipe modes on Color Page Preview - Davinci Resolve default shortcut: Shift + W
+/colorInterfaceImageWipeMode
+
+- Button - Toggle Image Wipe on/off on Color Page Preview - Davinci Resolve default shortcut: Ctrl + W
+/colorInterfaceImageWipe
+
+- Button - Toggle Split Screen on/off on Color Page Preview - Davinci Resolve default shortcut: Ctrl + Alt + W
+/colorInterfaceSplitScreen
+
+- Button - Toggle Highlight on/off on Color Page Preview - Davinci Resolve default shortcut: Shift + H
+/colorInterfaceHighlight
+
+- Button - Toggle between Zoom to Fit and Zoom to Original Size on Color Page Preview - Davinci Resolve default shortcut: Shift + Z and Shift + Alt + Z
+/colorInterfaceZoomView
+
+- Button - Toggle between Cursor and Hand mode on Color Page Nodes Panel
+/colorInterfaceCursorHand
+
+- Button - Select Node Modes 1 on Color Page
+/colorInterfaceNodeMode1
+
+- Button - Select Node Modes 2 on Color Page
+/colorInterfaceNodeMode2
+
+- Button - Select Node Modes 3 on Color Page
+/colorInterfaceNodeMode3
+
+- Button - Select Node Modes 4 on Color Page
+/colorInterfaceNodeMode4
+
+- Button - Show/Hide Gallery on Color Page
+/colorInterfaceGallery
+
+- Button - Show/Hide LUTs on Color Page
+/colorInterfaceLuts
+
+- Button - Show/Hide Media Pool on Color Page
+/colorInterfaceMediaPool
+
+- Button - Show/Hide Timeline on Color Page
+/colorInterfaceTimeline
+
+- Button - Show/Hide Clips on Color Page
+/colorInterfaceClips
+
+- Button - Show/Hide Nodes on Color Page
+/colorInterfaceNodes
+
+- Button - Show/Hide Open FX on Color Page
+/colorInterfaceOpenFX
+
+- Button - Show/Hide Lightbox on Color Page - Davinci Resolve Default Shortcut: Ctrl + Shift + F
+/colorInterfaceLightbox
+
+- Button - Grab Still on Color Page - Davinci Resolve Default Shortcut: Ctrl + Alt + G
+
+***** End of Color Interface Functions *****
+
+----- End of Color Mode Functions -----
+
+----- Edit Mode Functions -----
+
+***** Inspector Functions *****
+
+- Button - Key Frame Transform
+/inspectorKeyFrameTransform
+
+- Button - Key Frame Yaw
+/inspectorKeyFrameVolume
+
+- Button - Key Frame Yaw
+/inspectorKeyFrameYaw
+
+- Button - Key Frame Anchor
+/inspectorKeyFrameAnchor
+
+- Button - Key Frame Pitch
+/inspectorKeyFramePitch
+
+- Button - Key Frame Position
+/inspectorKeyFramePosition
+
+- Button - Key Frame Rotation
+/inspectorKeyFrameRotation
+
+- Button - Key Frame Zoom
+/inspectorKeyFrameZoom
+
+- Button - Inspector Link or Unlink Zoom
+/inspectorLinkUnlinkZoom
+
+- Button - Reset all audio inspector
+/inspectorAudioReset
+
+- Button - Reset all transform inspector
+/inspectorTransformReset
+
+- Knob - Increment, decrement or reset Inspector Volume - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorAudioVolume
+
+- Button - Open the Vide Inspector Window (NOT IN USE - You have to change the code and remove the commented lines of the function to make this function work)
+/openInspectorAudio
+
+- Button - Open the Audio Inspector Window (NOT IN USE - You have to change the code and remove the commented lines of the function to make this function work)
+/openInspectorVideo
+
+- Knob - Turn left to flip the clip horizontally and right to flip vertically (toggle), and press the knob to reset - Default Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/inspectorFlip
+
+- Knob - Increment, decrement or reset Inspector Yaw - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorYaw
+
+- Knob - Increment, decrement or reset Inspector Anchor Point Y - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorAnchorPointY
+
+- Knob - Increment, decrement or reset Inspector Anchor Point X - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorAnchorPointX
+
+- Knob - Increment, decrement or reset Inspector Pitch - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorPitch
+
+- Knob - Increment, decrement or reset Inspector Position Y - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorPositionY
+
+- Knob - Increment, decrement or reset Inspector Position X - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorPositionX
+
+- Knob - Increment, decrement or reset Inspector Rotation Angle - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorRotationAngle
+
+- Knob - Increment, decrement or reset Inspector Zoom Y - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorZoomY
+
+- Knob - Increment, decrement or reset Inspector Zoom X - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/inspectorZoomX
+
+***** End of Inspector Functions *****
+
+***** Edit Functions *****
+
+- Jog - Turn left/right to step frames with clip/edit point - Default Jog Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/clipEditPointFrameStep
+
+- Jog - Turn left to go backward on timeline and right to go forward - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/moveTimeline
+
+- Jog - Turn left to zoom out and right to zoom in - Default Jog Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/timelineZoom
+
+- Knob - Change between windows on Edit Page - Can be Timeline (right) or Preview (left) - Default Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse - Davinci Resolve Default Shortcut - Ctrl + 3 and Ctrl + 4
+/changeEditActiveWindow
+
+- Button - Open Davinci Settings - Davinci Resolve Default Shortcut: Ctrl + ,
+/davinciSettings
+
+- Button - Opem Project Home - Davinci Resolve Default Shortcut: Shift + 1
+/projectSelection
+
+- Button - Open Project Settings - Davinci Resolve Default Shortcut: Shift + 9
+/projectSettings
+
+- Button - Open or close Right Expander
+/openCloseRightExpander
+
+- Button - Open or close Inspector window
+/openCloseInspector
+
+- Button - Open or close Metadata window
+/openCloseMetadata
+
+- Button - Open or close Mixer window
+/openCloseMixer
+
+- Button - Open or close Sound Library window
+/openCloseSoundLibrary
+
+- Button - Open or close Edit Index window
+/openCloseEditIndex
+
+- Button - Open or close Effects Library window
+/openCloseEffectsLibrary
+
+- Button - Open or close Media Pool window
+/openCloseMediaPool
+
+- Button - Open or close Left Expander
+/openCloseLeftExpander
+
+- Button to Shortcut - Add a clip to the end of timeline - Davinci Resolve default shortcut: Shift + F12
+/addClipToTheEnd
+
+- Button to Shortcut - Fit to Fill Clip on timeline - Davinci Resolve default shortcut: Shift + F11
+/fitToFillClip
+
+- Button to Shortcut - Ripple Overwrite Clip on timeline - Davinci Resolve default shortcut: Shift + F10
+/rippleOverwriteClip
+
+- Button to Shortcut - Replace Clip on timeline - Davinci Resolve default shortcut: F11
+/replaceClip
+
+- Button to Shortcut - Overwrite Clip on timeline - Davinci Resolve default shortcut: F10
+/overwriteClip
+
+- Button to Shortcut - Insert Clip on timeline - Davinci Resolve default shortcut: F9
+/insertClip
+
+- Button to Shortcut - Select Blade tool - Davinci Resolve default shortcut: B
+/bladeTool
+
+- Knob to Shortcut - Select Trim tool or Dynamic Trim tool - Davinci Resolve default shortcut: T / W - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/trimMode
+
+- Button to Shortcut - Select Selection tool - Davinci Resolve default shortcut: A
+/selectionTool
+
+- Knob to Shortcut - Move clips through tracks up and down - Davinci Resolve default shortcut: Alt + Up Arrow / Alt + Down Arrow - Default Knob Sensitivity: Min: 0 - Max: 8 - Step: 1 - Coarse
+/altUpDown
+
+- Knob to Shortcut - Select all clips of the active track backward and forward - Davinci Resolve default shortcut: Y / Ctrl + Y - Default Knob Sensitivity: Min: 0 - Max: 50 - Step: 1 - Coarse
+/selectFwBwActiveTrack
+
+- Knob to Shortcut - Right to Paste Normal and Left to Paste Attributes - Davinci Resolve default shortcut: Ctrl + V and Alt + V - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/pasteKnob
+
+- Knob to Shortcut - Add audio transition, video transition or both - Davinci Resolve default shortcut: Shift + T / Alt + T / Ctrl + T - Default Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/addAVTransitions
+
+- Knob to Shortcut - Open Change Clip Speed window (left) or put clip on retime mode (right) - Davinci Resolve default shortcut: Ctrl + R / R - Default Knob Sensitivity: Min: 0 - Max: 5 - Step: 1 - Coarse
+/retimeClipSpeed
+
+- Knob to Shortcut - Swap clip towards right and left - Davinci Resolve default shortcut: Ctrl + Shift + , / Ctrl + Shift + . - Default Knob Sensitivity: Min: 0 - Max: 8 - Step: 1 - Coarse
+/swapClips
+
+- Knob to Shortcut - Add a mark, remove a mark and setup a mark - Davinci Resolve default shortcut: M / Alt + M / Ctrl + M - Default Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/addRemoveSetMark
+
+- Knob to Shortcut - Select (right) and deselect (left) all clips - Davinci Resolve default shortcut: Ctrl + A / Ctrl + Shift + A - Default Knob Sensitivity: Min: 0 - Max: 50 - Step: 1 - Coarse
+/selectDeselectAll
+
+- Knob to Shortcut - Select all clips backward (left) and forward (right) - Davinci Resolve default shortcut: Alt + Y / Ctrl + Alt + Y - Default Knob Sensitivity: Min: 0 - Max: 50 - Step: 1 - Coarse
+/selectForwardBackward
+
+- Knob to Shortcut - In/Out (left/right) timeline or preview - Davinci Resolve default shortcut: I / O / Alt + I / Alt + O - Default Knob Sensitivity: Min: 0 - Max: 50 - Step: 1 - Coarse
+/inOut
+
+- Button to Shortcut - Paste attributes from other clip - Davinci Resolve default shortcut: Alt + V
+/pasteAttributes
+
+- Button to Shortcut - Link/Unlink clips on timeline - Davinci Resolve default shortcut: Ctrl + Alt + L
+/linkUnlinkClips
+
+- Button to Shortcut - Select the closest edit point - Davinci Resolve default shortcut: V
+/closestEditPoint
+
+- Button to Shortcut - Select the closest clip or gap - Davinci Resolve default shortcut: Shift + V
+/closestClipGap
+
+- Button to Shortcut - Delete all the content from the end of the clip until the playhead - Davinci Resolve default shortcut: Ctrl + Shift + ]
+/delEndToPlayhead
+
+- Button to Shortcut - Delete all the content from the begin of the clip until the playhead - Davinci Resolve default shortcut: Ctrl + Shift + [
+/delStartToPlayhead
+
+- Button to Shortcut - Cut all selected clips or all tracks if none is selected - Davinci Resolve default shortcut: Ctrl + B
+/cutAllTimelines
+
+***** End of Edit Functions *****
+
+----- End of Edit Mode Functions -----
+
+----- General Functions -----
+
+- Button - Set mode to EDIT, go to Edit Page and open the Inspector
+/enterEditMode
+
+- Button - Set mode to EDIT and go to Edit Page and open the Inspector
+/goToInspectorWindow
+
+- Button - Set mode to COLOR, open color page and set the panel to Primaries Wheels with custom curves (default davinci mode)
+/enterColorMode
+
+- Turn on and off all the app
+/startStop
+
+- Jog - Turn Right or Left to step frame forward or backward - Default Jog Sensitivity: Min: 0 - Max: 50 - Step: 1 - Coarse
+/stepFrame
+
+- Button - Next Clip - Davinci Resolve default shortcut: Down Arrow
+/nextClip
+
+- Button - Previous Clip - Davinci Resolve default shortcut: Up Arrow
+/previousClip
+
+- Button - Play Backward - Davinci Resolve default shortcut: J
+/playBackward
+
+- Button - Stop - Davinci Resolve default shortcut: K
+/stop
+
+- Button - Play Forward - Davinci Resolve default shortcut: L
+/playForward
+
+- Button - Undo - Davinci Resolve default shortcut: Ctrl + Z
+/undo
+
+- Button - Redo - Davinci Resolve default shortcut: Ctrl + Shift + Z
+/redo
+
+- Button - Copy - Davinci Resolve default shortcut: Ctrl + C
+/copy
+
+- Button - Paste - Davinci Resolve default shortcut: Ctrl + V
+/paste
+
+- Button - Paste - Davinci Resolve default shortcut: Ctrl + X
+/cut
+
+- Jog - Alternate Key + First Jog Wheel can be used to move the thumbnails to left and right in Color Page - Default Jog Sensitivity - Min. 0 - Max: 100 - Step: 1 - Coarse
+/colorPageScrollThumbnails
+
+- Jog - Alternate Key + Fourth Jog Wheel can be used to navigate between nodes in Color Page - Davinci Resolve NON-Default Shortcut: Shift + Y (Next Node) and Shift + U (Previous Node) - Default Jog Sensitivity - Min. 0 - Max: 10 - Step: 1 - Coarse
+/navigateNodes
+
+- Enter/Exit on fullscreen mode - Davinci Resolve default shortcut: Ctrl + F
+/toggleFullscreen
+
+- Save project - Davinci Resolve default shortcut: Ctrl + S
+/saveProject
+
+- Home (left) or End (right) - Davinci Resolve default shortcut: Home / End - Default Knob Sensitivity: Min: 0 - Max: 50 - Step: 1 - Coarse
+/homeEnd
+
+- Left and right arrow on knob turn and hit the knob to enter - Davinci Resolve default shortcut: Left Arrow / Right Arrow / Enter Key - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/leftRightEnter
+
+- Up and down arrow on knob turn and hit the knob to enter - Davinci Resolve default shortcut: Up Arrow / Down Arrow / Enter Key - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/upDownEnter
+
+- Button on MODE SELECTION - Reset Davinci UI Layout, reset all variables to default states and put Davinci on Full Screen Mode (IMPORTANT: You have to manually put Custom Curves Edit on LINKED mode after use this function) - Davinci Resolve NON-Default Shortcut: Ctrl + F1 (Reset UI Layout) and Ctrl + F2 (Full Screen Window)
+/resetDefaultState
+
+- Button Alt + F6 - Enable/Disable All Nodes - Davinci Resolve Default Shortcut: Alt + D
+/enableDisableAllNodes
+
+- Button Alt + Up - Enable/Disable Selected Nodes - Davinci Resolve Default Shortcut: Ctrl + D
+/enableDisableSelectedNodes
+
+- Button Alt + Down - Bypass Color Grading - Davinci Resolve Default Shortcut: Shift + D
+/bypassColorGrading
+
+- Button Alt + F1 - Active Playhead A - Davinci Resolve NON-Default Shortcut: Shift + F1
+/playheadA
+
+- Button Alt + F2 - Active Playhead B - Davinci Resolve NON-Default Shortcut: Shift + F2
+/playheadB
+
+- Button Alt + F3 - Active Playhead C - Davinci Resolve NON-Default Shortcut: Shift + F3
+/playheadC
+
+- Button Alt + F4 - Active Playhead D - Davinci Resolve NON-Default Shortcut: Shift + F4
+/playheadD
+ ;Latest Low
+- Button Alt + F5 - Reset Playheads - Davinci Resolve NON-Default Shortcut: Shift + F5
+/resetPlayheads
+
+- Button Alt + F7 - Ripple Node Changes to Selected Clips - Davinci Resolve NON-Default Shortcut: Shift + F7
+/rippleNodesToSelectedClips
+
+- Jog to Shortcut - Navigate fast through clips on Color Page - Davinci Resolve default shortcut: Up and Down Arrows - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/fastNavigateClips
+
+- Button - Delete selection using Delete key - Davinci Resolve Default Shortcut: Delete
+/deleteKey
+
+- Button - Delete selection using Backspace key - Davinci Resolve Default Shortcut: Backspace
+/backspaceKey
+
+- Jog Wheel Button - Paste attributes from other clip - Davinci Resolve default shortcut: Alt + V (it's the same function of a button but to be setted on a jog wheel button)
+/pasteAttributesJogWheel
+
+- Jog Wheel Button - Copy - Davinci Resolve default shortcut: Ctrl + C (it's the same function of a button but to be setted on a jog wheel button)
+/copyJogWheel
+
+- Jog Wheel Button - Paste - Davinci Resolve default shortcut: Ctrl + V (it's the same function of a button but to be setted on a jog wheel button)
+/pasteJogWheel
+
+- Jog Wheel Button - Paste - Davinci Resolve default shortcut: Ctrl + X (it's the same function of a button but to be setted on a jog wheel button)
+/cutJogWheel
+
+- Button - Toogle between 2 Timeline modes on Color Page - Record A Mode or Source A Mode
+/toggleTimelineThumbMode
+
+- Button - Open Key Frame Animation window on Color Page
+/openKeyFrameWindowColorPage
+
+***** End of General Functions *****
+
+***** Update 2.2.1 Functions *****
+
+;Button from Jog or Wheel - Delete selection using Delete key - Davinci Resolve Default Shortcut: Delete
+_deleteKeyJogWheel
+
+;Button from Jog or Wheel - Delete selection using Backspace key - Davinci Resolve Default Shortcut: Backspace
+/backspaceKeyJogWheel
+
+- Button to Shortcut - Open Retime on the selected clip on Edit Mode - Davinci Resolve default shortcut: Ctrl + R
+/retime
+
+- Button to Shortcut - Open Retime on the selected clip on Edit Mode - Davinci Resolve default shortcut: R
+/changeClipSpeed
+
+- Knob to Shortcut - Open or Close the Right and Left Expanders on Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/leftRightExpander
+
+- Button to Shortcut - Toggle Dynamic Trim tool - Davinci Resolve default shortcut: W
+/dynamicTrimTool
+
+***** End of Update 2.2.1 Functions *****
+
+***** Update 2.2.2 Functions *****
+
+- Button - Create a Chroma Dark and Light Qualifier
+/qualifierChromaDarkLight
+
+- Button - Create a Chroma Light Qualifier
+/qualifierChromaLight
+
+- Button - Create a Chroma Dark Qualifier
+/qualifierChromaDark
+
+- Button - Create a Six Vector Qualifier Yellow
+/qualifierSixVectorYellow
+
+- Button - Create a Six Vector Qualifier Red
+/qualifierSixVectorRed
+
+- Button - Create a Six Vector Qualifier Magenta
+/qualifierSixVectorMagenta
+
+- Button - Create a Six Vector Qualifier Green
+/qualifierSixVectorGreen
+
+- Button - Create a Six Vector Qualifier Cyan
+/qualifierSixVectorCyan
+
+- Button - Create a Six Vector Qualifier Blue
+/qualifierSixVectorBlue
+
+- Knob - Reset all Qualifier when pressing the Kbob - Default Knob Sensitivity: Min: 0 - Max: 1 - Step: 1 - Coarse
+/qualifierResetKnob
+
+- Knob - Reset Luminance on HSL when turning Left or Blue on RGB when turning right on Qualifier Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/qualifierResetLuminanceKnob
+
+- Knob - Reset Saturation on HSL when turning Left or Green on RGB when turning right on Qualifier Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/qualifierResetSaturationKnob
+
+- Knob - Reset Hue on HSL when turning Left or Red on RGB when turning right on Qualifier Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/qualifierResetHueKnob
+
+- Button - Copy actual curve to All curves
+/customCurvesCopyToAll
+
+- Button - Copy actual curve to Blue curve
+/customCurvesCopyToBlue
+
+- Button - Copy actual curve to Green curve
+/customCurvesCopyToGreen
+
+- Button - Copy actual curve to Red curve
+/customCurvesCopyToRed
+
+- Button - Copy actual curve to Lum curve
+/customCurvesCopyToLum
+
+- Knob - Reset all Custom Curves - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/customCurvesResetKnob
+
+- Knob - Reset Soft Clip only - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/customCurvesResetSoftClipKnob
+
+- Knob - Reset all Custom Curves only, not intensity and soft parameters - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/customCurvesResetEditKnob
+
+- Jog/Knob - Move HDR Wheels to the left or righ on HDR Panel - Default Jog/Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/hdrNavigateWheels
+
+***** End Of Update 2.2.2 Functions *****
+
+***** Update 2.3 Functions *****
+
+- Knob - Increment or decrement Monitoring Volume or press to toggle On/Off the monitoring volume on Edit Page - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/monitoringVolume
+
+- Button - Show/Hide Timeline Stacked Tabs on Edit Mode
+/timelineViewOptionsStackedTimelines
+
+- Button - Show/Hide Subtitle Tracks on Edit Mode
+/timelineViewOptionsSubtitleTracks
+
+- Button - Show/Hide Audio Waveforms on Edit Mode
+/timelineViewOptionsAudioWaveforms
+
+- Trackball - Move left/right the trackball to navigate between the next and previous clip on timeline and press the button over Jog Wheel to Delete anything - Default Trackball Sensitivity: Min: 0 - Max: 30 - Step: 1 - Coarse
+/navigateClipsLeftRightAndDelete
+
+- Trackball - Move up/down the trackball to navigate between the clips up and down on timeline - Default Trackball Sensitivity: Min: 0 - Max: 30 - Step: 1 - Coarse
+/navigateClipsUpDown
+
+***** End Of Update 2.3 Functions *****
+
+***** Update 2.4 Functions *****
+
+- Button - Label node name of the selected node - Davinci Resolve non-default shortcut: Ctrl + O
+/labelNode
+
+***** End Of Update 2.4 Functions *****
+
+***** Update 2.5 Functions *****
+
+----- Change mode functions -----
+
+Button - Open Tracking panel on Davinci UI and change the mode on the Tangent Panel
+/tracking
+
+Button - Open Sizing Edit panel on Davinci UI and change the mode on the Tangent Panel
+/sizingModeEdit
+
+Button - Open Sizing Input panel on Davinci UI and change the mode on the Tangent Panel
+/sizingModeInput
+
+Button - Open Sizing Output panel on Davinci UI and change the mode on the Tangent Panel
+/sizingModeOutput
+
+Button - Open Sizing Node panel on Davinci UI and change the mode on the Tangent Panel
+/sizingModeNode
+
+Button - Open Sizing Reference panel on Davinci UI and change the mode on the Tangent Panel
+/sizingModeReference
+
+Button - Open the EDIT page on Davinci UI and change the mode on the Tangent Panel
+/editMode
+
+Button - Open the Inspector panel on Davinci UI at the Video page and change the mode on the Tangent Panel
+/inspectorMode
+
+Button - Change to Nodes and Scopes mode on the Tangent Panel
+/nodesAndScopes
+
+Button - Change to Printer Lights mode on the Tangent Panel
+/printerLights
+
+Button - Open Parimaries Wheels panel on Davinci UI and change the mode on the Tangent Panel
+/primariesWheels
+
+Button - Open Parimaries Bars panel on Davinci UI and change the mode on the Tangent Panel
+/primariesBars
+
+Button - Open Log Wheels panel on Davinci UI and change the mode on the Tangent Panel
+/logWheels
+
+Button - Open HDR Wheels panel on Davinci UI and change the mode on the Tangent Panel
+/hdrWheels
+
+Button - Open Custome Curves panel on Davinci UI and change the mode on the Tangent Panel
+/customCurves
+
+Button - Open Hue Curves panel on Davinci UI and change the mode on the Tangent Panel
+/hueCurves
+
+Button - Open Qualifier panel on Davinci UI and change the mode on the Tangent Panel
+/qualifier
+
+Button - Open Power Windows panel on Davinci UI and change the mode on the Tangent Panel
+/powerWindows
+
+Button - Open BSM panel on Davinci UI and change the mode on the Tangent Panel
+/blurSharpenMist
+
+Button - Open RGB Mixer panel on Davinci UI and change the mode on the Tangent Panel
+/rgbMixer
+
+Button - Open Key panel on Davinci UI and change the mode on the Tangent Panel
+/key
+
+Button - Open Motion Effects panel on Davinci UI and change the mode on the Tangent Panel
+/motionEffects
+
+Button - Open Color Warper HueXSat panel on Davinci UI and change the mode on the Tangent Panel
+/colorWarperHueSat
+
+Button - Open Color Warper ChrxLum panel on Davinci UI and change the mode on the Tangent Panel
+/colorWarperChrLum
+
+----- End of Change mode functions -----
+
+----- Color mode functions -----
+
+***** Sizing Output mode functions *****
+
+Knob - Increment, Decrement or Reset Softness on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputSoftness
+
+Knob - Increment, Decrement or Reset Blanking Left on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputBlankingLeft
+
+Knob - Increment, Decrement or Reset Blanking Bottom on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputBlankingBottom
+
+Knob - Increment, Decrement or Reset Blanking Right on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputBlankingRight
+
+Knob - Increment, Decrement or Reset Blanking Top on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputBlankingTop
+
+Knob - Toggle Horizontal Flip (left) and Vertical Flip (right) on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/sizingOutputFlip
+
+Knob - Increment, Decrement or Reset Yaw on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputYaw
+
+Knob - Increment, Decrement or Reset Pitch on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputPitch
+
+Knob - Increment, Decrement or Reset Height on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputHeight
+
+Knob - Increment, Decrement or Reset Width on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputWidth
+
+Knob - Increment, Decrement or Reset Rotate on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputRotate
+
+Knob - Increment, Decrement or Reset Zoom on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingOutputZoom(oscType, data, msgID, hwnd
+
+Knob - Increment, Decrement or Reset Tilt on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Between Fine and Medium
+/sizingOutputTilt
+
+Knob - Increment, Decrement or Reset Pan on Sizing Output Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Between Fine and Medium
+/sizingOutputPan
+
+Button - Reset Blanking on Sizing Output Panel
+/sizingOutputResetBlanking
+
+Button - Reset Sizing on Sizing Output Panel
+/sizingOutputResetSizing
+
+Button - Reset Blanking on Sizing Output Panel
+/sizingOutputSmooth
+
+***** End of Sizing Output mode functions *****
+
+***** Sizing Input mode functions *****
+
+Knob - Increment, Decrement or Reset Softness on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputSoftness
+
+Knob - Increment, Decrement or Reset Blanking Left on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputBlankingLeft
+
+Knob - Increment, Decrement or Reset Blanking Bottom on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputBlankingBottom
+
+Knob - Increment, Decrement or Reset Blanking Right on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputBlankingRight
+
+Knob - Increment, Decrement or Reset Blanking Top on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputBlankingTop
+
+Knob - Toggle Horizontal Flip (left) and Vertical Flip (right) on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/sizingInputFlip
+
+Knob - Increment, Decrement or Reset Yaw on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputYaw
+
+Knob - Increment, Decrement or Reset Pitch on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputPitch
+
+Knob - Increment, Decrement or Reset Height on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputHeight
+
+Knob - Increment, Decrement or Reset Width on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputWidth
+
+Knob - Increment, Decrement or Reset Rotate on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputRotate
+
+Knob - Increment, Decrement or Reset Zoom on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingInputZoom
+
+Knob - Increment, Decrement or Reset Tilt on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Between Fine and Medium
+/sizingInputTilt
+
+Knob - Increment, Decrement or Reset Pan on Sizing Input Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Between Fine and Medium
+/sizingInputPan
+
+Button - Reset Blanking on Sizing Input Panel
+/sizingInputResetBlanking
+
+Button - Reset Sizing on Sizing Input Panel
+/sizingInputResetSizing
+
+Button - Reset Blanking on Sizing Input Panel
+/sizingInputSmooth
+
+***** End of Sizing Input mode functions *****
+
+***** Sizing Edit mode functions *****
+
+Knob - Increment, Decrement or Reset Softness on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditSoftness
+
+Knob - Increment, Decrement or Reset Crop Bottom on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditCropBottom
+
+Knob - Increment, Decrement or Reset Crop Top on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditCropTop
+
+Knob - Increment, Decrement or Reset Crop Right on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditCropRight
+
+Knob - Increment, Decrement or Reset Crop Left on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditCropLeft
+
+Knob - Toggle Horizontal Flip (left) and Vertical Flip (right) on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/sizingEditFlip
+
+Knob - Increment, Decrement or Reset Yaw on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditYaw
+
+Knob - Increment, Decrement or Reset Pitch on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditPitch
+
+Knob - Increment, Decrement or Reset Zoom Y on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditZoomY
+
+Knob - Increment, Decrement or Reset Zoom X on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditZoomX
+
+Knob - Increment, Decrement or Reset Distortion on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditDistortion
+
+Knob - Increment, Decrement or Reset Rotate on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/sizingEditRotate
+
+Knob - Increment, Decrement or Reset Tilt on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Between Fine and Medium
+/sizingEditTilt
+
+Knob - Increment, Decrement or Reset Pan on Sizing Edit Panel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Between Fine and Medium
+/sizingEditPan
+
+Button - Reset Crop on Sizing Edit Panel
+/sizingEditResetCrop
+
+Button - Reset Sizing on Sizing Edit Panel
+/sizingEditResetSizing
+
+Button - Link / Unlink Zoom X and Y on Sizing Edit Panel
+/sizingEditLinkZoom
+
+Button - Activate Lens Correction on Sizing Edit Panel
+/sizingEditLensCorrection
+
+Button - Reset All on active Sizing Panel
+/sizingResetAll
+
+***** End of Sizing Edit mode functions *****
+
+***** Tracking mode functions *****
+
+Jog - Render one frame reverse or forward on Tracking Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/trackingStepFramesTrack
+
+Knob - Toggle between Window and FX panels on Tracking Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/trackingToggleWindowFX
+
+Knob - Toggle between Clip and Frame options on Tracking Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/trackingToggleClipFrame
+
+Button - Tracking Reset All on Tracking Panel
+/trackingResetAll
+
+Button - Tracking Paste Data on Tracking Panel
+/trackingPasteData
+
+Button - Tracking Copy Data on Tracking Panel
+/trackingCopyData
+
+Button - Tracking Show Tracking on Tracking Panel
+/trackingShowTracking
+
+Button - Tracking 3D on Tracking Panel
+/tracking3D
+
+Button - Tracking Rotate on Tracking Panel
+/trackingRotate
+
+Button - Tracking Zoom on Tracking Panel
+/trackingZoom
+
+Button - Tracking Tilt on Tracking Panel
+/trackingTilt
+
+Button - Tracking Pan on Tracking Panel
+/trackingPan
+
+Button - Tracking Next Keyframe on Tracking Panel
+/trackingNextKeyframe
+
+Button - Tracking Forward on Tracking Panel
+/trackingAddRemoveKeyframe
+
+Button - Tracking Previous Keyframe on Tracking Panel
+/trackingPreviousKeyframe
+
+Button - Remove Tracking Point on Tracking Panel
+/trackingRemovePoint
+
+Button - Add Tracking Point on Tracking Panel
+/trackingAddPoint
+
+Button - Tracking Reverse and Forward on Tracking Panel
+/trackingTrackReverseForward
+
+Button - Tracking Forward on Tracking Panel
+/trackingTrackForward
+
+Button - Stop Tracking on Tracking Panel
+/trackingStopTracking
+
+Button - Tracking Reverse on Tracking Panel
+/trackingTrackReverse
+
+***** End of Tracking mode functions *****
+
+***** Color Warper ChrXLum mode functions *****
+
+Button - Reset All Color Warper Panel
+/cwResetColorWarper
+
+Knob - Increment, decrement or reset Chroma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+/cwChrLumChromaBar
+
+Knob - Run through Chroma Resolution options on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/cwChrLumChromaResolution
+
+Knob - Run through Luma Resolution options on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/cwChrLumLumResolution
+
+Knob - Run through Color Space options on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/cwChrLumColorSpace
+
+Knob - Toggle between Grids 1 (left) and 2(right) on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/cwChrLumToggleGrids
+
+Knob - Smooth Chroma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/cwChrLumSmoothChroma
+
+Knob - Smooth Luma on Color Warper ChrXLum Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/cwChrLumSmoothLum
+
+Button - Select / Deselect on Color Warper ChrXLum Panel
+/cwChrLumSelect
+
+Button - Draw on Color Warper ChrXLum Panel
+/cwChrLumDraw
+
+Button - Pin / De-Pin on Color Warper ChrXLum Panel
+/cwChrLumPinDepin
+
+Button - Pull Points on Color Warper ChrXLum Panel
+/cwChrLumPullPoints
+
+Button - Push Points on Color Warper ChrXLum Panel
+/cwChrLumPushPoints
+
+Button - Increase Fall Off on Color Warper ChrXLum Panel
+/cwChrLumIncreaseFalloff
+
+Button - Decrease Fall Off on Color Warper ChrXLum Panel
+/cwChrLumDecreaseFalloff
+
+Button - Invert Selection on Color Warper ChrXLum Panel
+/cwChrLumInvertSelection
+
+Button - Convert to Pin on Color Warper ChrXLum Panel
+/cwChrLumConvertToPin
+
+Button - Select or Pin Column on Color Warper ChrXLum Panel
+/cwChrLumSelectPinColumn
+
+Button - Select or Pin Ring on Color Warper ChrXLum Panel
+/cwChrLumSelectPinRow
+
+Button - Select or Deselect All on Color Warper ChrXLum Panel
+/cwChrLumSelectDeselectAll
+
+Button - Reset All Selection on Color Warper ChrXLum Panel
+/cwChrLumResetSelection
+
+Button - Turn On/Off Auto Lock on Color Warper ChrXLum Panel
+/cwChrLumAutoLock
+
+Button - Auto Pin Columns on Color Warper ChrXLum Panel
+/cwChrLumAutoPinColumns
+
+Button - Auto Pin Rows on Color Warper ChrXLum Panel
+/cwChrLumAutoPinRows
+
+Button - Auto Pin Single Point on Color Warper ChrXLum Panel
+/cwChrLumAutoPinSingle
+
+***** End of Color Warper ChrXLum mode functions *****
+
+***** Color Warper HueXSat mode functions *****
+
+Knob - Increment, decrement or reset Luma on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+/cwHueSatHueBar
+
+Knob - Increment, decrement or reset Luma on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+/cwHueSatSatBar
+
+Knob - Increment, decrement or reset Luma on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 2000 - Step: 1 - Coarse
+/cwHueSatLumaBar
+
+Knob - Run through Hue Resolution options on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/cwHueSatHueResolution
+
+Knob - Run through Saturation Resolution options on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/cwHueSatSatResolution
+
+Knob - Run through Color Space options on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 20 - Step: 1 - Coarse
+/cwHueSatColorSpace
+
+Knob - Smooth Hue on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/cwHueSatSmoothHue
+
+Knob - Smooth Saturation on Color Warper HueXSat Panel - Default Knob Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse
+/cwHueSatSmoothSat
+
+Button - Select / Deselect on Color Warper HueXSat Panel
+/cwHueSatSelect
+
+Button - Draw on Color Warper HueXSat Panel
+/cwHueSatDraw
+
+Button - Pin / De-Pin on Color Warper HueXSat Panel
+/cwHueSatPinDepin
+
+Button - Pull Points on Color Warper HueXSat Panel
+/cwHueSatPullPoints
+
+Button - Push Points on Color Warper HueXSat Panel
+/cwHueSatPushPoints
+
+Button - Increase Fall Off on Color Warper HueXSat Panel
+/cwHueSatIncreaseFalloff
+
+Button - Decrease Fall Off on Color Warper HueXSat Panel
+/cwHueSatDecreaseFalloff
+
+Button - Invert Selection on Color Warper HueXSat Panel
+/cwHueSatInvertSelection
+
+Button - Convert to Pin on Color Warper HueXSat Panel
+/cwHueSatConvertToPin
+
+Button - Select or Pin Column on Color Warper HueXSat Panel
+/cwHueSatSelectPinColumn
+
+Button - Select or Pin Ring on Color Warper HueXSat Panel
+/cwHueSatSelectPinRing
+
+Button - Select or Deselect All on Color Warper HueXSat Panel
+/cwHueSatSelectDeselectAll
+
+Button - Reset All Selection on Color Warper HueXSat Panel
+/cwHueSatResetSelection
+
+Button - Turn On/Off Auto Lock on Color Warper HueXSat Panel
+/cwHueSatAutoLock
+
+***** End of Color Warper HueXSat mode functions *****
+
+;***** Multi-functions for Jog Wheels *****
+
+Trackball - Move left/right the trackball to navigate between the next and previous clip on timeline and press the button over Jog Wheel to Delete anything - Default Trackball Sensitivity: Min: 0 - Max: 30 - Step: 1 - Coarse
+/navigateClipsLeftRightAndDelete
+
+Trackball - Move Left/Right the trackball to move the selected Hue Curves Dot on X axis - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hueCurvesMoveDotXWithPaste
+
+Jog - Move to select next (right) or previous (left) dot on Hue Curves Panel - Default Jog Sensitivity: Min: 0 - Max: 10 - Step: 1 - Coarse (Different of the other tools, this one doesn't change automatically the panel for hue curves, you need change the panel using one of the buttons or knobs. This is for prevent some possible bugs with the hue curves dots. But, like the other tools, this one just work when you are in the correct hue curves panel)
+/hueCurvesSelectDotsWithCopy
+
+Trackball - Move Left/Right the trackball to move the selected Custom Curves Dot on X axis - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/customCurvesMoveDotXWithPaste
+
+Jog - Move to select next (right) or previous (left) dot on Custom Curves Panel - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse (Different of the other tools, this one doesn't change automatically the panel for custom curves, you need change the panel using one of the buttons or knobs. This is for prevent some possible bugs with the custom curves dots. But, like the other tools, this one just work when you are in the correct custom curves panel)
+/customCurvesSelectDotsWithCopy
+
+Jog/Knob - Move HDR Wheels to the left or righ on HDR Panel - Default Jog/Knob Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/hdrNavigateWheelsWithCopy
+
+Trackball - Move left/right the trackball to navigate between the next and previous clip on timeline and press the button over Jog Wheel to Delete anything - Default Trackball Sensitivity: Min: 0 - Max: 30 - Step: 1 - Coarse
+/navigateClipsLeftRightWithDelete
+
+Jog - Turn left to go backward on timeline and right to go forward - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/moveTimelineWithBackspace
+
+Jog - Turn left to zoom out and right to zoom in - Default Jog Sensitivity: Min: 0 - Max: 6 - Step: 1 - Coarse
+/timelineZoomWithCopy
+
+Trackball - Move left/right the trackball to move the X axis at the second HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrSecondWheelXWithDelete
+
+Trackball - Move left/right the trackball to move the X axis at the first HDR Wheel - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/hdrFirstWheelXWithPaste
+
+Trackball - Move up/down the trackball to move the X axis at the LOG Midtones - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logSecondWheelXWithDelete
+
+Jog - Increment (right) or decrement (left) the LOG Midtones Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logSecondJogWithBackspace
+
+Trackball - Move up/down the trackball to move the X axis at the LOG Shadow - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFirstWheelXWithPaste
+
+Jog - Increment (right) or decrement (left) the LOG Shadow Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/logFirstJogWithCopy
+
+Jog - Increment (right) or decrement (left) the Bars Gamma Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsSecondJogWithBackspace
+
+Jog - Increment (right) or decrement (left) the Bars Lift Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/barsFirstJogWithCopy
+
+Trackball - Move left/right the trackball to move the X axis at the Primaries Gamma - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesSecondWheelXWithDelete
+
+Jog - Increment (right) or decrement (left) the Primaries Gamma Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesSecondJogWithBackspace
+
+Jog - Alternate Key + First Jog Wheel can be used to move the thumbnails to left and right in Color Page - Default Jog Sensitivity - Min. 0 - Max: 100 - Step: 1 - Coarse
+/colorPageScrollThumbnailsWithCut
+
+Trackball - Move left/right the trackball to move the X axis at the Primaries Lift - Default Trackball Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFirstWheelXWithPaste
+
+Jog - Increment (right) or decrement (left) the Primaries Lift Jog - Default Jog Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+/primariesFirstJogWithCopy
+
+Jog to Shortcut - Quarter Increment/Decrement Printer Lights Green - Davinci Resolve default shortcut: Ctrl + Numpad 5 and Ctrl + Numpad 8 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterGreenWithBackspace
+
+Jog to Shortcut - Quarter Increment/Decrement Printer Lights Cyan - Davinci Resolve default shortcut: Ctrl + Numpad Sub and Ctrl + Numpad 1  - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterCyanWithCut
+
+Jog to Shortcut - Quarter Increment/Decrement Printer Lights Red - Davinci Resolve default shortcut: Ctrl + Numpad 4 and Ctrl + Numpad 7 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterRedWithCopy
+
+Jog to Shortcut - Quarter Increment/Decrement Printer Lights Green - Davinci Resolve default shortcut: Ctrl + Numpad 5 and Ctrl + Numpad 8 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterGreenWithDelete
+
+Knob to Shortcut - Half Increment/Decrement Printer Lights Master - Davinci Resolve NON-default shortcut: Ctrl + Alt + Numpad Enter and Ctrl + Alt + Numpad Add  - Default Knob Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsHalfMasterWithBackspace
+
+Jog to Shortcut - Quarter Increment/Decrement Printer Lights Red - Davinci Resolve default shortcut: Ctrl + Numpad 4 and Ctrl + Numpad 7 - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterRedWithPaste
+
+Jog to Shortcut - Quarter Increment/Decrement Printer Lights Master - Davinci Resolve default shortcut: Ctrl + Numpad Enter and Ctrl + Numpad Add  - Default Jog Sensitivity: Min: 0 - Max: 100 - Step: 1 - Coarse
+/printerLightsQuarterMasterWithCopy
+
+;***** End of multi-functions Jog Wheels *****
+
+***** End Of Update 2.5 Functions *****

@@ -3,8 +3,6 @@ string := 7650.0000
 msgbox % SubStr(String, 1, InStr(string, ".") - 1) 
 msgbox % SubStr(String, InStr(string, ".") + 1)
 
-
-
 ;Pegar do início até um caracter específico:
 string := "0x100C32\4.1.1.1.1.2.2.2.2"
 LastDotPos := InStr(string,"\",0,0)  ; get position of last occurrence of "."
@@ -15,3 +13,15 @@ MsgBox %result%  ; display result 0x100C32
 string := "0x100C32\4.1.1.1.1.2.2.2.2"
 result := SubStr(string,1,InStr(string,"\",0,0)-1)  ; get substring from start to last dot
 
+;Different kinds of loop:
+array := [A, B, C]
+
+MsgBox % array.Count() ;Returns 3
+
+loop % array.Count()
+    MsgBox % array[A_Index]
+Return
+
+for each, iten in array{
+    MsgBox % iten
+}

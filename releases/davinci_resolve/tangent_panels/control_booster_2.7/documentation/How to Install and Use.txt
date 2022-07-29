@@ -1,0 +1,71 @@
+How to install Control Booster for Tangent Panels - Version 2.7
+
+This is a step-by-step about how to install and make Tangent Wave Booster work.
+
+You can find a video tutorial about this step-by-step on our website: https://souandrerodrigues.com.br/controlbooster
+
+1 - First of all! Turn off the connection between Davinci Resolve and Tangent Panel!
+Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Panel->Select this panel for grading - Select "NONE".
+
+2 - Download TWB, unzip and put it in somewhere on your PC.
+
+3 - Download and install Tangent Mapper 1.7.6 Beta or HIGHER (there's a installation file inside the installs folder)
+
+4 - Open the Control Booster (run the Control Booster.exe file on the root folder).
+
+5 - Open the Tangent Mapper.
+
+6 - Go to File -> New Control Map.
+
+7 - Select "Add a New Application" and click on "Next" button.
+
+8 - Click on "Select From Desktop Button".
+
+9 - You have 10 seconds to click on the Tangent Wave Booster Screen, just click on the window of the software and wait for the 10 seconds end.
+
+10 - After the 10 seconds, Tangent Mapper shows the name of the Tangent Wave Booster.exe so you just have to click on "Finish" button.
+
+11 - Now go to File -> Manage Control Maps.
+
+12 - On top part of the menu check if the Control Booster.exe is selected and on the bottom part click on "Import" button.
+
+13 - Navigate to TWB folder. Inside the "MAPPINGS" folder you will select the respective map XML for your panel. Choose what you gonna use and click on "open" button.
+
+- For Tangent Wave or Tangent Wave 2 - "control_booster_2.7_wave.xml".
+- For Tangent Elements or Tangent Elements VS (Tablet app) - "control_booster_2.7_elements.xml". This map is mapped to be used with one BT, one KB, one TK and one MF panels.
+
+* If you're using other panel from Tangent or other brand, you have to create your own map using the functions on the "Control Booster - OSC Functions List.txt" file at the "DOCUMENTATION" folder. When possible I'll add more default mappings for other panels/MIDI Controllers/Apps.
+
+14 - Click on "Select" and "Close" buttons.
+
+15 - Now go to Davinci Resolve, open the keyboard customization screen (Ctrl+Alt+K or Davinci Resolve->Keyboard Customization).
+
+16 - Click on the 3 dots (...) on the upper right corner and choose "Import Preset...".
+
+17 - Inside the same folder "MAPPINGS" you gonna find the "davinci_resolve_keyboard_shortcuts.txt", select it.
+
+18 - Click on "Save" button.
+
+19 - On Control Booster, select the resolution/dpi scale that you're using on your computer.
+
+20 - Choose between the 3 types of Davinci Resolve layout that you're using:
+
+- NORMAL: In the Color Page Davinci has 3 groups of tools on the bottom page. First with Camera RAW, Color Checker, Primaries, HDR, RGM Mixer and Motion Effects. Second has Curves, Color Warper, Qualifier, Power Windows, Tracing, Magic Mask, BSM, Key, Sizing and 3D and the last one has Key Frame Animation, Scopes and Information. Also in this mode, the Matte Finesse panel on Qualifier tools has 2 separated pages.
+
+- CONDENSED: In the Color Page Davinci has 2 groups of tools. It merges in one group all the tools and let the Key Frame Animation, Scopes and Information on the second group. The Matte Finesse tools has 2 pages too.
+
+- WIDE: Same as NORMAL layout but on this the Matte Finesse tools are all together, there's no 2 pages for it.
+
+21 - Choose the type of hashs you want for the Custom Curves. There are 3 types (1, 2 and 3) and you need test it. Go to custom curves and add some dots to a curve, hit the "READ ALL DOTS" button and turn the third jog wheel that select the dots. If it's not selecting dot by dot, change the hashs type to another one and test it again until it works.
+
+22 - If you're using your scopes window floating, outside of Davinci default layout, you have to configure the positions of the scopes menu that toggles between each scope and the positions of the 3 dots menu and options for display focus and low pass filter. After that you have to check the checkbox on TWB so Control Booster knows that scopes are floating.
+
+23 - You're ready to go! Every time you want to work with your panel, just run Control Booster, click at the "OK" Button when you receive the message: "Control Booster is ready to be used", run the Tangent Wave Mapper (or your other mapper software) and that's it! Open Davinci Resolve and be happy!
+
+TIP: You can press Alt + Down Arrow (on top of F-Keys) on the Tangent Wave 1 and 2 Panels (or whatever button you setup with the function /startStop) to pause or restart Control Booster. So you can go to other windows outside Davinci without the misstype some key or control on your panel. On Tangent Elements you can press A+B (Alt+B) on the MF panel for start/stop TWB.
+
+IMPORTANT 1: Control Booster has some native resolutions and scaling configurations, so if you're using a different resolution or scaling, or if you want to customize your Davinci layout, you have to setup the positions of the elements on the screen. There's a very detailed video about how to do this on our website.
+
+IMPORTANT 2: Control Booster uses a DLL called OSC2AHK.DLL to make the comunication between the mappers softwares with OSC and Control Booster. For this it uses the door 7002, this can be changed using Tangent Mapper but if you change it you need change the port on Control Booster too on the 127.0.0.1 local IP. If you don't see the message saying "Control Booster is ready to be used" when you start the software (instead you get a message about error on a port) you need to open this door on your firewall. There's an explanation about how to do this on a video at our website.
+
+IMPORTANT 3: Some anti-virus can identify Control Booster and/or the OSC2AHK.DLL as a virus, this is a FALSE POSITIVE. There's NOTHING on Control Booster that can be harmful to you or your PC. Just add an exception to the software and you're be fine.

@@ -3851,11 +3851,71 @@
                         <Control type="Encoder" number="0"> <!-- Element-Kb Knob 1 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFirstWheelKnobX</CustomControl>
+                                <CustomName>1st X</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFalloffFirstWheel</CustomControl>
+                                <CustomName>1st Fall.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1"> <!-- Element-Kb Knob 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFirstWheelKnobY</CustomControl>
+                                <CustomName>1st Y</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFalloffSecondWheel</CustomControl>
+                                <CustomName>2nd Fall.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2"> <!-- Element-Kb Knob 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrFirstWheelSaturation</CustomControl>
                                 <CustomName>1st Sat.</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFalloffThirdWheel</CustomControl>
+                                <CustomName>3rd Fall.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3"> <!-- Element-Kb Knob 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrSecondWheelKnobX</CustomControl>
+                                <CustomName>2nd X</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -3868,14 +3928,14 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="1"> <!-- Element-Kb Knob 2 -->
+                        <Control type="Encoder" number="4"> <!-- Element-Kb Knob 5 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrSecondWheelSaturation</CustomControl>
-                                <CustomName>2nd Sat.</CustomName>
+                                <CustomControl>/hdrSecondWheelKnobY</CustomControl>
+                                <CustomName>2nd Y</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -3888,11 +3948,11 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="2"> <!-- Element-Kb Knob 3 -->
+                        <Control type="Encoder" number="5"> <!-- Element-Kb Knob 6 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrThirdWheelSaturation</CustomControl>
-                                <CustomName>3rd Sat.</CustomName>
+                                <CustomControl>/hdrSecondWheelSaturation</CustomControl>
+                                <CustomName>2nd Sat.</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
@@ -3908,14 +3968,14 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="3"> <!-- Element-Kb Knob 4 -->
+                        <Control type="Encoder" number="6"> <!-- Element-Kb Knob 7 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFourthWheelSaturation</CustomControl>
-                                <CustomName>4th Sat.</CustomName>
+                                <CustomControl>/hdrThirdWheelKnobX</CustomControl>
+                                <CustomName>3rd X</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -3928,7 +3988,16 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="4"> <!-- Element-Kb Knob 5 -->
+                        <Control type="Encoder" number="7"> <!-- Element-Kb Knob 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrThirdWheelKnobY</CustomControl>
+                                <CustomName>3rd Y</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrPivot</CustomControl>
@@ -3939,7 +4008,16 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="5"> <!-- Element-Kb Knob 6 -->
+                        <Control type="Encoder" number="8"> <!-- Element-Kb Knob 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrThirdWheelSaturation</CustomControl>
+                                <CustomName>3rd Sat.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrMD</CustomControl>
@@ -3950,50 +4028,17 @@
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
-                        <Control type="Encoder" number="6"> <!-- Element-Kb Knob 7 -->
+                        <Control type="Encoder" number="9"> <!-- Element-Kb Knob 10 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFalloffFirstWheel</CustomControl>
-                                <CustomName>1st Fall.</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrBlackOffset</CustomControl>
-                                <CustomName>B. Offset</CustomName>
+                                <CustomControl>/hdrFourthWheelKnobX</CustomControl>
+                                <CustomName>4th X</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="7"> <!-- Element-Kb Knob 8 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFalloffSecondWheel</CustomControl>
-                                <CustomName>2nd Fall.</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="8"> <!-- Element-Kb Knob 9 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFalloffThirdWheel</CustomControl>
-                                <CustomName>3rd Fall.</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="9"> <!-- Element-Kb Knob 10 -->
-                            <Mapping mode="Std">
+                            <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrZoneSelection</CustomControl>
                                 <CustomName>Zone Sel.</CustomName>
@@ -4006,6 +4051,15 @@
                         <Control type="Encoder" number="10"> <!-- Element-Kb Knob 11 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFourthWheelKnobY</CustomControl>
+                                <CustomName>4th Y</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrZoneMaxRange</CustomControl>
                                 <CustomName>Min/Max R.</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
@@ -4017,11 +4071,33 @@
                         <Control type="Encoder" number="11"> <!-- Element-Kb Knob 12 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFourthWheelSaturation</CustomControl>
+                                <CustomName>4th Sat.</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrZoneFalloff</CustomControl>
                                 <CustomName>Zone Falloff</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                    <Bank>
+                        <Control type="Encoder" number="0"> <!-- Element-Kb Knob 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrBlackOffset</CustomControl>
+                                <CustomName>B. Offset</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>

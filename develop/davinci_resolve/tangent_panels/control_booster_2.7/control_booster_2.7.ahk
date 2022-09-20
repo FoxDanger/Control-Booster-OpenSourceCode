@@ -7,8 +7,10 @@
 
 ;- TODO:
 ;- Add Pan, Semitones and cents control to audio inspector controllers on inspector mode
+;- Add a button to turn on/off the splines on hue curves
 
 ;Updates of 2.7 version:
+;- Added knobs functions on HDR mode to control X and Y in each color wheel. The trackball for this function on this mode can be a little tricky when you need precision, so for small changes you can use the knobs now.
 ;- Implemented UIAutomation for checking the windows state on Davinci Resolve UI. With this you can close windows with your mouse and Control Booster will open again if necessary to use some tool like in Inspector and Media Pool for example.
 ;- We still need windows_status.ini to save the information about the Matte Finess status on Qualifier because it doesn't has an AutomationID sadly.
 
@@ -9109,6 +9111,28 @@ _hdrTemperature(oscType, data, msgID, hwnd){
     }
 }
 
+;Knob - Increment, decrement or reset Y value on HDR Fourth Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrFourthWheelKnobY(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_fourth_wheel_y", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_fourth_wheel_y")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset X value on HDR Fourth Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrFourthWheelKnobX(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_fourth_wheel_x", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_fourth_wheel_x")
+        Return
+    }
+}
+
 ;Knob - Increment, decrement or reset saturation value on HDR Fourth Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
 _hdrFourthWheelSaturation(oscType, data, msgID, hwnd){
     if (data == 0){
@@ -9127,6 +9151,28 @@ _hdrFourthWheelExposure(oscType, data, msgID, hwnd){
         Return
     }Else{
         MoveMouseAndDrag(data, "x", "pos_hdr_fourth_wheel_exp")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset Y value on HDR Third Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrThirdWheelKnobY(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_third_wheel_y", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_third_wheel_y")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset X value on HDR Third Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrThirdWheelKnobX(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_third_wheel_x", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_third_wheel_x")
         Return
     }
 }
@@ -9163,6 +9209,28 @@ _hdrThirdWheelExposure(oscType, data, msgID, hwnd){
     }
 }
 
+;Knob - Increment, decrement or reset Y value on HDR Second Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrSecondWheelKnobY(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_second_wheel_y", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_second_wheel_y")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset X value on HDR Second Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrSecondWheelKnobX(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_second_wheel_x", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_second_wheel_x")
+        Return
+    }
+}
+
 ;Knob - Turn left/right to increment or decrement falloff value on the second HDR Wheel - Default Knob Sensitivity: Min: 0 - Max: 5000 - Step: 1 - Coarse
 _hdrFalloffSecondWheel(oscType, data, msgID, hwnd){
     if (data == 0){
@@ -9191,6 +9259,28 @@ _hdrSecondWheelExposure(oscType, data, msgID, hwnd){
         Return
     }Else{
         MoveMouseAndDrag(data, "x", "pos_hdr_second_wheel_exp")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset Y value on HDR First Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrFirstWheelKnobY(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_first_wheel_y", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_first_wheel_y")
+        Return
+    }
+}
+
+;Knob - Increment, decrement or reset X value on HDR First Wheel - Default Knob Sensitivity: Min: 0 - Max: 1000 - Step: 1 - Coarse
+_hdrFirstWheelKnobX(oscType, data, msgID, hwnd){
+    if (data == 0){
+        ResetForSpecificValue("pos_hdr_first_wheel_x", 0)
+        Return
+    }Else{
+        MoveMouseAndDrag(data, "x", "pos_hdr_first_wheel_x")
         Return
     }
 }

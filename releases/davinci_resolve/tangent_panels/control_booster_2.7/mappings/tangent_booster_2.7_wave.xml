@@ -993,32 +993,10 @@
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/timelineViewOptionsStackedTimelines</CustomControl>
-                                <CustomName>Stacked Timelines On/Off</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
                                 <CustomControl>/bypassColorGrading</CustomControl>
                                 <CustomName>ByPass Color Grading</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="32"> <!-- Wave Function 6 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/timelineViewOptionsSubtitleTracks</CustomControl>
-                                <CustomName>Subtitle Tracks On/Off</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="27"> <!-- Wave Function 7 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/timelineViewOptionsAudioWaveforms</CustomControl>
-                                <CustomName>Audio Waveforms On/Off</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -6635,97 +6613,39 @@
                         <Control type="Button" number="33"> <!-- Wave Function 1 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadA</CustomControl>
-                                <CustomName>Active Playhead A</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/rippleNodesToSelectedClips</CustomControl>
-                                <CustomName>Ripple Node Changes to Selected Clips</CustomName>
+                                <CustomControl>/selectionTool</CustomControl>
+                                <CustomName>Selection Tool</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="34"> <!-- Wave Function 2 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadB</CustomControl>
-                                <CustomName>Active Playhead B</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/toggleTimelineThumbMode</CustomControl>
-                                <CustomName>Toggle Timeline Thumbnail Mode</CustomName>
+                                <CustomControl>/bladeTool</CustomControl>
+                                <CustomName>Blade Tool</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="35"> <!-- Wave Function 3 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadC</CustomControl>
-                                <CustomName>Active Playhead C</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/fullView</CustomControl>
-                                <CustomName>Full View</CustomName>
+                                <CustomControl>/trimTool</CustomControl>
+                                <CustomName>Trim Tool</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="30"> <!-- Wave Function 4 -->
                             <Mapping mode="Std">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/playheadD</CustomControl>
-                                <CustomName>Active Playhead D</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/openKeyFrameWindowColorPage</CustomControl>
-                                <CustomName>Key Frame Window - Color Page</CustomName>
+                                <CustomControl>/dynamicTrimTool</CustomControl>
+                                <CustomName>Dynamic Trim Tool</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
                         <Control type="Button" number="31"> <!-- Wave Function 5 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/resetPlayheads</CustomControl>
-                                <CustomName>Reset Playheads</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x80000014</Key> <!-- OSC Command -->
                                 <CustomControl>/bypassColorGrading</CustomControl>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="32"> <!-- Wave Function 6 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/enableDisableSelectedNodes</CustomControl>
-                                <CustomName>Enable/Disable Selected Nodes</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/enableDisableAllNodes</CustomControl>
-                                <CustomName>Enable/Disable All Nodes</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Button" number="27"> <!-- Wave Function 7 -->
-                            <Mapping mode="Std">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/applyGrade</CustomControl>
-                                <CustomName>Apply Grade</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x80000014</Key> <!-- OSC Command -->
-                                <CustomControl>/grabStill</CustomControl>
-                                <CustomName>Grab Still</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                             </Mapping>
                         </Control>
@@ -7447,7 +7367,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7469,7 +7389,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7491,7 +7411,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7501,7 +7421,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -7513,7 +7433,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -7525,7 +7445,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -7537,7 +7457,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7547,7 +7467,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -7559,7 +7479,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7581,7 +7501,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7591,7 +7511,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>10.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -7603,7 +7523,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
@@ -7613,7 +7533,7 @@
                                 <Display>Number</Display>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value2>500.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
@@ -7622,6 +7542,46 @@
                 <ControlBank id="Encoder">
                     <Bank>
                         <Control type="Encoder" number="0"> <!-- Wave Knob 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFirstWheelKnobX</CustomControl>
+                                <CustomName>X 1st</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFalloffFirstWheel</CustomControl>
+                                <CustomName>Fall. 1st</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1"> <!-- Wave Knob 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFirstWheelKnobY</CustomControl>
+                                <CustomName>Y 1st</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFalloffSecondWheel</CustomControl>
+                                <CustomName>Fall. 2nd</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2"> <!-- Wave Knob 3 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrFirstWheelSaturation</CustomControl>
@@ -7633,48 +7593,8 @@
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrTemperature</CustomControl>
-                                <CustomName>Temp</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="1"> <!-- Wave Knob 2 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrSecondWheelSaturation</CustomControl>
-                                <CustomName>Sat. 2nd</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrTint</CustomControl>
-                                <CustomName>Tint</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="2"> <!-- Wave Knob 3 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrThirdWheelSaturation</CustomControl>
-                                <CustomName>Sat. 3rd</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrHue</CustomControl>
-                                <CustomName>Hue</CustomName>
+                                <CustomControl>/hdrFalloffThirdWheel</CustomControl>
+                                <CustomName>Fall. 3rd</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
@@ -7684,45 +7604,34 @@
                         <Control type="Encoder" number="3"> <!-- Wave Knob 4 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFourthWheelSaturation</CustomControl>
-                                <CustomName>Sat. 4th</CustomName>
+                                <CustomControl>/hdrSecondWheelKnobX</CustomControl>
+                                <CustomName>X 2nd</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                             <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrContrast</CustomControl>
-                                <CustomName>Contrast</CustomName>
+                                <CustomControl>/hdrZoneSelection</CustomControl>
+                                <CustomName>Zone Sel.</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value2>50.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
                         <Control type="Encoder" number="4"> <!-- Wave Knob 5 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrZoneSelection</CustomControl>
-                                <CustomName>Zone Sel.</CustomName>
+                                <CustomControl>/hdrSecondWheelKnobY</CustomControl>
+                                <CustomName>Y 2nd</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>1.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>50.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrPivot</CustomControl>
-                                <CustomName>Pivot</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>1000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="5"> <!-- Wave Knob 6 -->
-                            <Mapping mode="Std">
+                            <Mapping mode="Alt">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
                                 <CustomControl>/hdrZoneMaxRange</CustomControl>
                                 <CustomName>Max Range</CustomName>
@@ -7731,52 +7640,12 @@
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
                             </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrMD</CustomControl>
-                                <CustomName>MD</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
                         </Control>
-                        <Control type="Encoder" number="6"> <!-- Wave Knob 7 -->
+                        <Control type="Encoder" number="5"> <!-- Wave Knob 6 -->
                             <Mapping mode="Std">
                                 <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFalloffFirstWheel</CustomControl>
-                                <CustomName>Fall. 1st</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                            <Mapping mode="Alt">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrBlackOffset</CustomControl>
-                                <CustomName>B. Offset</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>1000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="7"> <!-- Wave Knob 8 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFalloffSecondWheel</CustomControl>
-                                <CustomName>Fall. 2nd</CustomName>
-                                <Argument>0x00000000</Argument> <!-- Integer -->
-                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
-                                <Value2>5000.000000</Value2> <!-- Maximum -->
-                                <Value3>1.000000</Value3> <!-- Step -->
-                            </Mapping>
-                        </Control>
-                        <Control type="Encoder" number="8"> <!-- Wave Knob 9 -->
-                            <Mapping mode="Std">
-                                <Key>0x81000007</Key> <!-- OSC Command -->
-                                <CustomControl>/hdrFalloffThirdWheel</CustomControl>
-                                <CustomName>Fall. 3rd</CustomName>
+                                <CustomControl>/hdrSecondWheelSaturation</CustomControl>
+                                <CustomName>Sat. 2nd</CustomName>
                                 <Argument>0x00000000</Argument> <!-- Integer -->
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
@@ -7790,6 +7659,145 @@
                                 <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
                                 <Value2>5000.000000</Value2> <!-- Maximum -->
                                 <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6"> <!-- Wave Knob 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrThirdWheelKnobX</CustomControl>
+                                <CustomName>X 3rd</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFourthWheelKnobX</CustomControl>
+                                <CustomName>X 4th</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="7"> <!-- Wave Knob 8 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrThirdWheelKnobY</CustomControl>
+                                <CustomName>Y 3rd</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFourthWheelKnobY</CustomControl>
+                                <CustomName>Y 4th</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="8"> <!-- Wave Knob 9 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrThirdWheelSaturation</CustomControl>
+                                <CustomName>Sat. 3rd</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                            <Mapping mode="Alt">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrFourthWheelSaturation</CustomControl>
+                                <CustomName>Sat. 4th</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                    </Bank>
+                    <Bank>
+                        <Control type="Encoder" number="0"> <!-- Wave Knob 1 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrTemperature</CustomControl>
+                                <CustomName>Temp</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="1"> <!-- Wave Knob 2 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrTint</CustomControl>
+                                <CustomName>Tint</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="2"> <!-- Wave Knob 3 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrHue</CustomControl>
+                                <CustomName>Hue</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>5000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="3"> <!-- Wave Knob 4 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrContrast</CustomControl>
+                                <CustomName>Contrast</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="4"> <!-- Wave Knob 5 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrPivot</CustomControl>
+                                <CustomName>Pivot</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="5"> <!-- Wave Knob 6 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrMD</CustomControl>
+                                <CustomName>MD</CustomName>
+                                <Argument>0x00000000</Argument> <!-- Integer -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>1.000000</Value3> <!-- Step -->
+                            </Mapping>
+                        </Control>
+                        <Control type="Encoder" number="6"> <!-- Wave Knob 7 -->
+                            <Mapping mode="Std">
+                                <Key>0x81000007</Key> <!-- OSC Command -->
+                                <CustomControl>/hdrBlackOffset</CustomControl>
+                                <CustomName>B. Offset</CustomName>
+                                <Argument>0x00000001</Argument> <!-- Float -->
+                                <Value1>0.000000</Value1> <!-- Minimum (min, max and step used for display and sensitivity) -->
+                                <Value2>1000.000000</Value2> <!-- Maximum -->
+                                <Value3>0.001000</Value3> <!-- Step -->
                             </Mapping>
                         </Control>
                     </Bank>

@@ -1,0 +1,459 @@
+All modes - The buttons here are the buttons on the Panel and not keyboard!
+
+- Access the Modes Selection mode
+- Toggle on/off the mouse emulation using the a trackball and jog wheel
+- Playback forward and backward (press more times to go faster) or stop the timeline
+- Step frames forward and backward
+- Go to the next or previous clip
+- Undo or redo
+- Save project
+- Toggle fullscreen mode
+- Toggle on/off the color grading bypass
+- Open the Davinci Resolve home screen
+- Reset knobs parameters pressing the knobs
+- Reset trackball and jog wheels tools pressing their respective reset buttons
+- Pause the software
+
+Edit Mode
+
+- Zoom in/out the timeline
+- Move the timeline
+- Move clips or edit points
+- Cut selected clips or all timelines
+- Delete start to playhead
+- Delete end to playhead
+- Select closest clip/gap
+- Select closes edit point
+- Link/unlink clips
+- Retime
+- Change clip speed
+- Select/deselect all clips
+- Select clips forward/backward
+- Select clips forward/backward in active track
+- Add audio/video transition
+- Swap clips
+- Move clips up and down on tracks
+- Mark and remove in/out points
+- Go to the begin or end of the timeline
+- Insert, overwrite, replace, ripple overwrite, fit to fill or add clip to the end from preview to the timeline
+- Toggle the active window (preview or timeline)
+- Control monitoring volume
+- Open and close the expanded panels
+- Open and close the panels: Media pool, effects library, edit index, sound library, mixer, metadata and inspector
+- Navigate and open clips on media pool
+- Copy, paste, cut and paste attributes
+- Select the selection, blade, trim and dynamic trim tools
+
+Inspector Mode
+
+- Adjust zoom X and Y
+- Link/unlink zoom
+- Adjust position X and Y
+- Adjust rotation angle
+- Adjust anchor point X and Y
+- Adjust pitch
+- Adjust yaw
+- Toggle horizontal/vertical flip
+- Adjust audio volume
+- Add/remove key frames on each tool
+- Reset video transform
+- Reset audio transform
+
+All color modes
+
+- Open and close the panels: gallery, luts, media pool, timeline, clips, nodes, ofx and lightbox
+- Toggle on/off image wipe
+- Change image wipe modes
+- Toggle on/off split screen
+- Toggle on/off highlight
+- Toggle zoom view
+- Choose the nodes mode (pre-clip, clip, post-clip and timeline)
+- Mark playhead A, B, C, D and reset all playheads
+- Enable/disable selected node(s)
+- Enable/disable all nodes
+- Grab still
+- Apply grade
+- Reset node grade
+- Reset all nodes grades but keep node tree
+- Ripple node changes to selected clips
+- Toggle timeline mode (rec/source)
+- Toggle fullview mode
+- Open keyframe window
+
+Primaries Wheels Mode
+
+- Control all color wheels
+- Control all jog wheels
+- Adjust and reset individually Y, R, G, B values of each color wheel
+- Adjust Temperature
+- Adjust Tint
+- Adjust Contrast
+- Adjust Pivot
+- Adjust Mid/Detail
+- Adjust Col boost
+- Adjust Shad
+- Adjust Hi/Light
+- Adjust Sat
+- Adjust Hue
+- Adjust L. Mix
+- AWB
+- Color picker
+- Pick Black point
+- Pick White point
+- Reset all primaries
+
+Primaries Bars Mode
+
+- Control all jog wheels
+- Adjust and reset individually Y, R, G, B values of each color wheel
+- Adjust Temperature
+- Adjust Tint
+- Adjust Contrast
+- Adjust Pivot
+- Adjust Mid/Detail
+- Adjust Col boost
+- Adjust Shad
+- Adjust Hi/Light
+- Adjust Sat
+- Adjust Hue
+- Adjust L. Mix
+- AWB
+- Color picker
+- Pick Black point
+- Pick White point
+- Reset all primaries
+
+Log Wheels Mode
+
+- Control all color wheels
+- Control all jog wheels
+- Adjust and reset individually R, G, B values of each color wheel
+- Adjust Low Range
+- Adjust High Range
+- Adjust Temperature
+- Adjust Tint
+- Adjust Contrast
+- Adjust Pivot
+- Adjust Mid/Detail
+- Adjust Col boost
+- Adjust Shad
+- Adjust Hi/Light
+- Adjust Sat
+- Adjust Hue
+- AWB
+- Color picker
+- Reset all log
+
+HDR Wheels and Zones Mode
+
+- Control all color wheels
+- Adjust exposure on each color wheel
+- Adjust saturation on each color wheel
+- Adjust falloff on each color wheel
+- Toggle on/off highlight zone on each color wheel
+- Navigate left/right on color wheels
+- Adjust temperature
+- Adjust tint
+- Adjust hue
+- Adjust contrast
+- Adjust pivot
+- Adjust MD
+- Adjust B/Ofs
+- Open/Close HDR zones panel
+- Navigate between each zone
+- Adjust zone max range
+- Adjust zone falloff
+- Turn on/off each zone
+- Show/hide each zone
+- Reset all HDR
+
+RGB Mixer Mode
+
+- Adjust and reset individually R, G, B values of each output
+- Invert red/green
+- Invert green/blue
+- invert blue/red
+- Toggle on/off monochrome
+- Toggle on/off preserve luminance
+- Reset all RGB mixer
+
+Printer Lights Mode
+
+- Control full half and quarter of master, red, green, blue, cyan, magenta and yellow
+- Turn on/off printer lights
+
+Custom Curves Mode
+
+- Add default anchor points
+- Navigate between the anchor points using a jog wheel
+- Control the selected anchor point using a trackball
+- Delete the selected anchor point
+- Toggle on/off editable splines
+- Read all anchor points (for points added manually with mouse)
+- Copy to all curves
+- Copy to lum
+- Copy to red
+- Copy to green
+- Copy to blue
+- Select/link all custom curves
+- Select individually Y, R, G, B curves
+- Adjust individually Y, R, G, B intensity
+- Select/link all soft clip
+- Select individually R, G, B soft clip
+- Adjust low
+- Adjust hight
+- Adjust low soft
+- Adjust high soft
+- Reset curves
+- Reset soft clip
+- Reset all custom curves
+
+Hue Curves Mode
+
+- Choose between hue x hue, hue x sat, hue x lum, lum x sat, sat x sat and sat x lum modes
+- Add red, yellow, green, cyan, blue, magenta, black and white anchor points
+- Navigate between the anchor points using a jog wheel
+- Control the selected anchor point using a trackball
+- Delete the selected anchor point
+- Read all anchor points (for points added manually with mouse)
+- Control with 3 different speeds the input hue, hue rotate, saturation, lum gain, input lum, input sat and lum tools
+- Reset all hue curves
+
+Color Warper - Hue / Saturation Mode
+
+- Select/deselect
+- Draw selection
+- Pin/de-pin
+- Pull points
+- Push points
+- Increase falloff / smooth selection
+- Decrease falloff / smooth selection
+- Invert selection
+- Convert selected to pin
+- Select / pin column
+- Select / pin ring
+- Select / pin all or select / de-pin all
+- Reset selection / pins
+- Toggle on/off auto lock
+- Adjust hue
+- Adjust sat
+- Adjust luma
+- Smooth hue
+- Smooth sat
+- Reset hue
+- Reset sat
+- Reset luma
+- Select hue resolution
+- Select saturation resolution
+- Select color space
+- Reset all color warper hue / saturation
+
+Color Warper - Chorma / Luma Mode
+
+- Select/deselect
+- Draw selection
+- Pin/de-pin
+- Pull points
+- Push points
+- Increase falloff / smooth selection
+- Decrease falloff / smooth selection
+- Invert selection
+- Convert selected to pin
+- Select / pin column
+- Select / pin row
+- Select / pin all or select / de-pin all
+- Reset selection / pins
+- Toggle on/off auto lock
+- Adjust chroma
+- Adjust luma
+- Smooth chroma
+- Smooth luma
+- Reset chroma
+- Reset luma
+- Select chroma resolution
+- Select luma resolution
+- Select color space
+- Adjust axis angle
+- Toggle between grid 1 and 2
+- Reset all color warper chroma / luma
+
+Qualifier HSL/RGB Mode
+
+- Adjust center, width, soft, sym, low, high, low soft and high soft values for hue, saturation and luminance on HSL mode and red, green and blue on RGB mode
+- Toggle on/off individually hue, saturation, luminance, red, blue and green bars.
+- Reset individually hue, saturation, luminance, red, blue and green bars.
+- Picker
+- Picker substract
+- Picker add
+- Feather substract
+- Feather add
+- Invert
+- Adjust pre-filter matte finesse
+- Adjust clean black matte finesse
+- Adjust clean white matte finesse
+- Adjust black clip matte finesse
+- Adjust white clip matte finesse
+- Adjust blur radius matte finesse
+- Adjust in/out ratio matte finesse
+- Toggle morph op. matte finesse
+- Adjust morph radius matte finesse
+- Adjust denoise matte finesse
+- Adjust shadow matte finesse
+- Adjust midtone matte finesse
+- Adjust highligh matte finesse
+- Adjust post-filter matte finesse
+- Select red, green, blue, cyan, magenta and yellow six vector
+- Select chroma dark, light and light/dark
+- Reset all qualifier
+
+Power Windows Mode
+
+- Add linear power window
+- Add circle power window
+- Add polygon power window
+- Add curve power window
+- Add gradient power window
+- Add a node with linear power window
+- Add a node with circle power window
+- Add a node with polygon power window
+- Add a node with curve power window
+- Delete power window
+- Show/hide power windows
+- Adjust size
+- Adjust aspect
+- Adjust pan
+- Adjust tilt
+- Adjust rotate
+- Adjust opacity
+- Adjust soft 1
+- Adjust soft 2
+- Adjust soft 3
+- Adjust soft 4
+- Adjust inside softness
+- Adjust outside softness
+- Reset all power windows
+
+Tracking Mode
+
+- Track reverse
+- Track forward
+- Track reverse/forward
+- Stop tracking
+- Step forward/reverse tracking
+- Add a tracking point (point tracker mode only)
+- Remove a tracking point (point tracker mode only)
+- Add key frame
+- Go to next key frame
+- Go to previous key frame
+- Turn on/off pan, tilt, zoom, rotate and 3D options
+- Toggle between clip/frame modes
+- Toggle between window and fx tracking
+- Show/hide tracking
+- Copy track data
+- Paste track data
+- Reset all tracking
+
+Blur, Sharpen and Mist Mode
+
+- Toggle between blur, sharpen and mist modes
+- Adjust individually R, G, B bars of radius, H/V ratio and scaling
+- Link/unlink radius, H/V ratio and scaling
+- Reset radius, H/V ratio and scaling
+- Adjust coring softness
+- Adjust level
+- Adjust mix
+- Reset all blur, sharpen and mist
+
+Key Mode
+
+- Adjust key input gain
+- Adjust key input offset
+- Adjust key input blur radius
+- Adjust key input blur h/v
+- Toggle key input matte/mask
+- Toggle key input key
+- Adjust key output gain
+- Adjust key output offset
+- Toggle key output matte/mask
+- Adjust qualifier gain
+- Adjust qualifier offset
+- Toggle qualifier matte/mask
+- Toggle qualifier key
+- Reset all key
+
+Sizing Mode
+
+- Choose between edit, input, output, node and reference sizing modes
+- Adjust sizing pan
+- Adjust sizing tilt
+- Adjust sizing zoom
+- Adjust sizing rotate
+- Analyze lens correction 
+- Adjust sizing distortion
+- Adjust sizing zoom X
+- Adjust sizing zoom Y
+- Link/unlink sizing zoom
+- Adjust sizing widht
+- Adjust sizing height
+- Adjust sizing pitch
+- Adjust sizing yaw
+- Toggle sizing horizontal/vertical flip
+- Toggle on/off key lock
+- Adjust cropping left
+- Adjust cropping right
+- Adjust cropping top
+- Adjust cropping bottom
+- Adjust cropping softness
+- Adjust blanking top
+- Adjust blanking right
+- Adjust blanking bottom
+- Adjust blanking left
+- Toggle on/off blanking smooth
+- Reset sizing
+- Reset cropping/blanking
+- Reset all sizing
+
+Motion Effects Mode
+
+- Choose between frames on temporal NR
+- Choose between motion estimation type on temporal NR
+- Choose between motion range on temporal NR
+- Adjust luma on temporal threshold
+- Adjust chroma on temporal threshold
+- Link/unlink luma/chroma on temporal threshold
+- Adjust motion on temporal threshold
+- Adjust blend on temporal threshold
+- Choose between mode on spatial NR
+- Choose between radius on spatial NR
+- Adjust luma on spatial threshold
+- Adjust chroma on spatial threshold
+- Link/unlink luma/chroma on spatial threshold
+- Adjust blend on spatial threshold
+- Choose between motion estimation type on motion blur
+- Choose between motion range on motion blur
+- Adjust motion blur on motion blur
+- Reset temporal NR
+- Reset temporal threshold
+- Reset spatial NR
+- Reset spatial threshold
+- Reset motion blur
+- Reset all motion effects
+
+Nodes and Scopes Mode
+
+- Add a serial node
+- Add a serial before node
+- Add a parallel node
+- Add a layer node
+- Add a outside node
+- Add a splitter combiner node
+- Append a node
+- Label a node
+- Open parade
+- Open waveform
+- Open vectorscope
+- Open histogram
+- Open CIE chromaticity
+- Toggle on/off display focus
+- Toggle on/off low pass filter
+- Reset all nodes and grades and node tree

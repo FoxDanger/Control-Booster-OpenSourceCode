@@ -25,24 +25,43 @@ Gui Add, Text, x360 y120 w250 h23, Set a type of curves Hashs:
 Gui Add, ComboBox, vcomboboxCurvesHashs g_change_curves_hash x360 y148 w100, 1|2|3
 Gui Add, CheckBox, vscopesState g_set_scopes_state x790 y90 w403 h23, Check this box if your scopes window is floating
 Gui Add, CheckBox, vcolorWarperState g_set_color_warper_state x790 y120 w403 h23, Check this box if your color warper window is floating
-Gui Add, Picture, x480 y480 w950 h400, %A_ScriptDir%\images\Sizing Input.png
-Gui Add, Button, g_set_variable_button vpos_sizing_input_pan x352 y480 w120 h50, Pan
-Gui Add, Button, g_set_variable_button vpos_sizing_input_tilt x352 y544 w120 h50, Tilt
-Gui Add, Button, g_set_variable_button vpos_sizing_input_zoom x352 y608 w120 h50, Zoom
-Gui Add, Button, g_set_variable_button vpos_sizing_input_rotate x352 y672 w120 h50, Rotate
-Gui Add, Button, g_set_variable_button vpos_sizing_input_reset_sizing x984 y888 w120 h50, Reset Sizing
-Gui Add, Button, g_set_variable_button vpos_sizing_input_width x816 y952 w120 h50, Width
-Gui Add, Button, g_set_variable_button vpos_sizing_input_height x984 y952 w120 h50, Height
-Gui Add, Button, g_set_variable_button vpos_sizing_input_pitch x816 y1016 w120 h50, Pitch
-Gui Add, Button, g_set_variable_button vpos_sizing_input_yaw x984 y1016 w120 h50, Yaw
-Gui Add, Button, g_set_variable_button vpos_sizing_input_horizontal_flip x816 y1080 w120 h50, h Flip
-Gui Add, Button, g_set_variable_button vpos_sizing_input_vertical_flip x984 y1080 w120 h50, v Flip
-Gui Add, Button, g_set_variable_button vpos_sizing_input_reset_blanking x1440 y512 w120 h50, Reset Blanking
-Gui Add, Button, g_set_variable_button vpos_sizing_input_top x1440 y576 w120 h50, Top
-Gui Add, Button, g_set_variable_button vpos_sizing_input_right x1440 y640 w120 h50, Right
-Gui Add, Button, g_set_variable_button vpos_sizing_input_bottom x1440 y704 w120 h50, Bottom
-Gui Add, Button, g_set_variable_button vpos_sizing_input_left x1440 y768 w120 h50, Left
-Gui Add, Button, g_set_variable_button vpos_sizing_input_somooth x1440 y832 w120 h50, Smooth
+Gui Add, Picture, x200 y432 w570 h400,  %A_ScriptDir%\images\Inspector Transform Panel.png
+Gui Add, Button, g_set_variable_button vpos_inspector_video x200 y368 w150 h50, Video
+Gui Add, Button, g_set_variable_button vpos_inspector_transform_on_off x40 y432 w150 h50, Transform On/Off
+Gui Add, Button, g_set_variable_button vpos_inspector_horizontal_flip x40 y712 w150 h50, Horizontal Flip
+Gui Add, Button, g_set_variable_button vpos_inspector_vertical_flip x40 y784 w150 h50, Vertical Flip
+Gui Add, Button, g_set_variable_button vpos_inspector_zoom_x x208 y848 w150 h50, Zoom X
+Gui Add, Button, g_set_variable_button vpos_inspector_zoom_y x368 y848 w150 h50, Zoom Y
+Gui Add, Button, g_set_variable_button vpos_inspector_position_x x208 y912 w150 h50, Position X
+Gui Add, Button, g_set_variable_button vpos_inspector_position_y x368 y912 w150 h50, Position Y
+Gui Add, Button, g_set_variable_button vpos_inspector_rotation_angle x456 y976 w150 h50, Rotation Anglers 
+Gui Add, Button, g_set_variable_button vpos_inspector_anchor_point_x x536 y848 w150 h50, Anchor Point X
+Gui Add, Button, g_set_variable_button vpos_inspector_anchor_point_y x696 y848 w150 h50, Anchor Point Y
+Gui Add, Button, g_set_variable_button vpos_inspector_pitch x536 y912 w150 h50, Pitch
+Gui Add, Button, g_set_variable_button vpos_inspector_yaw x696 y912 w150 h50, Yaw
+Gui Add, Button, g_set_variable_button vpos_inspector_zoom_link x464 y368 w150 h50, Transform Zoom Link
+Gui Add, Button, g_set_variable_button vpos_inspector_transform_reset x624 y368 w150 h50, Transform Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_zoom_reset x784 y400 w150 h50, Zoom Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_position_reset x784 y464 w150 h50, Position Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_rotation_angle_reset x784 y528 w150 h50, Rotation Angle Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_anchor_point_reset x784 y592 w150 h50, Anchor Point Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_pitch_reset x784 y656 w150 h50, Pitch Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_yaw_reset x784 y720 w150 h50, Yaw Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_flip_reset x784 y784 w150 h50, Flip Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_transform_keyframe x1064 y784 w150 h50, Key Frame - Transform
+Gui Add, Button, g_set_variable_button vpos_inspector_zoom_keyframe x904 y848 w150 h50, Key Frame - Zoom
+Gui Add, Button, g_set_variable_button vpos_inspector_anchor_keyframe x904 y912 w150 h50, Key Frame - Anchor Point
+Gui Add, Button, g_set_variable_button vpos_inspector_position_keyframe x1064 y848 w150 h50, Key Frame - Position
+Gui Add, Button, g_set_variable_button vpos_inspector_pitch_keyframe x1064 y912 w150 h50, Key Frame - Pitch
+Gui Add, Button, g_set_variable_button vpos_inspector_rotation_keyframe x1224 y848 w150 h50, Key Frame - Rotation Angle
+Gui Add, Button, g_set_variable_button vpos_inspector_yaw_keyframe x1224 y912 w150 h50, Key Frame - Yaw
+Gui Add, Picture, x1152 y432 w570 h380,  %A_ScriptDir%\images\Inspector Audio Panel.png
+Gui Add, Button, g_set_variable_button vpos_inspector_audio x1152 y368 w150 h50, Audio
+Gui Add, Button, g_set_variable_button vpos_inspector_volume_on_off x992 y504 w150 h50, Volume On/Off
+Gui Add, Button, g_set_variable_button vpos_inspector_audio_reset x1576 y368 w150 h50, Audio Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_volume_reset x1736 y552 w150 h50, Volume Reset
+Gui Add, Button, g_set_variable_button vpos_inspector_volume x1512 y616 w150 h50, Volume
+Gui Add, Button, g_set_variable_button vpos_inspector_volume_keyframe x1512 y680 w150 h50, Volume Key Frame
 
 Gui Show, w1920 h1249, TWB 2.5
 Return

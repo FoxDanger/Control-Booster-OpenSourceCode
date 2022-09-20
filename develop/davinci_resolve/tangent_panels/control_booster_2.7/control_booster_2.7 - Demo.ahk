@@ -9,6 +9,7 @@
 ;- Add Pan, Semitones and cents control to audio inspector controllers on inspector mode
 
 ;Updates of 2.7 version:
+;- Added knobs functions on HDR mode to control X and Y in each color wheel. The trackball for this function on this mode can be a little tricky when you need precision, so for small changes you can use the knobs now.
 ;- Implemented UIAutomation for checking the windows state on Davinci Resolve UI. With this you can close windows with your mouse and Control Booster will open again if necessary to use some tool like in Inspector and Media Pool for example.
 ;- We still need windows_status.ini to save the information about the Matte Finess status on Qualifier because it doesn't has an AutomationID sadly.
 

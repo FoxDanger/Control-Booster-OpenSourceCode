@@ -9,7 +9,7 @@ Go to Davinci Resolve->Preferences->System Tab->Control Panels->Color Grading Pa
 
 2 - Download TWB, unzip and put it in somewhere on your PC.
 
-3 - Download and install Tangent Mapper 1.7.6 Beta or HIGHER (there's a installation file inside the installs folder)
+3 - Download and install Tangent Mapper 1.7.6 Beta or HIGHER (the installation file is inside the INSTALL folder on Control Booster folder)
 
 4 - Open the Control Booster (run the Control Booster.exe file on the root folder).
 

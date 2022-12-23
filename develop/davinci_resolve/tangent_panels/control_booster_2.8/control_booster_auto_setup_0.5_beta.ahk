@@ -216,7 +216,7 @@ StartAutoPositions(){
     nextClick := False
 
     ;Use this to add some paths without need use all the paths
-    filePath := "1600x900_scale_100_condensed.ini"
+    filePath := "3440x1440_scale_100_addresses_wide.ini"
     
     ;if (!_isDualView){
         ;Switch (_davinciLayoutUI){

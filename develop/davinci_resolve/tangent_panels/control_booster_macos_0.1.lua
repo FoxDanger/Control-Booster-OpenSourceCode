@@ -1,11 +1,11 @@
--- Control Booster - OSX 1.0
+-- Control Booster - OSX 0.1
 -- This softtware was originaly designed to give lots of new features for Tangent Panels controlling Davinci Resolve. But it can be used with any other Panel or MIDI controller if they have a mapper software with OSC support.
 -- Developer: André Rodrigues - Media Environment
 -- Website: https://souandrerodrigues.com.br/controlbooster - You can find video tutorials about how to setup and use all the functions on our website.
 -- Contact: controlbooster@souandrerodrigues.com.br
--- OSx Version: 1.0
+-- OSx Version: 0.1
 
--- Features of 1.0 version:
+-- Features of 0.1 version:
 
 -- Special Thanks:
 -- To my wife and family (cliché but is obvious that I can't do nothing without them)

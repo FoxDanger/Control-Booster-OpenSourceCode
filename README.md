@@ -22,6 +22,8 @@ https://github.com/FoxDanger/Control-Booster-OpenSourceCode/blob/master/develop/
 
 There's more files in the folders, some other tools, there's a begin of a auto-configuration tool that find itens in the screen and some other stuffs in the folders.
 
+This software/code can be combined with lots of different tools, scripts and other softwares, and can be very powerful. And it has some resources that can be useful, like the tool to control all the curves panel on Davinci Resolve, that works nice and better than ANY other tool in the market. Even Blackmagic Panels doesn't work so well with curves like Control Booster. And using the code that is used to control the curves panel, you can create some other miracles and control other stuffs on the screen in any software.
+
 TODAY, June 18 2024, I'll open the code for anyone who wants use it. You can change the code as you need, use part of it in other projects (including paid ones) and anything else, since you put my name and the name of the project (Control Booster) in the credits.
 
 I'll not give any support about this software anymore in any situation.
